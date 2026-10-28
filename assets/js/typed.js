@@ -1,4 +1,4 @@
-// --- 1. Typed.js Initialization ---
+// --- Typed.js Initialization ---
   document.addEventListener('DOMContentLoaded', () => {
     if (typeof Typed !== 'undefined') {
       new Typed('#typed-text', {
