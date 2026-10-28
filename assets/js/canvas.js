@@ -1,4 +1,6 @@
-    //  Interactive Adaptive Multi-Color Connected Dots Canvas
+    document.addEventListener('DOMContentLoaded', () => {
+    
+//  Interactive Adaptive Multi-Color Connected Dots Canvas
     const canvas = document.getElementById('hero-connected-dots');
     const heroSection = document.getElementById('hero-section');
     if (!canvas || !heroSection) return;
