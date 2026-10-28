@@ -1,7 +1,28 @@
-<!-- JavaScript for Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
+<!-- JavaScript for Adaptive Light/Dark Mode Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
+<script>
   document.addEventListener('DOMContentLoaded', () => {
-   
-    //   Interactive Multi-Color Connected Dots Canvas
+    
+    // 1. Typed.js Initialization
+    if (document.getElementById('typed-text')) {
+      new Typed('#typed-text', {
+        strings: [
+          'works for you.',
+          'drives growth.',
+          'empowers businesses.',
+          'simplifies IT.',
+          'delivers performance.'
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 2000,
+        startDelay: 300,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+      });
+    }
+
+    // 2. Interactive Adaptive Multi-Color Connected Dots Canvas
     const canvas = document.getElementById('hero-connected-dots');
     const heroSection = document.getElementById('hero-section');
     if (!canvas || !heroSection) return;
@@ -9,13 +30,21 @@
     const ctx = canvas.getContext('2d');
     let width, height;
 
-    // Multi-color palette for vibrant particles
-    const colorPalette = [
-      { r: 23,  g: 105, b: 170 }, // Primary Brand Blue
-      { r: 105, g: 186, b: 255 }, // Light Sky Blue
-      { r: 16,  g: 185, b: 129 }, // Emerald Green
-      { r: 147, g: 51,  b: 234 }, // Vivid Purple
-      { r: 245, g: 158, b: 11  }  // Amber Glow
+    // Separate color palettes optimized for Light Mode vs Dark Mode contrast
+    const lightPalette = [
+      { r: 23,  g: 105, b: 170 }, // Deep Brand Blue
+      { r: 14,  g: 116, b: 144 }, // Ocean Cyan
+      { r: 5,   g: 150, b: 105 }, // Rich Emerald
+      { r: 124, g: 58,  b: 237 }, // Deep Purple
+      { r: 217, g: 119, b: 6   }  // Deep Amber
+    ];
+
+    const darkPalette = [
+      { r: 105, g: 186, b: 255 }, // Bright Sky Blue
+      { r: 52,  g: 211, b: 153 }, // Neon Emerald
+      { r: 167, g: 139, b: 250 }, // Soft Pastel Purple
+      { r: 251, g: 146, b: 60  }, // Bright Amber Glow
+      { r: 56,  g: 189, b: 248 }  // Electric Cyan
     ];
 
     const mouse = {
@@ -54,8 +83,6 @@
         this.radius = Math.random() * 4.5 + 5;
         this.vx = (Math.random() - 0.5) * 1.0;
         this.vy = (Math.random() - 0.5) * 1.0;
-        // Assign random multi-color from palette
-        this.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
         this.alpha = Math.random() * 0.4 + 0.6;
       }
 
@@ -82,15 +109,23 @@
         this.y += this.vy;
       }
 
-      draw() {
+      draw(palette) {
+        // Pick color dynamically based on current theme palette
+        const color = palette[Math.floor(this.x % palette.length)];
+        
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.alpha})`;
-        // Glowing halo effect for big dots
-        ctx.shadowBlur = 14;
-        ctx.shadowColor = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0.85)`;
+        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
+        
+        // Glowing halo effect for big dots (adjusted intensity for light vs dark mode)
+        const isDark = document.documentElement.classList.contains('dark');
+        ctx.shadowBlur = isDark ? 14 : 8;
+        ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
         ctx.fill();
         ctx.shadowBlur = 0;
+        
+        // Store color reference for line rendering
+        this.currentColor = color;
       }
     }
 
@@ -100,9 +135,13 @@
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
+      // Check current HTML dark mode class
+      const isDark = document.documentElement.classList.contains('dark');
+      const activePalette = isDark ? darkPalette : lightPalette;
+
       particles.forEach(p => {
         p.update();
-        p.draw();
+        p.draw(activePalette);
       });
 
       // Draw Bold Connecting Multi-Color Gradient Lines
@@ -116,12 +155,12 @@
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDistance) {
-            const alpha = (1 - dist / maxDistance) * 0.65;
+            const alpha = (1 - dist / maxDistance) * (isDark ? 0.65 : 0.45);
 
             // Create gradient blending between the two particle colors
             const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-            gradient.addColorStop(0, `rgba(${p1.color.r}, ${p1.color.g}, ${p1.color.b}, ${alpha})`);
-            gradient.addColorStop(1, `rgba(${p2.color.r}, ${p2.color.g}, ${p2.color.b}, ${alpha})`);
+            gradient.addColorStop(0, `rgba(${p1.currentColor.r}, ${p1.currentColor.g}, ${p1.currentColor.b}, ${alpha})`);
+            gradient.addColorStop(1, `rgba(${p2.currentColor.r}, ${p2.currentColor.g}, ${p2.currentColor.b}, ${alpha})`);
 
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
@@ -139,3 +178,4 @@
 
     animate();
   });
+</script>
