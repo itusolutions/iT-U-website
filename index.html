@@ -167,9 +167,10 @@
   <a class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-4 focus:z-[1000] focus:p-3 focus:bg-brand-surface focus:text-brand-primary font-semibold border border-brand-border rounded-b-md shadow-md" href="#main">
     Skip to content
   </a>
-
-  <!-- Header -->
-  <header class="relative bg-white/96 dark:bg-[#0b1220]/96 backdrop-blur-md border-b border-brand-border dark:border-brand-darkBorder px-[max(1.2rem,calc((100%-1200px)/2))] py-3 flex items-center justify-between gap-6 print:hidden">
+  
+          
+  <!-- Header with Ultra-High Z-Index to stay above everything -->
+  <header class="relative z-[9999] bg-white/96 dark:bg-[#0b1220]/96 backdrop-blur-md border-b border-brand-border dark:border-brand-darkBorder px-[max(1.2rem,calc((100%-1200px)/2))] py-3 flex items-center justify-between gap-6 print:hidden">
     <!-- Brand with Light/Dark Mode Logo Assets -->
     <a class="flex items-center gap-[0.65rem] text-brand-text dark:text-brand-darkText font-bold leading-tight no-underline hover:no-underline" href="/" aria-label="iTu Solutions home">
       <!-- Light Mode Logo -->
@@ -198,132 +199,133 @@
         <i class="fa-solid fa-circle-info text-brand-primary"></i> About
       </a>
       
-<!-- Nav Group / Centered Mega Menu Below Navigation -->
-<div id="nav-group" class="relative max-[900px]:w-full group">
-  <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
-    <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
-    <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
-  </button>
-  
-  <!-- Centered Mega Menu Content (High Z-Index Fix) -->
-  <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[min(1120px,calc(100vw-2rem))] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-[repeat(3,minmax(0,1fr))_minmax(200px,.9fr)] gap-[1.4rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[1000]">
-    
-    <!-- Column 1: Website Solutions -->
-    <div class="flex flex-col gap-[0.75rem]">
-      <img src="https://picsum.photos/300/120?random=1" alt="Website Solutions Preview" class="w-full h-24 object-cover rounded-xl mb-1 shadow-sm border border-brand-border dark:border-brand-darkBorder">
-      <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
-        <i class="fa-solid fa-code text-brand-primary"></i> Website solutions
-      </h3>
-      
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/website-development/">
-          <i class="fa-solid fa-laptop-code text-xs text-brand-primary"></i> Website development
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Custom responsive web design for businesses in Polokwane & Limpopo.</span>
+      <!-- Nav Group / Centered Mega Menu Below Navigation -->
+      <div id="nav-group" class="relative max-[900px]:w-full group">
+        <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
+          <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
+          <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+        </button>
+        
+        <!-- Centered Mega Menu Content -->
+        <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[min(1120px,calc(100vw-2rem))] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-[repeat(3,minmax(0,1fr))_minmax(200px,.9fr)] gap-[1.4rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[10000]">
+          
+          <!-- Column 1: Website Solutions -->
+          <div class="flex flex-col gap-[0.75rem]">
+            <img src="https://picsum.photos/300/120?random=1" alt="Website Solutions Preview" class="w-full h-24 object-cover rounded-xl mb-1 shadow-sm border border-brand-border dark:border-brand-darkBorder">
+            <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+              <i class="fa-solid fa-code text-brand-primary"></i> Website solutions
+            </h3>
+            
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/website-development/">
+                <i class="fa-solid fa-laptop-code text-xs text-brand-primary"></i> Website development
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Custom responsive web design for businesses in Polokwane & Limpopo.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/portfolio/">
+                <i class="fa-solid fa-briefcase text-xs text-brand-primary"></i> Portfolio
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Explore our featured web engineering case studies and live demos.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/projects/">
+                <i class="fa-solid fa-diagram-project text-xs text-brand-primary"></i> Projects
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Tailored frontend implementations and digital platform deployments.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/pricing/">
+                <i class="fa-solid fa-tags text-xs text-brand-primary"></i> Pricing & quotes
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Transparent pricing packages for sites and technical IT maintenance.</span>
+            </div>
+          </div>
+
+          <!-- Column 2: Computer & Software -->
+          <div class="flex flex-col gap-[0.75rem]">
+            <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+              <i class="fa-solid fa-computer text-brand-primary"></i> Computer & software
+            </h3>
+            
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/computer-repairs/">
+                <i class="fa-solid fa-screwdriver-wrench text-xs text-brand-primary"></i> Computer repairs
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Hardware diagnostics, component replacements, and laptop servicing.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/software-installation/">
+                <i class="fa-solid fa-download text-xs text-brand-primary"></i> Software installation
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Essential application setups, office suites, and security software.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/operating-system-updates/">
+                <i class="fa-solid fa-rotate text-xs text-brand-primary"></i> Operating system updates
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Windows OS upgrades, system optimizations, and driver maintenance.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/data-backup/">
+                <i class="fa-solid fa-hard-drive text-xs text-brand-primary"></i> Data backup
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Secure automated backups, drive recovery, and cloud file synchronization.</span>
+            </div>
+          </div>
+
+          <!-- Column 3: Technical Support -->
+          <div class="flex flex-col gap-[0.75rem]">
+            <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+              <i class="fa-solid fa-headset text-brand-primary"></i> Technical support
+            </h3>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/it-support/">
+                <i class="fa-solid fa-user-gear text-xs text-brand-primary"></i> IT support
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">On-demand technical assistance for individuals and small businesses.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/networking/">
+                <i class="fa-solid fa-network-wired text-xs text-brand-primary"></i> Networking
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Router setup, Wi-Fi optimization, local network security & cabling.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/cybersecurity/">
+                <i class="fa-solid fa-shield-halved text-xs text-brand-primary"></i> Cybersecurity assistance
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Virus removal, system hardening, and malware protection solutions.</span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/support/">
+                <i class="fa-solid fa-life-ring text-xs text-brand-primary"></i> Support centre
+              </a>
+              <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Access guides, technical FAQs, and submit direct service tickets.</span>
+            </div>
+          </div>
+
+          <!-- Column 4: Contact Action Feature -->
+          <a class="flex flex-col gap-[0.6rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[1.1rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20" href="/contact/">
+            <span class="text-2xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <strong class="mt-[0.1rem] mb-[0.25rem] text-[0.95rem] font-bold">Need a hand?</strong>
+            <span class="text-[0.85rem] text-brand-muted dark:text-brand-darkMuted leading-snug">Get in touch with iTu Solutions for fast, practical local IT advice.</span>
+            <b class="font-bold text-brand-primary dark:text-brand-darkPrimary mt-auto flex items-center gap-1 pt-2">Contact us <i class="fa-solid fa-arrow-right"></i></b>
+          </a>
+
+        </div>
       </div>
 
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/portfolio/">
-          <i class="fa-solid fa-briefcase text-xs text-brand-primary"></i> Portfolio
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Explore our featured web engineering case studies and live demos.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/projects/">
-          <i class="fa-solid fa-diagram-project text-xs text-brand-primary"></i> Projects
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Tailored frontend implementations and digital platform deployments.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/pricing/">
-          <i class="fa-solid fa-tags text-xs text-brand-primary"></i> Pricing & quotes
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Transparent pricing packages for sites and technical IT maintenance.</span>
-      </div>
-    </div>
-
-    <!-- Column 2: Computer & Software -->
-    <div class="flex flex-col gap-[0.75rem]">
-      <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
-        <i class="fa-solid fa-computer text-brand-primary"></i> Computer & software
-      </h3>
-      
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/computer-repairs/">
-          <i class="fa-solid fa-screwdriver-wrench text-xs text-brand-primary"></i> Computer repairs
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Hardware diagnostics, component replacements, and laptop servicing.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/software-installation/">
-          <i class="fa-solid fa-download text-xs text-brand-primary"></i> Software installation
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Essential application setups, office suites, and security software.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/operating-system-updates/">
-          <i class="fa-solid fa-rotate text-xs text-brand-primary"></i> Operating system updates
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Windows OS upgrades, system optimizations, and driver maintenance.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/data-backup/">
-          <i class="fa-solid fa-hard-drive text-xs text-brand-primary"></i> Data backup
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Secure automated backups, drive recovery, and cloud file synchronization.</span>
-      </div>
-    </div>
-
-    <!-- Column 3: Technical Support -->
-    <div class="flex flex-col gap-[0.75rem]">
-      <h3 class="mt-[0.1rem] mb-[0.25rem] font-bold text-[0.95rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
-        <i class="fa-solid fa-headset text-brand-primary"></i> Technical support
-      </h3>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/it-support/">
-          <i class="fa-solid fa-user-gear text-xs text-brand-primary"></i> IT support
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">On-demand technical assistance for individuals and small businesses.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/networking/">
-          <i class="fa-solid fa-network-wired text-xs text-brand-primary"></i> Networking
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Router setup, Wi-Fi optimization, local network security & cabling.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/services/cybersecurity/">
-          <i class="fa-solid fa-shield-halved text-xs text-brand-primary"></i> Cybersecurity assistance
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Virus removal, system hardening, and malware protection solutions.</span>
-      </div>
-
-      <div class="flex flex-col gap-1">
-        <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.92rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1.5" href="/support/">
-          <i class="fa-solid fa-life-ring text-xs text-brand-primary"></i> Support centre
-        </a>
-        <span class="text-[0.78rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-5">Access guides, technical FAQs, and submit direct service tickets.</span>
-      </div>
-    </div>
-
-    <!-- Column 4: Contact Action Feature -->
-    <a class="flex flex-col gap-[0.6rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[1.1rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20" href="/contact/">
-      <span class="text-2xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-      <strong class="mt-[0.1rem] mb-[0.25rem] text-[0.95rem] font-bold">Need a hand?</strong>
-      <span class="text-[0.85rem] text-brand-muted dark:text-brand-darkMuted leading-snug">Get in touch with iTu Solutions for fast, practical local IT advice.</span>
-      <b class="font-bold text-brand-primary dark:text-brand-darkPrimary mt-auto flex items-center gap-1 pt-2">Contact us <i class="fa-solid fa-arrow-right"></i></b>
-    </a>
-
-  </div>
-</div>
       <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5" href="/blog/">
         <i class="fa-solid fa-blog text-brand-primary"></i> Blog
       </a>
@@ -341,6 +343,12 @@
       </button>
     </nav>
   </header>
+  
+  
+  
+  
+  
+  
 
 <!-- Main Content -->
   <main id="main">
