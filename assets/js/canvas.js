@@ -154,4 +154,3 @@
 
     animate();
   });
-</script>
