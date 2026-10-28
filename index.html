@@ -185,10 +185,12 @@
   </a>
 
   <!-- Mobile Menu Toggle -->
-  <button id="menu-toggle" class="min-[901px]:hidden border-0 bg-transparent cursor-pointer p-[0.55rem] text-xl text-brand-text dark:text-brand-darkText" type="button" aria-expanded="false" aria-controls="primary-nav">
-    <i class="fa-solid fa-bars"></i>
-    <span class="sr-only">Toggle navigation</span>
-  </button>
+      <div id="nav-group" class="relative max-[900px]:w-full group">
+      <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
+        <i class="fa-solid fa-plus text-xs ml-1"></i>
+      </button>
+
 
   <!-- Navigation (Right-aligned drawer on mobile/tablet with smooth scroll support) -->
   <nav id="primary-nav" class="hidden min-[901px]:flex max-[900px]:absolute max-[900px]:top-full max-[900px]:left-auto max-[900px]:right-0 max-[900px]:w-[280px] max-[900px]:bg-brand-surface max-[900px]:dark:bg-brand-darkSurface max-[900px]:p-5 max-[900px]:border-l max-[900px]:border-b max-[900px]:border-brand-border max-[900px]:dark:border-brand-darkBorder max-[900px]:flex-col max-[900px]:gap-2 max-[900px]:overflow-y-auto max-[900px]:max-h-[calc(100vh-4.5rem)] items-center gap-[1.1rtem]" aria-label="Main navigation">
