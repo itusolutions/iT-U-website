@@ -169,8 +169,7 @@
   </a>
   
           
- 
-<!-- Fixed Top Header with Ultra-High Z-Index -->
+  <!-- Fixed Top Header with Ultra-High Z-Index -->
 <header class="fixed top-0 left-0 right-0 w-full z-[9999] bg-white/96 dark:bg-[#0b1220]/96 backdrop-blur-md border-b border-brand-border dark:border-brand-darkBorder px-[max(1.2rem,calc((100%-1200px)/2))] py-3 flex items-center justify-between gap-6 print:hidden">
   
   <!-- Brand with Light/Dark Mode Logo Assets -->
@@ -201,142 +200,143 @@
       <i class="fa-solid fa-circle-info text-brand-primary"></i> About
     </a>
     
-    <!-- Nav Group / 6-Column Mega Menu -->
+    <!-- Nav Group / Centered 6-Column Mega Menu -->
     <div id="nav-group" class="relative max-[900px]:w-full group">
       <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
         <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
         <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
       </button>
       
-      <!-- 6-Column Mega Menu Content (Static position, max-width with mx-0 alignment) -->
-      <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid absolute top-full left-0 right-0 mt-2 mx-0 max-w-[1280px] w-full p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-6 gap-[1rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[10000]">
+      <!-- Centered 6-Column Mega Menu Content (1 Column Picture + 5 Columns Links) -->
+      <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid absolute top-full left-1/2 -translate-x-1/2 mt-2 mx-auto max-w-[1300px] w-[calc(100vw-2rem)] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-6 gap-[1rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[10000]">
         
-        <!-- Column 1: Feature Image Preview Card -->
-        <div class="flex flex-col gap-[0.5rem] bg-brand-bg dark:bg-[#172c43] p-3 rounded-xl border border-brand-border dark:border-brand-darkBorder">
-          <img src="https://picsum.photos/300/140?random=1" alt="iTu Solutions Services Preview" class="w-full h-24 object-cover rounded-lg shadow-sm">
-          <h4 class="font-bold text-[0.85rem] text-brand-text dark:text-white mt-1">Professional IT & Web Services</h4>
-          <p class="text-[0.73rem] text-brand-muted dark:text-brand-darkMuted leading-tight">Practical technology support, custom web solutions, and repairs across Limpopo.</p>
-          <a href="/contact/" class="mt-auto text-[0.78rem] font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline">Get started →</a>
+        <!-- Column 1: Featured Image Preview -->
+        <div class="flex flex-col gap-[0.5rem] justify-start">
+          <img src="https://picsum.photos/300/220?random=1" alt="iTu Solutions Services" class="w-full h-36 object-cover rounded-xl shadow-sm border border-brand-border dark:border-brand-darkBorder">
+          <h4 class="font-bold text-[0.85rem] text-brand-text dark:text-brand-darkText">Practical Tech</h4>
+          <p class="text-[0.72rem] text-brand-muted dark:text-brand-darkMuted leading-snug">Expert solutions built for your home and office infrastructure.</p>
         </div>
 
-        <!-- Column 2: Website Solutions -->
+        <!-- Column 2: Web Solutions -->
         <div class="flex flex-col gap-[0.5rem]">
-          <h3 class="mt-[0.1rem] mb-[0.15rem] font-bold text-[0.85rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+          <h3 class="font-bold text-[0.88rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
             <i class="fa-solid fa-code text-brand-primary"></i> Web Solutions
           </h3>
           
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/website-development/">
-              <i class="fa-solid fa-laptop-code text-[10px] text-brand-primary"></i> Web Development
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/website-development/">
+              <i class="fa-solid fa-laptop-code text-xs text-brand-primary"></i> Development
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Custom responsive web design.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Custom responsive web design.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/portfolio/">
-              <i class="fa-solid fa-briefcase text-[10px] text-brand-primary"></i> Portfolio
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/portfolio/">
+              <i class="fa-solid fa-briefcase text-xs text-brand-primary"></i> Portfolio
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Engineering case studies.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Explore case studies & demos.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/projects/">
-              <i class="fa-solid fa-diagram-project text-[10px] text-brand-primary"></i> Projects
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/projects/">
+              <i class="fa-solid fa-diagram-project text-xs text-brand-primary"></i> Projects
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Platform deployments.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Frontend platforms & builds.</span>
           </div>
         </div>
 
-        <!-- Column 3: Computer & Hardware -->
+        <!-- Column 3: Hardware Repairs -->
         <div class="flex flex-col gap-[0.5rem]">
-          <h3 class="mt-[0.1rem] mb-[0.15rem] font-bold text-[0.85rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+          <h3 class="font-bold text-[0.88rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
             <i class="fa-solid fa-desktop text-brand-primary"></i> Hardware
           </h3>
           
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/computer-repairs/">
-              <i class="fa-solid fa-screwdriver-wrench text-[10px] text-brand-primary"></i> Computer Repairs
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/computer-repairs/">
+              <i class="fa-solid fa-screwdriver-wrench text-xs text-brand-primary"></i> Computer Repairs
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Diagnostics & servicing.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Diagnostics & servicing.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/laptop-maintenance/">
-              <i class="fa-solid fa-laptop text-[10px] text-brand-primary"></i> Laptop Care
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/laptop-maintenance/">
+              <i class="fa-solid fa-laptop text-xs text-brand-primary"></i> Laptops
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Screen & battery fixes.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Screen & battery swaps.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/hardware-upgrades/">
-              <i class="fa-solid fa-microchip text-[10px] text-brand-primary"></i> RAM & SSD
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/hardware-upgrades/">
+              <i class="fa-solid fa-microchip text-xs text-brand-primary"></i> Upgrades
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Speed up your system.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">RAM & SSD speed boosts.</span>
           </div>
         </div>
 
         <!-- Column 4: Software & Systems -->
         <div class="flex flex-col gap-[0.5rem]">
-          <h3 class="mt-[0.1rem] mb-[0.15rem] font-bold text-[0.85rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+          <h3 class="font-bold text-[0.88rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
             <i class="fa-solid fa-sliders text-brand-primary"></i> Software
           </h3>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/software-installation/">
-              <i class="fa-solid fa-download text-[10px] text-brand-primary"></i> Software Setup
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/software-installation/">
+              <i class="fa-solid fa-download text-xs text-brand-primary"></i> Software Setup
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Office suites & apps.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Office & security suites.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/operating-system-updates/">
-              <i class="fa-solid fa-rotate text-[10px] text-brand-primary"></i> OS Updates
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/operating-system-updates/">
+              <i class="fa-solid fa-rotate text-xs text-brand-primary"></i> OS Updates
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Windows upgrades.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Windows upgrades & drivers.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/data-backup/">
-              <i class="fa-solid fa-hard-drive text-[10px] text-brand-primary"></i> Data Backup
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/data-backup/">
+              <i class="fa-solid fa-hard-drive text-xs text-brand-primary"></i> Data Backup
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Secure file recovery.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Secure automated backups.</span>
           </div>
         </div>
 
         <!-- Column 5: Technical Support -->
         <div class="flex flex-col gap-[0.5rem]">
-          <h3 class="mt-[0.1rem] mb-[0.15rem] font-bold text-[0.85rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
+          <h3 class="font-bold text-[0.88rem] text-brand-text dark:text-brand-darkText flex items-center gap-1.5">
             <i class="fa-solid fa-headset text-brand-primary"></i> Support
           </h3>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/it-support/">
-              <i class="fa-solid fa-user-gear text-[10px] text-brand-primary"></i> IT Helpdesk
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/it-support/">
+              <i class="fa-solid fa-user-gear text-xs text-brand-primary"></i> IT Helpdesk
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">On-demand tech help.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">On-demand technical help.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/networking/">
-              <i class="fa-solid fa-network-wired text-[10px] text-brand-primary"></i> Networking
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/networking/">
+              <i class="fa-solid fa-network-wired text-xs text-brand-primary"></i> Networking
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Wi-Fi & router setup.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Wi-Fi & router setup.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.8rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/cybersecurity/">
-              <i class="fa-solid fa-shield-halved text-[10px] text-brand-primary"></i> Security
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/cybersecurity/">
+              <i class="fa-solid fa-shield-halved text-xs text-brand-primary"></i> Security
             </a>
-            <span class="text-[0.7rem] leading-snug text-brand-muted dark:text-brand-darkMuted pl-3.5">Virus & malware defense.</span>
+            <span class="text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Virus & malware defense.</span>
           </div>
         </div>
 
-        <!-- Column 6: Contact Action Feature -->
-        <a class="flex flex-col gap-[0.5rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[0.85rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20 justify-center" href="/contact/">
-          <span class="text-xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-          <strong class="font-bold text-[0.85rem]">Need assistance?</strong>
-          <span class="text-[0.75rem] text-brand-muted dark:text-brand-darkMuted leading-tight">Get in touch with iTu Solutions for fast local support.</span>
-          <b class="font-bold text-[0.75rem] text-brand-primary dark:text-brand-darkPrimary mt-1 flex items-center gap-1">Contact us <i class="fa-solid fa-arrow-right"></i></b>
+        <!-- Column 6: Contact Action Card -->
+        <a class="flex flex-col justify-between gap-[0.4rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[0.85rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20" href="/contact/">
+          <div>
+            <span class="text-xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <strong class="mt-1 mb-1 block text-[0.85rem] font-bold">Need assistance?</strong>
+            <span class="text-[0.72rem] text-brand-muted dark:text-brand-darkMuted leading-snug">Get fast local IT support today.</span>
+          </div>
+          <b class="font-bold text-[0.75rem] text-brand-primary dark:text-brand-darkPrimary flex items-center gap-1 pt-1">Contact us <i class="fa-solid fa-arrow-right"></i></b>
         </a>
 
       </div>
@@ -359,8 +359,6 @@
     </button>
   </nav>
 </header>
-  <!-- Navigation -->
-  <nav 
     
                 
 <!-- Main Content -->
