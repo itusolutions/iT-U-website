@@ -168,7 +168,9 @@
     Skip to content
   </a>
   
-    <!-- Fixed Top Header with Ultra-High Z-Index -->
+
+      
+<!-- Fixed Top Header with Ultra-High Z-Index -->
 <header class="fixed top-0 left-0 right-0 w-full z-[9999] bg-white/96 dark:bg-[#0b1220]/96 backdrop-blur-md border-b border-brand-border dark:border-brand-darkBorder px-[max(1.2rem,calc((100%-1200px)/2))] py-3 flex items-center justify-between gap-6 print:hidden">
   
   <!-- Brand with Light/Dark Mode Logo Assets -->
@@ -188,14 +190,14 @@
     <span class="sr-only">Toggle navigation</span>
   </button>
 
-  <!-- Navigation -->
-  <nav id="primary-nav" class="hidden min-[901px]:flex max-[900px]:absolute max-[900px]:top-full max-[900px]:left-0 max-[900px]:right-0 max-[900px]:bg-brand-surface max-[900px]:dark:bg-brand-darkSurface max-[900px]:p-5 max-[900px]:border-b max-[900px]:border-brand-border max-[900px]:dark:border-brand-darkBorder max-[900px]:flex-col max-[900px]:gap-1 items-center gap-[1.1rem]" aria-label="Main navigation">
+  <!-- Navigation (Right-aligned drawer on mobile/tablet with smooth scroll support) -->
+  <nav id="primary-nav" class="hidden min-[901px]:flex max-[900px]:absolute max-[900px]:top-full max-[900px]:left-auto max-[900px]:right-0 max-[900px]:w-[280px] max-[900px]:bg-brand-surface max-[900px]:dark:bg-brand-darkSurface max-[900px]:p-5 max-[900px]:border-l max-[900px]:border-b max-[900px]:border-brand-border max-[900px]:dark:border-brand-darkBorder max-[900px]:flex-col max-[900px]:gap-2 max-[900px]:overflow-y-auto max-[900px]:max-h-[calc(100vh-4.5rem)] items-center gap-[1.1rtem]" aria-label="Main navigation">
     
-    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 scroll-smooth" href="/">
+    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.5rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 w-full" href="/">
       <i class="fa-solid fa-house text-brand-primary"></i> Home
     </a>
     
-    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 scroll-smooth" href="/about/">
+    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.5rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 w-full" href="/about/">
       <i class="fa-solid fa-circle-info text-brand-primary"></i> About
     </a>
     
@@ -206,7 +208,7 @@
         <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
       </button>
       
-      <!-- Centered 6-Column Mega Menu Content (Hidden Col 1 & Col 6 on Tablet/Mobile + Hidden Paragraphs/Spans) -->
+      <!-- Centered 6-Column Mega Menu Content -->
       <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid fixed top-[calc(100%+0.25rem)] left-1/2 -translate-x-1/2 max-w-[1300px] w-[calc(100vw-2rem)] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-6 gap-[1rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[10000]">
         
         <!-- Column 1: Featured Image Preview (Hidden on Tablet & Mobile) -->
@@ -223,21 +225,21 @@
           </h3>
           
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/website-development/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/website-development/">
               <i class="fa-solid fa-laptop-code text-xs text-brand-primary"></i> Development
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Custom responsive web design.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/portfolio/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/portfolio/">
               <i class="fa-solid fa-briefcase text-xs text-brand-primary"></i> Portfolio
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Explore case studies & demos.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/projects/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/projects/">
               <i class="fa-solid fa-diagram-project text-xs text-brand-primary"></i> Projects
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Frontend platforms & builds.</span>
@@ -251,21 +253,21 @@
           </h3>
           
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/computer-repairs/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/computer-repairs/">
               <i class="fa-solid fa-screwdriver-wrench text-xs text-brand-primary"></i> Computer Repairs
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Diagnostics & servicing.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/laptop-maintenance/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/laptop-maintenance/">
               <i class="fa-solid fa-laptop text-xs text-brand-primary"></i> Laptops
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Screen & battery swaps.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/hardware-upgrades/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/hardware-upgrades/">
               <i class="fa-solid fa-microchip text-xs text-brand-primary"></i> Upgrades
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">RAM & SSD speed boosts.</span>
@@ -279,21 +281,21 @@
           </h3>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/software-installation/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/software-installation/">
               <i class="fa-solid fa-download text-xs text-brand-primary"></i> Software Setup
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Office & security suites.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/operating-system-updates/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/operating-system-updates/">
               <i class="fa-solid fa-rotate text-xs text-brand-primary"></i> OS Updates
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Windows upgrades & drivers.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/data-backup/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/data-backup/">
               <i class="fa-solid fa-hard-drive text-xs text-brand-primary"></i> Data Backup
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Secure automated backups.</span>
@@ -307,21 +309,21 @@
           </h3>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/it-support/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/it-support/">
               <i class="fa-solid fa-user-gear text-xs text-brand-primary"></i> IT Helpdesk
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">On-demand technical help.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/networking/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/networking/">
               <i class="fa-solid fa-network-wired text-xs text-brand-primary"></i> Networking
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Wi-Fi & router setup.</span>
           </div>
 
           <div class="flex flex-col gap-0.5">
-            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1 scroll-smooth" href="/services/cybersecurity/">
+            <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.82rem] hover:text-brand-primary dark:hover:text-brand-darkPrimary flex items-center gap-1" href="/services/cybersecurity/">
               <i class="fa-solid fa-shield-halved text-xs text-brand-primary"></i> Security
             </a>
             <span class="max-[900px]:hidden text-[0.7rem] leading-tight text-brand-muted dark:text-brand-darkMuted pl-3.5">Virus & malware defense.</span>
@@ -329,7 +331,7 @@
         </div>
 
         <!-- Column 6: Contact Action Card (Hidden on Tablet & Mobile) -->
-        <a class="hidden min-[901px]:flex flex-col justify-between gap-[0.4rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[0.85rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20 scroll-smooth" href="/contact/">
+        <a class="hidden min-[901px]:flex flex-col justify-between gap-[0.4rem] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] p-[0.85rem] rounded-[14px] text-brand-text dark:text-brand-darkText no-underline hover:no-underline border border-brand-primary/20" href="/contact/">
           <div>
             <span class="text-xl text-brand-primary dark:text-brand-darkPrimary"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
             <strong class="mt-1 mb-1 block text-[0.85rem] font-bold">Need assistance?</strong>
@@ -341,24 +343,23 @@
       </div>
     </div>
 
-    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 scroll-smooth" href="/blog/">
+    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.5rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 w-full" href="/blog/">
       <i class="fa-solid fa-blog text-brand-primary"></i> Blog
     </a>
     
-    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 scroll-smooth" href="/faq/">
+    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.5rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 w-full" href="/faq/">
       <i class="fa-solid fa-circle-question text-brand-primary"></i> FAQ
     </a>
     
-    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.65rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 scroll-smooth" href="/contact/">
+    <a class="text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:py-[0.5rem] hover:text-brand-primary hover:underline flex items-center gap-1.5 w-full" href="/contact/">
       <i class="fa-solid fa-envelope text-brand-primary"></i> Contact
     </a>
     
-    <button id="theme-toggle" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem]" type="button" aria-label="Toggle dark mode">
+    <button id="theme-toggle" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] mt-2 max-[900px]:self-start" type="button" aria-label="Toggle dark mode">
       <i class="fa-solid fa-circle-half-stroke"></i>
     </button>
   </nav>
 </header>
-      
 
                 
 <!-- Main Content -->
