@@ -185,11 +185,10 @@
   </a>
 
   <!-- Mobile Menu Toggle -->
-      <div id="nav-group" class="relative max-[900px]:w-full group">
-      <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
-        <i class="fa-solid fa-plus text-xs ml-1"></i>
-      </button>
+  <button id="menu-toggle" class="min-[901px]:hidden border-0 bg-transparent cursor-pointer p-[0.55rem] text-xl text-brand-text dark:text-brand-darkText" type="button" aria-expanded="false" aria-controls="primary-nav">
+    <i class="fa-solid fa-bars"></i>
+    <span class="sr-only">Toggle navigation</span>
+  </button>
 
 
   <!-- Navigation (Right-aligned drawer on mobile/tablet with smooth scroll support) -->
@@ -204,11 +203,13 @@
     </a>
     
     <!-- Nav Group / Perfectly Centered Middle 6-Column Mega Menu -->
-    <div id="nav-group" class="relative max-[900px]:w-full group">
+   <div id="nav-group" class="relative max-[900px]:w-full group">
       <button id="mega-trigger" class="border-0 bg-transparent cursor-pointer p-[0.55rem] text-brand-text dark:text-brand-darkText font-semibold text-[0.94rem] max-[900px]:w-full max-[900px]:text-left flex items-center justify-between gap-1.5" type="button" aria-expanded="false" aria-controls="services-mega">
         <span class="flex items-center gap-1.5"><i class="fa-solid fa-layer-group text-brand-primary"></i> Services</span>
-        <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+        <i class="fa-solid fa-plus text-xs ml-1"></i>
       </button>
+    </div>
+
       
       <!-- Centered 6-Column Mega Menu Content -->
       <div id="services-mega" class="hidden group-hover:grid group-focus-within:grid max-[900px]:group-hover:grid fixed top-[calc(100%+0.25rem)] left-1/2 -translate-x-1/2 max-w-[1300px] w-[calc(100vw-2rem)] p-[1.5rem] grid-cols-1 sm:grid-cols-2 min-[901px]:grid-cols-6 gap-[1rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl shadow-custom max-[900px]:static max-[900px]:translate-x-0 max-[900px]:w-full max-[900px]:shadow-none max-[900px]:rounded-xl max-[900px]:my-2 z-[10000]">
