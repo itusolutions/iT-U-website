@@ -1,4 +1,4 @@
-    //   Interactive Multi-Color Big Dots & Bold Lines Canvas
+    //   Interactive Multi-Color Big Dots & Bold Lines Canvas (Light/Dark Mode Adaptive)
     const canvas = document.getElementById('hero-connected-dots');
     const heroSection = document.getElementById('hero-section');
     if (!canvas || !heroSection) return;
@@ -6,13 +6,21 @@
     const ctx = canvas.getContext('2d');
     let width, height;
 
-    // Multi-color palette for vibrant particles
-    const colorPalette = [
+    // Multi-color palettes tailored for high contrast in both themes
+    const darkPalette = [
       { r: 105, g: 186, b: 255 }, // Electric Blue
       { r: 52,  g: 211, b: 153 }, // Emerald Green
       { r: 167, g: 139, b: 250 }, // Soft Purple
       { r: 251, g: 146, b: 60  }, // Amber Glow
       { r: 244, g: 63,  b: 94  }  // Rose Pink
+    ];
+
+    const lightPalette = [
+      { r: 23,  g: 105, b: 170 }, // Deep Brand Blue
+      { r: 13,  g: 148, b: 136 }, // Deep Teal
+      { r: 109, g: 40,  b: 217 }, // Deep Purple
+      { r: 194, g: 65,  b: 12  }, // Rich Amber/Rust
+      { r: 225, g: 29,  b: 72  }  // Rich Crimson
     ];
 
     const mouse = {
@@ -51,8 +59,6 @@
         this.radius = Math.random() * 4 + 5;
         this.vx = (Math.random() - 0.5) * 1.4;
         this.vy = (Math.random() - 0.5) * 1.4;
-        // Pick an independent multi-color from the palette
-        this.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
         this.alpha = Math.random() * 0.3 + 0.7;
       }
 
@@ -79,15 +85,20 @@
         this.y += this.vy;
       }
 
-      draw() {
+      draw(palette) {
+        // Pick color dynamically based on current theme palette
+        const color = palette[Math.floor(Math.abs(Math.sin(this.x) * palette.length)) % palette.length];
+        
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.alpha})`;
+        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
         // Glowing halo effect for big dots
-        ctx.shadowBlur = 14;
-        ctx.shadowColor = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0.8)`;
+        ctx.shadowBlur = 12;
+        ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, 0.6)`;
         ctx.fill();
         ctx.shadowBlur = 0;
+
+        return color; // Return color for line drawing
       }
     }
 
@@ -97,9 +108,14 @@
     function animate() {
       ctx.clearRect(0, 0, width, height);
 
-      particles.forEach(p => {
+      // Check if dark mode class is active on root <html> element
+      const isDark = document.documentElement.classList.contains('dark');
+      const activePalette = isDark ? darkPalette : lightPalette;
+
+      // Store resolved colors for each particle during this frame
+      const particleColors = particles.map(p => {
         p.update();
-        p.draw();
+        return p.draw(activePalette);
       });
 
       const maxDistance = 160;
@@ -112,12 +128,14 @@
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < maxDistance) {
-            const alpha = (1 - dist / maxDistance) * 0.6;
+            const alpha = (1 - dist / maxDistance) * (isDark ? 0.6 : 0.45);
+            const c1 = particleColors[i];
+            const c2 = particleColors[j];
 
             // Multi-color gradient connecting lines between particles
             const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-            gradient.addColorStop(0, `rgba(${p1.color.r}, ${p1.color.g}, ${p1.color.b}, ${alpha})`);
-            gradient.addColorStop(1, `rgba(${p2.color.r}, ${p2.color.g}, ${p2.color.b}, ${alpha})`);
+            gradient.addColorStop(0, `rgba(${c1.r}, ${c1.g}, ${c1.b}, ${alpha})`);
+            gradient.addColorStop(1, `rgba(${c2.r}, ${c2.g}, ${c2.b}, ${alpha})`);
 
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
