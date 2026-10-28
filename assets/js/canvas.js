@@ -1,28 +1,4 @@
-<!-- JavaScript for Adaptive Light/Dark Mode Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Typed.js Initialization
-    if (document.getElementById('typed-text')) {
-      new Typed('#typed-text', {
-        strings: [
-          'works for you.',
-          'drives growth.',
-          'empowers businesses.',
-          'simplifies IT.',
-          'delivers performance.'
-        ],
-        typeSpeed: 60,
-        backSpeed: 40,
-        backDelay: 2000,
-        startDelay: 300,
-        loop: true,
-        showCursor: true,
-        cursorChar: '|'
-      });
-    }
-
-    // 2. Interactive Adaptive Multi-Color Connected Dots Canvas
+    //  Interactive Adaptive Multi-Color Connected Dots Canvas
     const canvas = document.getElementById('hero-connected-dots');
     const heroSection = document.getElementById('hero-section');
     if (!canvas || !heroSection) return;
