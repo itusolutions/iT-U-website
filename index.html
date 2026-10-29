@@ -864,16 +864,28 @@
     </div>
 
     <!-- Column 4: Subscriber Form & Button -->
+<div class="footer-newsletter">
+  <h3 class="text-sm font-bold uppercase tracking-wider text-brand-text dark:text-brand-darkText mb-3">
+    Newsletter
+  </h3>
+  <p class="text-xs text-brand-muted dark:text-brand-darkMuted mb-4">
+    Get IT tips and tech updates delivered straight to your inbox.
+  </p>
+  
+  <form action="https://submit.jotform.com/submit/262952437131052" method="POST" class="space-y-3">
+    <!-- Hidden Jotform Fields required for routing -->
+    <input type="hidden" name="formID" value="262952437131052" />
+    
     <div>
-      <h3 class="font-bold text-base text-brand-text dark:text-white mb-3 border-l-2 border-brand-primary dark:border-brand-darkPrimary pl-2">Newsletter</h3>
-      <p class="text-brand-muted dark:text-[#aebed1] text-xs mb-3">Subscribe for our latest IT tips, tech updates and special service offers.</p>
-      <form action="/forms/newsletter-form/index.html" method="POST" class="flex flex-col gap-2">
-        <input type="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-xs rounded-lg bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-[#aebed1] focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
-        <button type="submit" class="w-full px-4 py-2 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] hover:bg-brand-primaryHover dark:hover:bg-blue-400 text-xs font-bold transition-colors cursor-pointer flex items-center justify-center gap-1 shadow-sm">
-          <i class="fa-solid fa-paper-plane"></i> Subscribe Now
-        </button>
-      </form>
+      <label for="footer-email" class="sr-only">Email Address</label>
+      <input type="email" id="footer-email" name="q3_email" required placeholder="Enter your email" class="w-full px-3 py-2.5 text-xs rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
     </div>
+
+    <button type="submit" class="w-full px-4 py-2.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-xs hover:shadow-md transition-all cursor-pointer flex items-center justify-center gap-2">
+      <i class="fa-solid fa-paper-plane text-[10px]"></i> Subscribe
+    </button>
+  </form>
+</div>
 
     <!-- Column 5: About iT-U -->
     <div>
