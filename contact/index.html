@@ -361,11 +361,112 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
+  
+  <!-- Page Hero Header -->
+  <section class="relative overflow-hidden mb-10 p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom">
+    <!-- Ambient Glow -->
+    <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-<section class="page-hero"><p class="eyebrow">Contact</p><h1>Tell us what you need help with.</h1><p>Contact iTu Solutions to discuss a website project or IT issue.</p></section>
-<section class="section split"><div><h2>Contact details</h2><p><strong>Email:</strong> <a href="mailto:sekoalabopape@gmail.com">sekoalabopape@gmail.com</a></p><p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/27711405870">071 140 5870</a></p><p><strong>Location:</strong> Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa, 0726.</p></div><div class="card"><h2>Send an enquiry</h2><p>This static demo form opens your email application. It does not send data to a server.</p><form id="contactForm"><label for="name">Your name</label><input id="name" name="name" required><label for="email">Email address</label><input id="email" name="email" type="email" required><label for="topic">What do you need?</label><select id="topic" name="topic"><option>Website development</option><option>Computer repairs</option><option>Software installation</option><option>IT support</option><option>Other enquiry</option></select><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea><button class="button" type="submit">Prepare email</button></form></div></section>
+    <div class="relative z-10 max-w-[800px]">
+      <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-4">
+        <i class="fa-solid fa-paper-plane text-xs"></i> Contact
+      </p>
+      <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.1] tracking-tight mb-4">
+        Tell us what you need help with.
+      </h1>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-[1.1rem] leading-relaxed">
+        Contact iTu Solutions to discuss a website project, computer repair, or technical IT issue.
+      </p>
+    </div>
+  </section>
 
+  <!-- Split Content Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1120px] mx-auto">
+    
+    <!-- Contact Details Panel (1 Column) -->
+    <div class="lg:col-span-1 p-6 sm:p-8 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between gap-6">
+      <div>
+        <h2 class="text-xl font-bold mb-4 text-brand-text dark:text-brand-darkText border-l-2 border-brand-primary dark:border-brand-darkPrimary pl-2">
+          Contact Details
+        </h2>
+        
+        <div class="space-y-4 text-sm text-brand-muted dark:text-brand-darkMuted">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">Email</strong>
+              <a href="mailto:sekoalabopape@gmail.com" class="hover:underline text-brand-primary dark:text-brand-darkPrimary">sekoalabopape@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-brands fa-whatsapp text-emerald-500 mt-1 text-base"></i>
+            <div>
+              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">Phone / WhatsApp</strong>
+              <a href="https://wa.me/27711405870" class="hover:underline text-emerald-500 font-semibold">+27 71 140 5870</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">Location</strong>
+              <span>Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa, 0726.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+        <p class="text-xs font-bold text-brand-text dark:text-brand-darkText mb-1"><i class="fa-solid fa-clock text-brand-primary mr-1"></i> Business Hours</p>
+        <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Monday – Friday: 08:00 – 17:00<br>Saturday: By Appointment</p>
+      </div>
+    </div>
+
+    <!-- Enquiry Form Card (2 Columns) -->
+    <div class="lg:col-span-2 p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card">
+      <h2 class="text-xl font-bold mb-2 text-brand-text dark:text-brand-darkText">Send an enquiry</h2>
+      <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mb-6">
+        This static demo form prepares and opens your email application. It does not send data directly to a server.
+      </p>
+
+      <form id="contactForm" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div>
+            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Your Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Sekoala Bopape" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+          </div>
+          
+          <div>
+            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Email Address *</label>
+            <input type="email" id="email" name="email" type="email" required placeholder="name@example.com" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+          </div>
+        </div>
+
+        <div>
+          <label for="topic" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">What do you need? *</label>
+          <select id="topic" name="topic" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+            <option>Website development</option>
+            <option>Computer repairs</option>
+            <option>Software installation</option>
+            <option>IT support</option>
+            <option>Other enquiry</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Message *</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project requirements or technical needs..." class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary"></textarea>
+        </div>
+
+        <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
+          <i class="fa-solid fa-envelope-open-text"></i> Prepare email
+        </button>
+      </form>
+    </div>
+
+  </div>
 </main>
 
 
