@@ -2,29 +2,54 @@
   "id": "/",
   "name": "iTu Solutions",
   "short_name": "iTu",
-  "description": "Practical IT services and website development in Polokwane, Limpopo, South Africa.",
+  "description": "Practical IT services, website development, computer repairs, and software setup in Polokwane, Limpopo, South Africa.",
   "lang": "en-ZA",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait-primary",
   "background_color": "#0b1220",
   "theme_color": "#0b1220",
+  "categories": ["technology", "business", "utilities"],
   "icons": [
     {
-      "src": "/assets/icons/favicon.ico",
+      "src": "/assets/images/favicon.ico",
       "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
-      "src": "/assets/icons/apple-touch-icon.png",
+      "src": "/assets/images/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/apple-touch-icon.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/logo/logo.png",
+      "src": "/assets/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/android-chrome-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Website Services",
+      "url": "/services/website-development/",
+      "description": "Professional web design and development in Limpopo"
+    },
+    {
+      "name": "Contact iTu",
+      "url": "/contact/",
+      "description": "Get in touch with iTu Solutions"
     }
   ]
 }
