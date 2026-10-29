@@ -369,20 +369,19 @@
 </main>
 
 
-<!-- Updated Footer Block -->
+ <!-- Updated Footer Block -->
 <footer class="bg-white text-brand-text dark:bg-[#0b1220] dark:text-[#e6edf6] pt-[3.5rem] pb-[1.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] print:hidden border-t border-brand-border dark:border-[#2a3a50] transition-colors duration-300">
   
   <!-- ROW 1: 5 Columns -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-brand-border dark:border-[#2a3a50]">
     
-<!-- Column 1: Logo, Address & Google Map -->
+    <!-- Column 1: Logo, Address & Google Map -->
     <div>
       <a class="flex items-center gap-[0.65rem] font-bold leading-tight text-brand-text dark:text-white no-underline hover:no-underline mb-4" href="/">
-        <span class="grid place-items-center w-[42px] h-[42px] rounded-xl bg-brand-primary text-white font-extrabold text-lg">iT</span>
-        <span>
-          iTu <b class="font-bold">Solutions</b>
-          <small class="block text-brand-muted dark:text-[#aebed1] text-[0.68rem] font-medium mt-[0.25rem]">Technology made practical</small>
-        </span>
+        <!-- Light Mode Logo -->
+        <img src="/assets/images/logo/logo-dark-mode.png" alt="iTu Solutions Logo" class="block dark:hidden h-10 w-auto object-contain">
+        <!-- Dark Mode Logo -->
+        <img src="/assets/images/logo/logo-light-mode.png" alt="iTu Solutions Logo" class="hidden dark:block h-10 w-auto object-contain">
       </a>
       <p class="text-brand-muted dark:text-[#aebed1] text-sm mb-3">
         <i class="fa-solid fa-location-dot text-brand-primary dark:text-brand-darkPrimary mr-1"></i> Ga-Mothiba, Nobody, Polokwane, Limpopo, 0726, South Africa.
@@ -410,7 +409,7 @@
       <a class="block text-brand-muted hover:text-brand-primary dark:text-[#c6d5e7] dark:hover:text-white text-sm my-[0.4rem] transition-colors" href="/about/">About Us</a>
       <a class="block text-brand-muted hover:text-brand-primary dark:text-[#c6d5e7] dark:hover:text-white text-sm my-[0.4rem] transition-colors" href="/services/">Services</a>
       <a class="block text-brand-muted hover:text-brand-primary dark:text-[#c6d5e7] dark:hover:text-white text-sm my-[0.4rem] transition-colors" href="/portfolio/">Portfolio</a>
-      <a class="block text-brand-muted hover:text-brand-primary dark:text-[#c6d5e7] dark:hover:text-white text-sm my-[0.4rem] transition-colors" href="/contact/">Contact Us</a>
+      <a class="block text-brand-muted hover:text-brand-primary dark:text-[#c6d5e7] dark:hover:text-white text-sm my-[0.4rem] transition-colors" href="/forms/contact-form/index.html">Contact Form</a>
     </div>
 
     <!-- Column 3: Connect with Social Icons -->
@@ -437,12 +436,12 @@
       </div>
     </div>
 
-    <!-- Column 4: Subscriber Button -->
+    <!-- Column 4: Subscriber Form & Button -->
     <div>
       <h3 class="font-bold text-base text-brand-text dark:text-white mb-3 border-l-2 border-brand-primary dark:border-brand-darkPrimary pl-2">Newsletter</h3>
       <p class="text-brand-muted dark:text-[#aebed1] text-xs mb-3">Subscribe for our latest IT tips, tech updates and special service offers.</p>
-      <form action="/subscribe/" method="POST" class="flex flex-col gap-2">
-        <input type="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-xs rounded-lg bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-[#aebed1] focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+      <form action="/forms/newsletter-form/index.html" method="POST" class="flex flex-col gap-2">
+        <input type="email" name="email" placeholder="Enter your email" required class="w-full px-3 py-2 text-xs rounded-lg bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-[#aebed1] focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
         <button type="submit" class="w-full px-4 py-2 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] hover:bg-brand-primaryHover dark:hover:bg-blue-400 text-xs font-bold transition-colors cursor-pointer flex items-center justify-center gap-1 shadow-sm">
           <i class="fa-solid fa-paper-plane"></i> Subscribe Now
         </button>
@@ -465,6 +464,8 @@
       <a href="/legal/privacy-policy/" class="hover:text-brand-primary dark:hover:text-white transition-colors">Privacy Policy</a>
       <a href="/legal/terms-and-conditions/" class="hover:text-brand-primary dark:hover:text-white transition-colors">Terms & Conditions</a>
       <a href="/legal/cookie-policy/" class="hover:text-brand-primary dark:hover:text-white transition-colors">Cookie Policy</a>
+      <a href="/legal/disclaimer/index.html" class="hover:text-brand-primary dark:hover:text-white transition-colors">Disclaimer</a>
+      <a href="/legal/data-protection/index.html" class="hover:text-brand-primary dark:hover:text-white transition-colors">Data Protection</a>
     </div>
     <div>
       <span class="text-brand-muted dark:text-[#aebed1]">Website Developer: <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline">www.sekoala.co.za</a></span>
