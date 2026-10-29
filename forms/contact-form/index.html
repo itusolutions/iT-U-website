@@ -231,10 +231,40 @@
     </nav>
   </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300 flex items-center justify-center">
+  
+  <section class="relative max-w-[650px] w-full p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+    
+    <!-- Ambient Glow -->
+    <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-2xl pointer-events-none"></div>
 
-<section class="page-hero"><h1>Contact form</h1><p>Use the main contact page to send an enquiry.</p><a class="button" href="/contact/">Go to contact page</a></section>
+    <!-- Eyebrow Badge -->
+    <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-6">
+      <i class="fa-solid fa-paper-plane text-xs"></i> Direct Inquiry
+    </p>
 
+    <!-- Main Heading -->
+    <h1 class="text-[clamp(2rem,3.5vw,2.8rem)] font-extrabold leading-[1.15] mb-4">
+      Contact Form
+    </h1>
+
+    <!-- Description Paragraph -->
+    <p class="text-brand-muted dark:text-brand-darkMuted text-[1rem] leading-relaxed mb-8 max-w-[500px] mx-auto">
+      Use the main contact page to send an enquiry regarding website development, computer repairs, or IT support.
+    </p>
+
+    <!-- Action Button -->
+    <div class="max-w-[320px] mx-auto">
+      <a class="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline hover:no-underline" href="/contact/">
+        <i class="fa-solid fa-arrow-right"></i> Go to contact page
+      </a>
+    </div>
+
+    <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-6">
+      Prefer direct messaging? Reach out via WhatsApp at <a href="https://wa.me/27711405870" class="underline text-emerald-500 font-semibold">+27 71 140 5870</a>.
+    </p>
+
+  </section>
 </main>
 
 
