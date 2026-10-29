@@ -362,11 +362,80 @@
 </header>
 
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
+  
+  <!-- Page Hero Header -->
+  <section class="relative overflow-hidden mb-10 p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom">
+    <!-- Ambient Glow -->
+    <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-<section class="page-hero"><p class="eyebrow">Legal information</p><h1>Disclaimer</h1><p>Website information is provided for general informational purposes and may be updated.</p></section>
-<section class="section"><h2>General information</h2><p>This page is a starter template and should be reviewed and adapted to match iTu Solutions' actual business practices before publication.</p><h2>Contact</h2><p>For questions about this page, email <a href="mailto:sekoalabopape@gmail.com">sekoalabopape@gmail.com</a>.</p><p><strong>Important:</strong> This template is not legal advice. Confirm the final wording with a qualified professional where necessary.</p></section>
+    <div class="relative z-10 max-w-[800px]">
+      <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-4">
+        <i class="fa-solid fa-scale-balanced text-xs"></i> Legal information
+      </p>
+      <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.1] tracking-tight mb-4">
+        Legal Disclaimer
+      </h1>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-[1.1rem] leading-relaxed">
+        Website information is provided for general informational purposes and may be updated continuously.
+      </p>
+    </div>
+  </section>
 
+  <!-- Content Section -->
+  <section class="max-w-[900px] mx-auto p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
+    
+    <!-- General Information -->
+    <div>
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-brand-primary dark:text-brand-darkPrimary text-lg"></i> General Information
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem]">
+        The information provided by <strong>iTu Solutions</strong> on this website is for general informational and educational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
+      </p>
+    </div>
+
+    <!-- Limitation of Liability -->
+    <div class="pt-6 border-t border-brand-border dark:border-brand-darkBorder">
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-shield-halved text-brand-primary dark:text-brand-darkPrimary text-lg"></i> Technical & Professional Services
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem]">
+        iTu Solutions provides IT technical support, computer maintenance, networking, and website development services tailored to local requirements in Polokwane and surrounding Limpopo areas. Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site.
+      </p>
+    </div>
+
+    <!-- Contact & Notice -->
+    <div class="pt-6 border-t border-brand-border dark:border-brand-darkBorder">
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary text-lg"></i> Contact Information
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem] mb-4">
+        For questions or formal inquiries regarding this Disclaimer page, please contact us directly:
+      </p>
+      
+      <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div>
+          <p class="font-bold text-sm">iTu Solutions Direct Support</p>
+          <a class="text-brand-primary dark:text-brand-darkPrimary hover:underline text-sm font-semibold flex items-center gap-1.5 mt-0.5" href="mailto:sekoalabopape@gmail.com">
+            <i class="fa-solid fa-paper-plane text-xs"></i> sekoalabopape@gmail.com
+          </a>
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] text-xs font-bold transition-all hover:shadow-md no-underline" href="/contact/">
+          Contact Page <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Legal Notice Box -->
+    <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-200 text-xs sm:text-sm leading-relaxed flex items-start gap-3">
+      <i class="fa-solid fa-triangle-exclamation text-amber-500 text-lg shrink-0 mt-0.5"></i>
+      <div>
+        <strong class="font-bold">Important Notice:</strong> Information on this website is subject to change at any time without notice. Confirm final terms, quote specifications, and operational parameters directly with an authorized representative.
+      </div>
+    </div>
+
+  </section>
 </main>
 
 
