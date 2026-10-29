@@ -362,11 +362,94 @@
 </header>
 
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
+  
+  <!-- Page Hero Header -->
+  <section class="relative overflow-hidden mb-10 p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom">
+    <!-- Ambient Glow -->
+    <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-<section class="page-hero"><p class="eyebrow">Legal information</p><h1>Data Protection</h1><p>iTu Solutions aims to handle personal information responsibly and in accordance with applicable South African data protection requirements.</p></section>
-<section class="section"><h2>General information</h2><p>This page is a starter template and should be reviewed and adapted to match iTu Solutions' actual business practices before publication.</p><h2>Contact</h2><p>For questions about this page, email <a href="mailto:sekoalabopape@gmail.com">sekoalabopape@gmail.com</a>.</p><p><strong>Important:</strong> This template is not legal advice. Confirm the final wording with a qualified professional where necessary.</p></section>
+    <div class="relative z-10 max-w-[800px]">
+      <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-4">
+        <i class="fa-solid fa-user-shield text-xs"></i> Legal information
+      </p>
+      <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.1] tracking-tight mb-4">
+        Data Protection Notice
+      </h1>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-[1.1rem] leading-relaxed">
+        iTu Solutions handles personal information responsibly and in accordance with applicable South African data protection requirements (POPIA).
+      </p>
+    </div>
+  </section>
 
+  <!-- Content Section -->
+  <section class="max-w-[900px] mx-auto p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
+    
+    <!-- Compliance Principles -->
+    <div>
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-lock text-brand-primary dark:text-brand-darkPrimary text-lg"></i> Protection Principles
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem]">
+        Under the Protection of Personal Information Act (POPIA) of South Africa, <strong>iTu Solutions</strong> is committed to safeguarding client, user, and partner data. We collect and process personal information strictly for legitimate operational purposes—including web project execution, technical service dispatch, hardware diagnostics, and client support communications.
+      </p>
+    </div>
+
+    <!-- Data Collection & Rights -->
+    <div class="pt-6 border-t border-brand-border dark:border-brand-darkBorder">
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-key text-brand-primary dark:text-brand-darkPrimary text-lg"></i> Your Data Rights
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem] mb-4">
+        You hold fundamental rights regarding your personal information processed through our website forms and technical service tickets:
+      </p>
+      <ul class="space-y-2 text-brand-muted dark:text-brand-darkMuted text-[0.94rem] pl-2">
+        <li class="flex items-start gap-2">
+          <i class="fa-solid fa-check text-emerald-500 text-xs mt-1 shrink-0"></i>
+          <span><strong>Right of Access:</strong> Request details of the personal data we hold about you or your business.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <i class="fa-solid fa-check text-emerald-500 text-xs mt-1 shrink-0"></i>
+          <span><strong>Right to Rectification:</strong> Request correction of inaccurate, incomplete, or outdated information.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <i class="fa-solid fa-check text-emerald-500 text-xs mt-1 shrink-0"></i>
+          <span><strong>Right to Object & Erasure:</strong> Object to processing or request deletion of personal records where applicable under POPIA regulations.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Details for Information Officer -->
+    <div class="pt-6 border-t border-brand-border dark:border-brand-darkBorder">
+      <h2 class="text-xl sm:text-2xl font-bold mb-3 text-brand-text dark:text-brand-darkText flex items-center gap-2">
+        <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary text-lg"></i> Contact Information Officer
+      </h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted leading-relaxed text-[0.98rem] mb-4">
+        For questions regarding data privacy, personal information inquiries, or exercising your statutory rights, contact iTu Solutions:
+      </p>
+      
+      <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div>
+          <p class="font-bold text-sm">Sekoala Daniel Bopape — Lead Information Officer</p>
+          <a class="text-brand-primary dark:text-brand-darkPrimary hover:underline text-sm font-semibold flex items-center gap-1.5 mt-0.5" href="mailto:sekoalabopape@gmail.com">
+            <i class="fa-solid fa-paper-plane text-xs"></i> sekoalabopape@gmail.com
+          </a>
+        </div>
+        <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] text-xs font-bold transition-all hover:shadow-md no-underline" href="/contact/">
+          Submit Query <i class="fa-solid fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Legal Notice Box -->
+    <div class="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-900 dark:text-blue-200 text-xs sm:text-sm leading-relaxed flex items-start gap-3">
+      <i class="fa-solid fa-circle-info text-blue-500 text-lg shrink-0 mt-0.5"></i>
+      <div>
+        <strong class="font-bold">Notice:</strong> This policy statement outlines operational principles. Personal data collected via forms (`forms/contact-form/index.html` and `forms/newsletter-form/index.html`) is retained securely and never sold or shared with third-party unauthorized entities.
+      </div>
+    </div>
+
+  </section>
 </main>
 
 
