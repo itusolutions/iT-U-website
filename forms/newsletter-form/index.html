@@ -250,23 +250,23 @@
       Get practical IT tips, tech updates, security notices, and exclusive web design special offers directly in your inbox.
     </p>
 
-    <!-- Subscription Form -->
-    <form id="newsletter-form" class="space-y-4 max-w-[480px] mx-auto">
+    <!-- Jotform Subscription Form Integration -->
+    <form action="https://submit.jotform.com/submit/262952437131052" method="POST" class="space-y-4 max-w-[480px] mx-auto">
+      <!-- Hidden Jotform Fields required for routing -->
+      <input type="hidden" name="formID" value="262952437131052" />
+      
       <div>
         <label for="subscriber-email" class="sr-only">Email Address</label>
-        <input type="email" id="subscriber-email" name="email" required placeholder="Enter your official email address" class="w-full px-4 py-3.5 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-brand-darkMuted focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary text-center">
+        <input type="email" id="subscriber-email" name="q3_email" required placeholder="Enter your official email address" class="w-full px-4 py-3.5 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-brand-darkMuted focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary text-center">
       </div>
 
-      <button type="submit" id="submit-btn" class="w-full px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
+      <button type="submit" class="w-full px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
         <i class="fa-solid fa-bell"></i> Confirm Subscription
       </button>
     </form>
 
-    <!-- Dynamic Status Message -->
-    <div id="form-status" class="mt-4 text-xs font-semibold"></div>
-
     <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-6">
-      We respect your privacy under <a href="/legal/data-protection/index.html" class="underline hover:text-brand-primary">POPIA</a>. Unsubscribe at any time.
+      We respect your privacy under <a href="/legal/data-protection/index.html" class="underline hover:text-brand-primary">POPIA</a>. Unsubscribe at any time. Or view the form directly on <a href="https://form.jotform.com/262952437131052" target="_blank" rel="noopener noreferrer" class="underline text-brand-primary">Jotform</a>.
     </p>
 
   </section>
