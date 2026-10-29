@@ -231,10 +231,42 @@
     </nav>
   </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300 flex items-center justify-center">
+  
+  <section class="relative max-w-[650px] w-full p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+    
+    <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-2xl pointer-events-none"></div>
 
-<section class="page-hero"><h1>Newsletter</h1><p>Newsletter sign-up is not enabled on this static website starter. Connect a compliant newsletter provider before collecting subscriber information.</p><a href="/contact/">Contact iTu Solutions</a></section>
+    <!-- Badge -->
+    <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-6">
+      <i class="fa-solid fa-envelope-open-text text-xs"></i> Stay Informed
+    </p>
 
+    <h1 class="text-[clamp(2rem,3.5vw,2.8rem)] font-extrabold leading-[1.15] mb-4">
+      Subscribe to Newsletter
+    </h1>
+
+    <p class="text-brand-muted dark:text-brand-darkMuted text-[1rem] leading-relaxed mb-8 max-w-[500px] mx-auto">
+      Get practical IT tips, tech updates, security notices, and exclusive web design special offers directly in your inbox.
+    </p>
+
+    <!-- Subscription Form -->
+    <form action="/forms/newsletter-form/index.html" method="POST" class="space-y-4 max-w-[480px] mx-auto">
+      <div>
+        <label for="subscriber-email" class="sr-only">Email Address</label>
+        <input type="email" id="subscriber-email" name="email" required placeholder="Enter your official email address" class="w-full px-4 py-3.5 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted dark:placeholder-brand-darkMuted focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary text-center">
+      </div>
+
+      <button type="submit" class="w-full px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
+        <i class="fa-solid fa-bell"></i> Confirm Subscription
+      </button>
+    </form>
+
+    <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-6">
+      We respect your privacy under <a href="/legal/data-protection/index.html" class="underline hover:text-brand-primary">POPIA</a>. Unsubscribe at any time.
+    </p>
+
+  </section>
 </main>
 
 
