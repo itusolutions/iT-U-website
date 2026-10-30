@@ -424,44 +424,47 @@
       </div>
     </div>
 
-    <!-- Enquiry Form Card (2 Columns) -->
+    <!-- Jotform Enquiry Form Card (2 Columns) -->
     <div class="lg:col-span-2 p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card">
       <h2 class="text-xl font-bold mb-2 text-brand-text dark:text-brand-darkText">Send an enquiry</h2>
       <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mb-6">
-        This static demo form prepares and opens your email application. It does not send data directly to a server.
+        Submit your project requirements or IT support inquiry directly through our secure form.
       </p>
 
-      <form id="contactForm" class="space-y-5">
+      <form action="https://submit.jotform.com/submit/263021767546056" method="POST" class="space-y-5">
+        <!-- Hidden Jotform Required Routing Field -->
+        <input type="hidden" name="formID" value="263021767546056" />
+
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label for="name" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Your Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Sekoala Bopape" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+            <input type="text" id="name" name="q3_fullname1" required placeholder="Sekoala Bopape" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
           </div>
           
           <div>
             <label for="email" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Email Address *</label>
-            <input type="email" id="email" name="email" type="email" required placeholder="name@example.com" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+            <input type="email" id="email" name="q4_email2" required placeholder="name@example.com" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
           </div>
         </div>
 
         <div>
           <label for="topic" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">What do you need? *</label>
-          <select id="topic" name="topic" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
-            <option>Website development</option>
-            <option>Computer repairs</option>
-            <option>Software installation</option>
-            <option>IT support</option>
-            <option>Other enquiry</option>
+          <select id="topic" name="q5_dropdown3" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
+            <option value="Website development">Website development</option>
+            <option value="Computer repairs">Computer repairs</option>
+            <option value="Software installation">Software installation</option>
+            <option value="IT support">IT support</option>
+            <option value="Other enquiry">Other enquiry</option>
           </select>
         </div>
 
         <div>
           <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Message *</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project requirements or technical needs..." class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary"></textarea>
+          <textarea id="message" name="q6_textarea4" rows="5" required placeholder="Tell us about your project requirements or technical needs..." class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary"></textarea>
         </div>
 
         <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
-          <i class="fa-solid fa-envelope-open-text"></i> Prepare email
+          <i class="fa-solid fa-paper-plane"></i> Submit Enquiry
         </button>
       </form>
     </div>
