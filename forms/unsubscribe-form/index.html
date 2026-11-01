@@ -367,8 +367,74 @@
   
 <main id="main">
 
-<section class="page-hero"><h1>Newsletter</h1><p>Newsletter sign-up is not enabled on this static website starter. Connect a compliant newsletter provider before collecting subscriber information.</p><a href="/contact/">Contact iTu Solutions</a></section>
+<style>
+  /* Suppress default Jotform footer promo text and links */
+  .jotform-ad, 
+  .jt-branding, 
+  #jfCard-branding, 
+  .jfBranding, 
+  a[href*="jotform.com"],
+  p:has(a[href*="jotform.com"]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    line-height: 0 !important;
+  }
+</style>
 
+<div class="wrapper" contenteditable="false">
+  <div class="col-1" contenteditable="false">
+    <img class="tyBgImage" src="https://cdn.jotfor.ms/img/Thankyou-iconV2.png?v=0.1" alt="unsubscribe icon" />
+  </div>
+  <div class="col-2" contenteditable="true">
+    <div class="thankyou-wrapper">
+      <p class="thank-you-icon" style="text-align: center; margin-bottom: 20px;">
+        <img 
+          src="https://www.it-u.co.za/assets/images/logo/logo-light-mode.png" 
+          alt="iTu Solutions Logo" 
+          style="display: inline-block; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; border: 2px solid #ECEDF2;" 
+        />
+      </p>
+      <div style="text-align: center;">
+        <h1 class="thankyou-main-text ty-text" style="text-align: center; color: #0a1551; font-family: Helvetica, sans-serif; margin-bottom: 8px;">
+          You Have Been Unsubscribed
+        </h1>
+        <p class="thankyou-sub-text ty-text" style="text-align: center; color: #556681; font-family: Helvetica, sans-serif; margin-bottom: 24px;">
+          Your email address has been successfully removed from the <strong>iTu Solutions</strong> newsletter list.
+        </p>
+
+        <!-- Redirect CTA Button -->
+        <div style="margin-top: 20px;">
+          <a href="https://www.it-u.co.za/forms/contact-form/contact/index.html" style="background-color: #0056b3; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; font-family: Helvetica, sans-serif; display: inline-block; transition: background-color 0.3s ease;">
+            Need help? Contact Us
+          </a>
+        </div>
+        <p style="font-size: 12px; color: #8892b0; margin-top: 16px; font-family: Helvetica, sans-serif;">
+          Redirecting to our contact page in <span id="countdown">5</span> seconds...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Automatic Client-Side Redirect Script -->
+<script type="text/javascript">
+  (function() {
+    var seconds = 5;
+    var countdownEl = document.getElementById('countdown');
+    var timer = setInterval(function() {
+      seconds--;
+      if (countdownEl) {
+        countdownEl.textContent = seconds;
+      }
+      if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "https://www.it-u.co.za/forms/contact-form/contact/index.html";
+      }
+    }, 1000);
+  })();
+</script>
 </main>
 
 <footer class="site-footer">
