@@ -368,93 +368,76 @@
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
   
   <!-- Page Hero Header -->
-  <section class="relative overflow-hidden mb-10 p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom">
+  <section class="relative overflow-hidden mb-10 p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center max-w-[800px] mx-auto">
     <!-- Ambient Glow -->
     <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="relative z-10 max-w-[800px]">
+    <div class="relative z-10">
       <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-4">
-        <i class="fa-solid fa-bell-slash text-xs"></i> Unsubscribe
+        <i class="fa-solid fa-envelope-circle-check text-xs"></i> Newsletter Preferences
       </p>
-      <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-extrabold leading-[1.1] tracking-tight mb-4">
-        Manage your subscription settings.
+      <h1 class="text-[clamp(2rem,3.5vw,3rem)] font-extrabold leading-[1.1] tracking-tight mb-4">
+        Unsubscribe from Updates
       </h1>
-      <p class="text-brand-muted dark:text-brand-darkMuted text-[1.1rem] leading-relaxed">
-        We're sorry to see you go. Enter your email address below to unsubscribe from iTu Solutions newsletter updates.
+      <p class="text-brand-muted dark:text-brand-darkMuted text-[1rem] sm:text-[1.1rem] leading-relaxed max-w-[600px] mx-auto">
+        We're sorry to see you go! Enter your email address below to stop receiving newsletter updates from <strong>iTu Solutions</strong>.
       </p>
     </div>
   </section>
 
-  <!-- Split Content Grid -->
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-[1120px] mx-auto">
+  <!-- Form Container (Centered Card) -->
+  <div class="max-w-[560px] mx-auto p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card">
     
-    <!-- Info Panel (1 Column) -->
-    <div class="lg:col-span-1 p-6 sm:p-8 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between gap-6">
+    <form action="https://submit.jotform.com/submit/263018033090042" method="POST" class="space-y-6">
+      <!-- Hidden Jotform Required Routing & Redirect Fields -->
+      <input type="hidden" name="formID" value="263018033090042" />
+      <input type="hidden" name="redirectUrl" value="https://www.it-u.co.za/forms/unsubscribe-form/index.html?status=success" />
+
       <div>
-        <h2 class="text-xl font-bold mb-4 text-brand-text dark:text-brand-darkText border-l-2 border-brand-primary dark:border-brand-darkPrimary pl-2">
-          What to expect
-        </h2>
-        
-        <div class="space-y-4 text-sm text-brand-muted dark:text-brand-darkMuted">
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-envelope-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-            <div>
-              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">Instant Removal</strong>
-              <span>Your email will be removed from future automated broadcasts immediately.</span>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-shield-halved text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-            <div>
-              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">POPIA Compliant</strong>
-              <span>We respect your privacy and honor all opt-out preferences instantly.</span>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-3">
-            <i class="fa-solid fa-headset text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-            <div>
-              <strong class="block text-brand-text dark:text-brand-darkText font-semibold">Need Assistance?</strong>
-              <a href="/forms/contact-form/index.html" class="hover:underline text-brand-primary dark:text-brand-darkPrimary font-semibold">Contact Support</a>
-            </div>
-          </div>
+        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">
+          Email Address *
+        </label>
+        <div class="relative">
+          <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-brand-muted dark:text-brand-darkMuted text-sm"></i>
+          <input 
+            type="email" 
+            id="email" 
+            name="q2_email0" 
+            required 
+            placeholder="name@example.com" 
+            class="w-full pl-11 pr-4 py-3.5 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary transition-all"
+          >
         </div>
       </div>
 
-      <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-        <p class="text-xs font-bold text-brand-text dark:text-brand-darkText mb-1">
-          <i class="fa-solid fa-rotate-left text-brand-primary mr-1"></i> Mind changed?
-        </p>
-        <p class="text-xs text-brand-muted dark:text-brand-darkMuted">
-          You can re-subscribe anytime via our <a href="/forms/newsletter-form/index.html" class="text-brand-primary dark:text-brand-darkPrimary underline font-medium">Newsletter page</a>.
-        </p>
+      <button type="submit" class="w-full px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-md hover:shadow-red-600/30 transition-all cursor-pointer flex items-center justify-center gap-2">
+        <i class="fa-solid fa-user-minus"></i> Unsubscribe
+      </button>
+
+      <div class="text-center pt-2">
+        <a href="/" class="text-xs text-brand-muted dark:text-brand-darkMuted hover:text-brand-primary dark:hover:text-white transition-colors inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left text-[10px]"></i> Changed your mind? Return to Homepage
+        </a>
       </div>
-    </div>
-
-    <!-- Unsubscribe Form Card (2 Columns) -->
-    <div class="lg:col-span-2 p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card">
-      <h2 class="text-xl font-bold mb-2 text-brand-text dark:text-brand-darkText">Unsubscribe from Newsletter</h2>
-      <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mb-6">
-        Please enter the email address associated with your subscription.
-      </p>
-
-      <form action="https://submit.jotform.com/submit/263018033090042" method="POST" class="space-y-5">
-        <!-- Hidden Jotform Required Routing Field -->
-        <input type="hidden" name="formID" value="263018033090042" />
-
-        <div>
-          <label for="email" class="block text-xs font-bold uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-2">Email Address *</label>
-          <input type="email" id="email" name="q2_email0" required placeholder="name@example.com" class="w-full px-4 py-3 text-sm rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white placeholder-brand-muted/60 dark:placeholder-brand-darkMuted/60 focus:outline-none focus:border-brand-primary dark:focus:border-brand-darkPrimary">
-        </div>
-
-        <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm hover:shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer flex items-center justify-center gap-2">
-          <i class="fa-solid fa-paper-plane"></i> Confirm Unsubscribe
-        </button>
-      </form>
-    </div>
-
+    </form>
   </div>
+
+  <!-- Developer Footer Attribution -->
+  <div class="max-w-[560px] mx-auto text-center mt-8 pt-4 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
+
 </main>
 
 <footer class="site-footer">
