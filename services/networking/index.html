@@ -362,10 +362,459 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">iTu Solutions service</p><h1>Networking</h1><p>Basic network setup and troubleshooting for connected devices.</p></section>
-<section class="section"><h2>How we can help</h2><p>Discuss Wi-Fi, connectivity, router setup and local network issues. Final scope depends on the environment.</p><h2>Getting started</h2><p>Contact us with your requirements, device details or project goals. We will discuss availability, scope and any relevant costs before work begins.</p><a class="button" href="/contact/">Ask about networking</a> <a class="button button-outline" href="/services/">All services</a></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- PAGE HERO -->
+    <section id="networking-hero" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-network-wired text-xs"></i> ITU SOLUTIONS | NETWORK SOLUTIONS
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          Networking Solutions in Polokwane and Limpopo
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Build a more reliable connected environment with practical networking assistance for homes, small businesses, and growing organisations. <strong>iTu Solutions</strong> helps you understand, organise, and improve how your devices communicate across your network.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Discuss Your Network Requirements
+          </a>
+          <a href="#networking-planning" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-sitemap"></i> Explore Infrastructure
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NETWORKING INTRODUCTION -->
+    <section id="networking-introduction" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 text-center max-w-[850px] mx-auto">
+      <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+        CONNECTIVITY FOUNDATIONS
+      </p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Connecting Your Digital Environment</h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        A dependable network is an important part of modern digital operations. From accessing the internet and sharing resources to connecting computers, printers, and other compatible equipment, a properly configured network helps devices communicate more effectively.
+      </p>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        iTu Solutions provides practical networking assistance focused on connectivity, network organisation, and configuration. Whether establishing a new network or reviewing an existing setup, we help assess requirements and identify suitable solutions.
+      </p>
+    </section>
+
+    <!-- NETWORK PLANNING -->
+    <section id="networking-planning" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          INFRASTRUCTURE ASSESSMENT
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Network Planning and Assessment</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        A successful network starts with understanding the environment in which it will operate. The number of connected devices, physical layout, internet requirements, and intended use all influence the appropriate network arrangement.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="font-bold text-base">Our network planning discussions consider:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>The number and types of devices that need network access.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Where computers, printers, and equipment are positioned.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Internet access requirements across different rooms or work areas.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Optimal router and wireless access point placement.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Selecting wired Ethernet, wireless Wi-Fi, or hybrid arrangements.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Future expansion as user counts and device numbers increase.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WIRED vs WIRELESS (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- WIRED NETWORKS -->
+      <section id="wired-networks" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          ETHERNET & CABLE STABILITY
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Wired Network Connections</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Wired networking provides a consistent connection for equipment in fixed locations, essential for workstations, network printers, and servers.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Fixed office workstations needing reliable bandwidth</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Devices near routers or network switches</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Environments where wireless coverage is inconsistent</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Ethernet cabling checks & connection diagnostics</li>
+        </ul>
+      </section>
+
+      <!-- WIRELESS NETWORKS -->
+      <section id="wireless-networks" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          WI-FI CONFIGURATION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Wireless Network Configuration</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Wireless connectivity enables mobile devices to connect cleanly. We optimize configuration to overcome building interference and range issues.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Router positioning and Wi-Fi signal coverage</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> SSID configuration and secure access settings</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Channel interference reduction & access points</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Isolated guest network arrangements</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- EQUIPMENT & DEVICE CONNECTIVITY -->
+    <section id="hardware-and-devices" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          ROUTERS, SWITCHES & DEVICES
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Equipment Setup & Device Interconnection</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Network hardware coordinates local traffic. Ensuring compatible equipment communicates cleanly makes daily activities simpler.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-router text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Routers & Switches</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Basic router setup, switch connection planning, and Ethernet port mapping.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-desktop text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Workstations & Laptops</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Connecting Windows PCs, laptops, and mobile devices to local networks.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-print text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Network Printers</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Shared printing setup across multiple computers and wireless devices.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-server text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">NAS & Smart Devices</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Network-attached storage, smart TVs, and IoT hardware integration.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LOCAL AREA NETWORKS & PERFORMANCE (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- LAN SETUP -->
+      <section id="lan-setup" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LOCAL AREA NETWORKS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Local Area Network (LAN) Setup</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          A properly organized LAN allows authorized users inside a home, office, or classroom to share folders, access printers, and communicate securely.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Connecting multiple computers in one building</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Shared resource & printer access setup</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> IP addressing and DHCP/Static allocation review</li>
+        </ul>
+      </section>
+
+      <!-- PERFORMANCE DIAGNOSTICS -->
+      <section id="network-performance" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          CONNECTIVITY ASSESSSMENT
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Performance Troubleshooting</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Networks can suffer intermittent drops, slow local file transfers, or signal dead spots. We diagnose root hardware or configuration causes.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Resolving unstable or dropping wireless signals</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Fixing device-to-device connection dropouts</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Identifying outdated or failing network hardware</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- BENEFICIARIES & SECURITY -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- WHO CAN BENEFIT -->
+      <section id="who-can-benefit" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          TAILORED SETUPS
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Networking for Homes & Businesses</h2>
+        <div class="space-y-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <div>
+            <strong class="text-brand-text dark:text-white block font-bold">Home Networking:</strong>
+            Connect family devices, smart TVs, and ensure seamless Wi-Fi for study and entertainment.
+          </div>
+          <div>
+            <strong class="text-brand-text dark:text-white block font-bold">Small Business & Offices:</strong>
+            Reliable connectivity for workstations, billing equipment, shared files, and office printers.
+          </div>
+          <div>
+            <strong class="text-brand-text dark:text-white block font-bold">Remote Workspaces:</strong>
+            Dedicated connectivity for remote workers requiring dependable VoIP and video conferencing.
+          </div>
+        </div>
+      </section>
+
+      <!-- SECURITY & RESPONSIBLE ACCESS -->
+      <section id="network-security" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          ACCESS CONTROL
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Responsible Access & Security</h2>
+        <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+          An unsecured wireless router can expose connected devices to unauthorized access. We help implement standard router security practices:
+        </p>
+        <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-1">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-lock text-brand-primary dark:text-brand-darkPrimary text-xs"></i> WPA2/WPA3 strong Wi-Fi encryption keys</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-key text-brand-primary dark:text-brand-darkPrimary text-xs"></i> Changing default router admin credentials</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-primary dark:text-brand-darkPrimary text-xs"></i> Updating router firmware and isolating guest Wi-Fi</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- SERVICE APPROACH PROCESS -->
+    <section id="service-approach" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          METHODOLOGY
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">A Practical, Requirements-Based Approach</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">1. Understand</strong>
+          Establish the purpose, layout, and user requirements.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">2. Review</strong>
+          Assess existing cabling, routers, switches, and signal maps.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">3. Identify</strong>
+          Pinpoint sources of dropped connections or bandwidth bottlenecks.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">4. Recommend</strong>
+          Discuss cost-effective hardware or configuration updates.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">5. Configure</strong>
+          Execute approved network adjustments within agreed scope.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">6. Verify</strong>
+          Test network throughput, printer sharing, and connection stability.
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED SERVICES -->
+    <section id="related-services" class="space-y-6">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          MORE IT SERVICES
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Explore Related Solutions</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="/services/it-support/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">IT Support</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Assistance with everyday workstation and device challenges.</p>
+        </a>
+
+        <a href="/services/cybersecurity/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">Cybersecurity</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Improving security awareness and device hardening.</p>
+        </a>
+
+        <a href="/services/computer-repairs/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">Computer Repairs</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Hardware diagnostics for desktop and laptop computers.</p>
+        </a>
+
+        <a href="/services/data-backup/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">Data Backup</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Protecting critical files and configuring cloud/local backups.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="networking-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          FAQ
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Common questions regarding network setup and troubleshooting.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help set up a home Wi-Fi network?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We assist with router configuration, SSID security settings, and Wi-Fi expansion across home areas.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help with a network that keeps disconnecting?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            We assess symptoms to isolate causes such as Wi-Fi channel interference, cabling faults, router memory locks, or ISP issues.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do I need to buy a new router?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Not necessarily. We review existing equipment first. Replacement is only advised if the current device is faulty or lacks needed features.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help connect a network printer?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We configure static/DHCP IP settings on compatible wireless or Ethernet printers for seamless access across computers.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you provide networking services in Polokwane?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            iTu Solutions is based in Ga-Mothiba near Polokwane, Limpopo, serving local residential and small business clients.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="networking-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          OPTIMIZE YOUR NETWORK
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Let's Discuss Your Networking Requirements
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Tell us about your environment, the devices you use, and the connectivity challenges you are experiencing.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request Networking Assistance
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
 
