@@ -362,10 +362,485 @@
   </nav>
 </header>
   
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">iTu Solutions service</p><h1>IT Support</h1><p>Practical IT support for setup, troubleshooting and everyday technical problems.</p></section>
-<section class="section"><h2>How we can help</h2><p>Get help diagnosing common issues and identifying a sensible route to resolution.</p><h2>Getting started</h2><p>Contact us with your requirements, device details or project goals. We will discuss availability, scope and any relevant costs before work begins.</p><a class="button" href="/contact/">Ask about it support</a> <a class="button button-outline" href="/services/">All services</a></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- PAGE HERO -->
+    <section id="it-support-introduction" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-headset text-xs"></i> iTu Solutions | Technical Assistance
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          IT Support in Polokwane
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Reliable technology starts with having the right technical assistance when problems arise. <strong>iTu Solutions</strong> provides practical IT support for computer users, home offices, entrepreneurs, and small businesses.
+          </p>
+          <p>
+            From everyday technical questions to more complicated computer and connectivity issues, get assistance in understanding problems and identifying appropriate solutions.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request IT Support
+          </a>
+          <a href="#support-areas" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-cubes"></i> Explore Support Areas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUPPORT AREAS -->
+    <section id="support-areas" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          TECHNICAL ASSISTANCE
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">What Can Our IT Support Help You With?</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Everyday technology problems can interrupt work, communication, and access to important information. Our IT support covers a range of common technical situations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-power-off text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Startup & Login Problems</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assistance investigating common login difficulties, user profile problems, startup errors, and issues preventing access to a computer.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-envelope-circle-check text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Email & Account Troubleshooting</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Help investigating email configuration problems, account access difficulties, synchronisation issues, and application errors.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-print text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Printer & Peripheral Support</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assistance with compatible printers, scanners, keyboards, mice, external storage drives, and computer accessories.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-wifi text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Internet Access Problems</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Technical investigation of connection difficulties, browser access problems, device connectivity, and network settings.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-triangle-exclamation text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Application Errors</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Help identifying application failures, unexpected error messages, freezing programmes, and software configuration issues.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-chalkboard-user text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Computer User Guidance</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Practical guidance for everyday computer tasks, system settings, file handling, and the use of common applications.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- REMOTE SUPPORT -->
+    <section id="remote-it-support" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          ASSISTANCE OPTIONS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Remote IT Support & Technical Assistance</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Some technical issues can be investigated without physically accessing the computer. Remote assistance may be suitable for software configuration problems, application errors, and user guidance requests.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="font-bold text-base">When remote assistance may be appropriate:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Basic software configuration and troubleshooting.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Guidance with computer settings and application options.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Investigation of certain browser and email problems.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Assistance with supported account and application settings.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Guidance through routine technical procedures.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-xs text-brand-muted dark:text-brand-darkMuted italic">
+        Remote access is arranged only with customer permission. Availability depends on the problem, internet connectivity, and device compatibility.
+      </p>
+    </section>
+
+    <!-- BUSINESS & EMAIL SUPPORT (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- BUSINESS SUPPORT -->
+      <section id="business-it-support" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          BUSINESS TECHNOLOGY
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Support for Small Businesses</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Even a small technical problem can affect administration, communication, and daily operations. iTu Solutions provides practical support for small business environments and home-based offices.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Workstation configuration & user assistance</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Office application troubleshooting</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Printer & scanner connectivity assistance</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Email access & configuration investigations</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> File access & shared resource troubleshooting</li>
+        </ul>
+      </section>
+
+      <!-- EMAIL SUPPORT -->
+      <section id="email-support" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          COMMUNICATION TECHNOLOGY
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Email & Communication Support</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Email remains a critical communication channel. Configuration problems can block messages, attachments, or correspondence access.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Email application configuration difficulties</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Incoming & outgoing mail troubleshooting</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Mailbox synchronisation errors</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Incorrect server or connection settings</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Attachment access and download fixes</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- DEVICE & PERIPHERAL SUPPORT -->
+    <section id="device-support" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          COMPUTER EQUIPMENT
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Peripheral Devices & Accessory Support</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Computers depend on additional hardware. When an accessory stops functioning or is unrecognised, it halts productivity.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-print text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Printers & Scanners</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Printer detection, driver setup, scanner configuration, and communication error resolution.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-usb text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">USB & External Storage</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            USB device recognition troubleshooting and external hard drive connectivity support.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-keyboard text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Keyboards & Mice</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Wired and wireless input device configuration, Bluetooth pairing, and response fixes.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-display text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Display & Monitors</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Monitor display checks, resolution adjustments, and cable connection troubleshooting.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- USER GUIDANCE & RECURRING PROBLEMS (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- USER GUIDANCE -->
+      <section id="user-technology-guidance" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          DIGITAL SKILLS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer Guidance for Everyday Users</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Not every challenge requires a repair. Users often need clear instructions to understand a computer function or complete a task.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Managing files, folders & document locations</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Understanding common Windows settings</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Using email and web browsers efficiently</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Recognising suspicious links and unsafe downloads</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Basic digital organisation practices</li>
+        </ul>
+      </section>
+
+      <!-- RECURRING PROBLEMS -->
+      <section id="recurring-it-problems" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          PROBLEM INVESTIGATION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Understanding Recurring Problems</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          When the same technical problem returns, temporary fixes fail to address the root cause. We investigate underlying triggers.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Computers repeatedly losing internet connection</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Applications freezing or closing unexpectedly</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Printers disconnecting after system restarts</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Repeated login or user profile errors</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Recurring system error notifications</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- SUPPORT READINESS & DOCUMENTATION -->
+    <section id="support-readiness" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          BEFORE REQUESTING SUPPORT
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">How to Prepare for an IT Support Request</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Providing accurate information helps establish what needs to be investigated. Consider preparing the following details before contacting iTu Solutions:
+      </p>
+
+      <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">1. Describe the problem</strong>
+          Explain what is happening and what you expected the device to do.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">2. Identify affected equipment</strong>
+          Provide computer type, model, and operating system details.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">3. Include error messages</strong>
+          Write down error text or provide a screenshot (remove private data).
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">4. Explain timeline</strong>
+          Mention whether the issue started after an update or hardware change.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">5. Describe previous attempts</strong>
+          Explain any troubleshooting steps already performed.
+        </li>
+      </ol>
+
+      <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs flex items-center gap-3">
+        <i class="fa-solid fa-triangle-exclamation text-base shrink-0"></i>
+        <span><strong>Security Notice:</strong> Never send passwords, banking details, or OTP pins in an ordinary support enquiry.</span>
+      </div>
+    </section>
+
+    <!-- LOCAL IT SERVICES BANNER -->
+    <section id="local-it-support" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 max-w-[700px]">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LOCAL TECHNICAL ASSISTANCE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer & IT Support in Ga-Mothiba & Polokwane</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          iTu Solutions is based in Ga-Mothiba, Nobody, Polokwane, Limpopo. We welcome enquiries from individuals, home offices, and small businesses seeking practical IT support.
+        </p>
+      </div>
+      <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline whitespace-nowrap shrink-0 flex items-center gap-2">
+        <i class="fa-solid fa-location-arrow"></i> Contact iTu Solutions
+      </a>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="it-support-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          IT SUPPORT INFORMATION
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Everything you need to know about our IT support services.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>What types of IT problems can you help with?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            We discuss common computer, software, email, peripheral, connectivity, and user configuration problems.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you assist with Windows computer problems?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We discuss common Windows troubleshooting, configuration, application, and user-related problems.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help with printer problems?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            We investigate common printer connection, recognition, and configuration issues for compatible equipment.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you provide remote IT support?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Some technical issues can be handled remotely, subject to compatibility, connectivity, and your permission.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help my small business with computer problems?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We discuss support requirements for small business workstations, office applications, and common technology problems.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>How much does IT support cost?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Costs depend on technical complexity, time required, and whether remote or on-site assistance is suitable.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="it-support-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LET'S GET YOUR TECHNOLOGY WORKING
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Having a Technical Problem? Let's Investigate It.
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Tell us what is happening, which device is affected, and when the problem started. We can discuss technical requirements and next steps.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request IT Support
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
 
