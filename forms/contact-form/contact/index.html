@@ -371,7 +371,7 @@
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
   
   <!-- Single Row with 2 Columns -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-[1120px] mx-auto">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-[1120px] mx-auto mb-12">
     
     <!-- COLUMN 1: Address, Contact Information & Social Media Icons -->
     <div class="p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
@@ -444,27 +444,49 @@
       </div>
     </div>
 
-    <!-- COLUMN 2: Embedded Jotform -->
-    <div class="p-4 sm:p-6 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card overflow-hidden">
+    <!-- COLUMN 2: Embedded Jotform with Footer Suppression -->
+    <div class="p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card overflow-hidden">
+      <style>
+        /* Suppress Jotform default footers, ads, and branding wrappers */
+        .formFooter-wrapper,
+        .formFooter,
+        .jotform-ad,
+        .jt-branding,
+        #jfCard-branding,
+        .form-submit-footer {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          height: 0 !important;
+          max-height: 0 !important;
+          overflow: hidden !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .jotform-form {
+          background: transparent !important;
+        }
+      </style>
       <script type="text/javascript" src="https://form.jotform.com/jsform/263050173292047"></script>
     </div>
 
   </div>
 
   <!-- Developer Footer Attribution -->
-  <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
-    <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
-    <span>Website Developer:</span>
-    <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
-      <!-- Light Mode Logo (Circular) -->
-      <img src="assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
-      <!-- Dark Mode Logo (Circular) -->
-      <img src="assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
-      <span>www.sekoala.co.za</span>
-      <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-    </a>
-  </span>
-</div>
+  <div class="max-w-[1120px] mx-auto text-center pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Logo (Circular) -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Logo (Circular) -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
   
