@@ -370,10 +370,32 @@
 
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
   
+  <!-- Jotform Footer Suppression Stylesheet Override -->
+  <style>
+    .formFooter-wrapper,
+    .formFooter,
+    .jotform-ad,
+    .jt-branding,
+    #jfCard-branding,
+    .form-submit-footer {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      max-height: 0 !important;
+      overflow: hidden !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .jotform-form {
+      background: transparent !important;
+    }
+  </style>
+
   <!-- Single Row with 2 Columns -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-[1120px] mx-auto mb-12">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start max-w-[1120px] mx-auto">
     
-    <!-- COLUMN 1: Address, Contact Information & Social Media Icons -->
+    <!-- COLUMN 1: Address, Contact Information, Social Media Icons & Google Map -->
     <div class="p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
       <div>
         <span class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-3.5 py-1 rounded-full mb-4">
@@ -442,38 +464,25 @@
           </a>
         </div>
       </div>
+
+      <!-- Embedded Google Map (iT-U Location) -->
+      <div class="pt-4 border-t border-brand-border dark:border-[#2a3a50]">
+        <h4 class="font-bold text-xs uppercase tracking-wider text-brand-muted dark:text-brand-darkMuted mb-3">Our Location</h4>
+        <div class="w-full h-64 rounded-2xl overflow-hidden border border-brand-border dark:border-[#2a3a50]">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2169.5312692557027!2d29.668597702810434!3d-23.864708694972958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6a3738b4cd0c1e8f%3A0xf8ac26af66df5c95!2siT-U!5e0!3m2!1sen!2sza!4v1793607213070!5m2!1sen!2sza" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
     </div>
 
-    <!-- COLUMN 2: Embedded Jotform with Footer Suppression -->
-    <div class="p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card overflow-hidden">
-      <style>
-        /* Suppress Jotform default footers, ads, and branding wrappers */
-        .formFooter-wrapper,
-        .formFooter,
-        .jotform-ad,
-        .jt-branding,
-        #jfCard-branding,
-        .form-submit-footer {
-          display: none !important;
-          visibility: hidden !important;
-          opacity: 0 !important;
-          height: 0 !important;
-          max-height: 0 !important;
-          overflow: hidden !important;
-          margin: 0 !important;
-          padding: 0 !important;
-        }
-        .jotform-form {
-          background: transparent !important;
-        }
-      </style>
+    <!-- COLUMN 2: Embedded Jotform -->
+    <div class="p-4 sm:p-6 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card overflow-hidden">
       <script type="text/javascript" src="https://form.jotform.com/jsform/263050173292047"></script>
     </div>
 
   </div>
 
   <!-- Developer Footer Attribution -->
-  <div class="max-w-[1120px] mx-auto text-center pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-4 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
     <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
       <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
       <span>Website Developer:</span>
