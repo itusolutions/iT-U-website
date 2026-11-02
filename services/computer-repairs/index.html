@@ -363,10 +363,465 @@
 </header>
 
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">iTu Solutions service</p><h1>Computer Repairs</h1><p>Computer troubleshooting and repair assistance in Polokwane and surrounding areas.</p></section>
-<section class="section"><h2>How we can help</h2><p>Describe the symptoms, device model and recent changes so the issue can be assessed and the next steps discussed.</p><h2>Getting started</h2><p>Contact us with your requirements, device details or project goals. We will discuss availability, scope and any relevant costs before work begins.</p><a class="button" href="/contact/">Ask about computer repairs</a> <a class="button button-outline" href="/services/">All services</a></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- PAGE HERO -->
+    <section id="computer-repairs-introduction" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-screwdriver-wrench text-xs"></i> iTu Solutions | Computer Repair Services
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          Computer Repairs in Polokwane
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Is your laptop or desktop computer experiencing technical problems? <strong>iTu Solutions</strong> provides computer troubleshooting, fault assessment, and repair assistance for compatible computer equipment.
+          </p>
+          <p>
+            From unexpected shutdowns and startup failures to hardware-related concerns, we help investigate computer problems and identify appropriate repair options.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request a Repair Assessment
+          </a>
+          <a href="#repair-services" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-cubes"></i> Explore Repair Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REPAIR SERVICES -->
+    <section id="repair-services" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          COMPUTER REPAIR CAPABILITIES
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Computer Repair & Troubleshooting Services</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Computer faults can originate from different components and operating conditions. Identifying the source of a problem is an important step towards selecting a suitable repair.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-laptop text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Laptop Repair Assessment</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Investigation of common laptop problems involving power, charging, display behaviour, overheating, connectivity, and general device operation.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-desktop text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Desktop Troubleshooting</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assessment of desktop computer faults involving startup, internal components, power connections, display output, and unexpected system behaviour.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-microchip text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Hardware Diagnostics</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Investigation of possible hardware faults involving memory, storage devices, cooling systems, power supplies, and internal components.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-temperature-high text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Overheating Problems</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assessment of excessive heat, unusual fan activity, ventilation problems, and thermal-related shutdowns.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-bolt text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Power & Charging Problems</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Investigation of computers that fail to power on, experience charging difficulties, or shut down unexpectedly.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-tv text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Display & Screen Problems</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assessment of common display issues, blank screens, external monitor connection problems, and unusual visual behavior.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- HARDWARE DIAGNOSTICS -->
+    <section id="hardware-diagnostics" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          TECHNICAL DIAGNOSIS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer Hardware Diagnostics & Fault Identification</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        A computer may appear completely faulty when the actual cause is a single failing component or connection. Proper assessment helps distinguish between hardware-related and software-related symptoms.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="font-bold text-base">Components that may require investigation:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>RAM:</strong> Memory-related errors, instability, and unexpected system crashes.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>Storage drives:</strong> Hard disk or solid-state drive detection problems and storage faults.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>Cooling components:</strong> Fan problems, restricted airflow, and overheating symptoms.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>Power supply:</strong> Power delivery concerns and unexpected shutdowns.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>Motherboard:</strong> Possible system board faults requiring further technical assessment.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span><strong>Display components:</strong> Screen, cable, graphics output, and monitor-related problems.</span>
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-xs text-brand-muted dark:text-brand-darkMuted italic">
+        Component testing and repair options depend on device design, available equipment, fault symptoms, and availability of replacement parts.
+      </p>
+    </section>
+
+    <!-- SLOW COMPUTER & STARTUP FAILURES (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- SLOW COMPUTER -->
+      <section id="slow-computer-repairs" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          COMPUTER PERFORMANCE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Diagnosing Slow Computers</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          A computer that takes too long to start, freezes during normal use, or struggles to open applications may have an underlying hardware, storage, or resource problem.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Insufficient RAM for current workloads</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Storage drives experiencing performance or health issues</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Excessive background processes</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Limited free storage capacity</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Thermal throttling from high operating temperatures</li>
+        </ul>
+      </section>
+
+      <!-- STARTUP PROBLEMS -->
+      <section id="computer-startup-failures" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          STARTUP TROUBLESHOOTING
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer Not Starting Correctly?</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Startup problems prevent access to important files. Symptoms range from a completely unresponsive computer to a device failing to load its operating system.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Computer powers on with a blank screen</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Computer repeatedly restarts during startup</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Operating system fails to load</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Boot device cannot be detected</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> System enters automatic recovery screen</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- STORAGE AND DATA -->
+    <section id="storage-device-assessment" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          STORAGE & DATA AWARENESS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Hard Drive and SSD Problems</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Storage devices hold operating system files, applications, and personal information. A failing drive can cause slow performance, file corruption, and potential data loss.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <strong class="text-brand-text dark:text-white block mb-1">Unusual mechanical sounds</strong> Clicking or whirring noises coming from mechanical hard drives.
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <strong class="text-brand-text dark:text-white block mb-1">Disk read/write errors</strong> Repeated errors when saving, opening, or modifying files.
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <strong class="text-brand-text dark:text-white block mb-1">Disappearing storage</strong> Storage devices failing to appear during system detection or boot.
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <strong class="text-brand-text dark:text-white block mb-1">System freezes</strong> Unexpected system lockups during file transfers or disk operations.
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs flex items-center gap-3">
+        <i class="fa-solid fa-triangle-exclamation text-base shrink-0"></i>
+        <span><strong>Data Warning:</strong> If a drive is physically failing, continued use increases data loss risk. Avoid unnecessary reinstallation attempts. Data recovery is a separate specialist service.</span>
+      </div>
+    </section>
+
+    <!-- PHYSICAL DAMAGE & COMPUTER MAINTENANCE (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- PHYSICAL DAMAGE -->
+      <section id="physical-computer-damage" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          DEVICE CONDITION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Physical Damage Assessment</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Physical damage affects reliability and safety. Some problems are visible externally, while others involve internal components.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Damaged laptop charging ports</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Broken laptop hinges or cracked casing</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Damaged keyboard keys or touchpads</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Liquid exposure and internal corrosion</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Damaged power cables and connectors</li>
+        </ul>
+      </section>
+
+      <!-- COMPUTER MAINTENANCE -->
+      <section id="computer-maintenance" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          PREVENTIVE CARE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer Maintenance & Care</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Routine care reduces avoidable problems. Dust accumulation, restricted ventilation, and poor handling affect equipment over time.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Keep ventilation openings clear of dust</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Use computers on stable, flat surfaces</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Avoid exposure to liquids and excessive dust</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Use appropriate power surge protection</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Monitor unusual fan noises and temperature spikes</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- REPAIR ASSESSMENT PROCESS -->
+    <section id="repair-assessment" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          REPAIR EVALUATION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">What Happens During a Repair Assessment?</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        A repair assessment focuses on understanding reported symptoms and identifying possible causes before repair work is undertaken.
+      </p>
+
+      <ol class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">1. Initial inspection</strong>
+          Review device physical condition and reported problem.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">2. Symptom verification</strong>
+          Check whether the reported fault can be reproduced.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">3. Technical investigation</strong>
+          Examine relevant hardware, system behavior, and diagnostics.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">4. Findings report</strong>
+          Explain the identified problem or any diagnostic limitations.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">5. Repair recommendation</strong>
+          Discuss suitable next steps, estimated costs, and parts.
+        </li>
+        <li class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">6. Customer approval</strong>
+          Repair work proceeds only after scope and costs are agreed.
+        </li>
+      </ol>
+    </section>
+
+    <!-- LOCAL IT SERVICES BANNER -->
+    <section id="local-computer-repairs" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 max-w-[700px]">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LOCAL REPAIR SERVICES
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Computer Repairs in Polokwane & Limpopo</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          iTu Solutions is based in Ga-Mothiba, Nobody, Polokwane, Limpopo. We welcome enquiries from people experiencing computer problems across Polokwane and surrounding communities.
+        </p>
+      </div>
+      <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline whitespace-nowrap shrink-0 flex items-center gap-2">
+        <i class="fa-solid fa-location-arrow"></i> Contact iTu Solutions
+      </a>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="computer-repairs-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          COMPUTER REPAIR QUESTIONS
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Everything you need to know about our computer repair services.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you repair laptops and desktop computers?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We assess and discuss repair assistance for compatible laptops and desktop computers based on identified faults.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help if my computer does not turn on?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. Power-related symptoms are investigated to identify problems involving power connections, charging ports, or internal components.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you repair a computer that keeps freezing?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            We investigate common causes of freezing, including storage health, memory stability, thermal issues, or software conflicts.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can a damaged laptop charging port be repaired?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            The device and port must be assessed first. Feasibility depends on laptop design, extent of damage, and component availability.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you replace a computer hard drive or SSD?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Storage replacement can be discussed where the computer supports a compatible drive and required components are available.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Will I lose my files during a computer repair?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Some repairs involve storage access or system changes. Back up files beforehand where possible. Data preservation cannot be guaranteed.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="computer-repair-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          GET YOUR COMPUTER ASSESSED
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Let's Find Out What's Wrong With Your Computer.
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Tell us whether you use a laptop or desktop, provide its make and model, and explain the problem you are experiencing.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request a Repair Assessment
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Send a WhatsApp Enquiry
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
 
