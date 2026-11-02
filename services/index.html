@@ -362,10 +362,608 @@
   </nav>
 </header>
   
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">What we do</p><h1>IT services for everyday needs.</h1><p>Explore our service areas and choose the support that matches your needs.</p></section>
-<section class="section"><div class="cards"><article class="card"><h3>Website Development</h3><p>Responsive website design and development for small businesses, creators and organisations.</p><a href="/services/website-development/">Learn more →</a></article><article class="card"><h3>Computer Repairs</h3><p>Computer troubleshooting and repair assistance in Polokwane and surrounding areas.</p><a href="/services/computer-repairs/">Learn more →</a></article><article class="card"><h3>Software Installation</h3><p>Help with installing and configuring software on compatible computers.</p><a href="/services/software-installation/">Learn more →</a></article><article class="card"><h3>Operating System Updates</h3><p>Support for operating system updates, maintenance and update troubleshooting.</p><a href="/services/operating-system-updates/">Learn more →</a></article><article class="card"><h3>IT Support</h3><p>Practical IT support for setup, troubleshooting and everyday technical problems.</p><a href="/services/it-support/">Learn more →</a></article><article class="card"><h3>Networking</h3><p>Basic network setup and troubleshooting for connected devices.</p><a href="/services/networking/">Learn more →</a></article><article class="card"><h3>Cybersecurity Assistance</h3><p>Practical guidance for safer devices, accounts and everyday computing.</p><a href="/services/cybersecurity/">Learn more →</a></article><article class="card"><h3>Data Backup</h3><p>Help planning and setting up sensible backup routines for important files.</p><a href="/services/data-backup/">Learn more →</a></article></div></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- SERVICES HERO -->
+    <section id="services-introduction" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-gears text-xs"></i> IT SOLUTIONS | SERVICES AND DIGITAL TECHNOLOGY
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          Technology Services Designed Around the Way You Work.
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            From digital platforms and computer systems to connected networks and data protection, <strong>iTu Solutions</strong> provides practical technology services that help individuals, entrepreneurs, and organisations manage their digital environments.
+          </p>
+          <p>
+            Discover technology solutions designed to improve accessibility, support productivity, and make everyday IT operations easier to manage.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-comments"></i> Discuss Your Requirements
+          </a>
+          <a href="#service-categories" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-layer-group"></i> Explore Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE CAPABILITIES -->
+    <section id="service-capabilities" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+      <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+        OUR SERVICE CAPABILITIES
+      </p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+        One Technology Partner. Multiple Digital Capabilities.
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed pt-2">
+        <p>
+          Technology requirements are rarely isolated. A business website needs reliable hosting and maintenance. A computer needs compatible software and security updates.
+        </p>
+        <p>
+          A productive working environment depends on devices, connectivity, and accessible information. iTu Solutions brings together complementary IT service areas under one roof.
+        </p>
+        <p>
+          Our service offering covers digital development, computer maintenance, software configuration, technical assistance, connectivity, and practical data protection.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICE CATEGORIES GRID -->
+    <section id="service-categories" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          EXPLORE OUR SERVICES
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Technology Solutions for Different Requirements</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Select a service category to discover its scope, potential applications, and how it can support your technology requirements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Website Development -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-laptop-code text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Website Development</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Build a professional digital presence with responsive website solutions for businesses, entrepreneurs, and personal brands.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Corporate & business sites</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> High-converting landing pages</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Mobile & desktop responsive layouts</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Basic SEO setup</li>
+            </ul>
+          </div>
+          <a href="/services/website-development/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Website Development <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Computer Repairs -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Computer Repairs</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Get assistance with computer faults, system performance concerns, and common hardware or software problems.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Computer diagnostics</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Performance troubleshooting</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Boot-related issues</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Hardware fault assessment</li>
+            </ul>
+          </div>
+          <a href="/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Computer Repairs <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Software Installation -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-box-archive text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Software Installation</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Configure compatible applications and essential software to support personal, educational, and business activities.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Application installation</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Software configuration</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> System compatibility checks</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Update & patch management</li>
+            </ul>
+          </div>
+          <a href="/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Software Installation <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Operating System Updates -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-brands fa-windows text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">OS Services</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Keep computer operating systems maintained through appropriate updates, configuration, and troubleshooting.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> OS update assistance</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Update error resolution</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> System configuration</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Driver compatibility checks</li>
+            </ul>
+          </div>
+          <a href="/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover OS Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- IT Support -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-headset text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">IT Support</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Access practical technical assistance for everyday computer, software, and technology-related challenges.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Technical troubleshooting</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> New device setup</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Basic system configuration</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> General IT guidance</li>
+            </ul>
+          </div>
+          <a href="/services/it-support/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover IT Support <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Networking Solutions -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-network-wired text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Networking Solutions</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Improve device connectivity and understand the basic network requirements of your home or business environment.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Wi-Fi setup & tuning</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Local network configuration</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Router setup guidance</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Connection troubleshooting</li>
+            </ul>
+          </div>
+          <a href="/services/networking/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Networking <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Cybersecurity Assistance -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-user-shield text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Cybersecurity</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Improve everyday digital safety through practical security guidance and responsible device and account practices.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Device security checks</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Account protection guidance</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Password security hygiene</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Safe browsing best practices</li>
+            </ul>
+          </div>
+          <a href="/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Cybersecurity <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+        <!-- Data Backup Solutions -->
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <i class="fa-solid fa-database text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
+            <h3 class="font-bold text-base">Data Backup</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Plan better ways to preserve important digital information and reduce the impact of accidental file loss.
+            </p>
+            <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-1.5 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Backup strategy planning</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> External storage setup</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> File organization guidance</li>
+              <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[10px] text-brand-primary dark:text-brand-darkPrimary"></i> Data recovery assessment</li>
+            </ul>
+          </div>
+          <a href="/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline pt-2">
+            Discover Data Backup <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- WHO WE SUPPORT (6 Cards Grid) -->
+    <section id="customer-segments" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          WHO WE SUPPORT
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Technology Support Across Different Environments</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Different customers have different technology priorities. Our services can be scoped according to the environment, available equipment, and intended outcomes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-building text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Small Businesses & Startups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Technology assistance for growing businesses that need an online presence, functional computer systems, and dependable IT support.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-user-tie text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Entrepreneurs & Freelancers</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Digital tools and website solutions that help independent professionals present services, communicate, and organize work.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-house-user text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Home Users & Families</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Practical computer assistance, software setup, device maintenance, and general guidance for everyday technology use.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-graduation-cap text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Students & Researchers</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Assistance with computer readiness, compatible software setup, and digital tools used for learning and educational research.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-people-group text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Community Organisations</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Technology support for non-profits and groups that need help maintaining digital information and communicating online.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-hashtag text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Content Creators</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Website development and digital presentation solutions for individuals building a distinct personal brand online.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BUSINESS APPLICATIONS -->
+    <section id="business-applications" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          TECHNOLOGY IN ACTION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Practical Applications That Make a Difference</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-brand-muted dark:text-brand-darkMuted">
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <h3 class="font-bold text-brand-text dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-globe text-brand-primary dark:text-brand-darkPrimary"></i> Professional Online Presence
+          </h3>
+          <p class="text-xs leading-relaxed">
+            A well-organised website gives potential customers a place to discover your services, understand your business, and find your contact details easily.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <h3 class="font-bold text-brand-text dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-gauge-high text-brand-primary dark:text-brand-darkPrimary"></i> Productive Work Environments
+          </h3>
+          <p class="text-xs leading-relaxed">
+            Proper configuration, software compatibility, and routine maintenance create a smoother computer environment for work and study.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <h3 class="font-bold text-brand-text dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-wifi text-brand-primary dark:text-brand-darkPrimary"></i> Connected Workspaces
+          </h3>
+          <p class="text-xs leading-relaxed">
+            Network configuration and Wi-Fi troubleshooting help devices communicate and access shared internet resources securely.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <h3 class="font-bold text-brand-text dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-hard-drive text-brand-primary dark:text-brand-darkPrimary"></i> Data Management & Recovery
+          </h3>
+          <p class="text-xs leading-relaxed">
+            Sensible backup routines and file organisation help customers manage important documents and photographs responsibly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO ENGAGE (Process Timeline Card) -->
+    <section id="service-process" class="p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          WORKING WITH US
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">From First Enquiry to Service Delivery</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed max-w-[700px]">
+          We use a clear enquiry and service process to establish expectations before work begins.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+        
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">1</span>
+          <h3 class="font-bold text-sm">Submit Enquiry</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Contact us with a description of the service you require.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">2</span>
+          <h3 class="font-bold text-sm">Discuss Needs</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We discuss your objectives, equipment, and technical challenges.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">3</span>
+          <h3 class="font-bold text-sm">Scope & Quote</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We outline proposed work, costs, and terms transparently.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">4</span>
+          <h3 class="font-bold text-sm">Approve & Schedule</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Work proceeds once arrangements and scope are agreed.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">5</span>
+          <h3 class="font-bold text-sm">Service Complete</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We execute the service and share recommendations.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FLEXIBLE SERVICE ARRANGEMENTS -->
+    <section id="service-delivery" class="space-y-6">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          FLEXIBLE SERVICE ARRANGEMENTS
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Discuss the Most Suitable Way to Get Support</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">
+          Depending on the nature of the work, location, equipment, and technical requirements, different service arrangements can be scheduled.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-3 text-center">
+          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mx-auto">
+            <i class="fa-solid fa-desktop text-lg"></i>
+          </div>
+          <h3 class="font-bold text-base">Remote Assistance</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Suitable for software, configuration, and troubleshooting tasks. Remote access is only used with explicit permission.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-3 text-center">
+          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mx-auto">
+            <i class="fa-solid fa-truck-medical text-lg"></i>
+          </div>
+          <h3 class="font-bold text-base">On-Site Support</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Physical hardware issues or network setups requiring physical access can be scheduled on-site subject to location.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-3 text-center">
+          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mx-auto">
+            <i class="fa-solid fa-diagram-project text-lg"></i>
+          </div>
+          <h3 class="font-bold text-base">Project-Based Services</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Website development and major system setups are handled as standalone projects with agreed scope and milestones.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL IT SERVICES BANNER -->
+    <section id="local-technology-services" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 max-w-[700px]">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LOCAL IT SERVICES
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">IT and Website Development Services in Polokwane</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          iTu Solutions operates from Ga-Mothiba, Nobody, Polokwane, Limpopo. Our local focus allows us to connect directly with individuals and businesses looking for dependable, practical technology services in the area.
+        </p>
+      </div>
+      <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline whitespace-nowrap shrink-0 flex items-center gap-2">
+        <i class="fa-solid fa-location-arrow"></i> Contact iTu Solutions
+      </a>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="services-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          SERVICE INFORMATION
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Everything you need to know about getting started with iTu Solutions.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>How do I request an IT service?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Visit our Contact page, send us an email, or initiate a WhatsApp enquiry. Describe the service you need alongside any details regarding your computer, website, or technical issue.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you provide IT services to small businesses?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. Our service packages are tailored specifically for small businesses, startups, entrepreneurs, and independent professionals looking for reliable technical support.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can I request more than one service at a time?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Absolutely. You can combine multiple requirements—such as website development and software setup—into a single enquiry for a consolidated project scope.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you offer remote computer assistance?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. Certain software configuration and troubleshooting tasks can be securely handled via remote desktop sessions with your consent.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you build websites for new businesses?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We design and build modern, responsive websites for startups, established companies, and personal brands.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>How much do your IT services cost?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Pricing depends on service complexity, hardware requirements, and scope. Submit your details for a transparent quotation.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Where is iTu Solutions located?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            We are based in Ga-Mothiba, Nobody, Polokwane, Limpopo (Postal Code 0726), serving local and regional clients.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="services-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          YOUR NEXT STEP STARTS HERE
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Let's Find the Right Technology Solution for Your Needs.
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Tell us what you are trying to achieve, what is not working, or what you would like to build. We will discuss your requirements and next practical steps.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request a Service
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
 
