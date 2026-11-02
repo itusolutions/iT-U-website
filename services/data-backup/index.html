@@ -362,13 +362,413 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">iTu Solutions service</p><h1>Data Backup</h1><p>Help planning and setting up sensible backup routines for important files.</p></section>
-<section class="section"><h2>How we can help</h2><p>Choose a backup approach based on your data, devices, storage and recovery needs.</p><h2>Getting started</h2><p>Contact us with your requirements, device details or project goals. We will discuss availability, scope and any relevant costs before work begins.</p><a class="button" href="/contact/">Ask about data backup</a> <a class="button button-outline" href="/services/">All services</a></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- PAGE HERO -->
+    <section id="data-backup-hero" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-hard-drive text-xs"></i> ITU SOLUTIONS | DATA PROTECTION SOLUTIONS
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          Data Backup Services in Polokwane and Limpopo
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Keep important digital information better protected with a practical data backup strategy. <strong>iTu Solutions</strong> helps individuals, entrepreneurs, and small businesses plan suitable ways to preserve important files and prepare for unexpected data loss.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Discuss Your Data Backup Needs
+          </a>
+          <a href="#protecting-information" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-shield-cat"></i> Protecting Information
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section id="protecting-information" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 text-center max-w-[850px] mx-auto">
+      <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+        INFORMATION VALUE
+      </p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Protecting the Information That Matters</h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        Digital information plays an important role in everyday life and business operations. Personal photographs, business documents, financial records, customer information, project files, and educational materials represent years of work and valuable memories.
+      </p>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        Losing access to this information can create inconvenience, operational disruption, and additional costs. A suitable backup arrangement provides another copy of important files that can be recovered when original data becomes unavailable.
+      </p>
+    </section>
+
+    <!-- DATA IDENTIFICATION -->
+    <section id="data-identification" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          FILE PRIORITIZATION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Identifying Which Information Needs Backup</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Not every file has the same importance. A useful backup plan starts by identifying information that would be difficult, expensive, or impossible to replace.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="font-bold text-base">Information worth considering:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Business documents, invoices, quotations, and financial records.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Customer databases and supplier records.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Personal family photographs and treasured video archives.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>School, college, and university student assignments.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Work projects, creative designs, and administrative reports.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-0.5"></i>
+            <span>Website files, database backups, and project documentation.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- BACKUP METHODS -->
+    <section id="backup-methods" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          STRATEGIC OPTIONS
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Understanding Different Backup Methods</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          The appropriate backup approach depends on data volume, how frequently files change, and how quickly recovery is required.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-clone text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Full Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Creates a complete copy of selected information, providing a straightforward reference point though requiring more storage capacity.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-file-circle-plus text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Incremental Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Captures changes made since the previous backup operation, reducing storage copy times and bandwidth utilization.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-code-compare text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Differential Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Captures all changes made since the last full backup, offering another balance for storage space and recovery management.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-folder-tree text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">File-Level Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Focuses on selected folders, documents, and individual files rather than duplicating an entire operating system.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-computer text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">System Image Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Captures an exact snapshot of a computer's system environment and applications for complete system restoration.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Cloud & Remote Backups</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Automated transmission of critical files to off-site cloud repositories for disaster recovery protection.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- STORAGE OPTIONS & 3-2-1 STRATEGY (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- STORAGE OPTIONS -->
+      <section id="storage-options" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          STORAGE MEDIA
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Choosing Suitable Backup Storage</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Storage selection is core to reliability. Consider capacity, portability, physical security, and failure risks when choosing media.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> External USB hard drives and portable solid-state drives (SSDs)</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Network-Attached Storage (NAS) for centralized local backups</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Encrypted cloud storage subscriptions for off-site redundancy</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Multi-location storage to prevent single points of failure</li>
+        </ul>
+      </section>
+
+      <!-- 3-2-1 STRATEGY -->
+      <section id="three-two-one-strategy" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          INDUSTRY BEST PRACTICE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">The 3-2-1 Backup Strategy</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          The 3-2-1 principle is a recognized guideline ensuring robust information preservation across varied media types.
+        </p>
+        <div class="space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50] text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <div><strong class="text-brand-text dark:text-white font-bold">3 Copies:</strong> Maintain original data plus two backup copies.</div>
+          <div><strong class="text-brand-text dark:text-white font-bold">2 Media Types:</strong> Store backups across at least two distinct storage formats.</div>
+          <div><strong class="text-brand-text dark:text-white font-bold">1 Off-Site:</strong> Keep at least one backup copy in a separate physical location.</div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- RANSOMWARE PROTECTION & SCHEDULING -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- RANSOMWARE -->
+      <section id="ransomware-protection" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          THREAT MITIGATION
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Ransomware & File Encryption Defense</h2>
+        <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+          Malware can lock files and demand ransom. Backups aid recovery only if isolated from encryption threats:
+        </p>
+        <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-2 pt-1">
+          <li>• Disconnect backup drives or cloud shares when backups complete.</li>
+          <li>• Protect backup administration accounts with strong passwords & MFA.</li>
+          <li>• Restrict deletion permissions on backup archives.</li>
+          <li>• Routinely test file restoration processes.</li>
+        </ul>
+      </section>
+
+      <!-- SCHEDULING -->
+      <section id="backup-scheduling" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          CONSISTENCY
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Creating a Consistent Schedule</h2>
+        <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+          Backups are most useful when recent enough to minimize data loss windows:
+        </p>
+        <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-2 pt-1">
+          <li>• Daily automated backups for active business documents.</li>
+          <li>• Weekly backups for archives and less volatile files.</li>
+          <li>• Pre-update backups before installing major OS upgrades.</li>
+          <li>• Periodic verification reports to confirm completion.</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- RECOVERY & VERIFICATION -->
+    <section id="recovery-and-verification" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          RESTORATION READINESS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Data Recovery Planning & Verification</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Creating a backup is only half the process; verifying that files can be successfully restored is essential to disaster recovery readiness.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">Log Audits</strong>
+          Review backup completion reports and error logs regularly.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">Test Restores</strong>
+          Periodically test restoring sample files to verify archive integrity.
+        </div>
+        <div class="p-4 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-1">
+          <strong class="text-brand-text dark:text-white block font-bold">Retention Rules</strong>
+          Organize folder naming conventions and archive lifecycles.
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL IT SERVICES BANNER -->
+    <section id="local-backup-services" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-3 max-w-[700px]">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          LOCAL DATA PROTECTION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Data Backup Assistance in Polokwane & Limpopo</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          iTu Solutions is based in Ga-Mothiba, Nobody, Polokwane, Limpopo. We assist families, students, and small businesses with custom storage and backup strategies.
+        </p>
+      </div>
+      <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline whitespace-nowrap shrink-0 flex items-center gap-2">
+        <i class="fa-solid fa-location-arrow"></i> Contact iTu Solutions
+      </a>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="data-backup-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          FAQ
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Common questions regarding data backup planning and storage.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>What is a data backup?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            An additional copy of digital files stored separately so data can be restored if original files are lost or damaged.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>How often should I back up my files?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Frequency depends on data change rates. Active business records require daily backups, whereas static photo libraries need less frequent updates.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Is an external hard drive enough for data backup?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            An external drive is useful, but relying on a single device creates a single point of failure. We recommend multi-destination copies.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Is cloud storage the same as a data backup?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Not always. Cloud sync tools synchronize file changes across devices, whereas dedicated backups preserve historical file versions.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Do you provide data backup services in Polokwane?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. iTu Solutions operates from Ga-Mothiba, Polokwane, assisting local homes, students, and businesses with data protection strategies.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="data-backup-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          SECURE YOUR DATA TODAY
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Give Your Important Information a Backup Plan
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Do not wait until files are missing before planning for data protection. Contact iTu Solutions to discuss a tailored backup strategy.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request Data Backup Assistance
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
-
 
 
 
