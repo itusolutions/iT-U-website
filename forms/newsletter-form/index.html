@@ -362,10 +362,11 @@
   </nav>
 </header>
 
-<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300 flex items-center justify-center">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300 flex flex-col items-center justify-center">
   
   <section class="relative max-w-[650px] w-full p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
     
+    <!-- Ambient Glow -->
     <div class="absolute -top-12 -right-12 w-48 h-48 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-2xl pointer-events-none"></div>
 
     <!-- Badge -->
@@ -381,16 +382,59 @@
       Get practical IT tips, tech updates, security notices, and exclusive web design special offers directly in your inbox.
     </p>
 
-    <!-- Jotform Subscription Form -->
-<script type="text/javascript" src="https://form.jotform.com/jsform/262952437131052"></script>
+    <!-- Jotform Subscription Form Embedding with Footer Suppression -->
+    <style>
+      /* Suppress Jotform default footers, ads, and branding wrappers */
+      .formFooter-wrapper,
+      .formFooter,
+      .jotform-ad,
+      .jt-branding,
+      #jfCard-branding,
+      .form-submit-footer {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      /* Style Jotform iframe container */
+      .jotform-form {
+        background: transparent !important;
+      }
+    </style>
+
+    <div class="w-full my-4">
+      <script type="text/javascript" src="https://form.jotform.com/jsform/262952437131052"></script>
+    </div>
     
-    <div class="flex items-center justify-center gap-4 text-xs text-brand-muted dark:text-brand-darkMuted mt-6">
+    <!-- Privacy & Unsubscribe Links -->
+    <div class="flex items-center justify-center gap-3 text-xs text-brand-muted dark:text-brand-darkMuted mt-6 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40">
       <span>We respect your privacy under <a href="/legal/data-protection/index.html" class="underline hover:text-brand-primary">POPIA</a>.</span>
       <span>•</span>
-      <a href="/forms/unsubscribe-form/index.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-primary font-medium">Unsubscribe</a>
+      <a href="/forms/unsubscribe-form/index.html" class="underline hover:text-brand-primary font-medium">Unsubscribe</a>
     </div>
 
   </section>
+
+  <!-- Developer Footer Attribution -->
+  <div class="max-w-[650px] w-full text-center mt-8 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
+
 </main>
 
 
