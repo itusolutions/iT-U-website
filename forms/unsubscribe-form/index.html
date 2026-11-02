@@ -385,19 +385,45 @@
     </div>
   </section>
 
-  <!-- Form Container (Centered Card) -->
-<script type="text/javascript" src="https://form.jotform.com/jsform/263018033090042"></script>
+  <!-- Form Container Card with Jotform Footer Suppression -->
+  <div class="max-w-[650px] mx-auto p-6 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card">
+    <style>
+      /* Suppress Jotform default footers, ads, and branding wrappers */
+      .formFooter-wrapper,
+      .formFooter,
+      .jotform-ad,
+      .jt-branding,
+      #jfCard-branding,
+      .form-submit-footer {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        height: 0 !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .jotform-form {
+        background: transparent !important;
+      }
+    </style>
+
+    <div class="w-full">
+      <script type="text/javascript" src="https://form.jotform.com/jsform/263018033090042"></script>
+    </div>
+  </div>
 
   <!-- Developer Footer Attribution -->
-  <div class="max-w-[560px] mx-auto text-center mt-8 pt-4 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+  <div class="max-w-[650px] mx-auto text-center mt-8 pt-4 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
     <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
       <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
       <span>Website Developer:</span>
       <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
         <!-- Light Mode Circular Logo -->
-        <img src="assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
         <!-- Dark Mode Circular Logo -->
-        <img src="assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
         <span>www.sekoala.co.za</span>
         <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
       </a>
