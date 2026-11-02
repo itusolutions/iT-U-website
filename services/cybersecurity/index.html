@@ -361,10 +361,457 @@
   </nav>
 </header>
 
-<main id="main">
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-<section class="page-hero"><p class="eyebrow">iTu Solutions service</p><h1>Cybersecurity Assistance</h1><p>Practical guidance for safer devices, accounts and everyday computing.</p></section>
-<section class="section"><h2>How we can help</h2><p>Discuss updates, account security, backups and common security hygiene. This is not a substitute for specialist incident response.</p><h2>Getting started</h2><p>Contact us with your requirements, device details or project goals. We will discuss availability, scope and any relevant costs before work begins.</p><a class="button" href="/contact/">Ask about cybersecurity assistance</a> <a class="button button-outline" href="/services/">All services</a></section>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
+
+    <!-- PAGE HERO -->
+    <section id="cybersecurity-hero" class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <!-- Ambient Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[850px] mx-auto">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-shield-halved text-xs"></i> ITU SOLUTIONS | DIGITAL PROTECTION
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-extrabold leading-[1.12] tracking-tight mb-6">
+          Cybersecurity Assistance in Polokwane and Limpopo
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Protect your digital environment with practical cybersecurity guidance. <strong>iTu Solutions</strong> helps individuals, home users, and small businesses understand online threats, strengthen everyday security practices, and make more informed technology decisions.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Discuss Your Cybersecurity Needs
+          </a>
+          <a href="#cybersecurity-intro" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-user-shield"></i> Building Safer Habits
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section id="cybersecurity-intro" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 text-center max-w-[850px] mx-auto">
+      <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+        EVERYDAY THREAT AWARENESS
+      </p>
+      <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Building Safer Digital Habits</h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        Cybersecurity is not only about advanced security software or complex technical systems. It also involves the everyday decisions people make when using computers, smartphones, email, websites, and online services.
+      </p>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        A suspicious email, reused password, unsafe download, or exposed personal account can create unnecessary risks. Understanding these risks is an important step towards protecting digital information.
+      </p>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        iTu Solutions focuses on practical cybersecurity awareness and appropriate security measures that help users improve how they protect their devices, accounts, and information.
+      </p>
+    </section>
+
+    <!-- PHISHING & ONLINE SCAMS -->
+    <section id="phishing-awareness" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          FRAUD PREVENTION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Phishing and Online Scam Awareness</h2>
+      </div>
+
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Phishing is a common form of online fraud in which criminals attempt to trick people into revealing sensitive information, opening harmful attachments, or visiting deceptive websites imitating banks, delivery services, or employers.
+      </p>
+
+      <div class="space-y-4">
+        <h3 class="font-bold text-base">Warning signs to recognise:</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Unexpected requests for passwords, pins, or verification codes.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Messages demanding immediate payment or urgent account confirmation.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Links leading to unfamiliar, misspelled, or misleading website addresses.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Unexpected email attachments or files from unknown senders.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Unusual spelling, formatting errors, or mismatched sender addresses.</span>
+          </li>
+          <li class="flex items-start gap-3 p-3 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i>
+            <span>Offers that appear unrealistic or demand personal financial details.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PASSWORDS & MFA (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- PASSWORD SECURITY -->
+      <section id="password-security" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          ACCOUNT HYGIENE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Password Protection</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Weak or reused passwords leave multiple accounts vulnerable if a single service suffers a data breach. Good management reduces unauthorized access risks.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Use long, unique passwords for every key account</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Store credentials in reputable password managers</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Never disclose OTP pins or authentication codes</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Regularly review account activity and active sessions</li>
+        </ul>
+      </section>
+
+      <!-- MULTI FACTOR AUTHENTICATION -->
+      <section id="mfa-security" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          2FA / MFA PROTECTION
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Multi-Factor Authentication</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Multi-factor authentication (MFA) adds a verification step through authenticator apps or physical keys, stopping attacks even if a password is stolen.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Primary Email & Cloud Storage accounts</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Social media & content creator platforms</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Online banking & financial services</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Website hosting & domain administration portals</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- SAFE BROWSING & EMAIL SECURITY -->
+    <section id="browsing-and-email" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          WEB & COMMUNICATION
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Safe Browsing & Email Security</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          Email accounts and browsers form your gateway to digital services. Securing them protects your identity across all platforms.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-globe text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">URL Verification</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Inspecting domain names and SSL security certificates before entering credentials.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-envelope-shield text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Email Rule Audit</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Auditing email account auto-forwarding rules and suspicious filters created by attackers.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-download text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Safe Downloads</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Avoiding third-party download portals, cracks, and unauthorized executable utilities.
+          </p>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+            <i class="fa-solid fa-wifi text-sm"></i>
+          </div>
+          <h3 class="font-bold text-base">Public Wi-Fi Safety</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            Using trusted VPNs and disabling automatic connection on untrusted networks.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA & MALWARE AWARENESS (2 Grid Layout) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+      
+      <!-- SOCIAL MEDIA & IDENTITY -->
+      <section id="social-media-security" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          DIGITAL IDENTITY
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Social Media & Brand Protection</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Losing access to social profiles impacts creators and businesses. Managing privacy settings and connected app permissions safeguards your brand presence.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Auditing 3rd-party OAuth app authorizations</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Protecting against impersonation and phishing takeover</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Maintaining up-to-date emergency recovery contact details</li>
+        </ul>
+      </section>
+
+      <!-- MALWARE AWARENESS -->
+      <section id="malware-awareness" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          SYSTEM THREATS
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Malware & Unsafe Software</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed">
+          Malware steals data or encrypts files. Avoid pirated software and software activators which frequently bundle trojans and ransomware.
+        </p>
+        <ul class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted space-y-2 pt-2 border-t border-brand-border/40 dark:border-[#2a3a50]">
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Downloading software strictly from official vendors</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Maintaining updated antivirus/antimalware definitions</li>
+          <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Isolating compromised systems before logging into accounts</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- SMALL BUSINESS & DEVICE LIFECYCLE -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- SMALL BUSINESS SECURITY -->
+      <section id="business-cybersecurity" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          BUSINESS POLICIES
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Cybersecurity for Small Businesses</h2>
+        <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+          Even small teams benefit from basic access control and data security protocols:
+        </p>
+        <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-2 pt-1">
+          <li>• Define clear access controls for email and administrative accounts.</li>
+          <li>• Establish offboarding protocols for departing employees.</li>
+          <li>• Mandate MFA across company email and cloud storage.</li>
+          <li>• Secure confidential business file transfers and record storage.</li>
+        </ul>
+      </section>
+
+      <!-- DEVICE LIFECYCLE & DATA PRIVACY -->
+      <section id="device-lifecycle" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          DATA WIPING & CARE
+        </p>
+        <h2 class="text-2xl font-extrabold tracking-tight">Device Lifecycle & Sanitization</h2>
+        <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+          Security lasts from initial system setup until hardware retirement:
+        </p>
+        <ul class="text-xs text-brand-muted dark:text-brand-darkMuted space-y-2 pt-1">
+          <li>• Enforce screen locks and non-administrator daily accounts.</li>
+          <li>• Securely wipe personal data before selling or recycling PCs.</li>
+          <li>• Replace end-of-life hardware no longer receiving security patches.</li>
+          <li>• Review application permissions (camera, location, mic).</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- SECURITY CHECKLIST & SCOPE -->
+    <section id="security-checklist" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          PRACTICAL CHECKLIST
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Everyday Cybersecurity Checklist</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Unique passwords on all key services
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Multi-factor authentication enabled
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> OS and security software updated
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Account recovery info verified
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Cautious of email links & attachments
+        </div>
+        <div class="p-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <i class="fa-solid fa-square-check text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Regular offline & cloud data backups
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 text-xs flex items-center gap-3">
+        <i class="fa-solid fa-triangle-exclamation text-base shrink-0"></i>
+        <span><strong>Emergency Scope Note:</strong> General guidance does not include active penetration testing, forensic reverse engineering, or enterprise SOC monitoring. If suffering an active financial fraud attack, contact your bank immediately.</span>
+      </div>
+    </section>
+
+    <!-- RELATED SERVICES -->
+    <section id="related-services" class="space-y-6">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
+          COMPLEMENTARY SERVICES
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Explore Related Solutions</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="/services/data-backup/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">Data Backup</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Planning local and cloud file preservation.</p>
+        </a>
+
+        <a href="/services/operating-system-updates/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">OS Updates</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Maintaining supported system security patches.</p>
+        </a>
+
+        <a href="/services/networking/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">Networking</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Wi-Fi configuration & router access security.</p>
+        </a>
+
+        <a href="/services/it-support/" class="p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all no-underline text-brand-text dark:text-white space-y-2 block group">
+          <h3 class="font-bold text-sm group-hover:text-brand-primary dark:group-hover:text-brand-darkPrimary transition-colors">IT Support</h3>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">General technical troubleshooting for workstations.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- FREQUENTLY ASKED QUESTIONS (Accordion Layout) -->
+    <section id="cybersecurity-faq" class="space-y-6 max-w-[900px] mx-auto">
+      <div class="text-center">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          FAQ
+        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-2">Frequently Asked Questions</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Common questions regarding cybersecurity assistance.</p>
+      </div>
+
+      <div class="space-y-3">
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>What is cybersecurity guidance?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            It encompasses practical guidance and setup advice to protect accounts, systems, and digital identity against online threats and unauthorized access.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Can you help me improve my account security?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Yes. We assist with configuring password managers, reviewing recovery details, and enabling multi-factor authentication (MFA).
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>How can I identify a phishing email?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            Check for urgent payment demands, mismatched sender domain names, unexpected attachments, and links leading to non-official URLs.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>Is antivirus software enough to protect my computer?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            No single tool protects against all risks. Antivirus should be combined with system patches, multi-factor authentication, safe browsing habits, and offline backups.
+          </p>
+        </details>
+
+        <details class="group p-5 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm cursor-pointer transition-all">
+          <summary class="flex items-center justify-between font-bold text-sm text-brand-text dark:text-white list-none">
+            <span>What should I do if I think my account was compromised?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-brand-primary dark:text-brand-darkPrimary group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-3 leading-relaxed border-t border-brand-border/40 dark:border-[#2a3a50] pt-3">
+            From a secure device, reset account passwords immediately, revoke active logged-in sessions, verify recovery options, and notify your bank if financial credentials were involved.
+          </p>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- FINAL CALL TO ACTION -->
+    <section id="cybersecurity-enquiry" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          PROACTIVE DIGITAL PROTECTION
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Take a More Proactive Approach to Digital Security
+        </h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+          Better cybersecurity starts with understanding your risks and adopting sensible protective practices.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i> Request Cybersecurity Assistance
+          </a>
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
+          </a>
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- DEVELOPER FOOTER ATTRIBUTION -->
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+    <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
+      <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
+      <span>Website Developer:</span>
+      <a href="https://www.sekoala.co.za" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-brand-primary dark:text-brand-darkPrimary font-bold hover:underline transition-opacity hover:opacity-90">
+        <!-- Light Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-light-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full dark:hidden object-cover border border-brand-border/40" />
+        <!-- Dark Mode Circular Logo -->
+        <img src="/assets/images/logo/sekoala-logo-dark-mode.png" alt="sekoala.co.za Logo" class="h-5 w-5 rounded-full hidden dark:block object-cover border border-white/20" />
+        <span>www.sekoala.co.za</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+      </a>
+    </span>
+  </div>
 
 </main>
 
