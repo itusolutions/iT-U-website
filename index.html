@@ -374,7 +374,7 @@
 
 
 <!-- Main Content -->
-  <main id="main">
+<main id="main" class="max-w-[1100px] mx-auto px-4 py-8 text-gray-800 font-sans">
 
     <!-- Unified Hero & Metrics Section -->
     <section id="hero-section" class="relative overflow-hidden py-[4rem] sm:py-[6.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-gradient-to-br from-[#f0f4f8] via-[#e2e8f0] to-[#f8fafc] dark:from-[#0b1220] dark:via-[#0e2238] dark:to-[#123e68] text-brand-text dark:text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
@@ -396,7 +396,7 @@
           
           <!-- Headline with Typed.js Animated Text Container -->
           <h1 class="text-[clamp(2.4rem,5vw,4.4rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold -tracking-[0.04em]">
-            Technology that <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-blue-600 to-emerald-600 dark:from-[#69baff] dark:via-[#7ec5ff] dark:to-emerald-400"></span>
+            Technology that <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-blue-600 to-emerald-600 dark:from-[#69baff] dark:via-[#7ec5ff] dark:to-emerald-400">works for you</span>
           </h1>
           
           <p class="max-w-[720px] text-brand-muted dark:text-[#d7e4f3] print:text-[#333] text-[1.15rem] leading-relaxed">
@@ -410,22 +410,22 @@
           </div>
         </div>
 
-        <!-- Deco Style Metrics / Trust Flex Container (No Grid) -->
-        <div class="flex flex-wrap gap-4 pt-6 border-t border-brand-border/60 dark:border-white/10">
-          <div class="flex-1 min-w-[140px] p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-md border border-brand-border dark:border-white/10 shadow-sm hover:border-brand-primary/50 transition-all text-center group">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary group-hover:scale-105 transition-transform">100%</p>
+        <!-- Trust Stats / Flow Line Bar Representation -->
+        <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-brand-border/60 dark:border-white/10">
+          <div class="text-center sm:text-left flex-1">
+            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">100%</p>
             <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Local & Dedicated</p>
           </div>
-          <div class="flex-1 min-w-[140px] p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-md border border-brand-border dark:border-white/10 shadow-sm hover:border-brand-primary/50 transition-all text-center group">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary group-hover:scale-105 transition-transform">Fast</p>
+          <div class="text-center sm:text-left flex-1">
+            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Fast</p>
             <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Turnaround Time</p>
           </div>
-          <div class="flex-1 min-w-[140px] p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-md border border-brand-border dark:border-white/10 shadow-sm hover:border-brand-primary/50 transition-all text-center group">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary group-hover:scale-105 transition-transform">Certified</p>
+          <div class="text-center sm:text-left flex-1">
+            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Certified</p>
             <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Technical Expertise</p>
           </div>
-          <div class="flex-1 min-w-[140px] p-5 rounded-2xl bg-white/60 dark:bg-white/5 backdrop-blur-md border border-brand-border dark:border-white/10 shadow-sm hover:border-brand-primary/50 transition-all text-center group">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary group-hover:scale-105 transition-transform">Tailored</p>
+          <div class="text-center sm:text-left flex-1">
+            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Tailored</p>
             <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Digital Solutions</p>
           </div>
         </div>
@@ -528,7 +528,10 @@
             const isDark = document.documentElement.classList.contains('dark');
             const activePalette = isDark ? darkPalette : lightPalette;
 
-            particles.forEach(p => { p.update(); p.draw(activePalette); });
+            particles.forEach(p => {
+              p.update();
+              p.draw(activePalette);
+            });
 
             const maxDistance = 160;
             for (let i = 0; i < particles.length; i++) {
@@ -560,352 +563,167 @@
         });
       </script>
     </section>
-  
-    <!-- Services Cards Section (Flex layout, no grid) -->
-    <section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem] print:p-4">
-      <div class="text-center max-w-[650px] mx-auto mb-12">
-        <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Our Offerings</p>
-        <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Services Designed for Excellence</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted mt-2">Comprehensive technical and digital solutions crafted to support your operational needs.</p>
-      </div>
 
-      <div class="flex flex-wrap gap-6 justify-center">
-        <article class="flex-1 min-w-[240px] max-w-[270px] group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[18px] p-6 shadow-card hover:shadow-custom hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary dark:text-brand-darkPrimary text-2xl flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-code"></i>
-            </div>
-            <h3 class="mt-0 font-bold text-xl mb-2 text-brand-text dark:text-brand-darkText">Website Development</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4 leading-relaxed">High-performance, responsive websites custom-designed to establish and grow your brand.</p>
-          </div>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold text-sm hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="/services/website-development/">
-            Explore service <i class="fa-solid fa-arrow-right text-xs"></i>
+  <!-- Circular & Radial Information Integration Layer -->
+  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-2xl font-extrabold mb-4">Core Competency Spectrum (Circular & Radial Mapping)</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-8">
+        Visualizing our service distribution as a balanced Donut and Radar structural flow.
+      </p>
+      
+      <!-- Interactive 4-Slice SVG Donut / Pie Representation -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+        <svg viewBox="0 0 420 420" class="w-full max-w-[320px] h-auto drop-shadow-md" aria-label="Services Distribution Chart">
+          <a href="/services/website-development/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 210 10 A 200 200 0 0 1 410 210 Z" fill="#36b5b0" />
+            <text x="295" y="115" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">01. Web</text>
           </a>
-        </article>
-
-        <article class="flex-1 min-w-[240px] max-w-[270px] group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[18px] p-6 shadow-card hover:shadow-custom hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary dark:text-brand-darkPrimary text-2xl flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-laptop-medical"></i>
-            </div>
-            <h3 class="mt-0 font-bold text-xl mb-2 text-brand-text dark:text-brand-darkText">Computer Repairs</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4 leading-relaxed">System diagnostics, hardware upgrades, and complete computer repair services.</p>
-          </div>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold text-sm hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="/services/computer-repairs/">
-            Explore service <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="/services/computer-repairs/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 410 210 A 200 200 0 0 1 210 410 Z" fill="#8b5cf6" />
+            <text x="295" y="290" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">02. Repairs</text>
           </a>
-        </article>
-
-        <article class="flex-1 min-w-[240px] max-w-[270px] group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[18px] p-6 shadow-card hover:shadow-custom hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary dark:text-brand-darkPrimary text-2xl flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-sliders"></i>
-            </div>
-            <h3 class="mt-0 font-bold text-xl mb-2 text-brand-text dark:text-brand-darkText">Software & OS Setup</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4 leading-relaxed">OS installation, updates, software configuration, and system optimization.</p>
-          </div>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold text-sm hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="/services/software-installation/">
-            Explore service <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="/services/software-installation/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 210 410 A 200 200 0 0 1 10 210 Z" fill="#84cc16" />
+            <text x="125" y="290" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">03. Software</text>
           </a>
-        </article>
-
-        <article class="flex-1 min-w-[240px] max-w-[270px] group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-[18px] p-6 shadow-card hover:shadow-custom hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-primary dark:text-brand-darkPrimary text-2xl flex items-center justify-center mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-headset"></i>
-            </div>
-            <h3 class="mt-0 font-bold text-xl mb-2 text-brand-text dark:text-brand-darkText">IT Support</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4 leading-relaxed">Dependable helpdesk assistance, troubleshooting, data backup, and network setup.</p>
-          </div>
-          <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold text-sm hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="/services/it-support/">
-            Explore service <i class="fa-solid fa-arrow-right text-xs"></i>
+          <a href="/services/it-support/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 10 210 A 200 200 0 0 1 210 10 Z" fill="#f97316" />
+            <text x="125" y="115" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">04. Support</text>
           </a>
-        </article>
-      </div>
-    </section>
+          <circle cx="210" cy="210" r="78" fill="#ffffff" class="dark:fill-[#0b1220]" />
+          <text x="210" y="205" text-anchor="middle" class="fill-gray-900 dark:fill-white" font-weight="bold" font-size="14">ITU</text>
+          <text x="210" y="225" text-anchor="middle" class="fill-gray-500" font-weight="bold" font-size="12">METRIC</text>
+        </svg>
 
-    <!-- Data Visualization & Chart Types Showcase (Integrating circular, rectangular, linear, funnel, and point shapes via Flexbox) -->
-    <section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem] bg-brand-surface/30 dark:bg-brand-darkSurface/30 rounded-3xl my-6">
-      <div class="text-center max-w-[750px] mx-auto mb-12">
-        <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Data Analytics & Metrics Architecture</p>
-        <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Data Visualization & Chart Taxonomy</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted mt-2">Structured breakdown of graphical data representations utilized across our advanced reporting platforms.</p>
-      </div>
-
-      <div class="flex flex-col gap-8">
-        
-        <!-- Category 1: Circular & Radial Shapes -->
-        <div class="p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-          <h3 class="text-xl font-bold mb-4 text-brand-primary dark:text-brand-darkPrimary flex items-center gap-2">
-            <i class="fa-solid fa-circle-notch"></i> 1. Circular & Radial Shapes
-          </h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Pie Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">A full circle divided into triangular slices to show parts of a whole.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Donut (Ring) Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">A circle with a hollow center, functioning like a pie chart with space for total metrics in the middle.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Radar (Spider / Web) Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">A polygon or web-like shape radiating from a center point across multiple axes to compare variables.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Polar Area Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Similar to a pie chart, except slices have equal angles and extend outward to different radii.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Sunburst Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Concentric rings radiating outward to show hierarchical data layers.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Gauge Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">A semi-circle or arc with a needle pointing to a value on a fixed scale.</p>
-            </div>
+        <div class="text-left space-y-4 max-w-md">
+          <div class="border-l-4 border-[#36b5b0] pl-3">
+            <h3 class="font-bold">01. Website Development</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Responsive websites built to present your brand and services online.</p>
           </div>
-        </div>
-
-        <!-- Category 2: Rectangular & Bar Shapes -->
-        <div class="p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-          <h3 class="text-xl font-bold mb-4 text-brand-primary dark:text-brand-darkPrimary flex items-center gap-2">
-            <i class="fa-solid fa-chart-bar"></i> 2. Rectangular & Bar Shapes
-          </h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Bar / Column Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Horizontal or vertical rectangles where length or height represents value.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Stacked Bar / Column</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Rectangles segmented into colored blocks to show sub-categories within a total.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Histogram</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Adjacent vertical rectangles showing the frequency distribution of continuous data.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Treemap</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Nested rectangles sized and colored proportionally for hierarchy.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Waterfall Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Floating vertical bars connected by lines to show step changes.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Box Plot & Candlestick</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Quartile ranges and financial high-low-open-close tracking bars.</p>
-            </div>
+          <div class="border-l-4 border-[#8b5cf6] pl-3">
+            <h3 class="font-bold">02. Computer Repairs</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Practical troubleshooting and repair support for common hardware/software issues.</p>
           </div>
-        </div>
-
-        <!-- Category 3: Linear, Wave & Flow Shapes -->
-        <div class="p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-          <h3 class="text-xl font-bold mb-4 text-brand-primary dark:text-brand-darkPrimary flex items-center gap-2">
-            <i class="fa-solid fa-chart-line"></i> 3. Linear, Wave & Flow Shapes
-          </h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Line Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Straight or curved segments connecting data points to show trends over time.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Area Chart & Streamgraph</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Shaded or wave-like organic stacked area charts centered across axes.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Sankey & Chord Diagram</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Flowing curved bands connecting nodes to display volume transfer and relationships.</p>
-            </div>
+          <div class="border-l-4 border-[#84cc16] pl-3">
+            <h3 class="font-bold">03. Software Installation</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Help installing software configurations and keeping systems up to date.</p>
           </div>
-        </div>
-
-        <!-- Category 4: Funnel, Pyramid & Triangular Shapes -->
-        <div class="p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-          <h3 class="text-xl font-bold mb-4 text-brand-primary dark:text-brand-darkPrimary flex items-center gap-2">
-            <i class="fa-solid fa-filter"></i> 4. Funnel, Pyramid & Triangular Shapes
-          </h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Funnel Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Inverted trapezoid divided into horizontal tiers for process stages.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Pyramid & Population Pyramid</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Upright triangles or back-to-back horizontal bar distributions.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Ternary Plot</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Equilateral triangle plotting ratios of three constant variables.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Category 5: Point, Grid & Geographic Shapes -->
-        <div class="p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-          <h3 class="text-xl font-bold mb-4 text-brand-primary dark:text-brand-darkPrimary flex items-center gap-2">
-            <i class="fa-solid fa-braille"></i> 5. Point, Grid & Geographic Shapes
-          </h3>
-          <div class="flex flex-wrap gap-4">
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Scatter Plot & Bubble Chart</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Dots and variable-sized circles plotted across coordinate planes.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Heatmap & Choropleth Map</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Color-shaded grids and geographical regions representing data values.</p>
-            </div>
-            <div class="flex-1 min-w-[200px] p-4 bg-brand-surface/60 dark:bg-white/5 rounded-xl border border-brand-border/60 dark:border-white/10">
-              <strong class="block text-sm mb-1">Network (Node-Link) Graph</strong>
-              <p class="text-xs text-brand-muted dark:text-brand-darkMuted">Circles connected by edges in a web or cluster formation.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- How We Work Section (Flex layout, no grid) -->
-    <section class="bg-brand-surface/50 dark:bg-brand-darkSurface/50 border-y border-brand-border dark:border-brand-darkBorder py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
-      <div class="max-w-[1120px] mx-auto">
-        <div class="text-center max-w-[650px] mx-auto mb-12">
-          <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Our Process</p>
-          <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">How We Deliver Results</h2>
-          <p class="text-brand-muted dark:text-brand-darkMuted mt-2">A streamlined 4-step approach to resolve technical challenges smoothly.</p>
-        </div>
-
-        <div class="flex flex-wrap gap-6 justify-center">
-          <div class="flex-1 min-w-[240px] max-w-[260px] relative p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-            <span class="text-3xl font-extrabold text-brand-primary/30 dark:text-brand-darkPrimary/30 mb-2 block">01</span>
-            <h3 class="font-bold text-lg mb-2">Consultation</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm">We listen to your specific technical or digital requirements.</p>
-          </div>
-          <div class="flex-1 min-w-[240px] max-w-[260px] relative p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-            <span class="text-3xl font-extrabold text-brand-primary/30 dark:text-brand-darkPrimary/30 mb-2 block">02</span>
-            <h3 class="font-bold text-lg mb-2">Diagnostics</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Thorough evaluation to identify exact issues or scope of work.</p>
-          </div>
-          <div class="flex-1 min-w-[240px] max-w-[260px] relative p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-            <span class="text-3xl font-extrabold text-brand-primary/30 dark:text-brand-darkPrimary/30 mb-2 block">03</span>
-            <h3 class="font-bold text-lg mb-2">Implementation</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Executing website builds or system repairs efficiently.</p>
-          </div>
-          <div class="flex-1 min-w-[240px] max-w-[260px] relative p-6 bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-2xl">
-            <span class="text-3xl font-extrabold text-brand-primary/30 dark:text-brand-darkPrimary/30 mb-2 block">04</span>
-            <h3 class="font-bold text-lg mb-2">Ongoing Support</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Continuous check-ins to ensure seamless long-term operation.</p>
+          <div class="border-l-4 border-[#f97316] pl-3">
+            <h3 class="font-bold">04. IT Support</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Friendly technical assistance for setup, maintenance, and routine troubleshooting.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Featured Works Section (Flex layout, no grid) -->
-    <section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-        <div>
-          <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Portfolio</p>
-          <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Recent Technical Deployments</h2>
-        </div>
-        <a href="/portfolio/" class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-2">
-          View all projects <i class="fa-solid fa-arrow-right text-xs"></i>
-        </a>
+  <!-- Linear, Wave & Flow / Process Representation -->
+  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Linear Flow Mapping</p>
+        <h2 class="text-2xl font-extrabold">How We Deliver Results</h2>
       </div>
 
-      <div class="flex flex-wrap gap-6">
-        <div class="flex-1 min-w-[280px] group relative overflow-hidden rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder">
-          <div class="p-6">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1 rounded-full">Website Engineering</span>
-            <h3 class="text-xl font-bold mt-4 mb-2">Business Digital Platform</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Responsive corporate website engineered for optimal search visibility and fast loading speeds.</p>
-            <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-brand-primary dark:text-brand-darkPrimary text-sm">
-              Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
+      <div class="space-y-6">
+        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
+          <span class="text-xl font-black text-blue-600">01</span>
+          <div>
+            <h3 class="font-bold text-lg">Consultation Stage</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">We listen to your specific technical or digital requirements directly.</p>
           </div>
         </div>
-
-        <div class="flex-1 min-w-[280px] group relative overflow-hidden rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder">
-          <div class="p-6">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1 rounded-full">IT Infrastructure</span>
-            <h3 class="text-xl font-bold mt-4 mb-2">Local Workstation Deployment</h3>
-            <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Complete OS setup, network configuration, and data backup implementation for local office setups.</p>
-            <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-brand-primary dark:text-brand-darkPrimary text-sm">
-              Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
+        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
+          <span class="text-xl font-black text-blue-600">02</span>
+          <div>
+            <h3 class="font-bold text-lg">Diagnostics Stage</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Thorough evaluation to identify exact issues or scope of work accurately.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
+          <span class="text-xl font-black text-blue-600">03</span>
+          <div>
+            <h3 class="font-bold text-lg">Implementation Stage</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Executing website builds or system repairs efficiently with minimal downtime.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <span class="text-xl font-black text-blue-600">04</span>
+          <div>
+            <h3 class="font-bold text-lg">Ongoing Support Flow</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-400">Continuous check-ins to ensure seamless long-term operational health.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Split Feature / Local Support Section (Flex layout, no grid) -->
-    <section class="max-w-[1120px] mx-auto py-[2.5rem] sm:py-[3.5rem] px-[1.2rem] flex flex-wrap gap-8 items-center print:p-4">
-      <div class="flex-1 min-w-[300px]">
-        <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Local support</p>
-        <h2 class="text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.2] font-extrabold mb-4">Clear advice. Practical solutions.</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted mb-4 leading-relaxed">
-          Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain. Whether you need an online presence or workstation repairs, we provide reliable local expertise.
-        </p>
-        <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/about/">Meet iTu Solutions <i class="fa-solid fa-arrow-right text-xs"></i></a>
-      </div>
-      <div class="flex-1 min-w-[300px] bg-gradient-to-br from-[#e6f3ff] to-[#f3f7ff] dark:from-[#172c43] dark:to-[#172c43] border border-brand-border dark:border-brand-darkBorder rounded-[20px] p-6 sm:p-8 shadow-card">
-        <h3 class="mt-0 font-extrabold text-xl mb-2">Need help with a tech issue?</h3>
-        <p class="text-brand-muted dark:text-brand-darkMuted mb-6 text-sm leading-relaxed">Tell us what you need and we’ll discuss the next practical step without unnecessary complexity.</p>
-        <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline transition-all" href="/forms/contact-form/contact/">
+  <!-- Funnel & Pyramid Structural View (Local Support & Contact Focus) -->
+  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Regional Foundation Layer</p>
+      <h2 class="text-2xl font-extrabold mb-4">Clear Advice. Practical Solutions.</h2>
+      <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+        Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain. Whether you need an online presence or workstation repairs, we provide reliable local expertise.
+      </p>
+      <div class="inline-block p-6 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-200 dark:border-blue-900">
+        <h3 class="font-bold text-lg mb-2">Need help with a tech issue?</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Tell us what you need and we’ll discuss the next practical step without unnecessary complexity.</p>
+        <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors" href="/forms/contact-form/contact/">
           <i class="fa-solid fa-envelope"></i> Contact us
         </a>
       </div>
-    </section>
-    
-    <div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
-    <script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
-    
-    <!-- Frequently Asked Questions (Accordion) -->
-    <section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem] border-t border-brand-border dark:border-brand-darkBorder">
-      <div class="text-center max-w-[650px] mx-auto mb-10">
-        <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Got Questions?</p>
-        <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Frequently Asked Questions</h2>
+    </div>
+  </section>
+
+  <!-- Point & Grid Map (FAQ / Support Hierarchy) -->
+  <section class="py-12">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Knowledge Grid Matrix</p>
+        <h2 class="text-2xl font-extrabold">Frequently Asked Questions</h2>
       </div>
 
-      <div class="max-w-3xl mx-auto space-y-4">
-        <details class="group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText">
+      <div class="space-y-4">
+        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
             <span>What areas do you serve?</span>
-            <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-              <i class="fa-solid fa-chevron-down text-sm"></i>
-            </span>
+            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
           </summary>
-          <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             We provide local on-site services in Ga-Mothiba, Polokwane, and surrounding Limpopo areas, as well as remote website development and technical assistance nationwide across South Africa.
           </p>
         </details>
 
-        <details class="group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText">
+        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
             <span>How long does it take to build a website?</span>
-            <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-              <i class="fa-solid fa-chevron-down text-sm"></i>
-            </span>
+            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
           </summary>
-          <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             Standard company websites typically take between 1 to 2 weeks, depending on requirements, content readiness, and specific integrations needed.
           </p>
         </details>
 
-        <details class="group bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder rounded-xl p-4 [&_summary::-webkit-details-marker]:hidden">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText">
+        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
+          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
             <span>Do you offer emergency computer repair support?</span>
-            <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-              <i class="fa-solid fa-chevron-down text-sm"></i>
-            </span>
+            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
           </summary>
-          <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             Yes, we offer priority diagnostics and repairs for urgent computer and software troubleshooting. Contact us via WhatsApp for fast responses.
           </p>
         </details>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- JotForm Embed Widget -->
+  <div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
+  <script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
+
+</main>
 
         
 
