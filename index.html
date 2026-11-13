@@ -618,110 +618,199 @@
     </div>
   </section>
 
-  <!-- Linear, Wave & Flow / Process Representation -->
-  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Linear Flow Mapping</p>
-        <h2 class="text-2xl font-extrabold">How We Deliver Results</h2>
-      </div>
+<!-- How We Work Section (Linear, Wave & Flow / Sankey Step Pipeline) -->
+<section class="bg-brand-surface/50 dark:bg-brand-darkSurface/50 border-y border-brand-border dark:border-brand-darkBorder py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
+  <div class="max-w-[1120px] mx-auto">
+    <div class="text-center max-w-[650px] mx-auto mb-12">
+      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Our Process</p>
+      <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">How We Deliver Results</h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted mt-2">A streamlined 4-step approach to resolve technical challenges smoothly.</p>
+    </div>
 
-      <div class="space-y-6">
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">01</span>
-          <div>
-            <h3 class="font-bold text-lg">Consultation Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">We listen to your specific technical or digital requirements directly.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">02</span>
-          <div>
-            <h3 class="font-bold text-lg">Diagnostics Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Thorough evaluation to identify exact issues or scope of work accurately.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">03</span>
-          <div>
-            <h3 class="font-bold text-lg">Implementation Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Executing website builds or system repairs efficiently with minimal downtime.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <span class="text-xl font-black text-blue-600">04</span>
-          <div>
-            <h3 class="font-bold text-lg">Ongoing Support Flow</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Continuous check-ins to ensure seamless long-term operational health.</p>
-          </div>
-        </div>
+    <!-- Flowing Wave / Sankey SVG Connector -->
+    <div class="w-full overflow-x-auto pb-4">
+      <svg viewBox="0 0 900 120" class="w-full min-w-[650px] h-auto mx-auto mb-6" aria-label="4-Step Process Flow Chart">
+        <defs>
+          <linearGradient id="processWave" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#36b5b0" />
+            <stop offset="33%" stop-color="#8b5cf6" />
+            <stop offset="66%" stop-color="#84cc16" />
+            <stop offset="100%" stop-color="#f97316" />
+          </linearGradient>
+        </defs>
+        <!-- Flowing Wave Line -->
+        <path d="M 90 60 C 190 10, 260 110, 340 60 C 420 10, 490 110, 570 60 C 650 10, 720 110, 810 60" fill="none" stroke="url(#processWave)" stroke-width="6" stroke-linecap="round" />
+        <!-- Node 01 -->
+        <circle cx="90" cy="60" r="26" fill="#36b5b0" />
+        <text x="90" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">01</text>
+        <!-- Node 02 -->
+        <circle cx="340" cy="60" r="26" fill="#8b5cf6" />
+        <text x="340" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">02</text>
+        <!-- Node 03 -->
+        <circle cx="570" cy="60" r="26" fill="#84cc16" />
+        <text x="570" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">03</text>
+        <!-- Node 04 -->
+        <circle cx="810" cy="60" r="26" fill="#f97316" />
+        <text x="810" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">04</text>
+      </svg>
+    </div>
+
+    <!-- Flexbox Flow Steps (No Grid / No Cards) -->
+    <div class="flex flex-col md:flex-row justify-between gap-8">
+      <div class="flex-1 border-t-4 border-[#36b5b0] pt-4">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-[#36b5b0]">Step 01</span>
+        <h3 class="font-bold text-lg mt-1 mb-2">Consultation</h3>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">We listen to your specific technical or digital requirements.</p>
+      </div>
+      <div class="flex-1 border-t-4 border-[#8b5cf6] pt-4">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-[#8b5cf6]">Step 02</span>
+        <h3 class="font-bold text-lg mt-1 mb-2">Diagnostics</h3>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Thorough evaluation to identify exact issues or scope of work.</p>
+      </div>
+      <div class="flex-1 border-t-4 border-[#84cc16] pt-4">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-[#84cc16]">Step 03</span>
+        <h3 class="font-bold text-lg mt-1 mb-2">Implementation</h3>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Executing website builds or system repairs efficiently.</p>
+      </div>
+      <div class="flex-1 border-t-4 border-[#f97316] pt-4">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-[#f97316]">Step 04</span>
+        <h3 class="font-bold text-lg mt-1 mb-2">Ongoing Support</h3>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Continuous check-ins to ensure seamless long-term operation.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Funnel & Pyramid Structural View (Local Support & Contact Focus) -->
-  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Regional Foundation Layer</p>
-      <h2 class="text-2xl font-extrabold mb-4">Clear Advice. Practical Solutions.</h2>
-      <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+<!-- Featured Works Section (Rectangular & Bar / Marimekko Proportional Layout) -->
+<section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
+  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+    <div>
+      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Portfolio</p>
+      <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Recent Technical Deployments</h2>
+    </div>
+    <a href="/portfolio/" class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-2">
+      View all projects <i class="fa-solid fa-arrow-right text-xs"></i>
+    </a>
+  </div>
+
+  <!-- Horizontal Stacked Bar / Marimekko Visual Meter -->
+  <div class="w-full h-4 flex rounded-full overflow-hidden mb-10 bg-gray-200 dark:bg-gray-800" aria-hidden="true">
+    <div class="w-[55%] bg-brand-primary dark:bg-brand-darkPrimary" title="Website Engineering 55%"></div>
+    <div class="w-[45%] bg-emerald-500" title="IT Infrastructure 45%"></div>
+  </div>
+
+  <!-- Flexbox Proportional Split (No Grid / No Cards) -->
+  <div class="flex flex-col md:flex-row gap-10">
+    <div class="flex-[1.15] border-l-4 border-brand-primary dark:border-brand-darkPrimary pl-6 py-2">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-brand-darkPrimary">Website Engineering</span>
+        <span class="text-xs font-mono font-bold text-brand-muted dark:text-brand-darkMuted">55% Deployment Share</span>
+      </div>
+      <h3 class="text-xl font-bold mb-2">Business Digital Platform</h3>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Responsive corporate website engineered for optimal search visibility and fast loading speeds.</p>
+      <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-brand-primary dark:text-brand-darkPrimary text-sm hover:underline">
+        Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="flex-1 border-l-4 border-emerald-500 pl-6 py-2">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">IT Infrastructure</span>
+        <span class="text-xs font-mono font-bold text-brand-muted dark:text-brand-darkMuted">45% Deployment Share</span>
+      </div>
+      <h3 class="text-xl font-bold mb-2">Local Workstation Deployment</h3>
+      <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Complete OS setup, network configuration, and data backup implementation for local office setups.</p>
+      <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-emerald-600 dark:text-emerald-400 text-sm hover:underline">
+        Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Local Support Section (Funnel & Pyramid Tiered Conversion Flow) -->
+<section class="max-w-[1120px] mx-auto py-[2.5rem] sm:py-[3.5rem] px-[1.2rem] border-t border-brand-border dark:border-brand-darkBorder print:p-4">
+  <div class="flex flex-col items-center text-center max-w-[780px] mx-auto">
+    <!-- Funnel Top Tier (Broad Regional Base) -->
+    <div class="w-full pb-6 border-b border-dashed border-brand-border dark:border-brand-darkBorder">
+      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Local support</p>
+      <h2 class="text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.2] font-extrabold mb-4">Clear advice. Practical solutions.</h2>
+      <p class="text-brand-muted dark:text-brand-darkMuted mb-4 leading-relaxed">
         Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain. Whether you need an online presence or workstation repairs, we provide reliable local expertise.
       </p>
-      <div class="inline-block p-6 bg-blue-50 dark:bg-blue-950/40 rounded-xl border border-blue-200 dark:border-blue-900">
-        <h3 class="font-bold text-lg mb-2">Need help with a tech issue?</h3>
-        <p class="text-sm text-gray-600 dark:text-gray-300 mb-4">Tell us what you need and we’ll discuss the next practical step without unnecessary complexity.</p>
-        <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors" href="/forms/contact-form/contact/">
-          <i class="fa-solid fa-envelope"></i> Contact us
-        </a>
-      </div>
+      <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/about/">
+        Meet iTu Solutions <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
     </div>
-  </section>
 
-  <!-- Point & Grid Map (FAQ / Support Hierarchy) -->
-  <section class="py-12">
-    <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Knowledge Grid Matrix</p>
-        <h2 class="text-2xl font-extrabold">Frequently Asked Questions</h2>
-      </div>
+    <!-- SVG Funnel Connector -->
+    <svg viewBox="0 0 300 54" class="w-64 h-12 my-2" aria-hidden="true">
+      <polygon points="10,0 290,0 210,54 90,54" class="fill-brand-primary/15 dark:fill-brand-darkPrimary/20" />
+      <line x1="150" y1="8" x2="150" y2="46" class="stroke-brand-primary dark:stroke-brand-darkPrimary" stroke-width="2" stroke-dasharray="4 4" />
+    </svg>
 
-      <div class="space-y-4">
-        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
-            <span>What areas do you serve?</span>
-            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
-          </summary>
-          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            We provide local on-site services in Ga-Mothiba, Polokwane, and surrounding Limpopo areas, as well as remote website development and technical assistance nationwide across South Africa.
-          </p>
-        </details>
-
-        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
-            <span>How long does it take to build a website?</span>
-            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
-          </summary>
-          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            Standard company websites typically take between 1 to 2 weeks, depending on requirements, content readiness, and specific integrations needed.
-          </p>
-        </details>
-
-        <details class="group bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-4">
-          <summary class="flex cursor-pointer items-center justify-between font-bold text-base">
-            <span>Do you offer emergency computer repair support?</span>
-            <i class="fa-solid fa-chevron-down text-sm transition-transform group-open:-rotate-180"></i>
-          </summary>
-          <p class="mt-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            Yes, we offer priority diagnostics and repairs for urgent computer and software troubleshooting. Contact us via WhatsApp for fast responses.
-          </p>
-        </details>
-      </div>
+    <!-- Funnel Bottom Tier (Direct Action) -->
+    <div class="w-full max-w-[540px] pt-2">
+      <h3 class="mt-0 font-extrabold text-xl mb-2">Need help with a tech issue?</h3>
+      <p class="text-brand-muted dark:text-brand-darkMuted mb-6 text-sm leading-relaxed">Tell us what you need and we’ll discuss the next practical step without unnecessary complexity.</p>
+      <a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline transition-all" href="/forms/contact-form/contact/">
+        <i class="fa-solid fa-envelope"></i> Contact us
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- JotForm Embed Widget -->
-  <div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
-  <script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
+<div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
+<script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
+
+<!-- Frequently Asked Questions (Network / Node-Link Graph List) -->
+<section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem] border-t border-brand-border dark:border-brand-darkBorder">
+  <div class="text-center max-w-[650px] mx-auto mb-10">
+    <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Got Questions?</p>
+    <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Frequently Asked Questions</h2>
+  </div>
+
+  <!-- Node-Link Connected Accordion List (No Grid / No Cards) -->
+  <div class="max-w-3xl mx-auto relative pl-8 border-l-2 border-brand-primary/30 dark:border-brand-darkPrimary/30 space-y-8">
+    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
+      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
+      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
+        <span>What areas do you serve?</span>
+        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+          <i class="fa-solid fa-chevron-down text-sm"></i>
+        </span>
+      </summary>
+      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        We provide local on-site services in Ga-Mothiba, Polokwane, and surrounding Limpopo areas, as well as remote website development and technical assistance nationwide across South Africa.
+      </p>
+    </details>
+
+    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
+      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
+      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
+        <span>How long does it take to build a website?</span>
+        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+          <i class="fa-solid fa-chevron-down text-sm"></i>
+        </span>
+      </summary>
+      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Standard company websites typically take between 1 to 2 weeks, depending on requirements, content readiness, and specific integrations needed.
+      </p>
+    </details>
+
+    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
+      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
+      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
+        <span>Do you offer emergency computer repair support?</span>
+        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
+          <i class="fa-solid fa-chevron-down text-sm"></i>
+        </span>
+      </summary>
+      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
+        Yes, we offer priority diagnostics and repairs for urgent computer and software troubleshooting. Contact us via WhatsApp for fast responses.
+      </p>
+    </details>
+  </div>
+</section>
 
 </main>
 
