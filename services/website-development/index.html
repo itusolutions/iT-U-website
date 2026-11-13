@@ -534,8 +534,13 @@
       </div>
     </section>
 
-    <!-- WEBSITE FEATURES (Network Node-Link Stream Flow) -->
-    <section id="website-features" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+  
+    
+    
+    
+
+    <!-- WEBSITE FEATURES (Network Node-Link Graph & Chord Diagram) -->
+    <section id="website-features" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           MODERN WEBSITE FEATURES
@@ -546,119 +551,194 @@
         </p>
       </div>
 
-      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-mobile-screen-button text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Responsive Design</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Layouts designed to adapt smoothly to mobile phones, tablets, laptops, and desktop screens.</p>
-          </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
+        <!-- SVG Network (Node-Link) Graph -->
+        <div class="flex-1 flex justify-center">
+          <svg viewBox="0 0 380 380" class="w-full max-w-[350px] h-auto" aria-label="8 Website Features Network Graph">
+            <!-- Connecting Edges (Lines) -->
+            <line x1="190" y1="190" x2="190" y2="40" stroke="#36b5b0" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="296" y2="84" stroke="#8b5cf6" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="340" y2="190" stroke="#84cc16" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="296" y2="296" stroke="#f97316" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="190" y2="340" stroke="#ec4899" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="84" y2="296" stroke="#2563eb" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="40" y2="190" stroke="#0d9488" stroke-width="2" opacity="0.5" />
+            <line x1="190" y1="190" x2="84" y2="84" stroke="#6366f1" stroke-width="2" opacity="0.5" />
+
+            <!-- Outer Web Links -->
+            <polygon points="190,40 296,84 340,190 296,296 190,340 84,296 40,190 84,84" fill="none" stroke="#36b5b0" stroke-width="1.5" stroke-dasharray="5 5" opacity="0.4" />
+
+            <!-- Central Hub Node -->
+            <circle cx="190" cy="190" r="46" class="fill-brand-bg dark:fill-brand-darkBg" stroke="#36b5b0" stroke-width="3" />
+            <text x="190" y="186" text-anchor="middle" class="fill-brand-text dark:fill-white font-extrabold text-xs">8 CORE</text>
+            <text x="190" y="203" text-anchor="middle" class="fill-brand-primary dark:fill-brand-darkPrimary font-bold text-[10px]">FEATURES</text>
+
+            <!-- 8 Outer Nodes -->
+            <circle cx="190" cy="40" r="18" fill="#36b5b0" />
+            <text x="190" y="44" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">01</text>
+
+            <circle cx="296" cy="84" r="18" fill="#8b5cf6" />
+            <text x="296" y="88" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">02</text>
+
+            <circle cx="340" cy="190" r="18" fill="#84cc16" />
+            <text x="340" y="194" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">03</text>
+
+            <circle cx="296" cy="296" r="18" fill="#f97316" />
+            <text x="296" y="300" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">04</text>
+
+            <circle cx="190" cy="340" r="18" fill="#ec4899" />
+            <text x="190" y="344" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">05</text>
+
+            <circle cx="84" cy="296" r="18" fill="#2563eb" />
+            <text x="84" y="300" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">06</text>
+
+            <circle cx="40" cy="190" r="18" fill="#0d9488" />
+            <text x="40" y="194" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">07</text>
+
+            <circle cx="84" cy="84" r="18" fill="#6366f1" />
+            <text x="84" y="88" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">08</text>
+          </svg>
         </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-compass text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Clear Navigation</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Organised menus and page structures helping visitors find relevant information without confusion.</p>
+        <!-- Unboxed Feature Stream -->
+        <div class="flex-1 flex flex-col gap-5">
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#36b5b0] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-mobile-screen-button"></i></span>
+            <div>
+              <h3 class="font-bold text-base">01. Responsive Design</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Layouts designed to adapt smoothly to mobile phones, tablets, laptops, and desktop screens.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-headset text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Contact Integration</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Convenient contact links, Jotform integration, email options, and WhatsApp connections.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#8b5cf6] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-compass"></i></span>
+            <div>
+              <h3 class="font-bold text-base">02. Clear Navigation</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Organised menus and page structures helping visitors find relevant information without confusion.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-magnifying-glass text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">SEO Foundations</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Descriptive titles, metadata, meaningful headings, internal links, and search-friendly structures.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#84cc16] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-headset"></i></span>
+            <div>
+              <h3 class="font-bold text-base">03. Contact Integration</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Convenient contact links, Jotform integration, email options, and WhatsApp connections.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-palette text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Brand Consistency</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Coordinated brand colors, typography, imagery, and layouts supporting a recognisable identity.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#f97316] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <div>
+              <h3 class="font-bold text-base">04. SEO Foundations</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Descriptive titles, metadata, meaningful headings, internal links, and search-friendly structures.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-universal-access text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Accessible Content</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Readable text styling, image alt descriptions, and well-organised content to improve usability.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#ec4899] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-palette"></i></span>
+            <div>
+              <h3 class="font-bold text-base">05. Brand Consistency</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Coordinated brand colors, typography, imagery, and layouts supporting a recognisable identity.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-share-nodes text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Social Integration</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Direct links to social platforms so visitors can connect through multiple engagement channels.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#2563eb] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-universal-access"></i></span>
+            <div>
+              <h3 class="font-bold text-base">06. Accessible Content</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Readable text styling, image alt descriptions, and well-organised content to improve usability.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6">
-          <i class="fa-solid fa-shield-halved text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Security Foundations</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">HTTPS routing, secure DNS configuration, and responsible form handling across hosting environments.</p>
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#0d9488] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-share-nodes"></i></span>
+            <div>
+              <h3 class="font-bold text-base">07. Social Integration</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Direct links to social platforms so visitors can connect through multiple engagement channels.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <span class="w-7 h-7 rounded-full bg-[#6366f1] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-shield-halved"></i></span>
+            <div>
+              <h3 class="font-bold text-base">08. Security Foundations</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">HTTPS routing, secure DNS configuration, and responsible form handling across hosting environments.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DIGITAL MARKETING -->
-    <section id="website-marketing" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
-      <div>
+    <!-- DIGITAL MARKETING (Funnel Chart: Traffic to Conversion) -->
+    <section id="website-marketing" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+      <div class="max-w-[700px]">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           WEBSITE DESIGN MEETS DIGITAL MARKETING
         </p>
         <h2 class="text-3xl font-extrabold tracking-tight">A Website That Supports Your Marketing Strategy</h2>
       </div>
 
-      <div class="flex flex-col gap-6 text-base text-brand-muted dark:text-brand-darkMuted max-w-4xl mx-auto">
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-magnifying-glass-chart text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">SEO Foundations</h3>
-            <p class="text-sm leading-relaxed">Search-friendly structures help search engines understand page topics using relevant headings, descriptive page titles, and structured content.</p>
-          </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
+        <!-- SVG Inverted Funnel Chart -->
+        <div class="flex-1 flex justify-center">
+          <svg viewBox="0 0 380 300" class="w-full max-w-[360px] h-auto" aria-label="Digital Marketing Conversion Funnel">
+            <!-- Tier 1: SEO Foundations (Widest Top) -->
+            <polygon points="20,20 360,20 325,80 55,80" fill="#36b5b0" />
+            <text x="190" y="55" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">1. SEO FOUNDATIONS</text>
+
+            <!-- Tier 2: Content Communicating Value -->
+            <polygon points="60,88 320,88 285,148 95,148" fill="#6366f1" />
+            <text x="190" y="123" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">2. VALUE CONTENT</text>
+
+            <!-- Tier 3: Local Search Visibility -->
+            <polygon points="100,156 280,156 245,216 135,216" fill="#8b5cf6" />
+            <text x="190" y="191" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">3. LOCAL VISIBILITY</text>
+
+            <!-- Tier 4: Conversion-Focused Layouts (Narrowest Bottom) -->
+            <polygon points="140,224 240,224 210,284 170,284" fill="#10b981" />
+            <text x="190" y="258" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">4. ACTION</text>
+          </svg>
         </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-bullseye text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Content Communicating Value</h3>
-            <p class="text-sm leading-relaxed">Website content explains what your business offers, who it serves, and how customers can take the next step without confusion.</p>
+        <!-- Unboxed Strategy Descriptions -->
+        <div class="flex-1 flex flex-col gap-6 text-base text-brand-muted dark:text-brand-darkMuted">
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-magnifying-glass-chart text-xl text-[#36b5b0] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">SEO Foundations</h3>
+              <p class="text-sm leading-relaxed">Search-friendly structures help search engines understand page topics using relevant headings, descriptive page titles, and structured content.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-location-crosshairs text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Local Search Visibility</h3>
-            <p class="text-sm leading-relaxed">Local businesses in Polokwane and Limpopo benefit from clear service areas, accurate business details, and locally relevant content.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-bullseye text-xl text-[#6366f1] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Content Communicating Value</h3>
+              <p class="text-sm leading-relaxed">Website content explains what your business offers, who it serves, and how customers can take the next step without confusion.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6">
-          <i class="fa-solid fa-hand-pointer text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Conversion-Focused Layouts</h3>
-            <p class="text-sm leading-relaxed">Strategic contact links, enquiry prompts, and well-placed call-to-action buttons guide visitors toward meaningful interactions.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-location-crosshairs text-xl text-[#8b5cf6] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Local Search Visibility</h3>
+              <p class="text-sm leading-relaxed">Local businesses in Polokwane and Limpopo benefit from clear service areas, accurate business details, and locally relevant content.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-hand-pointer text-xl text-[#10b981] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Conversion-Focused Layouts</h3>
+              <p class="text-sm leading-relaxed">Strategic contact links, enquiry prompts, and well-placed call-to-action buttons guide visitors toward meaningful interactions.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WEBSITE DEVELOPMENT TECHNOLOGY -->
-    <section id="web-technologies" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+    <!-- WEBSITE DEVELOPMENT TECHNOLOGY (Bubble Chart / Scatter Plot Cluster) -->
+    <section id="web-technologies" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           WEB TECHNOLOGY
@@ -669,123 +749,140 @@
         </p>
       </div>
 
-      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-brands fa-html5 text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">HTML5</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Structured web content providing meaningful semantic foundation and modern browser functionality.</p>
-          </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
+        <!-- SVG Bubble Chart (Circles of varying sizes across X-Y plane) -->
+        <div class="flex-1 flex justify-center">
+          <svg viewBox="0 0 380 320" class="w-full max-w-[360px] h-auto" aria-label="Web Technologies Bubble Chart">
+            <!-- Subtle X-Y Coordinate Axes -->
+            <line x1="30" y1="290" x2="360" y2="290" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5" />
+            <line x1="30" y1="20" x2="30" y2="290" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5" />
+
+            <!-- Bubbles of Varying Sizes -->
+            <circle cx="105" cy="95" r="46" fill="#f97316" opacity="0.9" />
+            <text x="105" y="99" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">HTML5</text>
+
+            <circle cx="220" cy="85" r="52" fill="#36b5b0" opacity="0.9" />
+            <text x="220" y="83" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">CSS3 &amp;</text>
+            <text x="220" y="97" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Tailwind</text>
+
+            <circle cx="315" cy="145" r="42" fill="#eab308" opacity="0.9" />
+            <text x="315" y="143" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">JS &amp;</text>
+            <text x="315" y="157" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">Alpine</text>
+
+            <circle cx="115" cy="215" r="44" fill="#8b5cf6" opacity="0.9" />
+            <text x="115" y="213" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">Blogger &amp;</text>
+            <text x="115" y="226" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">WordPress</text>
+
+            <circle cx="215" cy="215" r="40" fill="#2563eb" opacity="0.9" />
+            <text x="215" y="213" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">GitHub</text>
+            <text x="215" y="226" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">Pages</text>
+
+            <circle cx="305" cy="240" r="36" fill="#10b981" opacity="0.9" />
+            <text x="305" y="238" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">HostAfrica</text>
+            <text x="305" y="250" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">DNS</text>
+          </svg>
         </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-brands fa-css3-alt text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">CSS3 &amp; Tailwind CSS</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Styling frameworks used to build consistent, responsive, and visually clean user interfaces.</p>
+        <!-- Unboxed Tech List -->
+        <div class="flex-1 flex flex-col gap-5">
+          <div class="flex items-start gap-4">
+            <i class="fa-brands fa-html5 text-xl text-[#f97316] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">HTML5</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Structured web content providing meaningful semantic foundation and modern browser functionality.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-brands fa-js text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">JavaScript &amp; Alpine.js</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Interactive functionality such as dropdowns, mobile navigation behavior, and dynamic UI enhancements.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-brands fa-css3-alt text-xl text-[#36b5b0] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">CSS3 &amp; Tailwind CSS</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Styling frameworks used to build consistent, responsive, and visually clean user interfaces.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-brands fa-blogger text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Blogger XML &amp; WordPress</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Content management publishing platforms configured for efficient content administration and updates.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-brands fa-js text-xl text-[#eab308] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">JavaScript &amp; Alpine.js</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Interactive functionality such as dropdowns, mobile navigation behavior, and dynamic UI enhancements.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-brands fa-github text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">GitHub Pages Deployment</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Reliable static hosting deployed with custom DNS routing and automated HTTPS security.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-brands fa-blogger text-xl text-[#8b5cf6] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Blogger XML &amp; WordPress</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Content management publishing platforms configured for efficient content administration and updates.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-start gap-6">
-          <i class="fa-solid fa-server text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <div>
-            <h3 class="font-bold text-lg mb-1">HostAfrica DNS &amp; Hosting</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Domain name management, CNAME records, and regional server routing configuration.</p>
+          <div class="flex items-start gap-4">
+            <i class="fa-brands fa-github text-xl text-[#2563eb] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">GitHub Pages Deployment</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Reliable static hosting deployed with custom DNS routing and automated HTTPS security.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <i class="fa-solid fa-server text-xl text-[#10b981] mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">HostAfrica DNS &amp; Hosting</h3>
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Domain name management, CNAME records, and regional server routing configuration.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WEBSITE STRUCTURE (Linear Flow / Timeline Representation) -->
-    <section id="website-architecture" class="space-y-6 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
-      <div>
+    <!-- WEBSITE STRUCTURE (Sankey Flow & Wave Streamgraph) -->
+    <section id="website-architecture" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+      <div class="max-w-[700px]">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           PLANNING YOUR WEBSITE
         </p>
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Organised Website Architecture</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed mt-3">
+          A website should have a logical structure that makes information easy to discover. Depending on your business, a project may include:
+        </p>
       </div>
 
-      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
-        A website should have a logical structure that makes information easy to discover. Depending on your business, a project may include:
-      </p>
+      <!-- SVG Sankey Diagram (Flowing curved bands from Home Page node to 5 destinations) -->
+      <div class="w-full overflow-x-auto">
+        <svg viewBox="0 0 860 220" class="w-full min-w-[650px] h-auto" aria-label="Website Architecture Sankey Flow">
+          <!-- Source Node: Home Page -->
+          <rect x="20" y="30" width="24" height="160" rx="12" fill="#36b5b0" />
+          <text x="56" y="115" class="fill-brand-text dark:fill-white font-extrabold text-sm">1. HOME PAGE</text>
 
-      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
-        <div class="flex items-center gap-6 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">1</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">Home Page</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Clear introduction &amp; primary message.</p>
-          </div>
-        </div>
+          <!-- Flowing Curved Sankey Bands -->
+          <path d="M 165 55 C 360 55, 450 25, 640 25" fill="none" stroke="#36b5b0" stroke-width="14" opacity="0.35" />
+          <path d="M 165 85 C 360 85, 450 68, 640 68" fill="none" stroke="#6366f1" stroke-width="14" opacity="0.35" />
+          <path d="M 165 115 C 360 115, 450 112, 640 112" fill="none" stroke="#8b5cf6" stroke-width="14" opacity="0.35" />
+          <path d="M 165 145 C 360 145, 450 156, 640 156" fill="none" stroke="#ec4899" stroke-width="14" opacity="0.35" />
+          <path d="M 165 175 C 360 175, 450 198, 640 198" fill="none" stroke="#10b981" stroke-width="14" opacity="0.35" />
 
-        <div class="flex items-center gap-6 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">2</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">About Us</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Company background &amp; team info.</p>
-          </div>
-        </div>
+          <!-- Destination Nodes -->
+          <circle cx="650" cy="25" r="8" fill="#36b5b0" />
+          <text x="668" y="29" class="fill-brand-text dark:fill-white font-bold text-xs">2. About Us — Background &amp; team</text>
 
-        <div class="flex items-center gap-6 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">3</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">Services</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Detailed breakdown of offerings.</p>
-          </div>
-        </div>
+          <circle cx="650" cy="68" r="8" fill="#6366f1" />
+          <text x="668" y="72" class="fill-brand-text dark:fill-white font-bold text-xs">3. Services — Breakdown of offerings</text>
 
-        <div class="flex items-center gap-6 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">4</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">Portfolio</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Selected examples of completed work.</p>
-          </div>
-        </div>
+          <circle cx="650" cy="112" r="8" fill="#8b5cf6" />
+          <text x="668" y="116" class="fill-brand-text dark:fill-white font-bold text-xs">4. Portfolio — Completed work</text>
 
-        <div class="flex items-center gap-6 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">5</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">Blog / Updates</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Articles &amp; educational content.</p>
-          </div>
-        </div>
+          <circle cx="650" cy="156" r="8" fill="#ec4899" />
+          <text x="668" y="160" class="fill-brand-text dark:fill-white font-bold text-xs">5. Blog / Updates — Articles &amp; news</text>
 
-        <div class="flex items-center gap-6">
-          <span class="w-8 h-8 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white text-xs font-bold flex items-center justify-center shrink-0">6</span>
-          <div>
-            <strong class="text-brand-text dark:text-white block font-bold text-base">Contact Page</strong>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Jotform links, map &amp; WhatsApp.</p>
-          </div>
-        </div>
+          <circle cx="650" cy="198" r="8" fill="#10b981" />
+          <text x="668" y="202" class="fill-brand-text dark:fill-white font-bold text-xs">6. Contact Page — Map &amp; WhatsApp</text>
+        </svg>
       </div>
     </section>
 
-    <!-- WEBSITE PERFORMANCE -->
-    <section id="website-performance" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+    <!-- WEBSITE PERFORMANCE (Area & Line Wave Trend Chart) -->
+    <section id="website-performance" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           PERFORMANCE AND USABILITY
@@ -796,43 +893,50 @@
         </p>
       </div>
 
-      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Mobile-Friendly</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Mobile usability is prioritized as most local customers discover businesses through smartphones.</p>
-          </div>
+      <!-- SVG Area & Line Chart -->
+      <div class="w-full overflow-x-auto">
+        <svg viewBox="0 0 860 150" class="w-full min-w-[640px] h-auto" aria-label="Website Performance Optimization Curve">
+          <defs>
+            <linearGradient id="perfArea" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#36b5b0" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#36b5b0" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
+          <path d="M 80 115 Q 200 105, 320 80 T 560 45 T 780 20 L 780 135 L 80 135 Z" fill="url(#perfArea)" />
+          <path d="M 80 115 Q 200 105, 320 80 T 560 45 T 780 20" fill="none" stroke="#36b5b0" stroke-width="4" stroke-linecap="round" />
+
+          <circle cx="80" cy="115" r="10" fill="#36b5b0" />
+          <circle cx="320" cy="80" r="10" fill="#6366f1" />
+          <circle cx="560" cy="45" r="10" fill="#8b5cf6" />
+          <circle cx="780" cy="20" r="12" fill="#10b981" />
+        </svg>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between gap-8 max-w-5xl mx-auto">
+        <div class="flex-1">
+          <h3 class="font-bold text-lg text-[#36b5b0] mb-1">Mobile-Friendly</h3>
+          <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Mobile usability is prioritized as most local customers discover businesses through smartphones.</p>
         </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Efficient Resources</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Image compression, Cloudinary assets, and clean scripts minimize page loading overhead.</p>
-          </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg text-[#6366f1] mb-1">Efficient Resources</h3>
+          <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Image compression, Cloudinary assets, and clean scripts minimize page loading overhead.</p>
         </div>
 
-        <div class="flex items-start gap-6 pb-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Browser Compatibility</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Websites are tested across modern browsers to eliminate layout and rendering issues.</p>
-          </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg text-[#8b5cf6] mb-1">Browser Compatibility</h3>
+          <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Websites are tested across modern browsers to eliminate layout and rendering issues.</p>
         </div>
 
-        <div class="flex items-start gap-6">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
-          <div>
-            <h3 class="font-bold text-lg text-brand-text dark:text-white mb-1">Search Accessibility</h3>
-            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Semantic HTML structures and clean internal linking help search crawlers index content properly.</p>
-          </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-lg text-[#10b981] mb-1">Search Accessibility</h3>
+          <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Semantic HTML structures and clean internal linking help search crawlers index content properly.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHO CAN BENEFIT -->
-    <section id="website-audience" class="space-y-6 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+    <!-- WHO CAN BENEFIT (Pyramid Chart: Foundation to Growth Peak) -->
+    <section id="website-audience" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           WHO CAN BENEFIT?
@@ -840,36 +944,55 @@
         <h2 class="text-3xl font-extrabold tracking-tight">Is It Time to Build or Upgrade Your Website?</h2>
       </div>
 
-      <ul class="flex flex-col gap-4 text-sm sm:text-base text-brand-muted dark:text-brand-darkMuted max-w-4xl mx-auto">
-        <li class="flex items-start gap-3 pb-3 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>You are starting a new business and need a professional online identity.</span>
-        </li>
-        <li class="flex items-start gap-3 pb-3 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>Your current website is outdated or difficult to use on mobile phones.</span>
-        </li>
-        <li class="flex items-start gap-3 pb-3 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>Customers struggle to find accurate info about your products and services.</span>
-        </li>
-        <li class="flex items-start gap-3 pb-3 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>You want a dedicated portfolio to showcase your professional work.</span>
-        </li>
-        <li class="flex items-start gap-3 pb-3 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>You need a central destination for your digital marketing campaigns.</span>
-        </li>
-        <li class="flex items-start gap-3">
-          <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
-          <span>Your business relies too heavily on social media and needs an independent site.</span>
-        </li>
-      </ul>
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
+        <!-- Upright Pyramid Chart SVG -->
+        <div class="flex-1 flex justify-center">
+          <svg viewBox="0 0 360 280" class="w-full max-w-[340px] h-auto" aria-label="Digital Growth Pyramid Chart">
+            <!-- Peak Layer -->
+            <polygon points="180,20 120,100 240,100" fill="#10b981" />
+            <text x="180" y="80" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">SCALE &amp; LEADS</text>
+
+            <!-- Middle Layer -->
+            <polygon points="115,108 245,108 295,188 65,188" fill="#8b5cf6" />
+            <text x="180" y="154" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">PORTFOLIO &amp; AUTHORITY</text>
+
+            <!-- Foundation Base Layer -->
+            <polygon points="60,196 300,196 350,270 10,270" fill="#36b5b0" />
+            <text x="180" y="240" text-anchor="middle" fill="#fff" font-weight="bold" font-size="12">ONLINE IDENTITY FOUNDATION</text>
+          </svg>
+        </div>
+
+        <ul class="flex-1 flex flex-col gap-4 text-sm sm:text-base text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>You are starting a new business and need a professional online identity.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>Your current website is outdated or difficult to use on mobile phones.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>Customers struggle to find accurate info about your products and services.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>You want a dedicated portfolio to showcase your professional work.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>You need a central destination for your digital marketing campaigns.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <span>Your business relies too heavily on social media and needs an independent site.</span>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <!-- PROJECT DELIVERABLES & OPTIONS -->
-    <section id="website-deliverables" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+    <!-- PROJECT DELIVERABLES & OPTIONS (Ternary Plot Triangle) -->
+    <section id="website-deliverables" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           PROJECT DELIVERABLES
@@ -880,7 +1003,7 @@
         </p>
       </div>
 
-      <div class="flex flex-col lg:flex-row gap-12 max-w-4xl mx-auto">
+      <div class="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
         <div class="flex-1 space-y-4">
           <h3 class="font-bold text-xl flex items-center gap-2">
             <i class="fa-solid fa-list-check text-brand-primary dark:text-brand-darkPrimary"></i> Standard Project Inclusions
@@ -892,6 +1015,25 @@
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Jotform contact &amp; WhatsApp links</li>
             <li class="flex items-center gap-3"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Basic on-page SEO setup</li>
           </ul>
+        </div>
+
+        <!-- Equilateral Ternary Plot SVG (Design, Speed, SEO Balance) -->
+        <div class="flex justify-center">
+          <svg viewBox="0 0 280 250" class="w-full max-w-[260px] h-auto" aria-label="Project Balance Ternary Plot">
+            <polygon points="140,25 255,215 25,215" fill="#36b5b0" fill-opacity="0.12" stroke="#36b5b0" stroke-width="2.5" />
+            <line x1="140" y1="25" x2="140" y2="215" stroke="#36b5b0" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+            <line x1="255" y1="215" x2="82" y2="120" stroke="#8b5cf6" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+            <line x1="25" y1="215" x2="198" y2="120" stroke="#10b981" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+
+            <!-- Plotted Balance Point -->
+            <circle cx="140" cy="148" r="10" fill="#8b5cf6" />
+            <circle cx="140" cy="148" r="4" fill="#fff" />
+
+            <!-- 3 Vertex Labels -->
+            <text x="140" y="15" text-anchor="middle" class="fill-brand-text dark:fill-white font-bold text-xs">DESIGN</text>
+            <text x="255" y="235" text-anchor="middle" class="fill-brand-text dark:fill-white font-bold text-xs">SPEED</text>
+            <text x="25" y="235" text-anchor="middle" class="fill-brand-text dark:fill-white font-bold text-xs">SEO</text>
+          </svg>
         </div>
 
         <div class="flex-1 space-y-4">
@@ -908,7 +1050,7 @@
       </div>
     </section>
 
-    <!-- FREQUENTLY ASKED QUESTIONS (Node-Link Network Accordion Style) -->
+    <!-- FREQUENTLY ASKED QUESTIONS (Node-Link Stream Accordion) -->
     <section id="website-faq" class="space-y-8 max-w-[900px] mx-auto pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
@@ -973,7 +1115,7 @@
       </div>
     </section>
 
-    <!-- FINAL CALL TO ACTION (Funnel Conversion Apex) -->
+    <!-- FINAL CALL TO ACTION (Streamgraph Wave Backdrop) -->
     <section id="website-enquiry" class="relative overflow-hidden py-16 text-center flex flex-col items-center pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="relative z-10 max-w-[650px] mx-auto space-y-6 flex flex-col items-center">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
@@ -1028,6 +1170,9 @@
   </div>
 
 </main>
+
+    
+    
 
 
     <!-- Updated Footer Block -->
