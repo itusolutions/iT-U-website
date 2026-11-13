@@ -518,112 +518,123 @@
     </section>
 
 
-    <!-- HARDWARE DIAGNOSTICS (Network Node-Link Graph / Chord Representation) -->
+
+
+
+ 
+    <!-- HARDWARE DIAGNOSTICS (Network Node-Link Cluster & Chord Graph Integration) -->
     <section id="hardware-diagnostics" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
-      <div class="text-center max-w-[650px] mx-auto">
-        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           TECHNICAL DIAGNOSIS
         </p>
-        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Computer Hardware Diagnostics &amp; Fault Identification</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
-          A computer may appear completely faulty when the actual cause is a single failing component or connection. Proper assessment helps distinguish between hardware-related and software-related symptoms.
-        </p>
+        <h2 class="text-3xl font-extrabold tracking-tight">Computer Hardware Diagnostics &amp; Fault Identification</h2>
       </div>
 
+      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed max-w-4xl">
+        A computer may appear completely faulty when the actual cause is a single failing component or connection. Proper assessment helps distinguish between hardware-related and software-related symptoms.
+      </p>
+
       <div class="flex flex-col lg:flex-row items-center justify-between gap-12 max-w-5xl mx-auto">
-        <!-- Network Node-Link SVG Graph -->
+        <!-- Node-Link Network Cluster SVG Graphic -->
         <div class="flex-1 flex justify-center">
           <svg viewBox="0 0 360 360" class="w-full max-w-[340px] h-auto" aria-label="Hardware Diagnostics Node-Link Graph">
-            <!-- Connecting Edges / Links -->
-            <line x1="180" y1="60" x2="90" y2="130" stroke="#36b5b0" stroke-width="2.5" opacity="0.6" />
-            <line x1="180" y1="60" x2="270" y2="130" stroke="#8b5cf6" stroke-width="2.5" opacity="0.6" />
-            <line x1="90" y1="130" x2="120" y2="260" stroke="#84cc16" stroke-width="2.5" opacity="0.6" />
-            <line x1="270" y1="130" x2="240" y2="260" stroke="#f97316" stroke-width="2.5" opacity="0.6" />
-            <line x1="120" y1="260" x2="240" y2="260" stroke="#ec4899" stroke-width="2.5" opacity="0.6" />
-            <line x1="90" y1="130" x2="270" y2="130" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4" />
-            <line x1="180" y1="60" x2="180" y2="190" stroke="#0d9488" stroke-width="2" opacity="0.5" />
+            <!-- Connecting Edges / Lines -->
+            <line x1="180" y1="180" x2="180" y2="60" stroke="#36b5b0" stroke-width="2.5" opacity="0.5" />
+            <line x1="180" y1="180" x2="290" y2="120" stroke="#8b5cf6" stroke-width="2.5" opacity="0.5" />
+            <line x1="180" y1="180" x2="290" y2="240" stroke="#84cc16" stroke-width="2.5" opacity="0.5" />
+            <line x1="180" y1="180" x2="180" y2="300" stroke="#f97316" stroke-width="2.5" opacity="0.5" />
+            <line x1="180" y1="180" x2="70" y2="240" stroke="#ec4899" stroke-width="2.5" opacity="0.5" />
+            <line x1="180" y1="180" x2="70" y2="120" stroke="#2563eb" stroke-width="2.5" opacity="0.5" />
+            <!-- Inter-node web edges -->
+            <line x1="180" y1="60" x2="290" y2="120" stroke="#36b5b0" stroke-width="1.5" opacity="0.3" />
+            <line x1="290" y1="240" x2="180" y2="300" stroke="#84cc16" stroke-width="1.5" opacity="0.3" />
+            <line x1="70" y1="240" x2="70" y2="120" stroke="#ec4899" stroke-width="1.5" opacity="0.3" />
 
             <!-- Central Hub Node -->
-            <circle cx="180" cy="190" r="32" class="fill-brand-bg dark:fill-brand-darkBg" stroke="#36b5b0" stroke-width="3" />
-            <text x="180" y="186" text-anchor="middle" class="fill-brand-text dark:fill-white font-extrabold text-[10px]">SYSTEM</text>
-            <text x="180" y="198" text-anchor="middle" class="fill-brand-primary dark:fill-brand-darkPrimary font-bold text-[9px]">DIAGNOSIS</text>
+            <circle cx="180" cy="180" r="38" class="fill-brand-bg dark:fill-brand-darkBg" stroke="#36b5b0" stroke-width="3" />
+            <text x="180" y="176" text-anchor="middle" class="fill-brand-text dark:fill-white font-extrabold text-[10px]">SYSTEM</text>
+            <text x="180" y="191" text-anchor="middle" class="fill-brand-primary dark:fill-brand-darkPrimary font-bold text-[10px]">HUB</text>
 
             <!-- Peripheral Component Nodes -->
             <circle cx="180" cy="60" r="20" fill="#36b5b0" />
             <text x="180" y="64" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">RAM</text>
 
-            <circle cx="90" cy="130" r="20" fill="#8b5cf6" />
-            <text x="90" y="134" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">STORAGE</text>
+            <circle cx="290" cy="120" r="20" fill="#8b5cf6" />
+            <text x="290" y="124" text-anchor="middle" fill="#fff" font-weight="bold" font-size="9">STORAGE</text>
 
-            <circle cx="270" cy="130" r="20" fill="#84cc16" />
-            <text x="270" y="134" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">COOLING</text>
+            <circle cx="290" cy="240" r="20" fill="#84cc16" />
+            <text x="290" y="244" text-anchor="middle" fill="#fff" font-weight="bold" font-size="9">COOLING</text>
 
-            <circle cx="120" cy="260" r="20" fill="#f97316" />
-            <text x="120" y="264" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">POWER</text>
+            <circle cx="180" cy="300" r="20" fill="#f97316" />
+            <text x="180" y="304" text-anchor="middle" fill="#fff" font-weight="bold" font-size="9">POWER</text>
 
-            <circle cx="240" cy="260" r="20" fill="#ec4899" />
-            <text x="240" y="264" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">BOARD</text>
+            <circle cx="70" cy="240" r="20" fill="#ec4899" />
+            <text x="70" y="244" text-anchor="middle" fill="#fff" font-weight="bold" font-size="9">BOARD</text>
+
+            <circle cx="70" cy="120" r="20" fill="#2563eb" />
+            <text x="70" y="124" text-anchor="middle" fill="#fff" font-weight="bold" font-size="9">DISPLAY</text>
           </svg>
         </div>
 
-        <!-- Unboxed Diagnostic Components Stream -->
-        <div class="flex-1 flex flex-col gap-5">
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#36b5b0] mt-1 shrink-0"></i>
+        <!-- Unboxed Component Stream -->
+        <div class="flex-1 flex flex-col gap-6">
+          <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+            <span class="w-8 h-8 rounded-full bg-[#36b5b0] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">01</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">RAM</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">RAM</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Memory-related errors, instability, and unexpected system crashes.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#8b5cf6] mt-1 shrink-0"></i>
+          <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+            <span class="w-8 h-8 rounded-full bg-[#8b5cf6] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">02</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">Storage drives</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">Storage drives</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Hard disk or solid-state drive detection problems and storage faults.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#84cc16] mt-1 shrink-0"></i>
+          <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+            <span class="w-8 h-8 rounded-full bg-[#84cc16] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">03</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">Cooling components</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">Cooling components</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Fan problems, restricted airflow, and overheating symptoms.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#f97316] mt-1 shrink-0"></i>
+          <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+            <span class="w-8 h-8 rounded-full bg-[#f97316] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">04</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">Power supply</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">Power supply</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Power delivery concerns and unexpected shutdowns.</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#ec4899] mt-1 shrink-0"></i>
+          <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+            <span class="w-8 h-8 rounded-full bg-[#ec4899] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">05</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">Motherboard</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">Motherboard</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Possible system board faults requiring further technical assessment.</p>
             </div>
           </div>
 
           <div class="flex items-start gap-4">
-            <i class="fa-solid fa-circle-check text-xl text-[#2563eb] mt-1 shrink-0"></i>
+            <span class="w-8 h-8 rounded-full bg-[#2563eb] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">06</span>
             <div>
-              <strong class="text-brand-text dark:text-white block text-base font-bold mb-1">Display components</strong>
+              <strong class="text-brand-text dark:text-white block text-lg mb-1">Display components</strong>
               <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">Screen, cable, graphics output, and monitor-related problems.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <p class="text-xs text-brand-muted dark:text-brand-darkMuted italic pt-4 text-center">
+      <p class="text-xs text-brand-muted dark:text-brand-darkMuted italic pt-4">
         Component testing and repair options depend on device design, available equipment, fault symptoms, and availability of replacement parts.
       </p>
     </section>
 
-    <!-- SLOW COMPUTER & STARTUP FAILURES (Area Chart & Line Trend Flow) -->
+    <!-- SLOW COMPUTER & STARTUP FAILURES (Linear Sequential & Scatter Trend Layout) -->
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       
       <!-- SLOW COMPUTER -->
@@ -637,25 +648,7 @@
         <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           A computer that takes too long to start, freezes during normal use, or struggles to open applications may have an underlying hardware, storage, or resource problem.
         </p>
-
-        <!-- Area Chart Trend SVG -->
-        <div class="w-full overflow-x-auto py-2">
-          <svg viewBox="0 0 450 140" class="w-full h-auto" aria-label="Slow Computer Performance Area Chart">
-            <defs>
-              <linearGradient id="slowArea" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#f97316" stop-opacity="0.35" />
-                <stop offset="100%" stop-color="#f97316" stop-opacity="0.0" />
-              </linearGradient>
-            </defs>
-            <path d="M 30 110 C 120 100, 180 50, 240 70 C 300 90, 360 25, 420 30 L 420 120 L 30 120 Z" fill="url(#slowArea)" />
-            <path d="M 30 110 C 120 100, 180 50, 240 70 C 300 90, 360 25, 420 30" fill="none" stroke="#f97316" stroke-width="3" />
-            <circle cx="30" cy="110" r="5" fill="#f97316" />
-            <circle cx="240" cy="70" r="5" fill="#f97316" />
-            <circle cx="420" cy="30" r="6" fill="#f97316" />
-          </svg>
-        </div>
-
-        <ul class="flex flex-col gap-3 text-sm text-brand-muted dark:text-brand-darkMuted">
+        <ul class="flex flex-col gap-3 text-sm text-brand-muted dark:text-brand-darkMuted pt-2">
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Insufficient RAM for current workloads</li>
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Storage drives experiencing performance or health issues</li>
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Excessive background processes</li>
@@ -675,18 +668,7 @@
         <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           Startup problems prevent access to important files. Symptoms range from a completely unresponsive computer to a device failing to load its operating system.
         </p>
-
-        <!-- Line Chart Trend SVG -->
-        <div class="w-full overflow-x-auto py-2">
-          <svg viewBox="0 0 450 140" class="w-full h-auto" aria-label="Startup Failures Line Chart">
-            <path d="M 30 30 C 100 90, 170 110, 240 60 C 310 10, 370 80, 420 50" fill="none" stroke="#8b5cf6" stroke-width="3" />
-            <circle cx="30" cy="30" r="6" fill="#8b5cf6" />
-            <circle cx="240" cy="60" r="5" fill="#8b5cf6" />
-            <circle cx="420" cy="50" r="5" fill="#8b5cf6" />
-          </svg>
-        </div>
-
-        <ul class="flex flex-col gap-3 text-sm text-brand-muted dark:text-brand-darkMuted">
+        <ul class="flex flex-col gap-3 text-sm text-brand-muted dark:text-brand-darkMuted pt-2">
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Computer powers on with a blank screen</li>
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Computer repeatedly restarts during startup</li>
           <li class="flex items-center gap-3 pb-2 border-b border-brand-border/30 dark:border-brand-darkBorder/30"><i class="fa-solid fa-check text-brand-primary dark:text-brand-darkPrimary"></i> Operating system fails to load</li>
@@ -697,8 +679,8 @@
 
     </div>
 
-    <!-- STORAGE AND DATA (Streamgraph Flow Representation) -->
-    <section id="storage-device-assessment" class="space-y-6 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+    <!-- STORAGE AND DATA (Area Chart / Wave Flow Layout) -->
+    <section id="storage-device-assessment" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           STORAGE &amp; DATA AWARENESS
@@ -706,42 +688,65 @@
         <h2 class="text-3xl font-extrabold tracking-tight">Hard Drive and SSD Problems</h2>
       </div>
 
-      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
+      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed max-w-4xl">
         Storage devices hold operating system files, applications, and personal information. A failing drive can cause slow performance, file corruption, and potential data loss.
       </p>
 
-      <!-- Streamgraph Wave SVG -->
+      <!-- Wave / Area Chart SVG Flow Representation -->
       <div class="w-full overflow-x-auto">
-        <svg viewBox="0 0 900 120" class="w-full min-w-[650px] h-auto" aria-label="Storage Problems Streamgraph">
-          <path d="M 50 60 C 200 20, 350 100, 500 60 C 650 20, 800 100, 850 60 L 850 80 C 800 120, 650 40, 500 80 C 350 120, 200 40, 50 80 Z" fill="#36b5b0" opacity="0.4" />
-          <path d="M 50 50 C 220 80, 380 20, 550 50 C 720 80, 800 30, 850 40 L 850 70 C 800 60, 720 110, 550 80 C 380 50, 220 110, 50 70 Z" fill="#8b5cf6" opacity="0.4" />
+        <svg viewBox="0 0 900 150" class="w-full min-w-[680px] h-auto" aria-label="Storage Risk Area Chart">
+          <defs>
+            <linearGradient id="storageShade" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#f97316" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#36b5b0" stop-opacity="0.0" />
+            </linearGradient>
+            <linearGradient id="storageLine" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#36b5b0" />
+              <stop offset="50%" stop-color="#f97316" />
+              <stop offset="100%" stop-color="#ef4444" />
+            </linearGradient>
+          </defs>
+          <path d="M 60 120 C 180 120, 240 70, 360 80 C 480 90, 540 40, 660 45 C 750 50, 810 20, 870 15 L 870 135 L 60 135 Z" fill="url(#storageShade)" />
+          <path d="M 60 120 C 180 120, 240 70, 360 80 C 480 90, 540 40, 660 45 C 750 50, 810 20, 870 15" fill="none" stroke="url(#storageLine)" stroke-width="3.5" stroke-linecap="round" />
+          
+          <circle cx="60" cy="120" r="12" fill="#36b5b0" />
+          <text x="60" y="124" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">1</text>
+
+          <circle cx="360" cy="80" r="12" fill="#6366f1" />
+          <text x="360" y="84" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">2</text>
+
+          <circle cx="660" cy="45" r="12" fill="#f97316" />
+          <text x="660" y="49" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">3</text>
+
+          <circle cx="870" cy="15" r="14" fill="#ef4444" />
+          <text x="870" y="19" text-anchor="middle" fill="#fff" font-weight="bold" font-size="10">4</text>
         </svg>
       </div>
 
       <div class="flex flex-col gap-4 max-w-4xl mx-auto">
         <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
+          <span class="w-8 h-8 rounded-full bg-[#36b5b0] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">01</span>
           <div>
             <strong class="text-brand-text dark:text-white block font-bold text-base mb-1">Unusual mechanical sounds</strong>
             <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Clicking or whirring noises coming from mechanical hard drives.</p>
           </div>
         </div>
         <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
+          <span class="w-8 h-8 rounded-full bg-[#6366f1] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">02</span>
           <div>
             <strong class="text-brand-text dark:text-white block font-bold text-base mb-1">Disk read/write errors</strong>
             <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Repeated errors when saving, opening, or modifying files.</p>
           </div>
         </div>
         <div class="flex items-start gap-4 pb-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
+          <span class="w-8 h-8 rounded-full bg-[#f97316] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">03</span>
           <div>
             <strong class="text-brand-text dark:text-white block font-bold text-base mb-1">Disappearing storage</strong>
             <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Storage devices failing to appear during system detection or boot.</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
-          <span class="w-3 h-3 rounded-full bg-brand-primary dark:bg-brand-darkPrimary mt-2 shrink-0"></span>
+          <span class="w-8 h-8 rounded-full bg-[#ef4444] text-white text-xs font-bold flex items-center justify-center shrink-0 mt-1">04</span>
           <div>
             <strong class="text-brand-text dark:text-white block font-bold text-base mb-1">System freezes</strong>
             <p class="text-sm text-brand-muted dark:text-brand-darkMuted">Unexpected system lockups during file transfers or disk operations.</p>
@@ -755,7 +760,7 @@
       </div>
     </section>
 
-    <!-- PHYSICAL DAMAGE & COMPUTER MAINTENANCE (Linear Sequential Flow Layout) -->
+    <!-- PHYSICAL DAMAGE & COMPUTER MAINTENANCE (Linear Flow Layout) -->
     <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       
       <!-- PHYSICAL DAMAGE -->
@@ -800,18 +805,31 @@
 
     </div>
 
-    <!-- REPAIR ASSESSMENT PROCESS (Funnel Process Flow) -->
-    <section id="repair-assessment" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
-      <div>
+    <!-- REPAIR ASSESSMENT PROCESS (Funnel / Pyramid Flow Representation) -->
+    <section id="repair-assessment" class="space-y-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+      <div class="max-w-[700px]">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
           REPAIR EVALUATION
         </p>
-        <h2 class="text-3xl font-extrabold tracking-tight">What Happens During a Repair Assessment?</h2>
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">What Happens During a Repair Assessment?</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
+          A repair assessment focuses on understanding reported symptoms and identifying possible causes before repair work is undertaken.
+        </p>
       </div>
 
-      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed max-w-[700px]">
-        A repair assessment focuses on understanding reported symptoms and identifying possible causes before repair work is undertaken.
-      </p>
+      <!-- Pyramid & Funnel Flow SVG Diagram -->
+      <div class="flex justify-center">
+        <svg viewBox="0 0 400 240" class="w-full max-w-[360px] h-auto" aria-label="Repair Assessment Funnel Diagram">
+          <polygon points="200,10 60,75 340,75" fill="#36b5b0" />
+          <text x="200" y="50" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">1. INSPECTION &amp; VERIFY</text>
+
+          <polygon points="65,83 335,83 290,145 110,145" fill="#8b5cf6" />
+          <text x="200" y="118" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">2. INVESTIGATION &amp; FINDINGS</text>
+
+          <polygon points="105,153 295,153 350,225 50,225" fill="#2563eb" />
+          <text x="200" y="193" text-anchor="middle" fill="#fff" font-weight="bold" font-size="11">3. RECOMMENDATION &amp; APPROVAL</text>
+        </svg>
+      </div>
 
       <div class="flex flex-col gap-6 max-w-4xl mx-auto">
         <div class="flex items-start gap-6 pb-6 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
@@ -917,6 +935,7 @@
 
 </main>
 
+ 
 
 
 
