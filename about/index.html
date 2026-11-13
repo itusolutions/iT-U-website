@@ -362,16 +362,17 @@
 </header>
 
 
+<!-- Main Content -->
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
   <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
 
-    <!-- ABOUT PAGE HERO -->
-    <section class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
+    <!-- ABOUT PAGE HERO (Circular / Donut Metric Focus) -->
+    <section class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom flex flex-col items-center text-center">
       <!-- Ambient Background Glow -->
       <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="relative z-10 max-w-[850px] mx-auto">
+      <div class="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
         <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
           <i class="fa-solid fa-microchip text-xs"></i> ABOUT ITU SOLUTIONS | TECHNOLOGY WITH PURPOSE
         </p>
@@ -398,11 +399,11 @@
       </div>
     </section>
 
-    <!-- COMPANY INTRODUCTION & PURPOSE (2 Columns Grid) -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+    <!-- COMPANY INTRODUCTION & PURPOSE (Flex Stack Flow) -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
       
       <!-- COMPANY INTRODUCTION -->
-      <section id="company-overview" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+      <section id="company-overview" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
           WHO WE ARE
         </p>
@@ -426,7 +427,7 @@
       </section>
 
       <!-- OUR PURPOSE & SERVICE PROMISE -->
-      <section id="our-purpose" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6 flex flex-col justify-between">
+      <section id="our-purpose" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6 flex flex-col justify-between">
         <div class="space-y-4">
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
             OUR PURPOSE
@@ -459,10 +460,10 @@
 
     <!-- MISSION AND VISION -->
     <section id="mission-vision">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="flex flex-col md:flex-row gap-8">
 
-        <!-- MISSION CARD -->
-        <article class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
+        <!-- MISSION ARTICLE -->
+        <article class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
           <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-xl">
             <i class="fa-solid fa-bullseye"></i>
           </div>
@@ -475,8 +476,8 @@
           </p>
         </article>
 
-        <!-- VISION CARD -->
-        <article class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
+        <!-- VISION ARTICLE -->
+        <article class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
           <div class="w-12 h-12 rounded-2xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-xl">
             <i class="fa-solid fa-eye"></i>
           </div>
@@ -492,7 +493,7 @@
       </div>
     </section>
 
-    <!-- CORE VALUES -->
+    <!-- CORE VALUES (Stacked List Flow / Heatmap Matrix style layout without grids) -->
     <section id="our-values" class="space-y-8">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
@@ -504,72 +505,84 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-users text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Customer Focus</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            We listen to our customers, understand their challenges, and recommend solutions that address their actual needs.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Customer Focus</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We listen to our customers, understand their challenges, and recommend solutions that address their actual needs.
+            </p>
+          </div>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-shield-heart text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Integrity & Transparency</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            We believe in honest communication, clear expectations, and straightforward explanations of technical solutions.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Integrity & Transparency</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We believe in honest communication, clear expectations, and straightforward explanations of technical solutions.
+            </p>
+          </div>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-award text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Quality & Reliability</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            We aim to deliver careful, consistent work and practical solutions that customers can depend on every single time.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Quality & Reliability</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We aim to deliver careful, consistent work and practical solutions that customers can depend on every single time.
+            </p>
+          </div>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-graduation-cap text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Continuous Learning</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            Technology changes constantly. We value ongoing skills development and staying abreast of modern technical toolchains.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Continuous Learning</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Technology changes constantly. We value ongoing skills development and staying abreast of modern technical toolchains.
+            </p>
+          </div>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-lightbulb text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Innovation</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            We look for smarter ways to solve technical problems and help customers make better use of available digital tools.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Innovation</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We look for smarter ways to solve technical problems and help customers make better use of available digital tools.
+            </p>
+          </div>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary mb-3">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
             <i class="fa-solid fa-universal-access text-sm"></i>
           </div>
-          <h3 class="font-bold text-base">Accessibility</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-            We aim to make technology services easier to understand and access for individuals, startups, and established businesses alike.
-          </p>
-        </article>
+          <div class="flex-1">
+            <h3 class="font-bold text-base mb-1">Accessibility</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We aim to make technology services easier to understand and access for individuals, startups, and established businesses alike.
+            </p>
+          </div>
+        </div>
 
       </div>
     </section>
 
-    <!-- WHAT WE DO -->
+    <!-- WHAT WE DO (Sequential Flow Bars) -->
     <section id="what-we-do" class="space-y-8">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
@@ -581,116 +594,132 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-laptop-code text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Website Development</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Professional, responsive websites that help businesses establish an online presence, communicate with customers, and showcase services.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-laptop-code text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Website Development</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Professional, responsive websites that help businesses establish an online presence, communicate with customers, and showcase services.
+              </p>
+            </div>
           </div>
-          <a href="/services/website-development/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/website-development/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Computer Repairs</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Assistance with common computer problems, performance optimization, hardware diagnostics, and component maintenance.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Computer Repairs</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with common computer problems, performance optimization, hardware diagnostics, and component maintenance.
+              </p>
+            </div>
           </div>
-          <a href="/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-box-archive text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Software Installation</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Installation, configuration, and setup of compatible software applications to ensure systems operate at peak efficiency.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-box-archive text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Software Installation</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Installation, configuration, and setup of compatible software applications to ensure systems operate at peak efficiency.
+              </p>
+            </div>
           </div>
-          <a href="/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-brands fa-windows text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">OS Services</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Assistance with operating system installation, updates, configuration, security patches, and system tuning.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-brands fa-windows text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">OS Services</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with operating system installation, updates, configuration, security patches, and system tuning.
+              </p>
+            </div>
           </div>
-          <a href="/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-headset text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">IT Support</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Practical assistance with everyday IT challenges, remote troubleshooting, technical advice, and user support.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-headset text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">IT Support</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Practical assistance with everyday IT challenges, remote troubleshooting, technical advice, and user support.
+              </p>
+            </div>
           </div>
-          <a href="/services/it-support/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/it-support/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-network-wired text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Networking Solutions</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Support with basic network setup, connectivity troubleshooting, Wi-Fi configuration, and router optimization.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-network-wired text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Networking Solutions</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Support with basic network setup, connectivity troubleshooting, Wi-Fi configuration, and router optimization.
+              </p>
+            </div>
           </div>
-          <a href="/services/networking/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/networking/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-user-shield text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Cybersecurity</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Practical guidance on safer computing, account protection, password hygiene, and reducing digital security risks.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-user-shield text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Cybersecurity</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Practical guidance on safer computing, account protection, password hygiene, and reducing digital security risks.
+              </p>
+            </div>
           </div>
-          <a href="/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
-        <article class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col justify-between">
-          <div class="space-y-3">
-            <i class="fa-solid fa-database text-2xl text-brand-primary dark:text-brand-darkPrimary"></i>
-            <h3 class="font-bold text-base">Data Protection</h3>
-            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
-              Assistance with backup planning, file organization, and data recovery strategies to protect crucial records.
-            </p>
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-database text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
+            <div>
+              <h3 class="font-bold text-base">Data Protection</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with backup planning, file organization, and data recovery strategies to protect crucial records.
+              </p>
+            </div>
           </div>
-          <a href="/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline mt-4">
-            Explore Services <i class="fa-solid fa-chevron-right text-[9px]"></i>
+          <a href="/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
-        </article>
+        </div>
 
       </div>
     </section>
 
-    <!-- OUR APPROACH (Numbered Steps Timeline Card) -->
+    <!-- OUR APPROACH (Linear Flow Pipeline Diagram / Waterfall Style) -->
     <section id="our-approach" class="p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
       <div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
@@ -702,46 +731,56 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+      <div class="flex flex-col gap-4">
         
-        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">1</span>
-          <h3 class="font-bold text-sm">Understand</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We listen to your specific requirements and define the challenge.</p>
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">1</span>
+          <div>
+            <h3 class="font-bold text-sm">Understand</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We listen to your specific requirements and define the challenge.</p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">2</span>
-          <h3 class="font-bold text-sm">Assess</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We review the issue and evaluate options based on facts.</p>
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">2</span>
+          <div>
+            <h3 class="font-bold text-sm">Assess</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We review the issue and evaluate options based on facts.</p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">3</span>
-          <h3 class="font-bold text-sm">Recommend</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We explain proposed work, timelines, and costs transparently.</p>
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">3</span>
+          <div>
+            <h3 class="font-bold text-sm">Recommend</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We explain proposed work, timelines, and costs transparently.</p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">4</span>
-          <h3 class="font-bold text-sm">Deliver</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We execute the agreed service with precision and care.</p>
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">4</span>
+          <div>
+            <h3 class="font-bold text-sm">Deliver</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We execute the agreed service with precision and care.</p>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] space-y-2">
-          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm">5</span>
-          <h3 class="font-bold text-sm">Guide</h3>
-          <p class="text-xs text-brand-muted dark:text-brand-darkMuted">We share practical advice to help you maintain your setup.</p>
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">5</span>
+          <div>
+            <h3 class="font-bold text-sm">Guide</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We share practical advice to help you maintain your setup.</p>
+          </div>
         </div>
 
       </div>
     </section>
 
-    <!-- WHY CHOOSE US & LEADERSHIP (2 Columns Grid) -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+    <!-- WHY CHOOSE US & LEADERSHIP (Vertical Stack Flow) -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
       
       <!-- WHY CHOOSE US -->
-      <section id="why-choose-us" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <section id="why-choose-us" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
         <div>
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
             THE ITU SOLUTIONS DIFFERENCE
@@ -778,7 +817,7 @@
       </section>
 
       <!-- LEADERSHIP CARD -->
-      <section id="leadership" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <section id="leadership" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
         <div>
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
             LEADERSHIP
@@ -810,7 +849,7 @@
 
     </div>
 
-    <!-- SERVICE AREA & LOCATION MAP -->
+    <!-- SERVICE AREA & LOCATION MAP (Geographic Choropleth/Map Frame) -->
     <section id="service-area" class="p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
@@ -833,9 +872,9 @@
       </div>
     </section>
 
-    <!-- CALL TO ACTION SECTION -->
-    <section id="get-started" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center">
-      <div class="relative z-10 max-w-[650px] mx-auto space-y-6">
+    <!-- CALL TO ACTION SECTION (Funnel Apex Conversion) -->
+    <section id="get-started" class="relative overflow-hidden p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center flex flex-col items-center">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6 flex flex-col items-center">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
           LET'S WORK TOGETHER
         </p>
@@ -885,6 +924,8 @@
   </div>
 
 </main>
+
+
 
         
  <!-- Updated Footer Block -->
