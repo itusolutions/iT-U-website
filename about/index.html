@@ -362,19 +362,14 @@
 </header>
 
 
-
 <!-- Main Content -->
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
   <div class="max-w-[1120px] mx-auto space-y-16 sm:space-y-24">
 
-    <!-- ABOUT PAGE HERO: Circular & Donut Radial Motif -->
-    <section class="relative overflow-hidden p-8 sm:p-16 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom flex flex-col items-center text-center">
-      <!-- Ambient Background Radial Glow -->
-      <div class="absolute -top-24 -right-24 w-80 h-80 bg-brand-primary/15 dark:bg-brand-primary/25 rounded-full blur-3xl pointer-events-none"></div>
-
-      <!-- Donut Chart Aesthetic Ring Accent -->
-      <div class="absolute -left-20 -bottom-20 w-64 h-64 border-8 border-brand-primary/10 dark:border-brand-darkPrimary/10 rounded-full pointer-events-none"></div>
+    <!-- ABOUT PAGE HERO -->
+    <section class="relative overflow-hidden py-12 px-6 text-center border-b border-brand-border/40 dark:border-brand-darkBorder/40">
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div class="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
         <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
@@ -383,7 +378,7 @@
         <h1 class="text-[clamp(2.4rem,4.5vw,3.8rem)] font-extrabold leading-[1.1] tracking-tight mb-6">
           Practical Technology. Professional Service. Smarter Solutions.
         </h1>
-        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.05rem] sm:text-[1.15rem] leading-relaxed max-w-[750px] mx-auto mb-10">
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.1rem] sm:text-[1.2rem] leading-relaxed max-w-[750px] mx-auto mb-10">
           <p>
             Welcome to <strong>iTu Solutions</strong>, your local technology partner for reliable IT support, computer repairs, website development, and digital solutions in Ga-Mothiba, Polokwane, and surrounding areas of Limpopo, South Africa.
           </p>
@@ -403,45 +398,43 @@
       </div>
     </section>
 
-    <!-- COMPANY INTRODUCTION & PURPOSE (Linear & Flow / Infographic Split Motif) -->
-    <section class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+    <!-- COMPANY INTRODUCTION & PURPOSE (Two-Column Flow Layout without boxes/cards) -->
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
       
       <!-- COMPANY INTRODUCTION -->
-      <div id="company-overview" class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-5 flex flex-col justify-between">
-        <div class="space-y-4">
-          <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
-            WHO WE ARE
+      <section id="company-overview" class="flex-1 space-y-6">
+        <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          WHO WE ARE
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Your Partner in Technology and Digital Growth
+        </h2>
+        <div class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed space-y-4 border-l-2 border-brand-primary/30 pl-6">
+          <p>
+            iTu Solutions is a technology and digital services business based in Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa. We provide accessible IT services and practical digital solutions that help people and organisations overcome everyday technology challenges.
           </p>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
-            Your Partner in Technology and Digital Growth
-          </h2>
-          <div class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed space-y-4">
-            <p>
-              iTu Solutions is a technology and digital services business based in Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa. We provide accessible IT services and practical digital solutions that help people and organisations overcome everyday technology challenges.
-            </p>
-            <p>
-              From troubleshooting computer problems and installing software to developing professional websites and assisting with networking, our focus is on making technology easier to understand, manage, and use.
-            </p>
-            <p>
-              We understand that technology plays an important role in modern life and business. A reliable computer, a functional network, and a professional online presence can make a real difference to productivity, communication, and business growth.
-            </p>
-            <p>
-              That is why we aim to deliver straightforward, dependable, and customer-focused technology services without unnecessary complications.
-            </p>
-          </div>
+          <p>
+            From troubleshooting computer problems and installing software to developing professional websites and assisting with networking, our focus is on making technology easier to understand, manage, and use.
+          </p>
+          <p>
+            We understand that technology plays an important role in modern life and business. A reliable computer, a functional network, and a professional online presence can make a real difference to productivity, communication, and business growth.
+          </p>
+          <p>
+            That is why we aim to deliver straightforward, dependable, and customer-focused technology services without unnecessary complications.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <!-- OUR PURPOSE & SERVICE PROMISE (Infographic Stack) -->
-      <div id="our-purpose" class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6 flex flex-col justify-between">
-        <div class="space-y-4">
+      <!-- OUR PURPOSE & SERVICE PROMISE -->
+      <section id="our-purpose" class="flex-1 space-y-6 flex flex-col justify-between">
+        <div class="space-y-6">
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
             OUR PURPOSE
           </p>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Technology Should Work for You
           </h2>
-          <div class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed space-y-4">
+          <div class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed space-y-4 border-l-2 border-emerald-500/30 pl-6">
             <p>
               Our purpose is to bridge the gap between people, businesses, and technology. We believe that access to professional IT services should be practical, understandable, and within reach.
             </p>
@@ -451,133 +444,133 @@
           </div>
         </div>
 
-        <!-- Callout Banner with Financial/Transaction Flow Aesthetic -->
-        <div class="p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] flex items-center gap-4">
-          <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-2xl">
+        <!-- Callout Flow -->
+        <div class="pt-6 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-xl">
             <i class="fa-solid fa-handshake"></i>
           </div>
-          <p class="text-xs sm:text-sm text-brand-muted dark:text-[#aebed1]">
-            <strong class="text-brand-text dark:text-white block text-sm sm:text-base mb-0.5">Local & Dedicated:</strong> Providing personalized technology assistance directly to clients in Polokwane and across Limpopo.
+          <p class="text-sm text-brand-muted dark:text-[#aebed1]">
+            <strong class="text-brand-text dark:text-white block font-bold">Local & Dedicated</strong> Providing personalized technology assistance directly to clients in Polokwane and across Limpopo.
           </p>
         </div>
-      </div>
+      </section>
 
-    </section>
+    </div>
 
-    <!-- MISSION AND VISION (Polar Area & Rose Chart Proportion Layout) -->
-    <section id="mission-vision" class="flex flex-col md:flex-row gap-8">
+    <!-- MISSION AND VISION -->
+    <section id="mission-vision" class="flex flex-col md:flex-row gap-12 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
 
-      <!-- MISSION ARTICLE -->
-      <article class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-5 relative overflow-hidden">
-        <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-2xl">
+      <!-- MISSION -->
+      <article class="flex-1 space-y-4">
+        <div class="w-12 h-12 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-xl">
           <i class="fa-solid fa-bullseye"></i>
         </div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
           OUR MISSION
         </p>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Our Mission</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        <h2 class="text-2xl font-extrabold tracking-tight">Our Mission</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           To provide accessible, practical, and professional technology services that empower individuals and businesses to solve IT challenges, improve productivity, and participate confidently in the digital world.
         </p>
       </article>
 
-      <!-- VISION ARTICLE -->
-      <article class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-5 relative overflow-hidden">
-        <div class="w-14 h-14 rounded-2xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-2xl">
+      <!-- VISION -->
+      <article class="flex-1 space-y-4">
+        <div class="w-12 h-12 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary text-xl">
           <i class="fa-solid fa-eye"></i>
         </div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
           OUR VISION
         </p>
-        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Our Vision</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        <h2 class="text-2xl font-extrabold tracking-tight">Our Vision</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           To become a trusted technology and digital solutions provider in Limpopo, recognised for dependable service, technical knowledge, innovation, and a genuine commitment to customer satisfaction.
         </p>
       </article>
 
     </section>
 
-    <!-- CORE VALUES (Heatmap & Grid Matrix Sequential Flow) -->
-    <section id="our-values" class="space-y-10">
+    <!-- CORE VALUES (Stacked List Flow representing Heatmap / Grid alternative without boxes) -->
+    <section id="our-values" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           WHAT GUIDES US
         </p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">The Values Behind Our Work</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">The Values Behind Our Work</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           Every customer interaction is an opportunity to build trust. These core principles guide how we approach our work and long-term client relationships.
         </p>
       </div>
 
-      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
+      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-users"></i>
+        <div class="flex items-center gap-6 py-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-users text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Customer Focus</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               We listen to our customers, understand their challenges, and recommend solutions that address their actual needs.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-shield-heart"></i>
+        <div class="flex items-center gap-6 py-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-shield-heart text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Integrity & Transparency</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               We believe in honest communication, clear expectations, and straightforward explanations of technical solutions.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-award"></i>
+        <div class="flex items-center gap-6 py-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-award text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Quality & Reliability</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               We aim to deliver careful, consistent work and practical solutions that customers can depend on every single time.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-graduation-cap"></i>
+        <div class="flex items-center gap-6 py-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-graduation-cap text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Continuous Learning</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               Technology changes constantly. We value ongoing skills development and staying abreast of modern technical toolchains.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-lightbulb"></i>
+        <div class="flex items-center gap-6 py-4 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-lightbulb text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Innovation</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               We look for smarter ways to solve technical problems and help customers make better use of available digital tools.
             </p>
           </div>
         </div>
 
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
-          <div class="w-12 h-12 rounded-xl bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0 text-lg">
-            <i class="fa-solid fa-universal-access"></i>
+        <div class="flex items-center gap-6 py-4">
+          <div class="w-10 h-10 rounded-full bg-brand-primary/10 dark:bg-brand-darkPrimary/20 flex items-center justify-center text-brand-primary dark:text-brand-darkPrimary shrink-0">
+            <i class="fa-solid fa-universal-access text-sm"></i>
           </div>
           <div class="flex-1">
             <h3 class="font-bold text-lg mb-1">Accessibility</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed">
               We aim to make technology services easier to understand and access for individuals, startups, and established businesses alike.
             </p>
           </div>
@@ -586,213 +579,213 @@
       </div>
     </section>
 
-    <!-- WHAT WE DO (Sequential Flow Bars matching Reference Infographic Slices 01-08) -->
-    <section id="what-we-do" class="space-y-10">
+    <!-- WHAT WE DO (Sequential Flow Items without Cards or Grids) -->
+    <section id="what-we-do" class="space-y-10 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="text-center max-w-[650px] mx-auto">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           OUR EXPERTISE
         </p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">Technology Services for Your Everyday Needs</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed">
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">Technology Services for Your Everyday Needs</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           iTu Solutions offers a comprehensive suite of IT and digital services designed to support individuals, home users, entrepreneurs, and growing businesses.
         </p>
       </div>
 
-      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
+      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">01</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-laptop-code text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Website Development</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Professional, responsive websites that help businesses establish an online presence, communicate with customers, and showcase services.
               </p>
             </div>
           </div>
-          <a href="/services/website-development/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/website-development/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">02</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-screwdriver-wrench text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Computer Repairs</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Assistance with common computer problems, performance optimization, hardware diagnostics, and component maintenance.
               </p>
             </div>
           </div>
-          <a href="/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">03</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-box-archive text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Software Installation</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Installation, configuration, and setup of compatible software applications to ensure systems operate at peak efficiency.
               </p>
             </div>
           </div>
-          <a href="/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">04</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-brands fa-windows text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">OS Services</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Assistance with operating system installation, updates, configuration, security patches, and system tuning.
               </p>
             </div>
           </div>
-          <a href="/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">05</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-headset text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">IT Support</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Practical assistance with everyday IT challenges, remote troubleshooting, technical advice, and user support.
               </p>
             </div>
           </div>
-          <a href="/services/it-support/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/it-support/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">06</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-network-wired text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Networking Solutions</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Support with basic network setup, connectivity troubleshooting, Wi-Fi configuration, and router optimization.
               </p>
             </div>
           </div>
-          <a href="/services/networking/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/networking/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">07</span>
+        <div class="flex items-start justify-between gap-6 py-5 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-user-shield text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Cybersecurity</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Practical guidance on safer computing, account protection, password hygiene, and reducing digital security risks.
               </p>
             </div>
           </div>
-          <a href="/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
-        <div class="p-6 sm:p-8 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <div class="flex items-start gap-5 flex-1">
-            <span class="text-sm font-mono font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 px-3 py-1.5 rounded-lg shrink-0">08</span>
+        <div class="flex items-start justify-between gap-6 py-5">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-database text-2xl text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <div>
               <h3 class="font-bold text-lg">Data Protection</h3>
-              <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+              <p class="text-sm text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
                 Assistance with backup planning, file organization, and data recovery strategies to protect crucial records.
               </p>
             </div>
           </div>
-          <a href="/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
-            Explore <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          <a href="/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0 mt-2">
+            Explore <i class="fa-solid fa-chevron-right text-[9px]"></i>
           </a>
         </div>
 
       </div>
     </section>
 
-    <!-- OUR APPROACH (Linear Flow Pipeline Diagram / Waterfall & Line Trend Style) -->
-    <section id="our-approach" class="p-8 sm:p-14 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
+    <!-- OUR APPROACH (Linear Timeline / Waterfall Flow without grids/boxes) -->
+    <section id="our-approach" class="space-y-8 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div>
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
           HOW WE WORK
         </p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3">A Straightforward Approach to Technology</h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed max-w-[700px]">
+        <h2 class="text-3xl font-extrabold tracking-tight mb-3">A Straightforward Approach to Technology</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed max-w-[700px]">
           We believe good IT support starts with listening, understanding the problem, and explaining possible solutions clearly. Our process is built around open communication and practical technical execution.
         </p>
       </div>
 
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-6 max-w-4xl mx-auto">
         
-        <div class="flex items-start gap-5 p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">1</span>
+        <div class="flex items-start gap-6 pb-6 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">1</span>
           <div>
-            <h3 class="font-bold text-base">Understand</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We listen to your specific requirements and define the challenge.</p>
+            <h3 class="font-bold text-lg">Understand</h3>
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We listen to your specific requirements and define the challenge.</p>
           </div>
         </div>
 
-        <div class="flex items-start gap-5 p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">2</span>
+        <div class="flex items-start gap-6 pb-6 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">2</span>
           <div>
-            <h3 class="font-bold text-base">Assess</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We review the issue and evaluate options based on facts.</p>
+            <h3 class="font-bold text-lg">Assess</h3>
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We review the issue and evaluate options based on facts.</p>
           </div>
         </div>
 
-        <div class="flex items-start gap-5 p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">3</span>
+        <div class="flex items-start gap-6 pb-6 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">3</span>
           <div>
-            <h3 class="font-bold text-base">Recommend</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We explain proposed work, timelines, and costs transparently.</p>
+            <h3 class="font-bold text-lg">Recommend</h3>
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We explain proposed work, timelines, and costs transparently.</p>
           </div>
         </div>
 
-        <div class="flex items-start gap-5 p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">4</span>
+        <div class="flex items-start gap-6 pb-6 border-b border-brand-border/30 dark:border-brand-darkBorder/30">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">4</span>
           <div>
-            <h3 class="font-bold text-base">Deliver</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We execute the agreed service with precision and care.</p>
+            <h3 class="font-bold text-lg">Deliver</h3>
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We execute the agreed service with precision and care.</p>
           </div>
         </div>
 
-        <div class="flex items-start gap-5 p-6 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">5</span>
+        <div class="flex items-start gap-6">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-sm shrink-0">5</span>
           <div>
-            <h3 class="font-bold text-base">Guide</h3>
-            <p class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We share practical advice to help you maintain your setup.</p>
+            <h3 class="font-bold text-lg">Guide</h3>
+            <p class="text-sm text-brand-muted dark:text-brand-darkMuted mt-1">We share practical advice to help you maintain your setup.</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- WHY CHOOSE US & LEADERSHIP (Vertical Stack Flow) -->
-    <section class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-stretch">
+    <!-- WHY CHOOSE US & LEADERSHIP (Fluid Flow Sections) -->
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       
       <!-- WHY CHOOSE US -->
-      <div id="why-choose-us" class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+      <section id="why-choose-us" class="flex-1 space-y-6">
         <div>
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
             THE ITU SOLUTIONS DIFFERENCE
           </p>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Why Choose iTu Solutions?</h2>
+          <h2 class="text-3xl font-extrabold tracking-tight">Why Choose iTu Solutions?</h2>
         </div>
 
-        <ul class="space-y-3.5 text-sm sm:text-base text-brand-muted dark:text-brand-darkMuted">
+        <ul class="space-y-4 text-sm sm:text-base text-brand-muted dark:text-brand-darkMuted">
           <li class="flex items-start gap-3">
             <i class="fa-solid fa-circle-check text-brand-primary dark:text-brand-darkPrimary mt-1"></i>
             <span>Personalised attention and customer-focused service.</span>
@@ -818,53 +811,54 @@
             <span>Local presence and community commitment in Ga-Mothiba & Polokwane.</span>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <!-- LEADERSHIP CARD -->
-      <div id="leadership" class="flex-1 p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6 flex flex-col justify-between">
-        <div class="space-y-4">
-          <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+      <!-- LEADERSHIP -->
+      <section id="leadership" class="flex-1 space-y-6">
+        <div>
+          <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
             LEADERSHIP
           </p>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Meet the Founder</h2>
-          <div class="pt-1">
-            <h3 class="font-extrabold text-xl">Sekoala Daniel Bopape</h3>
-            <p class="text-xs sm:text-sm text-brand-primary dark:text-brand-darkPrimary font-bold uppercase tracking-wider mt-1">
+          <h2 class="text-3xl font-extrabold tracking-tight mb-2">Meet the Founder</h2>
+          <div class="pt-2">
+            <h3 class="font-extrabold text-xl">Sekoala Daniel Bopape[span_0](start_span)[span_0](end_span)</h3>
+            <p class="text-xs text-brand-primary dark:text-brand-darkPrimary font-bold uppercase tracking-wider mt-1">
               Founder & Managing Director | Network Engineer & Developer
-            </p>
-          </div>
-          <div class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed space-y-3 pt-2">
-            <p>
-              iTu Solutions is led by Sekoala Daniel Bopape, an IT professional with a strong background in computer systems, network engineering, and web development.
-            </p>
-            <p>
-              With a passion for digital innovation and practical problem-solving, Sekoala guides the company’s strategic direction while personally overseeing technical project execution.
             </p>
           </div>
         </div>
 
-        <a href="/forms/contact-form/index.html" class="inline-flex items-center justify-center gap-2 w-full px-6 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm transition-all cursor-pointer no-underline">
+        <div class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed space-y-4">
+          <p>
+            iTu Solutions is led by Sekoala Daniel Bopape[span_1](start_span)[span_1](end_span), an IT professional with a strong background in computer systems, network engineering, and web development.
+          </p>
+          <p>
+            With a passion for digital innovation and practical problem-solving, Sekoala guides the company’s strategic direction while personally overseeing technical project execution.
+          </p>
+        </div>
+
+        <a href="/forms/contact-form/index.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-xs transition-all cursor-pointer no-underline">
           <i class="fa-solid fa-envelope"></i> Connect with Sekoala Bopape
         </a>
-      </div>
+      </section>
 
-    </section>
+    </div>
 
-    <!-- SERVICE AREA & LOCATION MAP (Geographic Choropleth / Regional Map Frame) -->
-    <section id="service-area" class="p-8 sm:p-12 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+    <!-- SERVICE AREA & LOCATION MAP -->
+    <section id="service-area" class="space-y-6 pt-8 border-t border-brand-border/40 dark:border-brand-darkBorder/40">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-1">
             OUR LOCATION
           </p>
-          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Proudly Based in Ga-Mothiba, Polokwane</h2>
+          <h2 class="text-3xl font-extrabold tracking-tight">Proudly Based in Ga-Mothiba, Polokwane</h2>
         </div>
-        <span class="text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] px-4 py-2.5 rounded-xl">
+        <span class="text-xs text-brand-muted dark:text-brand-darkMuted bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] px-4 py-2 rounded-xl">
           <i class="fa-solid fa-location-dot text-brand-primary dark:text-brand-darkPrimary mr-1.5"></i> Postal Code 0726, Limpopo
         </span>
       </div>
 
-      <p class="text-brand-muted dark:text-brand-darkMuted text-sm sm:text-base leading-relaxed max-w-[800px]">
+      <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed max-w-[800px]">
         We proudly serve individuals, entrepreneurs, home users, and businesses in Ga-Mothiba, Nobody, Mankweng, Polokwane, and surrounding Limpopo communities. On-site arrangements and remote technical support options are available.
       </p>
 
@@ -873,33 +867,33 @@
       </div>
     </section>
 
-    <!-- CALL TO ACTION SECTION (Funnel Apex Conversion / Global Payoneer Inspired Clean Layout) -->
-    <section id="get-started" class="relative overflow-hidden p-8 sm:p-16 rounded-[2.5rem] bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom text-center flex flex-col items-center">
-      <div class="relative z-10 max-w-[700px] mx-auto space-y-6 flex flex-col items-center">
+    <!-- CALL TO ACTION SECTION (Funnel Conversion Apex) -->
+    <section id="get-started" class="relative overflow-hidden py-16 text-center flex flex-col items-center border-t border-brand-border/40 dark:border-brand-darkBorder/40">
+      <div class="relative z-10 max-w-[650px] mx-auto space-y-6 flex flex-col items-center">
         <p class="uppercase tracking-[0.14em] text-xs font-extrabold text-brand-primary dark:text-brand-darkPrimary">
           LET'S WORK TOGETHER
         </p>
-        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
           Have a Technology Challenge? Let's Find a Solution.
         </h2>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-base sm:text-lg leading-relaxed">
+        <p class="text-brand-muted dark:text-brand-darkMuted text-base leading-relaxed">
           Whether you need a professional website, help with a computer, software installation, or general IT assistance, iTu Solutions is ready to help.
         </p>
 
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a href="/forms/contact-form/index.html" class="px-8 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
             <i class="fa-solid fa-paper-plane"></i> Request a Service
           </a>
-          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
+          <a href="https://wa.me/27711405870" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all cursor-pointer no-underline flex items-center gap-2">
             <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
           </a>
         </div>
 
-        <div class="pt-8 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-8 text-xs sm:text-sm text-brand-muted dark:text-brand-darkMuted">
-          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-2">
+        <div class="pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 flex flex-wrap items-center justify-center gap-6 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <a href="mailto:info@it-u.co.za" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
             <i class="fa-solid fa-envelope text-brand-primary dark:text-brand-darkPrimary"></i> info@it-u.co.za
           </a>
-          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-2">
+          <a href="tel:+27711405870" class="hover:text-brand-primary dark:hover:text-white transition-colors flex items-center gap-1.5">
             <i class="fa-solid fa-phone text-brand-primary dark:text-brand-darkPrimary"></i> +27 71 140 5870
           </a>
         </div>
@@ -909,7 +903,7 @@
   </div>
 
   <!-- DEVELOPER FOOTER ATTRIBUTION -->
-  <div class="max-w-[1120px] mx-auto text-center mt-16 pt-8 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
+  <div class="max-w-[1120px] mx-auto text-center mt-12 pt-6 border-t border-brand-border/40 dark:border-[#2a3a50]/40 text-xs">
     <span class="inline-flex items-center gap-2 text-brand-muted dark:text-[#aebed1]">
       <i class="fa-solid fa-code text-[11px] text-brand-primary dark:text-brand-darkPrimary"></i>
       <span>Website Developer:</span>
