@@ -938,339 +938,509 @@
   
 
 
-<main id="main" class="pt-[4.25rem] md:pt-[7.25rem]">
-    <!-- Hero Section with Scroll & Mouse Parallax + Directional Reveals -->
-    <section class="relative isolate min-h-[550px] overflow-hidden bg-slate-950">
-      <!-- Parallax Gradient & Ambient Backdrop Layer -->
-      <div
-        data-itu-parallax
-        data-parallax-speed="0.15"
-        data-parallax-direction="up"
-        class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-blue-950 via-slate-950 to-green-950"
-      ></div>
+<!-- Main Content -->
+<main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div class="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
-          <!-- Left Content Column -->
-          <div class="max-w-3xl">
-            <p class="itu-reveal itu-reveal-down mb-4 inline-flex items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-green-300">
-              <i class="fa-solid fa-location-dot text-[11px]" aria-hidden="true"></i>
-              <span>iTu Solutions · Polokwane, Limpopo</span>
-            </p>
+  <div class="max-w-[1120px] mx-auto space-y-12 sm:space-y-16">
 
-            <h1 class="itu-reveal itu-reveal-left text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Practical technology. Personal service.
-            </h1>
+    <!-- ABOUT PAGE HERO (Circular / Donut Metric Focus) -->
+    <section class="relative overflow-hidden p-8 sm:p-14 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-custom flex flex-col items-center text-center">
+      <!-- Ambient Background Glow -->
+      <div class="absolute -top-20 -right-20 w-72 h-72 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
 
-            <p class="itu-reveal itu-reveal-up mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-              We make technology easier to use through clear advice, practical solutions and dependable digital services.
-            </p>
+      <div class="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
+          <i class="fa-solid fa-microchip text-xs text-sky-600 dark:text-sky-400" aria-hidden="true"></i>
+          <span>ABOUT ITU SOLUTIONS | TECHNOLOGY WITH PURPOSE</span>
+        </p>
+        <h1 class="text-[clamp(2.2rem,4vw,3.4rem)] font-black uppercase leading-[1.12] tracking-tight mb-6">
+          PRACTICAL TECHNOLOGY. PROFESSIONAL SERVICE. SMARTER SOLUTIONS.
+        </h1>
+        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-xs sm:text-sm leading-relaxed max-w-[750px] mx-auto mb-8">
+          <p>
+            Welcome to <strong class="uppercase text-brand-text dark:text-white">ITU SOLUTIONS</strong>, your local technology partner for reliable IT support, computer repairs, website development, and digital solutions in Ga-Mothiba, Polokwane, and surrounding areas of Limpopo, South Africa.
+          </p>
+          <p>
+            We help individuals, entrepreneurs, and businesses use technology more effectively through practical services, personalised support, and solutions designed around their unique needs.
+          </p>
+        </div>
 
-            <div class="itu-reveal itu-reveal-center-in mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://itusolutions.github.io/updated-i-tu/form/contact-form/"
-                class="rounded-lg bg-green-500 px-6 py-3 font-bold text-slate-950 shadow-lg shadow-green-950/30 transition hover:bg-lime-400 focus:outline-none focus:ring-4 focus:ring-green-300/40"
-              >
-                Discover our approach
-              </a>
-              <a
-                href="https://itusolutions.github.io/updated-i-tu/services/"
-                class="rounded-lg border border-white/25 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
-              >
-                Browse services
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Hero Visual with Scroll + Mouse Parallax -->
-          <div
-            data-itu-parallax
-            data-parallax-speed="0.35"
-            data-parallax-direction="down"
-            class="itu-reveal itu-reveal-right mx-auto w-full max-w-[360px] lg:mx-0"
-          >
-            <div
-              data-parallax-mouse="15"
-              class="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-sm"
-            >
-              <img
-                src="https://itusolutions.github.io/updated-i-tu/assets/images/hero-tech.svg"
-                alt="iTu Solutions technology services"
-                width="360"
-                height="260"
-                class="h-auto w-full rounded-2xl object-contain drop-shadow-2xl"
-                loading="eager"
-                decoding="async"
-              >
-            </div>
-          </div>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="https://www.it-u.co.za/form/contact-form/" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold uppercase tracking-wide text-xs shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-comments text-lime-200 dark:text-[#071524]" aria-hidden="true"></i>
+            <span>TALK TO OUR TEAM</span>
+          </a>
+          <a href="https://www.it-u.co.za/services/" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold uppercase tracking-wide text-xs hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-cubes text-amber-500 dark:text-amber-400" aria-hidden="true"></i>
+            <span>EXPLORE OUR SERVICES</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- About Us & Core Values Section (Corner & Directional Reveals) -->
-    <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-      <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
-        <article class="min-w-0">
-          <div class="itu-reveal itu-reveal-up">
-            <p class="text-sm font-bold uppercase tracking-wider text-green-700 dark:text-green-400">
-              iTu Solutions
+    <!-- COMPANY INTRODUCTION & PURPOSE (Flex Stack Flow) -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+
+      <!-- COMPANY INTRODUCTION -->
+      <section id="company-overview" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4">
+        <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+          WHO WE ARE
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight">
+          YOUR PARTNER IN TECHNOLOGY AND DIGITAL GROWTH
+        </h2>
+        <div class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed space-y-3">
+          <p>
+            iTu Solutions is a technology and digital services business based in Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa. We provide accessible IT services and practical digital solutions that help people and organisations overcome everyday technology challenges.
+          </p>
+          <p>
+            From troubleshooting computer problems and installing software to developing professional websites and assisting with networking, our focus is on making technology easier to understand, manage, and use.
+          </p>
+          <p>
+            We understand that technology plays an important role in modern life and business. A reliable computer, a functional network, and a professional online presence can make a real difference to productivity, communication, and business growth.
+          </p>
+          <p>
+            That is why we aim to deliver straightforward, dependable, and customer-focused technology services without unnecessary complications.
+          </p>
+        </div>
+      </section>
+
+      <!-- OUR PURPOSE & SERVICE PROMISE -->
+      <section id="our-purpose" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6 flex flex-col justify-between">
+        <div class="space-y-4">
+          <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+            OUR PURPOSE
+          </p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight">
+            TECHNOLOGY SHOULD WORK FOR YOU
+          </h2>
+          <div class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed space-y-3">
+            <p>
+              Our purpose is to bridge the gap between people, businesses, and technology. We believe that access to professional IT services should be practical, understandable, and within reach.
             </p>
-            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-950 dark:text-white sm:text-3xl">
-              About Us
-            </h2>
-            <p class="mt-4 max-w-3xl leading-7 text-slate-600 dark:text-slate-300">
-              Learn about iTu Solutions, an IT services and website development business serving Polokwane and surrounding areas.
+            <p>
+              Whether you need assistance with a computer, want to establish your business online, or need help maintaining your technology infrastructure, iTu Solutions is committed to helping you move forward with confidence.
             </p>
           </div>
+        </div>
 
-          <!-- 4-Corner Reveal Value Cards -->
-          <div class="mt-8 grid gap-4 sm:grid-cols-2">
-            <div class="itu-reveal itu-reveal-top-left rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <div class="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-400">
-                ✓
-              </div>
-              <h3 class="font-bold text-slate-900 dark:text-white">Clear communication</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                We explain the issue, available options and likely next steps in straightforward language.
-              </p>
-            </div>
-
-            <div class="itu-reveal itu-reveal-top-right rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <div class="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-400">
-                ⌘
-              </div>
-              <h3 class="font-bold text-slate-900 dark:text-white">Practical solutions</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Recommendations are based on your requirements, device compatibility and budget.
-              </p>
-            </div>
-
-            <div class="itu-reveal itu-reveal-bottom-left rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <div class="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-yellow-100 text-yellow-700 dark:bg-yellow-950 dark:text-yellow-400">
-                ◎
-              </div>
-              <h3 class="font-bold text-slate-900 dark:text-white">Careful approach</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Work is discussed before proceeding, including parts, licensing and data considerations.
-              </p>
-            </div>
-
-            <div class="itu-reveal itu-reveal-bottom-right rounded-2xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <div class="mb-3 grid h-10 w-10 place-items-center rounded-xl bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-400">
-                ↗
-              </div>
-              <h3 class="font-bold text-slate-900 dark:text-white">Support for different needs</h3>
-              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-                Services cover personal devices, study needs, small businesses and website projects.
-              </p>
-            </div>
+        <!-- Callout Banner -->
+        <div class="p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 dark:bg-emerald-400/15 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0 text-xl">
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
           </div>
+          <p class="text-xs text-brand-muted dark:text-[#aebed1]">
+            <strong class="text-brand-text dark:text-white uppercase block">LOCAL &amp; DEDICATED:</strong> Providing personalized technology assistance directly to clients in Polokwane and across Limpopo.
+          </p>
+        </div>
+      </section>
 
-          <div class="itu-reveal itu-reveal-up mt-8 flex flex-wrap gap-3">
-            <a
-              href="https://itusolutions.github.io/updated-i-tu/form/contact-form/"
-              class="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-200"
-            >
-              Request a quotation
-            </a>
-            <a
-              href="https://itusolutions.github.io/updated-i-tu/contact/"
-              class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 font-semibold text-slate-800 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800"
-            >
-              Contact us
-            </a>
+    </div>
+
+    <!-- MISSION AND VISION -->
+    <section id="mission-vision">
+      <div class="flex flex-col md:flex-row gap-8">
+
+        <!-- MISSION ARTICLE -->
+        <article class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/10 dark:bg-blue-400/15 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xl">
+            <i class="fa-solid fa-bullseye" aria-hidden="true"></i>
           </div>
+          <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+            OUR MISSION
+          </p>
+          <h2 class="text-2xl font-extrabold uppercase tracking-tight">OUR MISSION</h2>
+          <p class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed">
+            To provide accessible, practical, and professional technology services that empower individuals and businesses to solve IT challenges, improve productivity, and participate confidently in the digital world.
+          </p>
         </article>
 
-        <!-- Sidebar Assistance Card -->
-        <aside class="itu-reveal itu-reveal-right h-fit rounded-2xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <h2 class="text-lg font-extrabold text-slate-950 dark:text-white">Need assistance?</h2>
-          <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
-            Tell us what you are trying to achieve or what is not working. We can discuss the appropriate next step.
-          </p>
-          <a
-            href="https://itusolutions.github.io/updated-i-tu/contact/"
-            class="mt-5 block rounded-lg bg-blue-600 px-4 py-3 text-center text-sm font-bold text-white hover:bg-blue-700"
-          >
-            Contact iTu Solutions
-          </a>
-          <a
-            href="https://wa.me/27711405870"
-            class="mt-3 block rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-center text-sm font-bold text-green-800 hover:bg-green-100 dark:border-green-900/50 dark:bg-green-950/50 dark:text-green-300 dark:hover:bg-green-900/50"
-          >
-            WhatsApp us
-          </a>
-          <div class="mt-6 border-t border-slate-100 pt-5 text-sm text-slate-600 dark:border-slate-800 dark:text-slate-400">
-            <p class="font-semibold text-slate-900 dark:text-white">Service area</p>
-            <p class="mt-1">Ga-Mothiba, Nobody, Polokwane, Limpopo, South Africa.</p>
+        <!-- VISION ARTICLE -->
+        <article class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-4 relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 dark:bg-indigo-400/15 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl">
+            <i class="fa-solid fa-eye" aria-hidden="true"></i>
           </div>
-        </aside>
+          <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary">
+            OUR VISION
+          </p>
+          <h2 class="text-2xl font-extrabold uppercase tracking-tight">OUR VISION</h2>
+          <p class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed">
+            To become a trusted technology and digital solutions provider in Limpopo, recognised for dependable service, technical knowledge, innovation, and a genuine commitment to customer satisfaction.
+          </p>
+        </article>
+
       </div>
     </section>
 
-    <!-- Featured Services Carousel Section -->
-    <section
-      id="featured-services-carousel"
-      class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
-      data-itu-carousel
-      data-autoplay="true"
-      data-interval="5000"
-      data-loop="true"
-      data-transition="slide"
-      aria-label="Featured services"
-    >
-      <div class="itu-reveal itu-reveal-center-out mb-8 text-center">
-        <p class="font-semibold uppercase tracking-widest text-green-600 dark:text-green-400">
-          iTu Solutions
+    <!-- CORE VALUES (Stacked List Flow / Heatmap Matrix style layout without grids) -->
+    <section id="our-values" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          WHAT GUIDES US
         </p>
-        <h2 class="mt-1 text-3xl font-bold text-slate-950 dark:text-white">
-          Our Featured Services
-        </h2>
+        <h2 class="text-3xl font-extrabold uppercase tracking-tight mb-3">THE VALUES BEHIND OUR WORK</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed">
+          Every customer interaction is an opportunity to build trust. These core principles guide how we approach our work and long-term client relationships.
+        </p>
       </div>
 
-      <div class="itu-reveal itu-reveal-center-in relative overflow-hidden rounded-2xl border border-slate-200 shadow-xl dark:border-slate-800">
-        <div
-          id="featured-service-track"
-          data-carousel-track
-          class="flex transition-transform duration-500"
-        >
-          <!-- Slide 1 -->
-          <article
-            id="featured-slide-repairs"
-            data-carousel-slide
-            class="w-full shrink-0 bg-slate-50 dark:bg-slate-950"
-          >
-            <div data-parallax-mouse="10" class="p-4">
-              <img
-                src="https://itusolutions.github.io/updated-i-tu/assets/images/computer-repair.svg"
-                alt="Computer repair services"
-                width="720"
-                height="520"
-                class="h-72 w-full object-contain"
-              >
-            </div>
-            <div class="bg-slate-900 p-6 text-white">
-              <h3 class="text-2xl font-bold">Computer Repairs</h3>
-              <p class="mt-1 text-slate-300">Desktop and laptop troubleshooting and maintenance.</p>
-              <a
-                href="https://itusolutions.github.io/updated-i-tu/services/computer-repairs/"
-                class="mt-4 inline-block font-semibold text-lime-300 hover:underline"
-              >
-                Explore service →
-              </a>
-            </div>
-          </article>
+      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
 
-          <!-- Slide 2 -->
-          <article
-            id="featured-slide-web"
-            data-carousel-slide
-            class="w-full shrink-0 bg-slate-50 dark:bg-slate-950"
-          >
-            <div data-parallax-mouse="15" class="rounded-3xl p-4">
-              <img
-                src="https://itusolutions.github.io/updated-i-tu/assets/images/website-development.svg"
-                alt="Website development illustration"
-                width="720"
-                height="520"
-                class="h-72 w-full object-contain"
-              >
-            </div>
-            <div class="bg-slate-900 p-6 text-white">
-              <h3 class="text-2xl font-bold">Website Development</h3>
-              <p class="mt-1 text-slate-300">Responsive websites for businesses and organisations.</p>
-              <a
-                href="https://itusolutions.github.io/updated-i-tu/services/website-development/"
-                class="mt-4 inline-block font-semibold text-lime-300 hover:underline"
-              >
-                Explore service →
-              </a>
-            </div>
-          </article>
-
-          <!-- Slide 3 -->
-          <article
-            id="featured-slide-network"
-            data-carousel-slide
-            class="w-full shrink-0 bg-slate-50 dark:bg-slate-950"
-          >
-            <div data-parallax-mouse="10" class="p-4">
-              <img
-                src="https://itusolutions.github.io/updated-i-tu/assets/images/networking.svg"
-                alt="Networking and Wi-Fi services"
-                width="720"
-                height="520"
-                class="h-72 w-full object-contain"
-              >
-            </div>
-            <div class="bg-slate-900 p-6 text-white">
-              <h3 class="text-2xl font-bold">Networking &amp; Wi-Fi</h3>
-              <p class="mt-1 text-slate-300">Network setup, connectivity and router assistance.</p>
-              <a
-                href="https://itusolutions.github.io/updated-i-tu/services/networking/"
-                class="mt-4 inline-block font-semibold text-lime-300 hover:underline"
-              >
-                Explore service →
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Carousel Navigation Controls -->
-      <div class="itu-reveal itu-reveal-up mt-6 flex items-center justify-center gap-4">
-        <button
-          id="featured-carousel-prev"
-          type="button"
-          data-carousel-prev
-          aria-label="Previous slide"
-          class="cursor-pointer rounded-full bg-slate-900 px-5 py-3 text-white transition hover:bg-green-600 dark:bg-slate-800 dark:hover:bg-green-600"
-        >
-          ←
-        </button>
-
-        <div
-          id="featured-carousel-dots"
-          data-carousel-dots
-          class="flex items-center gap-2"
-          aria-label="Choose a slide"
-        ></div>
-
-        <button
-          id="featured-carousel-next"
-          type="button"
-          data-carousel-next
-          aria-label="Next slide"
-          class="cursor-pointer rounded-full bg-slate-900 px-5 py-3 text-white transition hover:bg-green-600 dark:bg-slate-800 dark:hover:bg-green-600"
-        >
-          →
-        </button>
-      </div>
-    </section>
-
-    <!-- Bottom CTA Banner -->
-    <section class="border-y border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
-      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
-          <div class="itu-reveal itu-reveal-left">
-            <h2 class="text-2xl font-extrabold text-slate-950 dark:text-white">
-              Let's find the right solution.
-            </h2>
-            <p class="mt-2 text-slate-600 dark:text-slate-400">
-              Request an assessment or discuss your website requirements.
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-sky-500/10 dark:bg-sky-400/15 flex items-center justify-center text-sky-600 dark:text-sky-400 shrink-0">
+            <i class="fa-solid fa-users text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">CUSTOMER FOCUS</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We listen to our customers, understand their challenges, and recommend solutions that address their actual needs.
             </p>
           </div>
-          <a
-            href="https://itusolutions.github.io/updated-i-tu/form/contact-form/"
-            class="itu-reveal itu-reveal-right inline-flex justify-center rounded-lg bg-orange-500 px-6 py-3 font-bold text-white transition hover:bg-orange-600"
-          >
-            Get in touch
-          </a>
         </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-rose-500/10 dark:bg-rose-400/15 flex items-center justify-center text-rose-600 dark:text-rose-400 shrink-0">
+            <i class="fa-solid fa-shield-heart text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">INTEGRITY &amp; TRANSPARENCY</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We believe in honest communication, clear expectations, and straightforward explanations of technical solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 dark:bg-emerald-400/15 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
+            <i class="fa-solid fa-award text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">QUALITY &amp; RELIABILITY</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We aim to deliver careful, consistent work and practical solutions that customers can depend on every single time.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/10 dark:bg-purple-400/15 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0">
+            <i class="fa-solid fa-graduation-cap text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">CONTINUOUS LEARNING</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              Technology changes constantly. We value ongoing skills development and staying abreast of modern technical toolchains.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-400/15 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
+            <i class="fa-solid fa-lightbulb text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">INNOVATION</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We look for smarter ways to solve technical problems and help customers make better use of available digital tools.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-teal-500/10 dark:bg-teal-400/15 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+            <i class="fa-solid fa-universal-access text-sm" aria-hidden="true"></i>
+          </div>
+          <div class="flex-1">
+            <h3 class="font-bold uppercase tracking-wide text-xs mb-1">ACCESSIBILITY</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed">
+              We aim to make technology services easier to understand and access for individuals, startups, and established businesses alike.
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
-  </main>
+
+    <!-- WHAT WE DO (Sequential Flow Bars) -->
+    <section id="what-we-do" class="space-y-8">
+      <div class="text-center max-w-[650px] mx-auto">
+        <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          OUR EXPERTISE
+        </p>
+        <h2 class="text-3xl font-extrabold uppercase tracking-tight mb-3">TECHNOLOGY SERVICES FOR YOUR EVERYDAY NEEDS</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed">
+          iTu Solutions offers a comprehensive suite of IT and digital services designed to support individuals, home users, entrepreneurs, and growing businesses.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4 max-w-4xl mx-auto">
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-laptop-code text-2xl text-orange-600 dark:text-orange-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">WEBSITE DEVELOPMENT</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Professional, responsive websites that help businesses establish an online presence, communicate with customers, and showcase services.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/website-development/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-screwdriver-wrench text-2xl text-emerald-600 dark:text-emerald-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">COMPUTER REPAIRS</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with common computer problems, performance optimization, hardware diagnostics, and component maintenance.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/computer-repairs/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-box-archive text-2xl text-amber-600 dark:text-amber-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">SOFTWARE INSTALLATION</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Installation, configuration, and setup of compatible software applications to ensure systems operate at peak efficiency.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/software-installation/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-brands fa-windows text-2xl text-sky-600 dark:text-sky-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">OS SERVICES</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with operating system installation, updates, configuration, security patches, and system tuning.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/operating-system-updates/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-headset text-2xl text-blue-600 dark:text-blue-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">IT SUPPORT</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Practical assistance with everyday IT challenges, remote troubleshooting, technical advice, and user support.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/it-support/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-network-wired text-2xl text-purple-600 dark:text-purple-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">NETWORKING SOLUTIONS</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Support with basic network setup, connectivity troubleshooting, Wi-Fi configuration, and router optimization.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/networking/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-user-shield text-2xl text-rose-600 dark:text-rose-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">CYBERSECURITY</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Practical guidance on safer computing, account protection, password hygiene, and reducing digital security risks.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/cybersecurity/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-start gap-4 flex-1">
+            <i class="fa-solid fa-database text-2xl text-teal-600 dark:text-teal-400 mt-1" aria-hidden="true"></i>
+            <div>
+              <h3 class="font-bold uppercase tracking-wide text-xs">DATA PROTECTION</h3>
+              <p class="text-xs text-brand-muted dark:text-brand-darkMuted leading-relaxed mt-1">
+                Assistance with backup planning, file organization, and data recovery strategies to protect crucial records.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.it-u.co.za/services/data-backup/" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-brand-primary dark:text-brand-darkPrimary hover:underline shrink-0">
+            <span>EXPLORE</span>
+            <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- OUR APPROACH (Linear Flow Pipeline Diagram / Waterfall Style) -->
+    <section id="our-approach" class="p-8 sm:p-12 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-8">
+      <div>
+        <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+          HOW WE WORK
+        </p>
+        <h2 class="text-3xl font-extrabold uppercase tracking-tight mb-3">A STRAIGHTFORWARD APPROACH TO TECHNOLOGY</h2>
+        <p class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed max-w-[700px]">
+          We believe good IT support starts with listening, understanding the problem, and explaining possible solutions clearly. Our process is built around open communication and practical technical execution.
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-4">
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-xs shrink-0">1</span>
+          <div>
+            <h3 class="font-bold uppercase tracking-wide text-xs">UNDERSTAND</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We listen to your specific requirements and define the challenge.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-xs shrink-0">2</span>
+          <div>
+            <h3 class="font-bold uppercase tracking-wide text-xs">ASSESS</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We review the issue and evaluate options based on facts.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-xs shrink-0">3</span>
+          <div>
+            <h3 class="font-bold uppercase tracking-wide text-xs">RECOMMEND</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We explain proposed work, timelines, and costs transparently.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-xs shrink-0">4</span>
+          <div>
+            <h3 class="font-bold uppercase tracking-wide text-xs">DELIVER</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We execute the agreed service with precision and care.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4 p-5 rounded-2xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50]">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-extrabold text-xs shrink-0">5</span>
+          <div>
+            <h3 class="font-bold uppercase tracking-wide text-xs">GUIDE</h3>
+            <p class="text-xs text-brand-muted dark:text-brand-darkMuted mt-0.5">We share practical advice to help you maintain your setup.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US & LEADERSHIP (Vertical Stack Flow) -->
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+      <!-- WHY CHOOSE US -->
+      <section id="why-choose-us" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+        <div>
+          <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+            THE ITU SOLUTIONS DIFFERENCE
+          </p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight">WHY CHOOSE ITU SOLUTIONS?</h2>
+        </div>
+
+        <ul class="space-y-3 text-xs text-brand-muted dark:text-brand-darkMuted">
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Personalised attention and customer-focused service.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Practical technology solutions based on real requirements.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Clear communication without unnecessary technical jargon.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Comprehensive IT support and web development under one banner.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Website development for growing businesses seeking an online presence.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5 shrink-0" aria-hidden="true"></i>
+            <span>Local presence and community commitment in Ga-Mothiba &amp; Polokwane.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- LEADERSHIP CARD -->
+      <section id="leadership" class="flex-1 p-8 sm:p-10 rounded-3xl bg-brand-surface dark:bg-brand-darkSurface border border-brand-border dark:border-brand-darkBorder shadow-card space-y-6">
+        <div>
+          <p class="uppercase tracking-[0.14em] text-[11px] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">
+            LEADERSHIP
+          </p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight mb-2">MEET THE FOUNDER</h2>
+          <div class="flex items-center gap-3 pt-2">
+            <div>
+              <h3 class="font-extrabold uppercase text-sm sm:text-base">SEKOALA DANIEL BOPAPE</h3>
+              <p class="text-[11px] text-brand-primary dark:text-brand-darkPrimary font-bold uppercase tracking-wider">
+                FOUNDER &amp; MANAGING DIRECTOR | NETWORK ENGINEER &amp; DEVELOPER
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-brand-muted dark:text-brand-darkMuted text-xs leading-relaxed space-y-3">
+          <p>
+            iTu Solutions is led by Sekoala Daniel Bopape, an IT professional with a strong background in computer systems, network engineering, and web development.
+          </p>
+          <p>
+            With a passion for digital innovation and practical problem-solving, Sekoala guides the company’s strategic direction while personally overseeing technical project execution.
+          </p>
+        </div>
+
+        <a href="https://www.it-u.co.za/form/contact-form/" class="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold uppercase tracking-wide text-xs transition-all cursor-pointer no-underline">
+          <i class="fa-solid fa-paper-plane text-lime-200 dark:text-[#071524]" aria-hidden="true"></i>
+          <span>GET IN TOUCH WITH US</span>
+        </a>
+      </section>
+
+    </div>
+
+  </div>
+
+</main>
+
   
 
 
