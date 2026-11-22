@@ -44,12 +44,22 @@
     var slidesHost = container.querySelector("[data-hero-slides]");
     if (!slidesHost || HERO_IMAGES.length === 0) return;
 
+    var isFixedScroll = container.hasAttribute("data-fixed-scroll");
     var intervalMs = parseInt(container.getAttribute("data-interval"), 10) || 4000;
     var counterEl = container.querySelector("[data-hero-counter]");
     var prevBtn = container.querySelector("[data-hero-prev]");
     var nextBtn = container.querySelector("[data-hero-next]");
     var activeIndex = Math.floor(Math.random() * HERO_IMAGES.length);
     var timerId = null;
+    var rafId = null;
+
+    if (isFixedScroll) {
+      slidesHost.className =
+        "pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden transition-opacity duration-200";
+    } else {
+      slidesHost.className =
+        "pointer-events-none absolute inset-0 -z-20 h-full w-full overflow-hidden";
+    }
 
     var fragment = document.createDocumentFragment();
     var slideElements = HERO_IMAGES.map(function (src, index) {
@@ -59,7 +69,7 @@
       img.decoding = "async";
       img.loading = index === activeIndex ? "eager" : "lazy";
       img.className =
-        "absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ease-in-out " +
+        "fixed inset-0 h-screen w-screen bg-fixed object-cover object-center transition-opacity duration-700 ease-in-out " +
         (index === activeIndex ? "opacity-100" : "opacity-0");
       fragment.appendChild(img);
       return img;
@@ -67,6 +77,22 @@
 
     slidesHost.innerHTML = "";
     slidesHost.appendChild(fragment);
+
+    function syncFixedScrollVisibility() {
+      if (!isFixedScroll) return;
+      var rect = container.getBoundingClientRect();
+      var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+      slidesHost.style.opacity = inView ? "1" : "0";
+      slidesHost.style.visibility = inView ? "visible" : "hidden";
+    }
+
+    function scheduleScrollSync() {
+      if (!isFixedScroll || rafId !== null) return;
+      rafId = window.requestAnimationFrame(function () {
+        rafId = null;
+        syncFixedScrollVisibility();
+      });
+    }
 
     function setActiveSlide(index) {
       activeIndex = ((index % slideElements.length) + slideElements.length) % slideElements.length;
@@ -123,11 +149,18 @@
       });
     }
 
+    if (isFixedScroll) {
+      window.addEventListener("scroll", scheduleScrollSync, { passive: true });
+      window.addEventListener("resize", scheduleScrollSync, { passive: true });
+      syncFixedScrollVisibility();
+    }
+
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
         stopTimer();
       } else {
         startTimer();
+        syncFixedScrollVisibility();
       }
     });
 
