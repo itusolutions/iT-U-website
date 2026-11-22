@@ -1,0 +1,13 @@
+{
+  "name": "itu-solutions",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "@tailwindcss/cli -i ./src/tailwind.css -o ./assets/css/tailwind.css --watch",
+    "build": "@tailwindcss/cli -i ./src/tailwind.css -o ./assets/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Allow primary contact and newsletter signup entry points
+Allow: /form/contact-form/contact/
+Allow: /form/newsletter/subscribe/
+
+# Disallow utility confirmation and unsubscribe endpoints from search indexing
+Disallow: /form/contact-form/thank-you/
+Disallow: /form/unsubscribe/
+
+Sitemap: https://www.it-u.co.za/sitemap.xml

@@ -1,0 +1,9 @@
+{
+  "name": "iTu Solutions",
+  "short_name": "iTu Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#2563EB",
+  "icons": []
+}
