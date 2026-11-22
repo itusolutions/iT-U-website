@@ -44,22 +44,11 @@
     var slidesHost = container.querySelector("[data-hero-slides]");
     if (!slidesHost || HERO_IMAGES.length === 0) return;
 
-    var isFixedScroll = container.hasAttribute("data-fixed-scroll");
     var intervalMs = parseInt(container.getAttribute("data-interval"), 10) || 4000;
-    var counterEl = container.querySelector("[data-hero-counter]");
-    var prevBtn = container.querySelector("[data-hero-prev]");
-    var nextBtn = container.querySelector("[data-hero-next]");
     var activeIndex = Math.floor(Math.random() * HERO_IMAGES.length);
     var timerId = null;
     var rafId = null;
-
-    if (isFixedScroll) {
-      slidesHost.className =
-        "pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden transition-opacity duration-200";
-    } else {
-      slidesHost.className =
-        "pointer-events-none absolute inset-0 -z-20 h-full w-full overflow-hidden";
-    }
+    var heroInView = true;
 
     var fragment = document.createDocumentFragment();
     var slideElements = HERO_IMAGES.map(function (src, index) {
@@ -69,7 +58,7 @@
       img.decoding = "async";
       img.loading = index === activeIndex ? "eager" : "lazy";
       img.className =
-        "fixed inset-0 h-screen w-screen bg-fixed object-cover object-center transition-opacity duration-700 ease-in-out " +
+        "absolute -inset-y-12 inset-x-0 h-[calc(100%+6rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out " +
         (index === activeIndex ? "opacity-100" : "opacity-0");
       fragment.appendChild(img);
       return img;
@@ -78,21 +67,45 @@
     slidesHost.innerHTML = "";
     slidesHost.appendChild(fragment);
 
-    function syncFixedScrollVisibility() {
-      if (!isFixedScroll) return;
+    function updateHeroFixedScroll() {
+      rafId = null;
+      if (!heroInView) return;
+
       var rect = container.getBoundingClientRect();
-      var inView = rect.bottom > 0 && rect.top < window.innerHeight;
-      slidesHost.style.opacity = inView ? "1" : "0";
-      slidesHost.style.visibility = inView ? "visible" : "hidden";
+      var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
+      var totalTravel = rect.height + viewportHeight;
+      if (totalTravel <= 0) return;
+
+      // Progress from 0 (entering bottom) to 1 (exiting top), anchored around center
+      var progress = (viewportHeight - rect.top) / totalTravel;
+      var offsetPx = Math.round((progress - 0.5) * 72);
+
+      slidesHost.style.transform = "translate3d(0, " + offsetPx + "px, 0)";
     }
 
-    function scheduleScrollSync() {
-      if (!isFixedScroll || rafId !== null) return;
-      rafId = window.requestAnimationFrame(function () {
-        rafId = null;
-        syncFixedScrollVisibility();
-      });
+    function scheduleScrollUpdate() {
+      if (rafId === null && heroInView) {
+        rafId = window.requestAnimationFrame(updateHeroFixedScroll);
+      }
     }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            heroInView = entry.isIntersecting;
+            if (heroInView) {
+              scheduleScrollUpdate();
+            }
+          });
+        },
+        { threshold: 0 }
+      );
+      observer.observe(container);
+    }
+
+    window.addEventListener("scroll", scheduleScrollUpdate, { passive: true });
+    window.addEventListener("resize", scheduleScrollUpdate, { passive: true });
 
     function setActiveSlide(index) {
       activeIndex = ((index % slideElements.length) + slideElements.length) % slideElements.length;
@@ -104,12 +117,6 @@
         img.classList.toggle("opacity-100", isActive);
         img.classList.toggle("opacity-0", !isActive);
       });
-
-      if (counterEl) {
-        var current = String(activeIndex + 1).padStart(2, "0");
-        var total = String(slideElements.length).padStart(2, "0");
-        counterEl.textContent = current + " / " + total;
-      }
     }
 
     function pickRandomIndex() {
@@ -135,36 +142,17 @@
       }
     }
 
-    if (prevBtn) {
-      prevBtn.addEventListener("click", function () {
-        setActiveSlide(activeIndex - 1);
-        startTimer();
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener("click", function () {
-        setActiveSlide(pickRandomIndex());
-        startTimer();
-      });
-    }
-
-    if (isFixedScroll) {
-      window.addEventListener("scroll", scheduleScrollSync, { passive: true });
-      window.addEventListener("resize", scheduleScrollSync, { passive: true });
-      syncFixedScrollVisibility();
-    }
-
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) {
         stopTimer();
       } else {
         startTimer();
-        syncFixedScrollVisibility();
+        scheduleScrollUpdate();
       }
     });
 
     setActiveSlide(activeIndex);
+    updateHeroFixedScroll();
     startTimer();
   }
 
