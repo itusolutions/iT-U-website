@@ -965,497 +965,793 @@
   
 
 <!-- Main Content -->
-<!-- Main Content -->
-<main id="main" class="max-w-[1100px] mx-auto px-4 py-8 text-gray-800 font-sans">
+<main id="main" class="w-full overflow-x-clip bg-slate-50 text-slate-900 dark:bg-[#0b1220] dark:text-slate-100 font-sans">
 
-    <!-- Unified Hero & Metrics Section -->
-    <section id="hero-section" class="relative overflow-hidden py-[4rem] sm:py-[6.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-gradient-to-br from-[#f0f4f8] via-[#e2e8f0] to-[#f8fafc] dark:from-[#0b1220] dark:via-[#0e2238] dark:to-[#123e68] text-brand-text dark:text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
-      
-      <!-- Interactive Animated Canvas Background with pointer-events-none so it never blocks the menu -->
-      <canvas id="hero-connected-dots" class="absolute inset-0 w-full h-full opacity-80 z-0 cursor-crosshair pointer-events-none"></canvas>
-      
-      <!-- Ambient Glow Overlay -->
-      <div class="absolute -right-20 -top-20 w-96 h-96 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- Unified Hero & Metrics Section -->
+  <section id="hero-section" class="relative overflow-hidden py-[4rem] sm:py-[6.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-gradient-to-br from-[#f0f4f8] via-[#e2e8f0] to-[#f8fafc] dark:from-[#0b1220] dark:via-[#0e2238] dark:to-[#123e68] text-slate-900 dark:text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
+    
+    <!-- Interactive Animated Canvas Background with pointer-events-none so it never blocks the menu -->
+    <canvas id="hero-connected-dots" class="absolute inset-0 w-full h-full opacity-80 z-0 cursor-crosshair pointer-events-none"></canvas>
+    
+    <!-- Ambient Glow Overlay -->
+    <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/10 dark:bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
 
-      <!-- Main Content Wrapper -->
-      <div class="relative z-10 max-w-[1120px] mx-auto flex flex-col gap-12 pointer-events-auto">
+    <!-- Main Content Wrapper -->
+    <div class="relative z-10 max-w-[1120px] mx-auto flex flex-col gap-12 pointer-events-auto">
+      
+      <!-- Hero Header Content -->
+      <div class="max-w-[850px]">
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-blue-700 dark:text-[#7ec5ff] bg-blue-600/10 dark:bg-sky-400/20 border border-blue-600/20 dark:border-[#7ec5ff]/30 px-3 py-1 rounded-full mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>IT SOLUTIONS MADE PRACTICAL</span>
+        </p>
         
-        <!-- Hero Header Content -->
-        <div class="max-w-[850px]">
-          <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-[#7ec5ff] bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-[#7ec5ff]/30 px-3 py-1 rounded-full mb-4">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> IT solutions made practical
-          </p>
-          
-          <!-- Headline with Typed.js Animated Text Container -->
-          <h1 class="text-[clamp(2.4rem,5vw,4.4rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold -tracking-[0.04em]">
-            Technology that <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary via-blue-600 to-emerald-600 dark:from-[#69baff] dark:via-[#7ec5ff] dark:to-emerald-400"></span>
-          </h1>
-          
-          <p class="max-w-[720px] text-brand-muted dark:text-[#d7e4f3] print:text-[#333] text-[1.15rem] leading-relaxed">
-            iTu Solutions delivers professional website development, computer maintenance, network setups, and reliable technical support tailored for individuals and businesses across Polokwane and Limpopo.
-          </p>
-          
-          <div class="flex gap-[0.8rem] flex-wrap mt-[2rem]">
-            <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] border border-brand-primary dark:border-brand-darkPrimary font-bold cursor-pointer hover:shadow-lg hover:shadow-brand-primary/30 transition-all duration-200 no-underline hover:no-underline print:hidden" href="/forms/contact-form/contact/">
-              <i class="fa-solid fa-paper-plane"></i> Request a quote
-            </a>
-          </div>
+        <!-- Headline with Typed.js Animated Text Container -->
+        <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold uppercase -tracking-[0.04em]">
+          TECHNOLOGY THAT <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-600 to-emerald-600 dark:from-[#69baff] dark:via-[#7ec5ff] dark:to-emerald-400">WORKS FOR YOU</span>
+        </h1>
+        
+        <p class="max-w-[720px] text-slate-600 dark:text-[#d7e4f3] print:text-[#333] text-sm sm:text-base leading-relaxed">
+          iTu Solutions delivers professional website development, computer maintenance, network setups, and reliable technical support tailored for individuals and businesses across Polokwane and Limpopo.
+        </p>
+        
+        <div class="flex gap-[0.8rem] flex-wrap mt-[2rem]">
+          <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 dark:bg-sky-400 text-white dark:text-[#071524] border border-blue-600 dark:border-sky-400 text-xs font-bold uppercase tracking-wider cursor-pointer hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-200 no-underline hover:no-underline print:hidden" href="https://www.it-u.co.za/form/contact-form/">
+            <i class="fa-solid fa-paper-plane text-amber-300 dark:text-slate-900"></i>
+            <span>REQUEST A QUOTE</span>
+          </a>
         </div>
-
-        <!-- Trust Metrics / Flow Bar Representation (No Grid, No Cards) -->
-        <div class="flex flex-col sm:flex-row justify-between gap-6 pt-6 border-t border-brand-border/60 dark:border-white/10">
-          <div class="text-center sm:text-left flex-1 border-b sm:border-b-0 sm:border-r border-brand-border/40 pb-4 sm:pb-0 sm:pr-4">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">100%</p>
-            <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Local & Dedicated</p>
-          </div>
-          <div class="text-center sm:text-left flex-1 border-b sm:border-b-0 sm:border-r border-brand-border/40 pb-4 sm:pb-0 sm:pr-4">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Fast</p>
-            <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Turnaround Time</p>
-          </div>
-          <div class="text-center sm:text-left flex-1 border-b sm:border-b-0 sm:border-r border-brand-border/40 pb-4 sm:pb-0 sm:pr-4">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Certified</p>
-            <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Technical Expertise</p>
-          </div>
-          <div class="text-center sm:text-left flex-1">
-            <p class="text-3xl font-extrabold text-brand-primary dark:text-brand-darkPrimary">Tailored</p>
-            <p class="text-xs font-semibold text-brand-muted dark:text-brand-darkMuted uppercase tracking-wider mt-1">Digital Solutions</p>
-          </div>
-        </div>
-
       </div>
 
-      <!-- JavaScript for Adaptive Light/Dark Mode Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const canvas = document.getElementById('hero-connected-dots');
-          const heroSection = document.getElementById('hero-section');
-          if (!canvas || !heroSection) return;
+      <!-- Trust Stats / Flow Line Bar Representation -->
+      <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-slate-300/80 dark:border-white/10">
+        <div class="text-center sm:text-left flex-1">
+          <p class="text-2xl sm:text-3xl font-extrabold text-blue-700 dark:text-sky-400">100%</p>
+          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">LOCAL &amp; DEDICATED</p>
+        </div>
+        <div class="text-center sm:text-left flex-1">
+          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">FAST</p>
+          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">TURNAROUND TIME</p>
+        </div>
+        <div class="text-center sm:text-left flex-1">
+          <p class="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-violet-400">CERTIFIED</p>
+          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">TECHNICAL EXPERTISE</p>
+        </div>
+        <div class="text-center sm:text-left flex-1">
+          <p class="text-2xl sm:text-3xl font-extrabold text-orange-600 dark:text-orange-400">TAILORED</p>
+          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">DIGITAL SOLUTIONS</p>
+        </div>
+      </div>
 
-          const ctx = canvas.getContext('2d');
-          let width, height;
+    </div>
 
-          const lightPalette = [
-            { r: 23,  g: 105, b: 170 },
-            { r: 14,  g: 116, b: 144 },
-            { r: 5,   g: 150, b: 105 },
-            { r: 124, g: 58,  b: 237 },
-            { r: 217, g: 119, b: 6   }
-          ];
+    <!-- JavaScript for Adaptive Light/Dark Mode Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('hero-connected-dots');
+        const heroSection = document.getElementById('hero-section');
+        if (!canvas || !heroSection) return;
 
-          const darkPalette = [
-            { r: 105, g: 186, b: 255 },
-            { r: 52,  g: 211, b: 153 },
-            { r: 167, g: 139, b: 250 },
-            { r: 251, g: 146, b: 60  },
-            { r: 56,  g: 189, b: 248 }
-          ];
+        const ctx = canvas.getContext('2d');
+        let width, height;
 
-          const mouse = { x: null, y: null, radius: 180 };
+        const lightPalette = [
+          { r: 23,  g: 105, b: 170 },
+          { r: 14,  g: 116, b: 144 },
+          { r: 5,   g: 150, b: 105 },
+          { r: 124, g: 58,  b: 237 },
+          { r: 217, g: 119, b: 6   }
+        ];
 
-          function resizeCanvas() {
-            width = canvas.width = heroSection.offsetWidth;
-            height = canvas.height = heroSection.offsetHeight;
-          }
-          resizeCanvas();
-          window.addEventListener('resize', resizeCanvas);
+        const darkPalette = [
+          { r: 105, g: 186, b: 255 },
+          { r: 52,  g: 211, b: 153 },
+          { r: 167, g: 139, b: 250 },
+          { r: 251, g: 146, b: 60  },
+          { r: 56,  g: 189, b: 248 }
+        ];
 
-          heroSection.addEventListener('mousemove', (e) => {
-            const rect = heroSection.getBoundingClientRect();
-            mouse.x = e.clientX - rect.left;
-            mouse.y = e.clientY - rect.top;
-          });
+        const mouse = { x: null, y: null, radius: 180 };
 
-          heroSection.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-          });
+        function resizeCanvas() {
+          width = canvas.width = heroSection.offsetWidth;
+          height = canvas.height = heroSection.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
 
-          class Particle {
-            constructor() { this.reset(); }
-
-            reset() {
-              this.x = Math.random() * width;
-              this.y = Math.random() * height;
-              this.radius = Math.random() * 4.5 + 5;
-              this.vx = (Math.random() - 0.5) * 1.0;
-              this.vy = (Math.random() - 0.5) * 1.0;
-              this.alpha = Math.random() * 0.4 + 0.6;
-            }
-
-            update() {
-              if (this.x < 0 || this.x > width) this.vx *= -1;
-              if (this.y < 0 || this.y > height) this.vy *= -1;
-
-              if (mouse.x !== null && mouse.y !== null) {
-                const dx = mouse.x - this.x;
-                const dy = mouse.y - this.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
-
-                if (distance < mouse.radius) {
-                  const forceDirectionX = dx / distance;
-                  const forceDirectionY = dy / distance;
-                  const force = (mouse.radius - distance) / mouse.radius;
-                  this.x -= forceDirectionX * force * 5;
-                  this.y -= forceDirectionY * force * 5;
-                }
-              }
-
-              this.x += this.vx;
-              this.y += this.vy;
-            }
-
-            draw(palette) {
-              const color = palette[Math.floor(this.x % palette.length)];
-              ctx.beginPath();
-              ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-              ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
-              
-              const isDark = document.documentElement.classList.contains('dark');
-              ctx.shadowBlur = isDark ? 14 : 8;
-              ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
-              ctx.fill();
-              ctx.shadowBlur = 0;
-              
-              this.currentColor = color;
-            }
-          }
-
-          const particleCount = Math.floor(Math.min(width, 1200) / 20);
-          const particles = Array.from({ length: particleCount }, () => new Particle());
-
-          function animate() {
-            ctx.clearRect(0, 0, width, height);
-
-            const isDark = document.documentElement.classList.contains('dark');
-            const activePalette = isDark ? darkPalette : lightPalette;
-
-            particles.forEach(p => {
-              p.update();
-              p.draw(activePalette);
-            });
-
-            const maxDistance = 160;
-            for (let i = 0; i < particles.length; i++) {
-              for (let j = i + 1; j < particles.length; j++) {
-                const p1 = particles[i];
-                const p2 = particles[j];
-                const dx = p1.x - p2.x;
-                const dy = p1.y - p2.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-
-                if (dist < maxDistance) {
-                  const alpha = (1 - dist / maxDistance) * (isDark ? 0.65 : 0.45);
-                  const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-                  gradient.addColorStop(0, `rgba(${p1.currentColor.r}, ${p1.currentColor.g}, ${p1.currentColor.b}, ${alpha})`);
-                  gradient.addColorStop(1, `rgba(${p2.currentColor.r}, ${p2.currentColor.g}, ${p2.currentColor.b}, ${alpha})`);
-
-                  ctx.beginPath();
-                  ctx.moveTo(p1.x, p1.y);
-                  ctx.lineTo(p2.x, p2.y);
-                  ctx.strokeStyle = gradient;
-                  ctx.lineWidth = (1 - dist / maxDistance) * 3.5;
-                  ctx.stroke();
-                }
-              }
-            }
-
-            requestAnimationFrame(animate);
-          }
-
-          animate();
+        heroSection.addEventListener('mousemove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
         });
-      </script>
-    </section>
 
-</main>
-  <!-- Circular & Radial Information Integration Layer -->
-  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto text-center px-4">
-      <h2 class="text-2xl font-extrabold mb-4">Core Competency Spectrum (Circular & Radial Mapping)</h2>
-      <p class="text-gray-600 dark:text-gray-300 mb-8">
-        Visualizing our service distribution as a balanced Donut and Radar structural flow.
+        heroSection.addEventListener('mouseleave', () => {
+          mouse.x = null;
+          mouse.y = null;
+        });
+
+        class Particle {
+          constructor() { this.reset(); }
+          reset() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.radius = Math.random() * 4.5 + 5;
+            this.vx = (Math.random() - 0.5) * 1.0;
+            this.vy = (Math.random() - 0.5) * 1.0;
+            this.alpha = Math.random() * 0.4 + 0.6;
+          }
+          update() {
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+            if (mouse.x !== null && mouse.y !== null) {
+              const dx = mouse.x - this.x;
+              const dy = mouse.y - this.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              if (distance < mouse.radius) {
+                const forceDirectionX = dx / distance;
+                const forceDirectionY = dy / distance;
+                const force = (mouse.radius - distance) / mouse.radius;
+                this.x -= forceDirectionX * force * 5;
+                this.y -= forceDirectionY * force * 5;
+              }
+            }
+            this.x += this.vx;
+            this.y += this.vy;
+          }
+          draw(palette) {
+            const color = palette[Math.floor(this.x % palette.length)];
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
+            const isDark = document.documentElement.classList.contains('dark');
+            ctx.shadowBlur = isDark ? 14 : 8;
+            ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            this.currentColor = color;
+          }
+        }
+
+        const particleCount = Math.floor(Math.min(width, 1200) / 20);
+        const particles = Array.from({ length: particleCount }, () => new Particle());
+
+        function animate() {
+          ctx.clearRect(0, 0, width, height);
+          const isDark = document.documentElement.classList.contains('dark');
+          const activePalette = isDark ? darkPalette : lightPalette;
+
+          particles.forEach(p => {
+            p.update();
+            p.draw(activePalette);
+          });
+
+          const maxDistance = 160;
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const p1 = particles[i];
+              const p2 = particles[j];
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < maxDistance) {
+                const alpha = (1 - dist / maxDistance) * (isDark ? 0.65 : 0.45);
+                const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
+                gradient.addColorStop(0, `rgba(${p1.currentColor.r}, ${p1.currentColor.g}, ${p1.currentColor.b}, ${alpha})`);
+                gradient.addColorStop(1, `rgba(${p2.currentColor.r}, ${p2.currentColor.g}, ${p2.currentColor.b}, ${alpha})`);
+
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = (1 - dist / maxDistance) * 3.5;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(animate);
+        }
+        animate();
+      });
+    </script>
+  </section>
+
+  <!-- 1. CIRCULAR & RADIAL SHAPES (Donut, Sunburst & Gauge Charts) -->
+  <section class="py-16 border-b border-slate-200 dark:border-slate-800 max-w-[1120px] mx-auto px-4">
+    <div class="mb-10 text-right">
+      <p class="inline-flex items-center justify-end gap-2 text-[11px] font-extrabold uppercase tracking-widest text-teal-600 dark:text-teal-400">
+        <span>01 · CIRCULAR &amp; RADIAL SHAPES</span>
+        <i class="fa-solid fa-chart-pie text-amber-500"></i>
       </p>
-      
-      <!-- Interactive 4-Slice SVG Donut / Pie Representation -->
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-        <svg viewBox="0 0 420 420" class="w-full max-w-[320px] h-auto drop-shadow-md" aria-label="Services Distribution Chart">
-          <a href="/services/website-development/" class="cursor-pointer hover:opacity-90 transition-opacity">
-            <path d="M 210 210 L 210 10 A 200 200 0 0 1 410 210 Z" fill="#36b5b0" />
-            <text x="295" y="115" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">01. Web</text>
+      <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight mt-1">SERVICE SPECTRUM, HIERARCHY &amp; SYSTEM READINESS</h2>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1 max-w-2xl ml-auto">
+        Donut ring metrics, concentric sunburst service rings, and a real-time SLA gauge meter.
+      </p>
+    </div>
+
+    <!-- Donut Chart + Concentric Sunburst SVG -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 pb-12 border-b border-dashed border-slate-300 dark:border-slate-700">
+      <div class="w-full max-w-[340px] mx-auto">
+        <svg viewBox="0 0 420 420" class="w-full h-auto drop-shadow-md" aria-label="Donut and Sunburst Service Chart">
+          <!-- Outer Sunburst Ring (Sub-Specialties) -->
+          <path d="M 210 10 A 200 200 0 0 1 351 69 L 319 101 A 155 155 0 0 0 210 55 Z" fill="#0d9488" />
+          <path d="M 351 69 A 200 200 0 0 1 410 210 L 365 210 A 155 155 0 0 0 319 101 Z" fill="#2dd4bf" />
+          <path d="M 410 210 A 200 200 0 0 1 351 351 L 319 319 A 155 155 0 0 0 365 210 Z" fill="#7c3aed" />
+          <path d="M 351 351 A 200 200 0 0 1 210 410 L 210 365 A 155 155 0 0 0 319 319 Z" fill="#a78bfa" />
+          <path d="M 210 410 A 200 200 0 0 1 69 351 L 101 319 A 155 155 0 0 0 210 365 Z" fill="#65a30d" />
+          <path d="M 69 351 A 200 200 0 0 1 10 210 L 55 210 A 155 155 0 0 0 101 319 Z" fill="#a3e635" />
+          <path d="M 10 210 A 200 200 0 0 1 69 69 L 101 101 A 155 155 0 0 0 55 210 Z" fill="#ea580c" />
+          <path d="M 69 69 A 200 200 0 0 1 210 10 L 210 55 A 155 155 0 0 0 101 101 Z" fill="#fb923c" />
+
+          <!-- Inner Donut Ring (4 Core Divisions) -->
+          <a href="https://www.it-u.co.za/services/website-development/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 210 60 A 150 150 0 0 1 360 210 Z" fill="#36b5b0" />
+            <text x="275" y="140" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="12">01. WEB</text>
           </a>
-          <a href="/services/computer-repairs/" class="cursor-pointer hover:opacity-90 transition-opacity">
-            <path d="M 210 210 L 410 210 A 200 200 0 0 1 210 410 Z" fill="#8b5cf6" />
-            <text x="295" y="290" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">02. Repairs</text>
+          <a href="https://www.it-u.co.za/services/computer-repairs/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 360 210 A 150 150 0 0 1 210 360 Z" fill="#8b5cf6" />
+            <text x="275" y="280" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="12">02. REPAIRS</text>
           </a>
-          <a href="/services/software-installation/" class="cursor-pointer hover:opacity-90 transition-opacity">
-            <path d="M 210 210 L 210 410 A 200 200 0 0 1 10 210 Z" fill="#84cc16" />
-            <text x="125" y="290" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">03. Software</text>
+          <a href="https://www.it-u.co.za/services/software-installation/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 210 360 A 150 150 0 0 1 60 210 Z" fill="#84cc16" />
+            <text x="145" y="280" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="12">03. SOFTWARE</text>
           </a>
-          <a href="/services/it-support/" class="cursor-pointer hover:opacity-90 transition-opacity">
-            <path d="M 210 210 L 10 210 A 200 200 0 0 1 210 10 Z" fill="#f97316" />
-            <text x="125" y="115" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">04. Support</text>
+          <a href="https://www.it-u.co.za/services/it-support/" class="cursor-pointer hover:opacity-90 transition-opacity">
+            <path d="M 210 210 L 60 210 A 150 150 0 0 1 210 60 Z" fill="#f97316" />
+            <text x="145" y="140" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="12">04. SUPPORT</text>
           </a>
-          <circle cx="210" cy="210" r="78" fill="#ffffff" class="dark:fill-[#0b1220]" />
-          <text x="210" y="205" text-anchor="middle" class="fill-gray-900 dark:fill-white" font-weight="bold" font-size="14">ITU</text>
-          <text x="210" y="225" text-anchor="middle" class="fill-gray-500" font-weight="bold" font-size="12">METRIC</text>
+
+          <!-- Donut Hollow Center -->
+          <circle cx="210" cy="210" r="68" fill="#ffffff" class="dark:fill-[#0b1220]" />
+          <text x="210" y="205" text-anchor="middle" class="fill-slate-900 dark:fill-white" font-weight="900" font-size="14">ITU 360°</text>
+          <text x="210" y="224" text-anchor="middle" class="fill-slate-500 dark:fill-slate-400" font-weight="bold" font-size="10">SUNBURST</text>
         </svg>
+      </div>
 
-        <div class="text-left space-y-4 max-w-md">
-          <div class="border-l-4 border-[#36b5b0] pl-3">
-            <h3 class="font-bold">01. Website Development</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Responsive websites built to present your brand and services online.</p>
-          </div>
-          <div class="border-l-4 border-[#8b5cf6] pl-3">
-            <h3 class="font-bold">02. Computer Repairs</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Practical troubleshooting and repair support for common hardware/software issues.</p>
-          </div>
-          <div class="border-l-4 border-[#84cc16] pl-3">
-            <h3 class="font-bold">03. Software Installation</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Help installing software configurations and keeping systems up to date.</p>
-          </div>
-          <div class="border-l-4 border-[#f97316] pl-3">
-            <h3 class="font-bold">04. IT Support</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Friendly technical assistance for setup, maintenance, and routine troubleshooting.</p>
-          </div>
+      <!-- Right-Aligned Ring Breakdown & Speedometer Gauge -->
+      <div class="w-full max-w-lg space-y-5 text-right">
+        <div class="border-r-4 border-[#36b5b0] pr-3">
+          <h3 class="text-xs font-extrabold uppercase tracking-wider text-teal-700 dark:text-teal-300">01 · DONUT &amp; SUNBURST: WEBSITE DEVELOPMENT</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Inner ring: Custom web design · Outer ring: Responsive UI, SEO sitemaps &amp; domain DNS.</p>
+        </div>
+        <div class="border-r-4 border-[#8b5cf6] pr-3">
+          <h3 class="text-xs font-extrabold uppercase tracking-wider text-violet-700 dark:text-violet-300">02 · DONUT &amp; SUNBURST: COMPUTER REPAIRS</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Inner ring: Diagnostics · Outer ring: Motherboard repair, SSD/RAM upgrades &amp; thermal care.</p>
+        </div>
+        <div class="border-r-4 border-[#84cc16] pr-3">
+          <h3 class="text-xs font-extrabold uppercase tracking-wider text-lime-700 dark:text-lime-300">03 · DONUT &amp; SUNBURST: SOFTWARE &amp; OS</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Inner ring: Operating systems · Outer ring: Windows/Linux deployment, drivers &amp; security.</p>
+        </div>
+        <div class="border-r-4 border-[#f97316] pr-3">
+          <h3 class="text-xs font-extrabold uppercase tracking-wider text-orange-700 dark:text-orange-300">04 · DONUT &amp; SUNBURST: IT &amp; NETWORK SUPPORT</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Inner ring: Connectivity · Outer ring: Wi-Fi coverage, routers, printers &amp; remote helpdesk.</p>
+        </div>
+
+        <!-- Semi-Circular Gauge (Speedometer) Chart -->
+        <div class="pt-4 flex flex-col items-end">
+          <svg viewBox="0 0 260 145" class="w-64 h-auto" aria-label="First-Visit Resolution Gauge">
+            <path d="M 20 130 A 110 110 0 0 1 95 26" fill="none" stroke="#f97316" stroke-width="18" stroke-linecap="round" />
+            <path d="M 102 24 A 110 110 0 0 1 178 32" fill="none" stroke="#38bdf8" stroke-width="18" />
+            <path d="M 185 36 A 110 110 0 0 1 240 130" fill="none" stroke="#10b981" stroke-width="18" stroke-linecap="round" />
+            <!-- Needle pointing to 96% -->
+            <line x1="130" y1="130" x2="214" y2="76" stroke="#ef4444" stroke-width="4" stroke-linecap="round" />
+            <circle cx="130" cy="130" r="8" fill="#0f172a" class="dark:fill-white" />
+            <text x="130" y="106" text-anchor="middle" class="fill-slate-900 dark:fill-white" font-weight="900" font-size="14">96% SLA</text>
+          </svg>
+          <p class="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">GAUGE METER · FIRST-VISIT DIAGNOSTIC RESOLUTION</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Linear, Wave & Flow / Process Representation -->
-  <section class="py-12 border-b border-gray-200 dark:border-gray-800">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <p class="uppercase text-xs font-extrabold text-blue-600 tracking-widest">Linear Flow Mapping</p>
-        <h2 class="text-2xl font-extrabold">How We Deliver Results</h2>
+  <!-- 2. RECTANGULAR & BAR SHAPES (Bar, Stacked Bar, Histogram, Treemap, Marimekko, Waterfall, Box Plot, Candlestick/OHLC) -->
+  <section class="py-16 border-b border-slate-200 dark:border-slate-800 max-w-[1120px] mx-auto px-4 space-y-12">
+    <div class="text-right">
+      <p class="inline-flex items-center justify-end gap-2 text-[11px] font-extrabold uppercase tracking-widest text-blue-600 dark:text-sky-400">
+        <span>02 · RECTANGULAR &amp; BAR SHAPES</span>
+        <i class="fa-solid fa-chart-column text-emerald-500"></i>
+      </p>
+      <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight mt-1">PERFORMANCE BENCHMARKS, BUDGET STEPPING &amp; ALLOCATIONS</h2>
+    </div>
+
+    <!-- Horizontal Bar Chart & Stacked Bar Chart -->
+    <div class="space-y-4">
+      <div class="flex items-center justify-between text-xs font-extrabold uppercase tracking-wider">
+        <span class="text-blue-600 dark:text-sky-400">BAR &amp; STACKED BAR · TURNAROUND &amp; RESOURCE SPLIT</span>
+        <span class="text-slate-500">0% — 100%</span>
+      </div>
+      <!-- Horizontal Bar -->
+      <div class="space-y-1">
+        <div class="flex justify-between text-[11px] font-bold uppercase">
+          <span>SAME-DAY HARDWARE &amp; OS DIAGNOSTICS</span>
+          <span class="text-emerald-600 dark:text-emerald-400">94%</span>
+        </div>
+        <div class="w-full h-3 bg-slate-200 dark:bg-slate-800 overflow-hidden">
+          <div class="h-full bg-emerald-500" style="width: 94%;"></div>
+        </div>
+      </div>
+      <!-- Stacked Bar (Segmented colored blocks) -->
+      <div class="space-y-1">
+        <div class="flex justify-between text-[11px] font-bold uppercase">
+          <span>STACKED WORKLOAD: WEB (40%) · REPAIRS (30%) · NETWORKS (20%) · SOFTWARE (10%)</span>
+          <span class="text-blue-600 dark:text-sky-400">100%</span>
+        </div>
+        <div class="w-full h-4 flex overflow-hidden">
+          <div class="h-full bg-teal-500" style="width: 40%;" title="Website Development 40%"></div>
+          <div class="h-full bg-violet-500" style="width: 30%;" title="Computer Repairs 30%"></div>
+          <div class="h-full bg-orange-500" style="width: 20%;" title="Networking 20%"></div>
+          <div class="h-full bg-lime-500" style="width: 10%;" title="Software 10%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Histogram (Adjacent vertical rectangles with no gaps) + Treemap + Marimekko -->
+    <div class="flex flex-col md:flex-row items-end justify-between gap-8 pt-4 border-t border-dashed border-slate-300 dark:border-slate-700">
+      <!-- Histogram -->
+      <div class="w-full md:w-1/3">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-violet-600 dark:text-violet-400 mb-2">HISTOGRAM · TICKET COMPLETION HOURS (NO GAPS)</p>
+        <div class="h-32 flex items-end border-b-2 border-l-2 border-slate-400 dark:border-slate-600 px-1 pt-2">
+          <div class="flex-1 bg-sky-400 h-[35%]" title="0-1 hr"></div>
+          <div class="flex-1 bg-sky-500 h-[75%]" title="1-2 hrs"></div>
+          <div class="flex-1 bg-blue-600 h-[95%]" title="2-4 hrs"></div>
+          <div class="flex-1 bg-indigo-600 h-[60%]" title="4-8 hrs"></div>
+          <div class="flex-1 bg-violet-600 h-[25%]" title="8-24 hrs"></div>
+        </div>
+        <div class="flex justify-between text-[10px] font-bold uppercase text-slate-500 mt-1">
+          <span>1H</span><span>2H</span><span>4H</span><span>8H</span><span>24H</span>
+        </div>
       </div>
 
-      <div class="space-y-6">
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">01</span>
-          <div>
-            <h3 class="font-bold text-lg">Consultation Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">We listen to your specific technical or digital requirements directly.</p>
+      <!-- Treemap (Nested proportional rectangles) -->
+      <div class="w-full md:w-1/3">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-teal-600 dark:text-teal-400 mb-2">TREEMAP · INFRASTRUCTURE &amp; WEB SCOPE</p>
+        <div class="h-36 flex border border-slate-300 dark:border-slate-700 text-[10px] font-extrabold uppercase text-white">
+          <div class="w-3/5 h-full bg-teal-600 p-2 flex flex-col justify-between border-r border-white/30">
+            <span>WEB &amp; SEO</span>
+            <span>45%</span>
           </div>
-        </div>
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">02</span>
-          <div>
-            <h3 class="font-bold text-lg">Diagnostics Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Thorough evaluation to identify exact issues or scope of work accurately.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 pb-4 border-b border-dashed border-gray-300 dark:border-gray-700">
-          <span class="text-xl font-black text-blue-600">03</span>
-          <div>
-            <h3 class="font-bold text-lg">Implementation Stage</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Executing website builds or system repairs efficiently with minimal downtime.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4">
-          <span class="text-xl font-black text-blue-600">04</span>
-          <div>
-            <h3 class="font-bold text-lg">Ongoing Support Flow</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-400">Continuous check-ins to ensure seamless long-term operational health.</p>
+          <div class="w-2/5 h-full flex flex-col">
+            <div class="h-3/5 bg-violet-600 p-2 flex flex-col justify-between border-b border-white/30">
+              <span>REPAIRS</span>
+              <span>33%</span>
+            </div>
+            <div class="h-2/5 flex">
+              <div class="w-1/2 bg-orange-500 p-1 flex items-end">LAN</div>
+              <div class="w-1/2 bg-lime-600 p-1 flex items-end">OS</div>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Marimekko (Mosaic) Chart (Variable-width, variable-height stacked rectangles) -->
+      <div class="w-full md:w-1/3">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-orange-600 dark:text-orange-400 mb-2">MARIMEKKO · CLIENT TIER × SERVICE MIX</p>
+        <div class="h-36 flex border border-slate-300 dark:border-slate-700 text-[10px] font-extrabold uppercase text-white">
+          <div class="w-[50%] h-full flex flex-col border-r border-white/40">
+            <div class="h-[60%] bg-blue-600 p-1.5">SME WEB</div>
+            <div class="h-[40%] bg-emerald-600 p-1.5">SME IT</div>
+          </div>
+          <div class="w-[30%] h-full flex flex-col border-r border-white/40">
+            <div class="h-[35%] bg-amber-500 p-1.5">HOME</div>
+            <div class="h-[65%] bg-purple-600 p-1.5">PC FIX</div>
+          </div>
+          <div class="w-[20%] h-full flex flex-col">
+            <div class="h-[75%] bg-rose-500 p-1">EDU</div>
+            <div class="h-[25%] bg-cyan-600 p-1">OS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Waterfall Chart, Box Plot & Candlestick / OHLC Chart -->
+    <div class="pt-4 border-t border-dashed border-slate-300 dark:border-slate-700">
+      <p class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-3 text-right">
+        WATERFALL COST SAVINGS · BOX-AND-WHISKER LATENCY · CANDLESTICK / OHLC UPTIME TRACKING
+      </p>
+      <svg viewBox="0 0 900 180" class="w-full h-auto" aria-label="Waterfall, Box Plot, and Candlestick Financial and Uptime Charts">
+        <!-- Waterfall Chart (Left: x 10..310) -->
+        <text x="10" y="16" class="fill-slate-700 dark:fill-slate-300" font-size="10" font-weight="bold">WATERFALL: IT COST REDUCTION</text>
+        <rect x="20" y="40" width="36" height="110" fill="#3b82f6" />
+        <line x1="56" y1="40" x2="76" y2="40" stroke="#94a3b8" stroke-dasharray="3 2" />
+        <rect x="76" y="40" width="36" height="35" fill="#10b981" />
+        <line x1="112" y1="75" x2="132" y2="75" stroke="#94a3b8" stroke-dasharray="3 2" />
+        <rect x="132" y="75" width="36" height="30" fill="#10b981" />
+        <line x1="168" y1="105" x2="188" y2="105" stroke="#94a3b8" stroke-dasharray="3 2" />
+        <rect x="188" y="90" width="36" height="15" fill="#f97316" />
+        <line x1="224" y1="90" x2="244" y2="90" stroke="#94a3b8" stroke-dasharray="3 2" />
+        <rect x="244" y="90" width="36" height="60" fill="#0d9488" />
+        <text x="38" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">BASE</text>
+        <text x="94" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">-SSD</text>
+        <text x="150" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">-CLOUD</text>
+        <text x="206" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">+SEC</text>
+        <text x="262" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">NET</text>
+
+        <!-- Box Plot / Box-and-Whisker (Center: x 340..580) -->
+        <text x="345" y="16" class="fill-slate-700 dark:fill-slate-300" font-size="10" font-weight="bold">BOX PLOT: RESPONSE QUARTILES</text>
+        <!-- Whisker 1 -->
+        <line x1="395" y1="35" x2="395" y2="145" stroke="#8b5cf6" stroke-width="2" />
+        <line x1="380" y1="35" x2="410" y2="35" stroke="#8b5cf6" stroke-width="2" />
+        <line x1="380" y1="145" x2="410" y2="145" stroke="#8b5cf6" stroke-width="2" />
+        <rect x="372" y="62" width="46" height="54" fill="#8b5cf6" fill-opacity="0.35" stroke="#8b5cf6" stroke-width="2" />
+        <line x1="372" y1="88" x2="418" y2="88" stroke="#f59e0b" stroke-width="3" />
+        <text x="395" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">REMOTE</text>
+
+        <!-- Whisker 2 -->
+        <line x1="495" y1="45" x2="495" y2="150" stroke="#06b6d4" stroke-width="2" />
+        <line x1="480" y1="45" x2="510" y2="45" stroke="#06b6d4" stroke-width="2" />
+        <line x1="480" y1="150" x2="510" y2="150" stroke="#06b6d4" stroke-width="2" />
+        <rect x="472" y="72" width="46" height="48" fill="#06b6d4" fill-opacity="0.35" stroke="#06b6d4" stroke-width="2" />
+        <line x1="472" y1="95" x2="518" y2="95" stroke="#10b981" stroke-width="3" />
+        <text x="495" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">ON-SITE</text>
+
+        <!-- Candlestick / OHLC Chart (Right: x 610..890) -->
+        <text x="615" y="16" class="fill-slate-700 dark:fill-slate-300" font-size="10" font-weight="bold">CANDLESTICK / OHLC: SERVER SLA</text>
+        <line x1="640" y1="38" x2="640" y2="142" stroke="#10b981" stroke-width="2" />
+        <rect x="631" y="56" width="18" height="58" fill="#10b981" />
+        <line x1="690" y1="45" x2="690" y2="148" stroke="#ef4444" stroke-width="2" />
+        <rect x="681" y="70" width="18" height="45" fill="#ef4444" />
+        <line x1="740" y1="32" x2="740" y2="132" stroke="#10b981" stroke-width="2" />
+        <rect x="731" y="48" width="18" height="62" fill="#10b981" />
+        <line x1="790" y1="30" x2="790" y2="125" stroke="#10b981" stroke-width="2" />
+        <rect x="781" y="42" width="18" height="54" fill="#10b981" />
+        <line x1="840" y1="28" x2="840" y2="118" stroke="#3b82f6" stroke-width="2" />
+        <rect x="831" y="38" width="18" height="50" fill="#3b82f6" />
+        <text x="740" y="166" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">Q1 — Q4 HOSTING &amp; NETWORK OHLC</text>
+      </svg>
     </div>
   </section>
 
-<!-- How We Work Section (Linear, Wave & Flow / Sankey Step Pipeline) -->
-<section class="bg-brand-surface/50 dark:bg-brand-darkSurface/50 border-y border-brand-border dark:border-brand-darkBorder py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
-  <div class="max-w-[1120px] mx-auto">
-    <div class="text-center max-w-[650px] mx-auto mb-12">
-      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Our Process</p>
-      <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">How We Deliver Results</h2>
-      <p class="text-brand-muted dark:text-brand-darkMuted mt-2">A streamlined 4-step approach to resolve technical challenges smoothly.</p>
+  <!-- 3. LINEAR, WAVE & FLOW SHAPES (Line, Area, Streamgraph, Sankey & Chord Diagram) -->
+  <section class="py-16 border-b border-slate-200 dark:border-slate-800 max-w-[1120px] mx-auto px-4 space-y-12">
+    <div class="text-right">
+      <p class="inline-flex items-center justify-end gap-2 text-[11px] font-extrabold uppercase tracking-widest text-indigo-600 dark:text-indigo-400">
+        <span>03 · LINEAR, WAVE &amp; FLOW SHAPES</span>
+        <i class="fa-solid fa-wave-square text-rose-500"></i>
+      </p>
+      <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight mt-1">DELIVERY FLOW, TRAFFIC WAVES &amp; INTER-SYSTEM RELATIONSHIPS</h2>
     </div>
 
-    <!-- Flowing Wave / Sankey SVG Connector -->
-    <div class="w-full overflow-x-auto pb-4">
-      <svg viewBox="0 0 900 120" class="w-full min-w-[650px] h-auto mx-auto mb-6" aria-label="4-Step Process Flow Chart">
+    <!-- Line Chart, Shaded Area Chart & Organic Streamgraph -->
+    <div class="space-y-2">
+      <p class="text-[11px] font-extrabold uppercase tracking-wider text-sky-600 dark:text-sky-400">
+        LINE TREND · SHADED AREA · ORGANIC STREAMGRAPH (WEB &amp; IT GROWTH)
+      </p>
+      <svg viewBox="0 0 900 170" class="w-full h-auto" aria-label="Line, Area, and Streamgraph Visualization">
         <defs>
-          <linearGradient id="processWave" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#36b5b0" />
-            <stop offset="33%" stop-color="#8b5cf6" />
-            <stop offset="66%" stop-color="#84cc16" />
-            <stop offset="100%" stop-color="#f97316" />
+          <linearGradient id="ituAreaGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.45" />
+            <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.02" />
           </linearGradient>
         </defs>
-        <!-- Flowing Wave Line -->
-        <path d="M 90 60 C 190 10, 260 110, 340 60 C 420 10, 490 110, 570 60 C 650 10, 720 110, 810 60" fill="none" stroke="url(#processWave)" stroke-width="6" stroke-linecap="round" />
-        <!-- Node 01 -->
-        <circle cx="90" cy="60" r="26" fill="#36b5b0" />
-        <text x="90" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">01</text>
-        <!-- Node 02 -->
-        <circle cx="340" cy="60" r="26" fill="#8b5cf6" />
-        <text x="340" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">02</text>
-        <!-- Node 03 -->
-        <circle cx="570" cy="60" r="26" fill="#84cc16" />
-        <text x="570" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">03</text>
-        <!-- Node 04 -->
-        <circle cx="810" cy="60" r="26" fill="#f97316" />
-        <text x="810" y="65" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">04</text>
+        <!-- Streamgraph Wave Layers -->
+        <path d="M 0 110 C 180 70, 320 140, 500 95 C 680 55, 780 120, 900 85 L 900 135 C 760 155, 620 105, 460 135 C 290 160, 150 115, 0 140 Z" fill="#8b5cf6" fill-opacity="0.35" />
+        <path d="M 0 125 C 200 95, 360 150, 540 110 C 700 80, 800 135, 900 105 L 900 150 C 740 165, 580 125, 420 150 C 250 168, 120 135, 0 155 Z" fill="#10b981" fill-opacity="0.4" />
+        <!-- Area Chart Underlay -->
+        <path d="M 20 145 L 190 112 L 360 92 L 530 62 L 700 44 L 880 22 L 880 160 L 20 160 Z" fill="url(#ituAreaGrad)" />
+        <!-- Line Chart Stroke -->
+        <polyline fill="none" stroke="#0284c7" stroke-width="3.5" points="20,145 190,112 360,92 530,62 700,44 880,22" />
+        <circle cx="20" cy="145" r="5" fill="#0284c7" />
+        <circle cx="190" cy="112" r="5" fill="#10b981" />
+        <circle cx="360" cy="92" r="5" fill="#8b5cf6" />
+        <circle cx="530" cy="62" r="5" fill="#f97316" />
+        <circle cx="700" cy="44" r="5" fill="#06b6d4" />
+        <circle cx="880" cy="22" r="6" fill="#eab308" />
       </svg>
     </div>
 
-    <!-- Flexbox Flow Steps (No Grid / No Cards) -->
-    <div class="flex flex-col md:flex-row justify-between gap-8">
-      <div class="flex-1 border-t-4 border-[#36b5b0] pt-4">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-[#36b5b0]">Step 01</span>
-        <h3 class="font-bold text-lg mt-1 mb-2">Consultation</h3>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">We listen to your specific technical or digital requirements.</p>
+    <!-- Sankey Diagram + Chord Diagram -->
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10 pt-6 border-t border-dashed border-slate-300 dark:border-slate-700">
+      <!-- Sankey Diagram -->
+      <div class="w-full lg:w-3/5">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">
+          SANKEY DIAGRAM · REQUEST VOLUME TRANSFER FROM INTAKE TO DELIVERY
+        </p>
+        <svg viewBox="0 0 540 200" class="w-full h-auto" aria-label="Sankey Workflow Transfer Diagram">
+          <!-- Source Nodes -->
+          <rect x="10" y="15" width="16" height="85" fill="#3b82f6" />
+          <text x="32" y="32" class="fill-slate-800 dark:fill-slate-200" font-size="10" font-weight="bold">SME &amp; BUSINESS</text>
+          <rect x="10" y="115" width="16" height="70" fill="#10b981" />
+          <text x="32" y="132" class="fill-slate-800 dark:fill-slate-200" font-size="10" font-weight="bold">HOME &amp; STUDENTS</text>
+
+          <!-- Flowing Curved Bands -->
+          <path d="M 26 42 C 180 42, 340 35, 510 35" fill="none" stroke="#3b82f6" stroke-opacity="0.35" stroke-width="34" />
+          <path d="M 26 78 C 190 78, 330 95, 510 95" fill="none" stroke="#8b5cf6" stroke-opacity="0.35" stroke-width="24" />
+          <path d="M 26 140 C 190 140, 330 112, 510 112" fill="none" stroke="#10b981" stroke-opacity="0.35" stroke-width="26" />
+          <path d="M 26 170 C 190 170, 330 165, 510 165" fill="none" stroke="#f97316" stroke-opacity="0.35" stroke-width="22" />
+
+          <!-- Destination Nodes -->
+          <rect x="510" y="15" width="16" height="45" fill="#0d9488" />
+          <text x="502" y="38" text-anchor="end" class="fill-slate-800 dark:fill-slate-200" font-size="10" font-weight="bold">WEB &amp; SEO</text>
+          <rect x="510" y="75" width="16" height="55" fill="#8b5cf6" />
+          <text x="502" y="104" text-anchor="end" class="fill-slate-800 dark:fill-slate-200" font-size="10" font-weight="bold">REPAIRS &amp; OS</text>
+          <rect x="510" y="145" width="16" height="40" fill="#f97316" />
+          <text x="502" y="168" text-anchor="end" class="fill-slate-800 dark:fill-slate-200" font-size="10" font-weight="bold">WIFI &amp; SUPPORT</text>
+        </svg>
       </div>
-      <div class="flex-1 border-t-4 border-[#8b5cf6] pt-4">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-[#8b5cf6]">Step 02</span>
-        <h3 class="font-bold text-lg mt-1 mb-2">Diagnostics</h3>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Thorough evaluation to identify exact issues or scope of work.</p>
-      </div>
-      <div class="flex-1 border-t-4 border-[#84cc16] pt-4">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-[#84cc16]">Step 03</span>
-        <h3 class="font-bold text-lg mt-1 mb-2">Implementation</h3>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Executing website builds or system repairs efficiently.</p>
-      </div>
-      <div class="flex-1 border-t-4 border-[#f97316] pt-4">
-        <span class="text-xs font-extrabold uppercase tracking-wider text-[#f97316]">Step 04</span>
-        <h3 class="font-bold text-lg mt-1 mb-2">Ongoing Support</h3>
-        <p class="text-brand-muted dark:text-brand-darkMuted text-sm">Continuous check-ins to ensure seamless long-term operation.</p>
+
+      <!-- Chord Diagram -->
+      <div class="w-full max-w-[240px] mx-auto text-center">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400 mb-2">
+          CHORD DIAGRAM · CROSS-SERVICE SYNERGY
+        </p>
+        <svg viewBox="0 0 220 220" class="w-full h-auto" aria-label="Chord Diagram Service Relationships">
+          <circle cx="110" cy="110" r="90" fill="none" stroke="#94a3b8" stroke-opacity="0.3" stroke-width="8" />
+          <!-- Perimeter Arcs -->
+          <path d="M 110 20 A 90 90 0 0 1 195 82" fill="none" stroke="#14b8a6" stroke-width="10" />
+          <path d="M 195 138 A 90 90 0 0 1 110 200" fill="none" stroke="#8b5cf6" stroke-width="10" />
+          <path d="M 65 188 A 90 90 0 0 1 25 138" fill="none" stroke="#84cc16" stroke-width="10" />
+          <path d="M 25 82 A 90 90 0 0 1 82 25" fill="none" stroke="#f97316" stroke-width="10" />
+          <!-- Connecting Chords -->
+          <path d="M 155 34 Q 110 110 165 175" fill="none" stroke="#14b8a6" stroke-opacity="0.45" stroke-width="12" />
+          <path d="M 185 155 Q 110 110 38 155" fill="none" stroke="#8b5cf6" stroke-opacity="0.45" stroke-width="10" />
+          <path d="M 45 55 Q 110 110 180 65" fill="none" stroke="#f97316" stroke-opacity="0.45" stroke-width="11" />
+        </svg>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Featured Works Section (Rectangular & Bar / Marimekko Proportional Layout) -->
-<section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem]">
-  <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-    <div>
-      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Portfolio</p>
-      <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Recent Technical Deployments</h2>
-    </div>
-    <a href="/portfolio/" class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-2">
-      View all projects <i class="fa-solid fa-arrow-right text-xs"></i>
-    </a>
-  </div>
-
-  <!-- Horizontal Stacked Bar / Marimekko Visual Meter -->
-  <div class="w-full h-4 flex rounded-full overflow-hidden mb-10 bg-gray-200 dark:bg-gray-800" aria-hidden="true">
-    <div class="w-[55%] bg-brand-primary dark:bg-brand-darkPrimary" title="Website Engineering 55%"></div>
-    <div class="w-[45%] bg-emerald-500" title="IT Infrastructure 45%"></div>
-  </div>
-
-  <!-- Flexbox Proportional Split (No Grid / No Cards) -->
-  <div class="flex flex-col md:flex-row gap-10">
-    <div class="flex-[1.15] border-l-4 border-brand-primary dark:border-brand-darkPrimary pl-6 py-2">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-brand-primary dark:text-brand-darkPrimary">Website Engineering</span>
-        <span class="text-xs font-mono font-bold text-brand-muted dark:text-brand-darkMuted">55% Deployment Share</span>
+    <!-- Sequential Process Steps -->
+    <div class="space-y-5 pt-4">
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-dashed border-slate-300 dark:border-slate-700">
+        <div class="flex items-start gap-3">
+          <span class="text-lg font-black text-blue-600 dark:text-sky-400">01</span>
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider">CONSULTATION STAGE</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">We listen to your specific technical or digital requirements directly.</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-comments text-sky-500 text-sm"></i>
       </div>
-      <h3 class="text-xl font-bold mb-2">Business Digital Platform</h3>
-      <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Responsive corporate website engineered for optimal search visibility and fast loading speeds.</p>
-      <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-brand-primary dark:text-brand-darkPrimary text-sm hover:underline">
-        Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-dashed border-slate-300 dark:border-slate-700">
+        <div class="flex items-start gap-3">
+          <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">02</span>
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider">DIAGNOSTICS STAGE</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Thorough evaluation to identify exact issues or scope of work accurately.</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-stethoscope text-emerald-500 text-sm"></i>
+      </div>
+      <div class="flex items-start justify-between gap-4 pb-4 border-b border-dashed border-slate-300 dark:border-slate-700">
+        <div class="flex items-start gap-3">
+          <span class="text-lg font-black text-violet-600 dark:text-violet-400">03</span>
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider">IMPLEMENTATION STAGE</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Executing website builds or system repairs efficiently with minimal downtime.</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-screwdriver-wrench text-violet-500 text-sm"></i>
+      </div>
+      <div class="flex items-start justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-lg font-black text-orange-600 dark:text-orange-400">04</span>
+          <div>
+            <h3 class="text-xs font-extrabold uppercase tracking-wider">ONGOING SUPPORT FLOW</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Continuous check-ins to ensure seamless long-term operational health.</p>
+          </div>
+        </div>
+        <i class="fa-solid fa-shield-heart text-orange-500 text-sm"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. FUNNEL, PYRAMID & TRIANGULAR SHAPES (Funnel, Upright Pyramid, Population Pyramid & Ternary Plot) -->
+  <section class="py-16 border-b border-slate-200 dark:border-slate-800 max-w-[1120px] mx-auto px-4 space-y-10">
+    <div class="text-right">
+      <p class="inline-flex items-center justify-end gap-2 text-[11px] font-extrabold uppercase tracking-widest text-amber-600 dark:text-amber-400">
+        <span>04 · FUNNEL, PYRAMID &amp; TRIANGULAR SHAPES</span>
+        <i class="fa-solid fa-filter text-teal-500"></i>
+      </p>
+      <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight mt-1">CONVERSION FUNNEL, INFRASTRUCTURE PYRAMID &amp; BALANCE TRIANGLE</h2>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+      <!-- Funnel Chart (Inverted Trapezoid Tiers) -->
+      <div class="w-full lg:w-1/4 text-center">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-blue-600 dark:text-sky-400 mb-2">FUNNEL CHART · CLIENT CONVERSION</p>
+        <svg viewBox="0 0 240 190" class="w-full h-auto" aria-label="Client Conversion Funnel Chart">
+          <polygon points="10,10 230,10 205,52 35,52" fill="#2563eb" />
+          <text x="120" y="35" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">100% INQUIRIES</text>
+          <polygon points="38,56 202,56 178,98 62,98" fill="#0d9488" />
+          <text x="120" y="81" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">84% SCOPED</text>
+          <polygon points="65,102 175,102 152,144 88,144" fill="#8b5cf6" />
+          <text x="120" y="127" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">76% DELIVERED</text>
+          <polygon points="91,148 149,148 136,184 104,184" fill="#10b981" />
+          <text x="120" y="170" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">68% RETAINED</text>
+        </svg>
+      </div>
+
+      <!-- Upright Pyramid Chart -->
+      <div class="w-full lg:w-1/4 text-center">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">PYRAMID CHART · IT FOUNDATION</p>
+        <svg viewBox="0 0 240 190" class="w-full h-auto" aria-label="Upright IT Foundation Pyramid Chart">
+          <polygon points="120,10 155,64 85,64" fill="#f59e0b" />
+          <text x="120" y="52" text-anchor="middle" fill="#ffffff" font-size="9" font-weight="bold">GROWTH</text>
+          <polygon points="82,68 158,68 192,124 48,124" fill="#0284c7" />
+          <text x="120" y="100" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">WEB &amp; CLOUD APPS</text>
+          <polygon points="45,128 195,128 230,184 10,184" fill="#059669" />
+          <text x="120" y="160" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">HARDWARE &amp; NETWORK BASE</text>
+        </svg>
+      </div>
+
+      <!-- Population Pyramid (Symmetrical Back-to-Back Horizontal Bars) -->
+      <div class="w-full lg:w-1/4 text-center">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-violet-600 dark:text-violet-400 mb-2">POPULATION PYRAMID · ON-SITE VS REMOTE</p>
+        <svg viewBox="0 0 240 190" class="w-full h-auto" aria-label="Back-to-Back Population Pyramid">
+          <line x1="120" y1="15" x2="120" y2="175" stroke="#94a3b8" stroke-width="1.5" />
+          <rect x="85" y="25" width="33" height="22" fill="#3b82f6" />
+          <rect x="122" y="25" width="42" height="22" fill="#10b981" />
+          <rect x="55" y="55" width="63" height="22" fill="#3b82f6" />
+          <rect x="122" y="55" width="70" height="22" fill="#10b981" />
+          <rect x="30" y="85" width="88" height="22" fill="#3b82f6" />
+          <rect x="122" y="85" width="92" height="22" fill="#10b981" />
+          <rect x="48" y="115" width="70" height="22" fill="#3b82f6" />
+          <rect x="122" y="115" width="65" height="22" fill="#10b981" />
+          <rect x="78" y="145" width="40" height="22" fill="#3b82f6" />
+          <rect x="122" y="145" width="36" height="22" fill="#10b981" />
+          <text x="65" y="185" text-anchor="middle" class="fill-blue-600 dark:fill-sky-400" font-size="9" font-weight="bold">ON-SITE</text>
+          <text x="175" y="185" text-anchor="middle" class="fill-emerald-600 dark:fill-emerald-400" font-size="9" font-weight="bold">REMOTE</text>
+        </svg>
+      </div>
+
+      <!-- Ternary Plot (Equilateral Triangle of Three Constant-Sum Variables) -->
+      <div class="w-full lg:w-1/4 text-center">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-rose-600 dark:text-rose-400 mb-2">TERNARY PLOT · SPEED · COST · QUALITY</p>
+        <svg viewBox="0 0 240 190" class="w-full h-auto" aria-label="Ternary Plot Speed Cost Quality">
+          <polygon points="120,20 215,170 25,170" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-width="2.5" />
+          <line x1="72" y1="95" x2="168" y2="95" stroke="#94a3b8" stroke-dasharray="3 3" />
+          <line x1="120" y1="20" x2="120" y2="170" stroke="#94a3b8" stroke-dasharray="3 3" />
+          <circle cx="120" cy="108" r="7" fill="#f97316" />
+          <text x="120" y="13" text-anchor="middle" class="fill-slate-700 dark:fill-slate-300" font-size="9" font-weight="bold">QUALITY</text>
+          <text x="22" y="184" text-anchor="start" class="fill-slate-700 dark:fill-slate-300" font-size="9" font-weight="bold">SPEED</text>
+          <text x="218" y="184" text-anchor="end" class="fill-slate-700 dark:fill-slate-300" font-size="9" font-weight="bold">VALUE</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Direct CTA Strip -->
+    <div class="pt-6 border-t border-dashed border-slate-300 dark:border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4 text-right sm:text-left">
+      <div>
+        <h3 class="text-base font-extrabold uppercase">CLEAR ADVICE. PRACTICAL SOLUTIONS.</h3>
+        <p class="text-xs text-slate-600 dark:text-slate-300 mt-1 max-w-2xl">
+          Based in Ga-Mothiba, Nobody, Polokwane, Limpopo — tell us what you need and we’ll discuss the next practical step without unnecessary complexity.
+        </p>
+      </div>
+      <a class="inline-flex shrink-0 items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 text-white text-xs font-bold uppercase tracking-wider hover:bg-blue-700 transition-colors" href="https://www.it-u.co.za/form/contact-form/">
+        <i class="fa-solid fa-envelope text-amber-300"></i>
+        <span>CONTACT US</span>
       </a>
     </div>
+  </section>
 
-    <div class="flex-1 border-l-4 border-emerald-500 pl-6 py-2">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">IT Infrastructure</span>
-        <span class="text-xs font-mono font-bold text-brand-muted dark:text-brand-darkMuted">45% Deployment Share</span>
+  <!-- 5. POINT, GRID & GEOGRAPHIC SHAPES (Scatter Plot, Bubble Chart, Heatmap, Choropleth Map & Network Graph) -->
+  <section class="py-16 max-w-[1120px] mx-auto px-4 space-y-12">
+    <div class="text-right">
+      <p class="inline-flex items-center justify-end gap-2 text-[11px] font-extrabold uppercase tracking-widest text-rose-600 dark:text-rose-400">
+        <span>05 · POINT, GRID &amp; GEOGRAPHIC SHAPES</span>
+        <i class="fa-solid fa-map-location-dot text-sky-500"></i>
+      </p>
+      <h2 class="text-xl sm:text-2xl font-extrabold uppercase tracking-tight mt-1">SCATTER CORRELATION, ACTIVITY HEATMAP, LIMPOPO CHOROPLETH &amp; NODE NETWORK</h2>
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+      <!-- Scatter Plot & Bubble Chart SVG -->
+      <div class="w-full lg:w-1/2">
+        <p class="text-[11px] font-extrabold uppercase tracking-wider text-sky-600 dark:text-sky-400 mb-2">
+          SCATTER PLOT &amp; 3D BUBBLE CHART · UPGRADE IMPACT VS SYSTEM SPEED
+        </p>
+        <svg viewBox="0 0 440 200" class="w-full h-auto" aria-label="Scatter Plot and Bubble Chart">
+          <line x1="35" y1="15" x2="35" y2="170" stroke="#94a3b8" stroke-width="1.5" />
+          <line x1="35" y1="170" x2="425" y2="170" stroke="#94a3b8" stroke-width="1.5" />
+          <!-- Scatter Dots -->
+          <circle cx="65" cy="148" r="4" fill="#64748b" />
+          <circle cx="95" cy="135" r="4" fill="#64748b" />
+          <circle cx="145" cy="118" r="4" fill="#0ea5e9" />
+          <circle cx="215" cy="92" r="4" fill="#0ea5e9" />
+          <circle cx="290" cy="64" r="4" fill="#10b981" />
+          <!-- Bubble Chart (Varying Sizes = 3rd Dimension: ROI) -->
+          <circle cx="125" cy="128" r="14" fill="#8b5cf6" fill-opacity="0.45" stroke="#8b5cf6" stroke-width="2" />
+          <circle cx="235" cy="86" r="20" fill="#0d9488" fill-opacity="0.45" stroke="#0d9488" stroke-width="2" />
+          <circle cx="355" cy="44" r="26" fill="#f97316" fill-opacity="0.45" stroke="#f97316" stroke-width="2" />
+          <text x="355" y="48" text-anchor="middle" class="fill-slate-900 dark:fill-white" font-size="9" font-weight="bold">SSD+WEB</text>
+          <text x="230" y="188" text-anchor="middle" class="fill-slate-500" font-size="9" font-weight="bold">INVESTMENT TIER → PERFORMANCE &amp; ROI BUBBLE SIZE</text>
+        </svg>
       </div>
-      <h3 class="text-xl font-bold mb-2">Local Workstation Deployment</h3>
-      <p class="text-brand-muted dark:text-brand-darkMuted text-sm mb-4">Complete OS setup, network configuration, and data backup implementation for local office setups.</p>
-      <a href="/portfolio/" class="inline-flex items-center gap-1 font-semibold text-emerald-600 dark:text-emerald-400 text-sm hover:underline">
-        Read Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
-      </a>
+
+      <!-- Heatmap + Limpopo Choropleth Map + Network Node-Link Graph -->
+      <div class="w-full lg:w-1/2 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <!-- Uniform Square Heatmap -->
+        <div class="text-center">
+          <p class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">HEATMAP · WEEKLY LOAD</p>
+          <svg viewBox="0 0 140 120" class="w-36 h-auto mx-auto" aria-label="Weekly Activity Heatmap">
+            <rect x="5" y="5" width="22" height="22" fill="#bbf7d0" /><rect x="31" y="5" width="22" height="22" fill="#4ade80" /><rect x="57" y="5" width="22" height="22" fill="#16a34a" /><rect x="83" y="5" width="22" height="22" fill="#15803d" /><rect x="109" y="5" width="22" height="22" fill="#86efac" />
+            <rect x="5" y="31" width="22" height="22" fill="#4ade80" /><rect x="31" y="31" width="22" height="22" fill="#15803d" /><rect x="57" y="31" width="22" height="22" fill="#166534" /><rect x="83" y="31" width="22" height="22" fill="#22c55e" /><rect x="109" y="31" width="22" height="22" fill="#bbf7d0" />
+            <rect x="5" y="57" width="22" height="22" fill="#86efac" /><rect x="31" y="57" width="22" height="22" fill="#22c55e" /><rect x="57" y="57" width="22" height="22" fill="#15803d" /><rect x="83" y="57" width="22" height="22" fill="#166534" /><rect x="109" y="57" width="22" height="22" fill="#4ade80" />
+            <rect x="5" y="83" width="22" height="22" fill="#dcfce7" /><rect x="31" y="83" width="22" height="22" fill="#86efac" /><rect x="57" y="83" width="22" height="22" fill="#4ade80" /><rect x="83" y="83" width="22" height="22" fill="#22c55e" /><rect x="109" y="83" width="22" height="22" fill="#bbf7d0" />
+          </svg>
+        </div>
+
+        <!-- Choropleth Map (Limpopo District Regions) -->
+        <div class="text-center">
+          <p class="text-[11px] font-extrabold uppercase tracking-wider text-blue-600 dark:text-sky-400 mb-2">CHOROPLETH · LIMPOPO</p>
+          <svg viewBox="0 0 150 120" class="w-36 h-auto mx-auto" aria-label="Limpopo District Choropleth Map">
+            <!-- Vhembe -->
+            <polygon points="55,8 125,12 115,42 52,38" fill="#60a5fa" stroke="#ffffff" stroke-width="1.5" />
+            <!-- Mopani -->
+            <polygon points="115,42 140,48 132,92 92,85" fill="#3b82f6" stroke="#ffffff" stroke-width="1.5" />
+            <!-- Capricorn (Polokwane / Ga-Mothiba Hub - Highest Intensity) -->
+            <polygon points="52,38 115,42 92,85 45,78" fill="#1d4ed8" stroke="#ffffff" stroke-width="1.5" />
+            <circle cx="80" cy="60" r="4" fill="#facc15" />
+            <!-- Waterberg & Sekhukhune -->
+            <polygon points="12,48 52,38 45,78 20,96" fill="#93c5fd" stroke="#ffffff" stroke-width="1.5" />
+            <polygon points="45,78 92,85 110,112 48,110" fill="#2563eb" stroke="#ffffff" stroke-width="1.5" />
+          </svg>
+        </div>
+
+        <!-- Network (Node-Link) Graph -->
+        <div class="text-center">
+          <p class="text-[11px] font-extrabold uppercase tracking-wider text-orange-600 dark:text-orange-400 mb-2">NODE-LINK NETWORK</p>
+          <svg viewBox="0 0 150 120" class="w-36 h-auto mx-auto" aria-label="Network Node-Link Graph">
+            <line x1="75" y1="60" x2="28" y2="25" stroke="#94a3b8" stroke-width="2" />
+            <line x1="75" y1="60" x2="122" y2="25" stroke="#94a3b8" stroke-width="2" />
+            <line x1="75" y1="60" x2="25" y2="95" stroke="#94a3b8" stroke-width="2" />
+            <line x1="75" y1="60" x2="125" y2="95" stroke="#94a3b8" stroke-width="2" />
+            <line x1="28" y1="25" x2="122" y2="25" stroke="#cbd5e1" stroke-width="1.2" />
+            <circle cx="75" cy="60" r="13" fill="#0284c7" />
+            <text x="75" y="63" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">ITU</text>
+            <circle cx="28" cy="25" r="8" fill="#14b8a6" />
+            <circle cx="122" cy="25" r="8" fill="#8b5cf6" />
+            <circle cx="25" cy="95" r="8" fill="#84cc16" />
+            <circle cx="125" cy="95" r="8" fill="#f97316" />
+          </svg>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
 
-<!-- Local Support Section (Funnel & Pyramid Tiered Conversion Flow) -->
-<section class="max-w-[1120px] mx-auto py-[2.5rem] sm:py-[3.5rem] px-[1.2rem] border-t border-brand-border dark:border-brand-darkBorder print:p-4">
-  <div class="flex flex-col items-center text-center max-w-[780px] mx-auto">
-    <!-- Funnel Top Tier (Broad Regional Base) -->
-    <div class="w-full pb-6 border-b border-dashed border-brand-border dark:border-brand-darkBorder">
-      <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Local support</p>
-      <h2 class="text-[clamp(1.7rem,3vw,2.3rem)] leading-[1.2] font-extrabold mb-4">Clear advice. Practical solutions.</h2>
-      <p class="text-brand-muted dark:text-brand-darkMuted mb-4 leading-relaxed">
-        Based in Ga-Mothiba, Nobody, Polokwane, Limpopo, iTu Solutions focuses on making technology easier to use and maintain. Whether you need an online presence or workstation repairs, we provide reliable local expertise.
-      </p>
-      <a class="text-brand-primary dark:text-brand-darkPrimary font-semibold hover:underline inline-flex items-center gap-1" href="/about/">
-        Meet iTu Solutions <i class="fa-solid fa-arrow-right text-xs"></i>
-      </a>
+    <!-- Frequently Asked Questions (Clean Bordered List, No Cards/Grids) -->
+    <div class="pt-8 border-t border-slate-200 dark:border-slate-800 max-w-3xl ml-auto">
+      <div class="text-right mb-6">
+        <p class="text-[11px] font-extrabold uppercase tracking-widest text-blue-600 dark:text-sky-400">KNOWLEDGE MATRIX</p>
+        <h3 class="text-lg sm:text-xl font-extrabold uppercase">FREQUENTLY ASKED QUESTIONS</h3>
+      </div>
+
+      <div class="divide-y divide-slate-200 dark:divide-slate-800 border-y border-slate-200 dark:border-slate-800">
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-xs sm:text-sm font-extrabold uppercase tracking-wide">
+            <span>WHAT AREAS DO YOU SERVE?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-sky-500 transition-transform group-open:-rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            We provide local on-site services in Ga-Mothiba, Polokwane, and surrounding Limpopo areas, as well as remote website development and technical assistance nationwide across South Africa.
+          </p>
+        </details>
+
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-xs sm:text-sm font-extrabold uppercase tracking-wide">
+            <span>HOW LONG DOES IT TAKE TO BUILD A WEBSITE?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-emerald-500 transition-transform group-open:-rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Standard company websites typically take between 1 to 2 weeks, depending on requirements, content readiness, and specific integrations needed.
+          </p>
+        </details>
+
+        <details class="group py-4">
+          <summary class="flex cursor-pointer items-center justify-between text-xs sm:text-sm font-extrabold uppercase tracking-wide">
+            <span>DO YOU OFFER EMERGENCY COMPUTER REPAIR SUPPORT?</span>
+            <i class="fa-solid fa-chevron-down text-xs text-orange-500 transition-transform group-open:-rotate-180"></i>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Yes, we offer priority diagnostics and repairs for urgent computer and software troubleshooting. Contact us via WhatsApp for fast responses.
+          </p>
+        </details>
+      </div>
     </div>
+  </section>
 
-    <!-- SVG Funnel Connector -->
-    <svg viewBox="0 0 300 54" class="w-64 h-12 my-2" aria-hidden="true">
-      <polygon points="10,0 290,0 210,54 90,54" class="fill-brand-primary/15 dark:fill-brand-darkPrimary/20" />
-      <line x1="150" y1="8" x2="150" y2="46" class="stroke-brand-primary dark:stroke-brand-darkPrimary" stroke-width="2" stroke-dasharray="4 4" />
-    </svg>
-
-    <!-- Funnel Bottom Tier (Direct Action) -->
-    <div class="w-full max-w-[540px] pt-2">
-      <h3 class="mt-0 font-extrabold text-xl mb-2">Need help with a tech issue?</h3>
-      <p class="text-brand-muted dark:text-brand-darkMuted mb-6 text-sm leading-relaxed">Tell us what you need and we’ll discuss the next practical step without unnecessary complexity.</p>
-      <a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold cursor-pointer hover:bg-brand-primaryHover dark:hover:bg-blue-400 no-underline hover:no-underline transition-all" href="/forms/contact-form/contact/">
-        <i class="fa-solid fa-envelope"></i> Contact us
-      </a>
-    </div>
-  </div>
-</section>
-
-<div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
-<script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
-
-<!-- Frequently Asked Questions (Network / Node-Link Graph List) -->
-<section class="max-w-[1120px] mx-auto py-[3.5rem] sm:py-[4.5rem] px-[1.2rem] border-t border-brand-border dark:border-brand-darkBorder">
-  <div class="text-center max-w-[650px] mx-auto mb-10">
-    <p class="uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary mb-2">Got Questions?</p>
-    <h2 class="text-[clamp(1.8rem,3.5vw,2.5rem)] leading-[1.2] font-extrabold">Frequently Asked Questions</h2>
-  </div>
-
-  <!-- Node-Link Connected Accordion List (No Grid / No Cards) -->
-  <div class="max-w-3xl mx-auto relative pl-8 border-l-2 border-brand-primary/30 dark:border-brand-darkPrimary/30 space-y-8">
-    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
-      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
-      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
-        <span>What areas do you serve?</span>
-        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-          <i class="fa-solid fa-chevron-down text-sm"></i>
-        </span>
-      </summary>
-      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
-        We provide local on-site services in Ga-Mothiba, Polokwane, and surrounding Limpopo areas, as well as remote website development and technical assistance nationwide across South Africa.
-      </p>
-    </details>
-
-    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
-      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
-      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
-        <span>How long does it take to build a website?</span>
-        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-          <i class="fa-solid fa-chevron-down text-sm"></i>
-        </span>
-      </summary>
-      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
-        Standard company websites typically take between 1 to 2 weeks, depending on requirements, content readiness, and specific integrations needed.
-      </p>
-    </details>
-
-    <details class="group relative [&_summary::-webkit-details-marker]:hidden">
-      <span class="absolute -left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-primary dark:bg-brand-darkPrimary ring-4 ring-white dark:ring-[#0b1220]"></span>
-      <summary class="flex cursor-pointer items-center justify-between font-bold text-lg text-brand-text dark:text-brand-darkText pb-2 border-b border-brand-border/60 dark:border-brand-darkBorder/60">
-        <span>Do you offer emergency computer repair support?</span>
-        <span class="ml-1.5 flex-shrink-0 transition duration-300 group-open:-rotate-180">
-          <i class="fa-solid fa-chevron-down text-sm"></i>
-        </span>
-      </summary>
-      <p class="mt-3 text-brand-muted dark:text-brand-darkMuted text-sm leading-relaxed">
-        Yes, we offer priority diagnostics and repairs for urgent computer and software troubleshooting. Contact us via WhatsApp for fast responses.
-      </p>
-    </details>
-  </div>
-</section>
+  <!-- JotForm Embed Widget -->
+  <div id="JFWebsiteWidget-01a15ef87a6870008548540faa223ea8389b"></div>
+  <script src="https://www.jotform.com/website-widgets/embed/01a15ef87a6870008548540faa223ea8389b" defer></script>
 
 </main>
 
