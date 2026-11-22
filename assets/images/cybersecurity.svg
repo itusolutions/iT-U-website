@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-labelledby="title desc">
+<title>Cybersecurity assistance</title><desc>Shield and digital security check</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#123b52"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22c55e"/><stop offset="1" stop-color="#38bdf8"/></linearGradient>
+ <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bef264"/><stop offset="1" stop-color="#facc15"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#020617" flood-opacity=".35"/></filter>
+</defs>
+<rect x="24" y="24" width="672" height="472" rx="42" fill="url(#bg)"/>
+<circle cx="590" cy="112" r="78" fill="#38bdf8" opacity=".12"/><circle cx="118" cy="410" r="94" fill="#22c55e" opacity=".12"/>
+
+<g filter="url(#shadow)"><path d="M360 105l150 58v112q0 105-150 162Q210 380 210 275V163z" fill="#123b52" stroke="#38bdf8" stroke-width="10"/><path d="M360 160l100 38v76q0 68-100 112-100-44-100-112v-76z" fill="#071321"/><path d="M306 272l38 38 75-82" fill="none" stroke="#bef264" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+<g opacity=".85"><circle cx="82" cy="82" r="5" fill="#bef264"/><circle cx="103" cy="82" r="5" fill="#38bdf8"/><circle cx="124" cy="82" r="5" fill="#facc15"/></g>
+</svg>

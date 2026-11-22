@@ -1,0 +1,415 @@
+
+/* ==========================================================================
+   iTu Solutions - Advanced Animations
+   File: /assets/css/animations.css
+   Deployment base: https://itusolutions.github.io/updated-i-tu/
+   ========================================================================== */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   1. ANIMATION UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+
+  /* Floating and pulse effects */
+  .animate-float-slow {
+    animation: itu-float-slow 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: itu-pulse-soft 2.8s ease-in-out infinite;
+  }
+
+  .animate-fade-up-fast {
+    animation: itu-fade-up-fast 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /* Directional entrance animations */
+  .animate-fade-left {
+    animation: itu-fade-left 0.8s ease both;
+  }
+
+  .animate-fade-right {
+    animation: itu-fade-right 0.8s ease both;
+  }
+
+  .animate-fade-up {
+    animation: itu-fade-up 0.8s ease both;
+  }
+
+  .animate-fade-down {
+    animation: itu-fade-down 0.8s ease both;
+  }
+
+  /* Centre animations */
+  .animate-zoom-in {
+    animation: itu-zoom-in 0.8s ease both;
+  }
+
+  .animate-zoom-out {
+    animation: itu-zoom-out 0.8s ease both;
+  }
+
+  .animate-fade-center-in {
+    animation: itu-fade-center-in 0.9s ease both;
+  }
+
+  .animate-fade-center-out {
+    animation: itu-fade-center-out 0.9s ease both;
+  }
+
+  /* Diagonal animations */
+  .animate-fade-top-left {
+    animation: itu-fade-top-left 0.8s ease both;
+  }
+
+  .animate-fade-top-right {
+    animation: itu-fade-top-right 0.8s ease both;
+  }
+
+  .animate-fade-bottom-left {
+    animation: itu-fade-bottom-left 0.8s ease both;
+  }
+
+  .animate-fade-bottom-right {
+    animation: itu-fade-bottom-right 0.8s ease both;
+  }
+
+  /* Combined horizontal and vertical movement */
+  .animate-fade-left-right {
+    animation: itu-fade-left-right 1s ease both;
+  }
+
+  .animate-fade-top-bottom {
+    animation: itu-fade-top-bottom 1s ease both;
+  }
+
+  /* Scroll reveal helpers */
+  .itu-reveal {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition:
+      opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .itu-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  .itu-reveal-left {
+    transform: translate3d(-65px, 0, 0);
+  }
+
+  .itu-reveal-right {
+    transform: translate3d(65px, 0, 0);
+  }
+
+  .itu-reveal-up {
+    transform: translate3d(0, 65px, 0);
+  }
+
+  .itu-reveal-down {
+    transform: translate3d(0, -65px, 0);
+  }
+
+  .itu-reveal-center-in {
+    transform: scale(0.75);
+  }
+
+  .itu-reveal-center-out {
+    transform: scale(1.2);
+  }
+
+  .itu-reveal-top-left {
+    transform: translate3d(-50px, -50px, 0);
+  }
+
+  .itu-reveal-top-right {
+    transform: translate3d(50px, -50px, 0);
+  }
+
+  .itu-reveal-bottom-left {
+    transform: translate3d(-50px, 50px, 0);
+  }
+
+  .itu-reveal-bottom-right {
+    transform: translate3d(50px, 50px, 0);
+  }
+
+  /* Staggered animation delays */
+  .itu-delay-100 { transition-delay: 100ms; }
+  .itu-delay-200 { transition-delay: 200ms; }
+  .itu-delay-300 { transition-delay: 300ms; }
+  .itu-delay-400 { transition-delay: 400ms; }
+  .itu-delay-500 { transition-delay: 500ms; }
+
+  /* Card hover effects */
+  .itu-card-hover {
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .itu-card-hover:hover {
+    transform: translateY(-5px);
+  }
+
+  .dark .itu-card-hover:hover {
+    box-shadow: 0 12px 28px -12px rgba(37, 99, 235, 0.28);
+  }
+}
+
+/* ==========================================================================
+   2. KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+@keyframes itu-float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes itu-pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.72; }
+}
+
+@keyframes itu-fade-up-fast {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left to right */
+@keyframes itu-fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Right to left */
+@keyframes itu-fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bottom to top */
+@keyframes itu-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Top to bottom */
+@keyframes itu-fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Centre zoom in */
+@keyframes itu-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Centre zoom out */
+@keyframes itu-zoom-out {
+  from {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Centre fade in */
+@keyframes itu-fade-center-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Centre fade out / outward effect */
+@keyframes itu-fade-center-out {
+  from {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Diagonal directions */
+@keyframes itu-fade-top-left {
+  from {
+    opacity: 0;
+    transform: translate(-50px, -50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes itu-fade-top-right {
+  from {
+    opacity: 0;
+    transform: translate(50px, -50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes itu-fade-bottom-left {
+  from {
+    opacity: 0;
+    transform: translate(-50px, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes itu-fade-bottom-right {
+  from {
+    opacity: 0;
+    transform: translate(50px, 50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Horizontal combined movement */
+@keyframes itu-fade-left-right {
+  from {
+    opacity: 0;
+    transform: translateX(-90px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Vertical combined movement */
+@keyframes itu-fade-top-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(-90px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   3. AOS COMPATIBILITY
+   ========================================================================== */
+
+[data-aos] {
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   4. ACCESSIBILITY
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce), print {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-float-slow,
+  .animate-pulse-soft,
+  .animate-fade-up-fast,
+  .animate-fade-left,
+  .animate-fade-right,
+  .animate-fade-up,
+  .animate-fade-down,
+  .animate-zoom-in,
+  .animate-zoom-out,
+  .animate-fade-center-in,
+  .animate-fade-center-out,
+  .animate-fade-top-left,
+  .animate-fade-top-right,
+  .animate-fade-bottom-left,
+  .animate-fade-bottom-right,
+  .animate-fade-left-right,
+  .animate-fade-top-bottom,
+  .itu-reveal,
+  .itu-card-hover {
+    opacity: 1 !important;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+}

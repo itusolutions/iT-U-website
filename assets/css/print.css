@@ -1,0 +1,99 @@
+/* ==========================================================================
+   iTu Solutions - Print Stylesheet (/assets/css/print.css)
+   Deployment base: https://itusolutions.github.io/updated-i-tu/
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm;
+  }
+
+  /* Force light ink on white paper even when dark mode (.dark) is active */
+  html,
+  html.dark,
+  body,
+  .dark body,
+  main,
+  .dark main,
+  section,
+  article,
+  aside,
+  div {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html,
+  body {
+    font-size: 11pt !important;
+    line-height: 1.45 !important;
+    overflow: visible !important;
+  }
+
+  /* Hide interactive navigation, toggles, drawers, and non-print chrome */
+  header nav,
+  #mobile-menu,
+  #mobile-menu-button,
+  [data-theme-toggle],
+  [data-mega-panel],
+  [data-back-to-top],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Keep header brand identity compact and clean on printed pages */
+  header {
+    position: static !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    padding-bottom: 8pt !important;
+    margin-bottom: 12pt !important;
+  }
+
+  /* Avoid awkward page breaks inside cards, tables, and headings */
+  h1, h2, h3, h4,
+  .break-inside-avoid,
+  article,
+  aside,
+  table,
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Show URLs for external links while keeping internal subpath links tidy */
+  a[href^="http"]:not([href*="itusolutions.github.io/updated-i-tu"])::after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+    color: #475569;
+    word-break: break-all;
+  }
+
+  a[href^="mailto:"]::after,
+  a[href^="tel:"]::after {
+    content: " (" attr(href) ")";
+    font-size: 8.5pt;
+    color: #475569;
+  }
+
+  img,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  footer {
+    border-top: 1px solid #cbd5e1 !important;
+    margin-top: 16pt !important;
+    padding-top: 8pt !important;
+    font-size: 9pt !important;
+  }
+}
