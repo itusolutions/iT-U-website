@@ -969,7 +969,7 @@
     <section
       data-hero-random-carousel
       data-interval="4000"
-      class="relative isolate overflow-hidden bg-slate-950"
+      class="relative isolate flex min-h-[75vh] items-center overflow-hidden bg-slate-950 sm:min-h-[82vh] lg:min-h-[90vh]"
     >
       <!-- Dynamic Slide Layer Populated by assets/js/carousel.js -->
       <div
@@ -982,7 +982,7 @@
       <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/85 via-blue-950/75 to-green-950/80"></div>
 
       <!-- Foreground Hero Content -->
-      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div class="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
         <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div class="min-w-0 max-w-3xl" data-aos="fade-up" data-aos-once="true">
             <p class="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-green-300 backdrop-blur-sm sm:text-xs">
@@ -1010,8 +1010,12 @@
             </div>
           </div>
 
-          <!-- Random Slide Controls & Counter -->
-          
+          <!-- Random Slide Controls -->
+          <div class="flex shrink-0 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-slate-950/65 px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-slate-200 backdrop-blur-md lg:justify-start">
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-shuffle text-sky-400" aria-hidden="true"></i>
+              <span>RANDOM SHOWCASE</span>
+            </span>
             <div class="flex items-center gap-1.5">
               <button
                 type="button"
@@ -1019,7 +1023,7 @@
                 aria-label="Previous background image"
                 class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
               >
-                <i class="fa-solid fa-chevron-left text-xs" aria-hidden="true"></i>
+                <i class="fa-solid fa-chevron-left text-xs text-amber-300" aria-hidden="true"></i>
               </button>
               <button
                 type="button"
@@ -1027,7 +1031,7 @@
                 aria-label="Next random background image"
                 class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
               >
-                <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
+                <i class="fa-solid fa-chevron-right text-xs text-lime-300" aria-hidden="true"></i>
               </button>
             </div>
           </div>
