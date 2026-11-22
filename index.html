@@ -965,23 +965,37 @@
   
 
 <main id="main" class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-    <!-- Section 1: Hero & Visual Showcase Carousel -->
-    <section class="relative isolate overflow-x-clip bg-slate-950">
-      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blue-950 via-slate-950 to-green-950"></div>
-      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
-        <div class="grid items-center gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1fr)_380px]">
+<!-- Section 1: Full-Bleed Random Auto-Advancing Hero Carousel -->
+    <section
+      data-hero-random-carousel
+      data-interval="4000"
+      class="relative isolate overflow-hidden bg-slate-950"
+    >
+      <!-- Dynamic Slide Layer Populated by assets/js/carousel.js -->
+      <div
+        data-hero-slides
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 -z-20 overflow-hidden"
+      ></div>
+
+      <!-- Dark Scrim Overlay for High Text Readability -->
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/85 via-blue-950/75 to-green-950/80"></div>
+
+      <!-- Foreground Hero Content -->
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+        <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <div class="min-w-0 max-w-3xl" data-aos="fade-up" data-aos-once="true">
-            <p class="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-green-300 sm:text-xs">
+            <p class="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-green-300 backdrop-blur-sm sm:text-xs">
               <i class="fa-solid fa-location-dot shrink-0 text-[11px] text-rose-400" aria-hidden="true"></i>
               <span class="truncate">ITU SOLUTIONS · POLOKWANE, LIMPOPO</span>
             </p>
-            <h1 class="break-words text-3xl font-black uppercase tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 class="break-words text-3xl font-black uppercase tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
               TECHNOLOGY MADE SIMPLE. SOLUTIONS THAT WORK.
             </h1>
             <p class="mt-4 min-h-[2.75rem] break-words font-mono text-sm font-medium leading-snug text-green-300 sm:min-h-[1.75rem] sm:text-base">
               <span id="hero-typed"></span>
             </p>
-            <p class="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            <p class="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
               Reliable computer services, practical IT support and professional websites for individuals, entrepreneurs and businesses.
             </p>
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -989,72 +1003,42 @@
                 <span>EXPLORE OUR SERVICES</span>
                 <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
               </a>
-              <a href="https://www.it-u.co.za/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/25 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white transition hover:bg-white/10 focus:outline-none focus:ring-4 focus:ring-white/20 sm:w-auto">
+              <a href="https://www.it-u.co.za/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/25 bg-slate-950/40 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm transition hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20 sm:w-auto">
                 <i class="bx bx-grid-alt text-base text-sky-300" aria-hidden="true"></i>
                 <span>BROWSE SERVICES</span>
               </a>
             </div>
           </div>
 
-          <div class="mx-auto w-full max-w-[340px] sm:max-w-[380px] lg:mx-0" data-aos="fade-up" data-aos-once="true" data-aos-delay="100">
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur-sm" data-carousel>
-              <div class="relative overflow-hidden rounded-2xl bg-slate-900/80">
-                <div class="flex transition-transform duration-300" data-carousel-track>
-                  <div class="w-full shrink-0" data-carousel-slide>
-                    <img
-                      src="https://www.it-u.co.za/assets/images/carousel-images/slide-1.webp"
-                      alt="iTu Solutions computer repair and technical support showcase"
-                      width="380"
-                      height="260"
-                      class="h-60 w-full object-cover"
-                      loading="eager"
-                      decoding="async"
-                    >
-                  </div>
-                  <div class="w-full shrink-0" data-carousel-slide>
-                    <img
-                      src="https://www.it-u.co.za/assets/images/carousel-images/slide-2.webp"
-                      alt="Networking, Wi-Fi and office IT setup in Polokwane"
-                      width="380"
-                      height="260"
-                      class="h-60 w-full object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    >
-                  </div>
-                  <div class="w-full shrink-0" data-carousel-slide>
-                    <img
-                      src="https://www.it-u.co.za/assets/images/carousel-images/slide-3.webp"
-                      alt="Custom website design and digital presence solutions"
-                      width="380"
-                      height="260"
-                      class="h-60 w-full object-cover"
-                      loading="lazy"
-                      decoding="async"
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="mt-3 flex items-center justify-between text-[11px] font-semibold uppercase tracking-wider text-slate-300">
-                <span class="flex items-center gap-1.5">
-                  <i class="fa-solid fa-images text-sky-400" aria-hidden="true"></i>
-                  <span>FEATURED HIGHLIGHTS</span>
-                </span>
-                <div class="flex items-center gap-1.5">
-                  <button type="button" data-carousel-prev aria-label="Previous slide" class="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-white transition hover:bg-white/15">
-                    <i class="fa-solid fa-chevron-left text-[10px]" aria-hidden="true"></i>
-                  </button>
-                  <button type="button" data-carousel-next aria-label="Next slide" class="inline-flex h-7 w-7 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-white transition hover:bg-white/15">
-                    <i class="fa-solid fa-chevron-right text-[10px]" aria-hidden="true"></i>
-                  </button>
-                </div>
-              </div>
+          <!-- Random Slide Controls & Counter -->
+          <div class="flex shrink-0 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-slate-950/65 px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-slate-200 backdrop-blur-md lg:justify-start">
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-shuffle text-sky-400" aria-hidden="true"></i>
+              <span>RANDOM SHOWCASE</span>
+              <span data-hero-counter class="font-mono text-green-300">01 / 35</span>
+            </span>
+            <div class="flex items-center gap-1.5">
+              <button
+                type="button"
+                data-hero-prev
+                aria-label="Previous background image"
+                class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
+              >
+                <i class="fa-solid fa-chevron-left text-xs" aria-hidden="true"></i>
+              </button>
+              <button
+                type="button"
+                data-hero-next
+                aria-label="Next random background image"
+                class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
+              >
+                <i class="fa-solid fa-chevron-right text-xs" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Section 2: Core Overview & Sidebar -->
     <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
       <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
