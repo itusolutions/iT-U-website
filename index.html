@@ -965,71 +965,47 @@
   
 
 <main id="main" class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-<!-- Section 1: Fixed-Scroll Full-Bleed Random Hero Carousel -->
+<!-- Section 1: Full-Bleed Random Auto-Advancing Hero Carousel (Hero-Scoped Fixed Scroll) -->
     <section
       data-hero-random-carousel
-      data-fixed-scroll
       data-interval="4000"
       class="relative isolate flex min-h-[75vh] items-center overflow-hidden bg-slate-950 sm:min-h-[82vh] lg:min-h-[90vh]"
     >
-      <!-- Fixed-Scroll Slide Layer Populated by assets/js/carousel.js -->
+      <!-- Dynamic Slide Layer Populated by assets/js/carousel.js (Strictly Scoped to Hero) -->
       <div
         data-hero-slides
         aria-hidden="true"
-        class="pointer-events-none fixed inset-0 z-0 h-screen w-screen overflow-hidden"
+        class="pointer-events-none absolute inset-0 -z-20 overflow-hidden"
       ></div>
 
       <!-- Dark Scrim Overlay for High Text Readability -->
-      <div aria-hidden="true" class="pointer-events-none fixed inset-0 z-[1] bg-gradient-to-br from-slate-950/85 via-blue-950/75 to-green-950/80"></div>
+      <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/85 via-blue-950/75 to-green-950/80"></div>
 
       <!-- Foreground Hero Content -->
-      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
-        <div class="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <div class="min-w-0 max-w-3xl" data-aos="fade-up" data-aos-once="true">
-            <p class="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-green-300 backdrop-blur-sm sm:text-xs">
-              <i class="fa-solid fa-location-dot shrink-0 text-[11px] text-rose-400" aria-hidden="true"></i>
-              <span class="truncate">ITU SOLUTIONS · POLOKWANE, LIMPOPO</span>
-            </p>
-            <h1 class="break-words text-3xl font-black uppercase tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
-              TECHNOLOGY MADE SIMPLE. SOLUTIONS THAT WORK.
-            </h1>
-            <p class="mt-4 min-h-[2.75rem] break-words font-mono text-sm font-medium leading-snug text-green-300 sm:min-h-[1.75rem] sm:text-base">
-              <span id="hero-typed"></span>
-            </p>
-            <p class="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
-              Reliable computer services, practical IT support and professional websites for individuals, entrepreneurs and businesses.
-            </p>
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a href="https://www.it-u.co.za/form/contact-form/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-xs font-bold uppercase tracking-wide text-slate-950 shadow-lg shadow-green-950/30 transition hover:bg-lime-400 focus:outline-none focus:ring-4 focus:ring-green-300/40 sm:w-auto">
-                <span>EXPLORE OUR SERVICES</span>
-                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.it-u.co.za/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/25 bg-slate-950/40 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm transition hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20 sm:w-auto">
-                <i class="bx bx-grid-alt text-base text-sky-300" aria-hidden="true"></i>
-                <span>BROWSE SERVICES</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Random Slide Controls -->
-            <div class="flex items-center gap-1.5">
-              <button
-                type="button"
-                data-hero-prev
-                aria-label="Previous background image"
-                class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
-              >
-                <i class="fa-solid fa-chevron-left text-xs text-amber-300" aria-hidden="true"></i>
-              </button>
-              <button
-                type="button"
-                data-hero-next
-                aria-label="Next random background image"
-                class="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/15 bg-white/10 text-white transition hover:bg-white/20"
-              >
-                <i class="fa-solid fa-chevron-right text-xs text-lime-300" aria-hidden="true"></i>
-              </button>
-            </div>
+      <div class="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+        <div class="min-w-0 max-w-3xl" data-aos="fade-up" data-aos-once="true">
+          <p class="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-green-300 backdrop-blur-sm sm:text-xs">
+            <i class="fa-solid fa-location-dot shrink-0 text-[11px] text-rose-400" aria-hidden="true"></i>
+            <span class="truncate">ITU SOLUTIONS · POLOKWANE, LIMPOPO</span>
+          </p>
+          <h1 class="break-words text-3xl font-black uppercase tracking-tight text-white drop-shadow sm:text-5xl lg:text-6xl">
+            TECHNOLOGY MADE SIMPLE. SOLUTIONS THAT WORK.
+          </h1>
+          <p class="mt-4 min-h-[2.75rem] break-words font-mono text-sm font-medium leading-snug text-green-300 sm:min-h-[1.75rem] sm:text-base">
+            <span id="hero-typed"></span>
+          </p>
+          <p class="mt-5 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg sm:leading-8">
+            Reliable computer services, practical IT support and professional websites for individuals, entrepreneurs and businesses.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a href="https://www.it-u.co.za/form/contact-form/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-green-500 px-6 py-3 text-xs font-bold uppercase tracking-wide text-slate-950 shadow-lg shadow-green-950/30 transition hover:bg-lime-400 focus:outline-none focus:ring-4 focus:ring-green-300/40 sm:w-auto">
+              <span>EXPLORE OUR SERVICES</span>
+              <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.it-u.co.za/services/" class="inline-flex w-full items-center justify-center gap-2 rounded-lg border border-white/25 bg-slate-950/40 px-6 py-3 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-sm transition hover:bg-white/15 focus:outline-none focus:ring-4 focus:ring-white/20 sm:w-auto">
+              <i class="bx bx-grid-alt text-base text-sky-300" aria-hidden="true"></i>
+              <span>BROWSE SERVICES</span>
+            </a>
           </div>
         </div>
       </div>
