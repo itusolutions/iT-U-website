@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   if (heroSections.length === 0) return;
 
+  const prefersReducedMotion =
+    window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   const stopCallbacks = [];
   const startCallbacks = [];
 
@@ -96,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function startAutoplay() {
         stopAutoplay();
+        if (prefersReducedMotion || slideDivs.length <= 1) return;
         slideTimer = window.setInterval(() => showSlide(nextRandomIndex()), intervalMs);
       }
 
@@ -118,7 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    let width, height;
+    let width = 0;
+    let height = 0;
 
     const lightPalette = [
       { r: 23,  g: 105, b: 170 },
@@ -139,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mouse = { x: null, y: null, radius: 180 };
 
     function resizeCanvas() {
-      width = canvas.width = heroSection.offsetWidth;
-      height = canvas.height = heroSection.offsetHeight;
+      width = canvas.width = heroSection.offsetWidth || 1;
+      height = canvas.height = heroSection.offsetHeight || 1;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -157,7 +162,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     class Particle {
-      constructor() { this.reset(); }
+      constructor() {
+        this.currentColor = lightPalette[0];
+        this.reset();
+      }
       reset() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
@@ -173,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < mouse.radius) {
+          if (distance > 0 && distance < mouse.radius) {
             const forceDirectionX = dx / distance;
             const forceDirectionY = dy / distance;
             const force = (mouse.radius - distance) / mouse.radius;
@@ -185,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.y += this.vy;
       }
       draw(palette) {
-        const color = palette[Math.floor(this.x % palette.length)];
+        const color = palette[Math.floor(Math.abs(this.x) % palette.length)];
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
@@ -198,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const particleCount = Math.floor(Math.min(width, 1200) / 20);
+    const particleCount = Math.max(8, Math.floor(Math.min(width, 1200) / 20));
     const particles = Array.from({ length: particleCount }, () => new Particle());
 
     function animate() {
@@ -206,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isDark = document.documentElement.classList.contains('dark');
       const activePalette = isDark ? darkPalette : lightPalette;
 
-      particles.forEach(p => {
+      particles.forEach((p) => {
         p.update();
         p.draw(activePalette);
       });
@@ -242,9 +250,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      stopCallbacks.forEach(fn => fn());
+      stopCallbacks.forEach((fn) => fn());
     } else {
-      startCallbacks.forEach(fn => fn());
+      startCallbacks.forEach((fn) => fn());
     }
   });
 });
