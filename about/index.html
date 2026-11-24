@@ -946,31 +946,31 @@
     <!-- ABOUT PAGE HERO -->
     <section
       id="hero-section"
-      data-hero-random-carousel
       data-interval="4000"
-      class="relative isolate flex min-h-[82vh] items-center overflow-hidden py-20 px-6 text-center bg-slate-950 text-white border-b border-brand-border/40 dark:border-brand-darkBorder/40 sm:min-h-[88vh] sm:py-28 lg:min-h-[92vh] lg:py-36"
+      class="relative isolate flex min-h-[75vh] items-center overflow-hidden py-16 px-6 text-center bg-slate-950 text-white border-b border-brand-border/40 dark:border-brand-darkBorder/40 sm:min-h-[82vh] sm:py-24"
     >
-      <!-- Hero-Scoped Fixed-Scroll Background Container -->
+      <!-- JS-Populated Fixed-Background Carousel Layer (Scoped Strictly to Hero Section) -->
       <div
-        data-hero-fixed-layer
+        id="hero-carousel-layer"
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 -z-20 overflow-hidden"
-      >
-        <!-- Carousel Layer Populated by assets/js/carousel.js -->
-        <div
-          data-hero-slides
-          class="absolute -inset-y-12 inset-x-0 h-[calc(100%+6rem)] w-full overflow-hidden will-change-transform"
-        ></div>
-      </div>
+        class="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+      ></div>
 
       <!-- Readability Scrim Over Carousel Images -->
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-slate-950/80 via-blue-950/70 to-slate-950/85"
+        class="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-slate-950/80 via-blue-950/70 to-slate-950/85"
       ></div>
 
+      <!-- Interactive Connected Dots Canvas -->
+      <canvas
+        id="hero-connected-dots"
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 h-full w-full z-[1] opacity-80 cursor-crosshair"
+      ></canvas>
+
       <!-- Ambient Glow Overlay -->
-      <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl z-[1] pointer-events-none"></div>
 
       <div class="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
         <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/60 border border-sky-400/30 px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
