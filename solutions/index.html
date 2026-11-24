@@ -933,25 +933,38 @@
 
   
   <main id="main">
-    <section class="relative isolate overflow-hidden bg-slate-950">
-      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-blue-950 via-slate-950 to-green-950"></div>
-      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <p class="mb-4 inline-flex rounded-full border border-green-300/30 bg-green-300/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-green-300">iTu Solutions · Polokwane, Limpopo</p>
-        <div class="max-w-3xl">
-          <h1 class="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">Solutions shaped around how you work</h1>
-          <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-300">Different users have different technology needs. Explore support options for your environment.</p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="/form/contact-form/" class="rounded-lg bg-green-500 px-6 py-3 font-bold text-slate-950 shadow-lg shadow-green-950/30 transition hover:bg-lime-400 focus:outline-none focus:ring-4 focus:ring-green-300/40">Find your solution</a>
-            <a href="/services/" class="rounded-lg border border-white/25 px-6 py-3 font-semibold text-white transition hover:bg-white/10">Browse services</a>
-          </div>
+<!-- SOLUTIONS PAGE HERO -->
+  <section id="hero-section" data-interval="4000" class="relative isolate flex w-full max-w-none min-h-[75vh] items-center overflow-hidden py-16 px-[max(1.2rem,calc((100%-1120px)/2))] bg-slate-950 text-white border-b border-white/10 sm:min-h-[82vh] sm:py-24">
+    <div id="hero-carousel-layer" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden"></div>
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-0 bg-gradient-to-br from-slate-950/80 via-blue-950/70 to-slate-950/85"></div>
+    <canvas id="hero-connected-dots" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full opacity-80 z-[1] cursor-crosshair"></canvas>
+    <div class="absolute -top-20 -right-20 w-80 h-80 bg-blue-600/15 dark:bg-sky-400/20 rounded-full blur-3xl z-[1] pointer-events-none"></div>
+
+    <div class="relative z-10 w-full max-w-[1120px] mx-auto">
+      <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/60 border border-sky-400/30 px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+        <i class="fa-solid fa-network-wired text-xs text-emerald-400" aria-hidden="true"></i>
+        <span>ITU SOLUTIONS · POLOKWANE, LIMPOPO</span>
+      </p>
+      <div class="max-w-3xl">
+        <h1 class="text-[clamp(2.2rem,4.5vw,3.8rem)] font-extrabold uppercase leading-[1.1] tracking-tight text-white drop-shadow">
+          SOLUTIONS SHAPED AROUND HOW YOU WORK
+        </h1>
+        <p class="mt-6 max-w-2xl text-xs sm:text-sm leading-relaxed text-slate-200">
+          Different users have different technology needs. Explore practical support options tailored for your home, study, or business environment.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://www.it-u.co.za/form/contact-form/" class="inline-flex items-center gap-2 rounded-xl bg-blue-600 dark:bg-sky-400 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white dark:text-[#071524] shadow-lg transition hover:shadow-blue-600/30 no-underline">
+            <i class="fa-solid fa-compass text-amber-300 dark:text-slate-900" aria-hidden="true"></i>
+            <span>FIND YOUR SOLUTION</span>
+          </a>
+          <a href="https://www.it-u.co.za/services/" class="inline-flex items-center gap-2 rounded-xl bg-slate-950/50 border border-white/25 px-6 py-3.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm transition hover:bg-white/15 no-underline">
+            <i class="fa-solid fa-cubes text-sky-300" aria-hidden="true"></i>
+            <span>BROWSE SERVICES</span>
+          </a>
         </div>
       </div>
-    
-      <div class="pointer-events-none absolute right-4 top-1/2 hidden -translate-y-1/2 lg:block xl:right-10" aria-hidden="true">
-        <img src="/assets/images/hero-tech.svg" alt="" width="360" height="260" class="h-auto w-[300px] rounded-3xl opacity-90 drop-shadow-2xl xl:w-[360px]" loading="eager" decoding="async">
-      </div>
-</section>
-
+    </div>
+  </section>
     <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
       <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
         <article class="min-w-0">
