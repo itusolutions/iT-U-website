@@ -42,146 +42,59 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   if (heroSections.length === 0) return;
 
-  const prefersReducedMotion =
-    window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   const stopCallbacks = [];
   const startCallbacks = [];
 
   heroSections.forEach((heroSection) => {
-    // Ensure hero acts as a positioned & clipped container
-    const computedPos = window.getComputedStyle(heroSection).position;
-    if (computedPos === 'static') {
-      heroSection.style.position = 'relative';
-    }
-    heroSection.style.overflow = 'hidden';
-
     let carouselLayer =
       heroSection.querySelector('#hero-carousel-layer, [data-hero-slides]') ||
-      (heroSections.length === 1 ? document.getElementById('hero-carousel-layer') : null);
+      document.getElementById('hero-carousel-layer');
 
     if (!carouselLayer && heroImages.length > 0) {
       carouselLayer = document.createElement('div');
       carouselLayer.setAttribute('data-hero-slides', '');
       carouselLayer.setAttribute('aria-hidden', 'true');
+      carouselLayer.className = 'pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden';
       heroSection.prepend(carouselLayer);
     }
 
     if (carouselLayer && heroImages.length > 0) {
-      // Force visible stacking order & dimensions inside heroSection
-      carouselLayer.style.position = 'absolute';
-      carouselLayer.style.inset = '0';
-      carouselLayer.style.width = '100%';
-      carouselLayer.style.height = '100%';
-      carouselLayer.style.zIndex = '0';
-      carouselLayer.style.overflow = 'hidden';
-      carouselLayer.style.pointerEvents = 'none';
-
-      // Ensure direct children of heroSection that are not the carousel layer sit above it
-      Array.from(heroSection.children).forEach((child) => {
-        if (child === carouselLayer || child.tagName === 'SCRIPT') return;
-        const currentZ = parseInt(window.getComputedStyle(child).zIndex, 10);
-        if (Number.isNaN(currentZ) || currentZ < 1) {
-          child.style.position = window.getComputedStyle(child).position === 'static'
-            ? 'relative'
-            : window.getComputedStyle(child).position;
-          child.style.zIndex = '10';
-        }
-      });
-
       const intervalMs = parseInt(heroSection.getAttribute('data-interval'), 10) || 4000;
       let activeIndex = Math.floor(Math.random() * heroImages.length);
       let slideTimer = null;
 
       const frag = document.createDocumentFragment();
-      const slideItems = heroImages.map((src, idx) => {
+      const slideDivs = heroImages.map((src, idx) => {
         const slide = document.createElement('div');
-        slide.style.position = 'absolute';
-        slide.style.inset = '0';
-        slide.style.width = '100%';
-        slide.style.height = '100%';
         slide.style.backgroundImage = `url("${src}")`;
-        slide.style.backgroundSize = 'cover';
-        slide.style.backgroundPosition = 'center center';
-        slide.style.backgroundRepeat = 'no-repeat';
-        slide.style.transition = 'opacity 700ms ease-in-out';
-        slide.style.opacity = idx === activeIndex ? '1' : '0';
-        slide.style.willChange = 'opacity, transform';
-
-        // Pre-verify image load so broken URLs never stay stuck invisible
-        const loader = new Image();
-        loader.decoding = 'async';
-        loader.src = src;
-        loader.onerror = () => {
-          slide.dataset.loadError = 'true';
-        };
-
+        slide.className =
+          'absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-700 ease-in-out ' +
+          (idx === activeIndex ? 'opacity-100' : 'opacity-0');
         frag.appendChild(slide);
-        return { el: slide, src };
+        return slide;
       });
 
       carouselLayer.innerHTML = '';
       carouselLayer.appendChild(frag);
 
-      // Keep background locked relative to viewport while clipped to heroSection
-      function syncFixedBackgroundOffset() {
-        const rect = heroSection.getBoundingClientRect();
-        const offsetY = Math.round(-rect.top);
-        slideItems.forEach(({ el }) => {
-          el.style.transform = `translate3d(0, ${offsetY}px, 0)`;
-          el.style.top = `${rect.top}px`;
-          el.style.height = `${window.innerHeight}px`;
-          el.style.transform = 'none';
-        });
-      }
-
-      // Clean viewport-fixed positioning clipped strictly by heroSection's overflow:hidden
-      function updateFixedSlides() {
-        const rect = heroSection.getBoundingClientRect();
-        const vh = window.innerHeight || 800;
-        const vw = heroSection.clientWidth || window.innerWidth;
-        slideItems.forEach(({ el }) => {
-          el.style.position = 'fixed';
-          el.style.top = '0';
-          el.style.left = `${rect.left}px`;
-          el.style.width = `${vw}px`;
-          el.style.height = `${vh}px`;
-        });
-      }
-
-      updateFixedSlides();
-      window.addEventListener('scroll', updateFixedSlides, { passive: true });
-      window.addEventListener('resize', updateFixedSlides, { passive: true });
-
-      function getValidIndices() {
-        const valid = [];
-        slideItems.forEach((item, i) => {
-          if (item.el.dataset.loadError !== 'true') valid.push(i);
-        });
-        return valid.length > 0 ? valid : slideItems.map((_, i) => i);
-      }
-
       function showSlide(index) {
-        const validIndices = getValidIndices();
-        if (!validIndices.includes(index)) {
-          index = validIndices[0];
-        }
-        activeIndex = index;
-        slideItems.forEach((item, i) => {
-          item.el.style.opacity = i === activeIndex ? '1' : '0';
+        activeIndex = ((index % slideDivs.length) + slideDivs.length) % slideDivs.length;
+        slideDivs.forEach((slide, i) => {
+          const isCurrent = i === activeIndex;
+          slide.classList.toggle('opacity-100', isCurrent);
+          slide.classList.toggle('opacity-0', !isCurrent);
         });
       }
 
       function nextRandomIndex() {
-        const validIndices = getValidIndices();
-        if (validIndices.length <= 1) return validIndices[0] ?? 0;
-        const pool = validIndices.filter((i) => i !== activeIndex);
-        return pool[Math.floor(Math.random() * pool.length)];
+        if (slideDivs.length <= 1) return 0;
+        let candidate = Math.floor(Math.random() * slideDivs.length);
+        if (candidate === activeIndex) candidate = (activeIndex + 1) % slideDivs.length;
+        return candidate;
       }
 
       function startAutoplay() {
         stopAutoplay();
-        if (prefersReducedMotion || slideItems.length <= 1) return;
         slideTimer = window.setInterval(() => showSlide(nextRandomIndex()), intervalMs);
       }
 
@@ -201,11 +114,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const canvas = heroSection.querySelector('#hero-connected-dots, [data-hero-canvas]');
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    let width = 0;
-    let height = 0;
+    let width, height;
 
     const lightPalette = [
       { r: 23,  g: 105, b: 170 },
@@ -226,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mouse = { x: null, y: null, radius: 180 };
 
     function resizeCanvas() {
-      width = canvas.width = heroSection.offsetWidth || 1;
-      height = canvas.height = heroSection.offsetHeight || 1;
+      width = canvas.width = heroSection.offsetWidth;
+      height = canvas.height = heroSection.offsetHeight;
     }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
@@ -244,10 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     class Particle {
-      constructor() {
-        this.currentColor = lightPalette[0];
-        this.reset();
-      }
+      constructor() { this.reset(); }
       reset() {
         this.x = Math.random() * width;
         this.y = Math.random() * height;
@@ -263,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const dx = mouse.x - this.x;
           const dy = mouse.y - this.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance > 0 && distance < mouse.radius) {
+          if (distance < mouse.radius) {
             const forceDirectionX = dx / distance;
             const forceDirectionY = dy / distance;
             const force = (mouse.radius - distance) / mouse.radius;
@@ -275,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
         this.y += this.vy;
       }
       draw(palette) {
-        const color = palette[Math.floor(Math.abs(this.x) % palette.length)];
+        const color = palette[Math.floor(this.x % palette.length)];
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
@@ -288,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    const particleCount = Math.max(8, Math.floor(Math.min(width, 1200) / 20));
+    const particleCount = Math.floor(Math.min(width, 1200) / 20);
     const particles = Array.from({ length: particleCount }, () => new Particle());
 
     function animate() {
@@ -296,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const isDark = document.documentElement.classList.contains('dark');
       const activePalette = isDark ? darkPalette : lightPalette;
 
-      particles.forEach((p) => {
+      particles.forEach(p => {
         p.update();
         p.draw(activePalette);
       });
@@ -332,9 +240,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      stopCallbacks.forEach((fn) => fn());
+      stopCallbacks.forEach(fn => fn());
     } else {
-      startCallbacks.forEach((fn) => fn());
+      startCallbacks.forEach(fn => fn());
     }
   });
 });
