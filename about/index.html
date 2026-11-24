@@ -941,22 +941,37 @@
 <!-- Main Content -->
 <main id="main" class="min-h-screen py-12 sm:py-20 px-[max(1.2rem,calc((100%-1120px)/2))] bg-brand-bg dark:bg-brand-darkBg text-brand-text dark:text-brand-darkText transition-colors duration-300">
 
-  <div class="max-w-[1120px] mx-auto space-y-16 sm:space-y-24">
+<div class="max-w-[1120px] mx-auto space-y-16 sm:space-y-24">
 
-    <!-- ABOUT PAGE HERO -->
-    <section class="relative overflow-hidden py-12 px-6 text-center border-b border-brand-border/40 dark:border-brand-darkBorder/40">
-      <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- ABOUT PAGE HERO (FIXED BACKGROUND CAROUSEL SCOPED TO HERO) -->
+    <section
+      id="about-hero-section"
+      data-interval="4000"
+      class="relative flex min-h-[75vh] items-center justify-center overflow-hidden rounded-3xl py-16 px-6 sm:min-h-[82vh] sm:py-24 text-center text-white border border-white/15 bg-slate-950 transition-colors duration-300"
+    >
+      <!-- JS-Populated Fixed-Background Carousel Layer (Clipped Strictly to Hero Section) -->
+      <div id="about-hero-carousel-layer" aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 overflow-hidden"></div>
 
+      <!-- Dark Scrim Overlay for High Text Readability -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-slate-950/80 via-blue-950/70 to-slate-950/85"></div>
+
+      <!-- Ambient Glow Overlay -->
+      <div class="pointer-events-none absolute -top-20 -right-20 w-80 h-80 bg-sky-400/20 rounded-full blur-3xl z-[1]"></div>
+
+      <!-- Foreground Hero Content -->
       <div class="relative z-10 max-w-[850px] mx-auto flex flex-col items-center">
-        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[0.78rem] font-extrabold text-brand-primary dark:text-brand-darkPrimary bg-brand-primary/10 dark:bg-brand-primary/20 border border-brand-primary/20 dark:border-brand-darkPrimary/30 px-4 py-1.5 rounded-full mb-6">
-          <i class="fa-solid fa-microchip text-xs"></i> ABOUT ITU SOLUTIONS | TECHNOLOGY WITH PURPOSE
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/65 border border-sky-400/30 px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
+          <i class="fa-solid fa-microchip text-xs text-emerald-400" aria-hidden="true"></i>
+          <span>ABOUT ITU SOLUTIONS · TECHNOLOGY WITH PURPOSE</span>
         </p>
-        <h1 class="text-[clamp(2.4rem,4.5vw,3.8rem)] font-extrabold leading-[1.1] tracking-tight mb-6">
-          Practical Technology. Professional Service. Smarter Solutions.
+
+        <h1 class="text-[clamp(2.2rem,4.5vw,3.8rem)] font-extrabold uppercase leading-[1.1] tracking-tight mb-6 text-white drop-shadow">
+          PRACTICAL TECHNOLOGY. PROFESSIONAL SERVICE. SMARTER SOLUTIONS.
         </h1>
-        <div class="space-y-4 text-brand-muted dark:text-brand-darkMuted text-[1.1rem] sm:text-[1.2rem] leading-relaxed max-w-[750px] mx-auto mb-10">
+
+        <div class="space-y-4 text-slate-200 text-xs sm:text-sm leading-relaxed max-w-[750px] mx-auto mb-10 drop-shadow-sm">
           <p>
-            Welcome to <strong>iTu Solutions</strong>, your local technology partner for reliable IT support, computer repairs, website development, and digital solutions in Ga-Mothiba, Polokwane, and surrounding areas of Limpopo, South Africa.
+            Welcome to <strong class="font-extrabold text-white">ITU SOLUTIONS</strong>, your local technology partner for reliable IT support, computer repairs, website development, and digital solutions in Ga-Mothiba, Polokwane, and surrounding areas of Limpopo, South Africa.
           </p>
           <p>
             We help individuals, entrepreneurs, and businesses use technology more effectively through practical services, personalised support, and solutions designed around their unique needs.
@@ -964,11 +979,13 @@
         </div>
 
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="/forms/contact-form/index.html" class="px-8 py-4 rounded-xl bg-brand-primary dark:bg-brand-darkPrimary text-white dark:text-[#071524] font-bold text-sm shadow-lg hover:shadow-brand-primary/30 transition-all cursor-pointer no-underline flex items-center gap-2">
-            <i class="fa-solid fa-comments"></i> Talk to Our Team
+          <a href="https://www.it-u.co.za/form/contact-form/" class="px-7 py-3.5 rounded-xl bg-blue-600 dark:bg-sky-400 text-white dark:text-[#071524] font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-sky-400/30 transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-comments text-amber-300 dark:text-slate-900" aria-hidden="true"></i>
+            <span>TALK TO OUR TEAM</span>
           </a>
-          <a href="/services/" class="px-8 py-4 rounded-xl bg-brand-bg dark:bg-[#172c43] border border-brand-border dark:border-[#2a3a50] text-brand-text dark:text-white font-bold text-sm hover:border-brand-primary dark:hover:border-brand-darkPrimary transition-all cursor-pointer no-underline flex items-center gap-2">
-            <i class="fa-solid fa-cubes"></i> Explore Our Services
+          <a href="https://www.it-u.co.za/services/" class="px-7 py-3.5 rounded-xl bg-slate-950/60 border border-white/25 text-white font-bold text-xs uppercase tracking-wider hover:bg-white/15 backdrop-blur-sm transition-all cursor-pointer no-underline flex items-center gap-2">
+            <i class="fa-solid fa-cubes text-emerald-400" aria-hidden="true"></i>
+            <span>EXPLORE OUR SERVICES</span>
           </a>
         </div>
       </div>
