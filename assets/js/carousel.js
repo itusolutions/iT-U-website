@@ -46,74 +46,36 @@
           const intervalMs = parseInt(heroSection.getAttribute('data-interval'), 10) || 4000;
           let activeIndex = Math.floor(Math.random() * heroImages.length);
           let slideTimer = null;
-          let scrollRaf = null;
-          let inHeroView = true;
 
           const frag = document.createDocumentFragment();
-          const slideImgs = heroImages.map((src, idx) => {
-            const img = document.createElement('img');
-            img.src = src;
-            img.alt = '';
-            img.decoding = 'async';
-            img.loading = idx === activeIndex ? 'eager' : 'lazy';
-            img.className =
-              'absolute -inset-y-16 inset-x-0 h-[calc(100%+8rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out ' +
+          const slideDivs = heroImages.map((src, idx) => {
+            const slide = document.createElement('div');
+            slide.style.backgroundImage = `url("${src}")`;
+            slide.className =
+              'absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-700 ease-in-out ' +
               (idx === activeIndex ? 'opacity-100' : 'opacity-0');
-            frag.appendChild(img);
-            return img;
+            frag.appendChild(slide);
+            return slide;
           });
 
           carouselLayer.innerHTML = '';
           carouselLayer.appendChild(frag);
 
           function showSlide(index) {
-            activeIndex = ((index % slideImgs.length) + slideImgs.length) % slideImgs.length;
-            slideImgs.forEach((img, i) => {
+            activeIndex = ((index % slideDivs.length) + slideDivs.length) % slideDivs.length;
+            slideDivs.forEach((slide, i) => {
               const isCurrent = i === activeIndex;
-              if (isCurrent && img.loading === 'lazy') img.loading = 'eager';
-              img.classList.toggle('opacity-100', isCurrent);
-              img.classList.toggle('opacity-0', !isCurrent);
+              slide.classList.toggle('opacity-100', isCurrent);
+              slide.classList.toggle('opacity-0', !isCurrent);
             });
           }
 
           function nextRandomIndex() {
-            if (slideImgs.length <= 1) return 0;
-            let candidate = Math.floor(Math.random() * slideImgs.length);
-            if (candidate === activeIndex) candidate = (activeIndex + 1) % slideImgs.length;
+            if (slideDivs.length <= 1) return 0;
+            let candidate = Math.floor(Math.random() * slideDivs.length);
+            if (candidate === activeIndex) candidate = (activeIndex + 1) % slideDivs.length;
             return candidate;
           }
-
-          // Keeps the background anchored inside #hero-section while scrolling
-          function applyHeroFixedBackground() {
-            scrollRaf = null;
-            if (!inHeroView) return;
-            const rect = heroSection.getBoundingClientRect();
-            const vh = window.innerHeight || document.documentElement.clientHeight || 800;
-            const span = rect.height + vh;
-            if (span <= 0) return;
-            const progress = (vh - rect.top) / span;
-            const offset = Math.round((progress - 0.5) * 96);
-            carouselLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
-          }
-
-          function queueScrollSync() {
-            if (scrollRaf === null && inHeroView) {
-              scrollRaf = window.requestAnimationFrame(applyHeroFixedBackground);
-            }
-          }
-
-          if ('IntersectionObserver' in window) {
-            const io = new IntersectionObserver((entries) => {
-              entries.forEach((entry) => {
-                inHeroView = entry.isIntersecting;
-                if (inHeroView) queueScrollSync();
-              });
-            }, { threshold: 0 });
-            io.observe(heroSection);
-          }
-
-          window.addEventListener('scroll', queueScrollSync, { passive: true });
-          window.addEventListener('resize', queueScrollSync, { passive: true });
 
           function startAutoplay() {
             stopAutoplay();
@@ -132,12 +94,10 @@
               stopAutoplay();
             } else {
               startAutoplay();
-              queueScrollSync();
             }
           });
 
           showSlide(activeIndex);
-          applyHeroFixedBackground();
           startAutoplay();
         }
 
@@ -264,4 +224,3 @@
         }
         animate();
       });
-    
