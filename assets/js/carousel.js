@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const heroSections = Array.from(
+    document.querySelectorAll('#hero-section, [data-hero-section]')
+  );
+  if (heroSections.length === 0) return;
+
   const heroImages = [
+    // it-support-and-networking (01–09)
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-01.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-02.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-03.jpg",
@@ -9,12 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-07.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-08.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-09.jpg",
+
+    // operating-systems-and-software (01–06)
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-01.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-02.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-03.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-04.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-05.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software/operating-systems-and-software-06.jpg",
+
+    // website-design-and-development (01–10)
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-01.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-02.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-03.jpg",
@@ -25,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-08.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-09.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development/website-design-and-development-10.jpg",
+
+    // computer-repair-and-maintenance (01–10)
     "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance/computer-repair-and-maintenance-01.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance/computer-repair-and-maintenance-02.jpg",
     "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance/computer-repair-and-maintenance-03.jpg",
@@ -37,26 +49,16 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance/computer-repair-and-maintenance-10.jpg"
   ];
 
-  const heroSections = Array.from(
-    document.querySelectorAll('#hero-section, [data-hero-section], .hero-section')
-  );
-  if (heroSections.length === 0) return;
-
-  const stopCallbacks = [];
-  const startCallbacks = [];
+  const stopAutoplayList = [];
+  const startAutoplayList = [];
 
   heroSections.forEach((heroSection) => {
-    let carouselLayer =
+    const carouselLayer =
       heroSection.querySelector('#hero-carousel-layer, [data-hero-slides]') ||
       document.getElementById('hero-carousel-layer');
-
-    if (!carouselLayer && heroImages.length > 0) {
-      carouselLayer = document.createElement('div');
-      carouselLayer.setAttribute('data-hero-slides', '');
-      carouselLayer.setAttribute('aria-hidden', 'true');
-      carouselLayer.className = 'pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden';
-      heroSection.prepend(carouselLayer);
-    }
+    const canvas =
+      heroSection.querySelector('#hero-connected-dots') ||
+      document.getElementById('hero-connected-dots');
 
     if (carouselLayer && heroImages.length > 0) {
       const intervalMs = parseInt(heroSection.getAttribute('data-interval'), 10) || 4000;
@@ -105,18 +107,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      stopCallbacks.push(stopAutoplay);
-      startCallbacks.push(startAutoplay);
+      stopAutoplayList.push(stopAutoplay);
+      startAutoplayList.push(startAutoplay);
 
       showSlide(activeIndex);
       startAutoplay();
     }
 
-    const canvas = heroSection.querySelector('#hero-connected-dots, [data-hero-canvas]');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    let width, height;
+
+    let width = 0;
+    let height = 0;
+    let particles = [];
 
     const lightPalette = [
       { r: 23,  g: 105, b: 170 },
@@ -136,10 +140,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mouse = { x: null, y: null, radius: 180 };
 
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.radius = Math.random() * 4.5 + 5;
+        this.vx = (Math.random() - 0.5) * 1.0;
+        this.vy = (Math.random() - 0.5) * 1.0;
+        this.alpha = Math.random() * 0.4 + 0.6;
+        this.currentColor = darkPalette[0];
+      }
+      update() {
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+        if (mouse.x !== null && mouse.y !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius && distance > 0) {
+            const forceDirectionX = dx / distance;
+            const forceDirectionY = dy / distance;
+            const force = (mouse.radius - distance) / mouse.radius;
+            this.x -= forceDirectionX * force * 5;
+            this.y -= forceDirectionY * force * 5;
+          }
+        }
+        this.x += this.vx;
+        this.y += this.vy;
+      }
+      draw(palette) {
+        const color = palette[Math.abs(Math.floor(this.x)) % palette.length];
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
+        const isDark = document.documentElement.classList.contains('dark');
+        ctx.shadowBlur = isDark ? 14 : 8;
+        ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
+        ctx.fill();
+        ctx.shadowBlur = 0;
+        this.currentColor = color;
+      }
+    }
+
+    function initParticles() {
+      const particleCount = Math.max(8, Math.floor(Math.min(width || 800, 1200) / 20));
+      particles = Array.from({ length: particleCount }, () => new Particle());
+    }
+
     function resizeCanvas() {
       width = canvas.width = heroSection.offsetWidth;
       height = canvas.height = heroSection.offsetHeight;
+      initParticles();
     }
+
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -154,57 +208,12 @@ document.addEventListener('DOMContentLoaded', () => {
       mouse.y = null;
     });
 
-    class Particle {
-      constructor() { this.reset(); }
-      reset() {
-        this.x = Math.random() * width;
-        this.y = Math.random() * height;
-        this.radius = Math.random() * 4.5 + 5;
-        this.vx = (Math.random() - 0.5) * 1.0;
-        this.vy = (Math.random() - 0.5) * 1.0;
-        this.alpha = Math.random() * 0.4 + 0.6;
-      }
-      update() {
-        if (this.x < 0 || this.x > width) this.vx *= -1;
-        if (this.y < 0 || this.y > height) this.vy *= -1;
-        if (mouse.x !== null && mouse.y !== null) {
-          const dx = mouse.x - this.x;
-          const dy = mouse.y - this.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          if (distance < mouse.radius) {
-            const forceDirectionX = dx / distance;
-            const forceDirectionY = dy / distance;
-            const force = (mouse.radius - distance) / mouse.radius;
-            this.x -= forceDirectionX * force * 5;
-            this.y -= forceDirectionY * force * 5;
-          }
-        }
-        this.x += this.vx;
-        this.y += this.vy;
-      }
-      draw(palette) {
-        const color = palette[Math.floor(this.x % palette.length)];
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
-        const isDark = document.documentElement.classList.contains('dark');
-        ctx.shadowBlur = isDark ? 14 : 8;
-        ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
-        ctx.fill();
-        ctx.shadowBlur = 0;
-        this.currentColor = color;
-      }
-    }
-
-    const particleCount = Math.floor(Math.min(width, 1200) / 20);
-    const particles = Array.from({ length: particleCount }, () => new Particle());
-
     function animate() {
       ctx.clearRect(0, 0, width, height);
       const isDark = document.documentElement.classList.contains('dark');
       const activePalette = isDark ? darkPalette : lightPalette;
 
-      particles.forEach(p => {
+      particles.forEach((p) => {
         p.update();
         p.draw(activePalette);
       });
@@ -235,14 +244,15 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       requestAnimationFrame(animate);
     }
+
     animate();
   });
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
-      stopCallbacks.forEach(fn => fn());
+      stopAutoplayList.forEach((fn) => fn());
     } else {
-      startCallbacks.forEach(fn => fn());
+      startAutoplayList.forEach((fn) => fn());
     }
   });
 });
