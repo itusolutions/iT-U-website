@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
   const heroImages = [
     // it-support-and-networking (9 images)
     "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking/it-support-and-networking-01.jpg",
@@ -44,79 +44,88 @@ document.addEventListener('DOMContentLoaded', () => {
     "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance/computer-repair-and-maintenance-10.jpg"
   ];
 
-  const heroSections = Array.from(
-    document.querySelectorAll('#hero-section, [data-hero-section], .hero-section')
-  );
-  if (heroSections.length === 0 || heroImages.length === 0) return;
-
   const stopCallbacks = [];
   const startCallbacks = [];
 
-  heroSections.forEach((heroSection) => {
-    let carouselLayer =
-      heroSection.querySelector('#hero-carousel-layer, [data-hero-slides]') ||
-      document.getElementById('hero-carousel-layer');
+  function initHeroCarousels() {
+    if (!Array.isArray(heroImages) || heroImages.length === 0) return;
 
-    if (!carouselLayer) {
-      carouselLayer = document.createElement('div');
-      carouselLayer.setAttribute('data-hero-slides', '');
-      carouselLayer.setAttribute('aria-hidden', 'true');
-      carouselLayer.className = 'pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden';
-      heroSection.prepend(carouselLayer);
-    }
+    const heroSections = Array.from(
+      document.querySelectorAll('#hero-section, [data-hero-section], .hero-section')
+    );
+    if (heroSections.length === 0) return;
 
-    const intervalMs = parseInt(heroSection.getAttribute('data-interval'), 10) || 4000;
-    let activeIndex = Math.floor(Math.random() * heroImages.length);
-    let slideTimer = null;
+    heroSections.forEach((heroSection) => {
+      if (heroSection.dataset.carouselInitialized === 'true') return;
+      heroSection.dataset.carouselInitialized = 'true';
 
-    const frag = document.createDocumentFragment();
-    const slideDivs = heroImages.map((src, idx) => {
-      const slide = document.createElement('div');
-      slide.style.backgroundImage = `url("${src}")`;
-      slide.className =
-        'absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-700 ease-in-out ' +
-        (idx === activeIndex ? 'opacity-100' : 'opacity-0');
-      frag.appendChild(slide);
-      return slide;
-    });
+      let carouselLayer =
+        heroSection.querySelector('#hero-carousel-layer, [data-hero-slides]') ||
+        document.getElementById('hero-carousel-layer');
 
-    carouselLayer.innerHTML = '';
-    carouselLayer.appendChild(frag);
-
-    function showSlide(index) {
-      activeIndex = ((index % slideDivs.length) + slideDivs.length) % slideDivs.length;
-      slideDivs.forEach((slide, i) => {
-        const isCurrent = i === activeIndex;
-        slide.classList.toggle('opacity-100', isCurrent);
-        slide.classList.toggle('opacity-0', !isCurrent);
-      });
-    }
-
-    function nextRandomIndex() {
-      if (slideDivs.length <= 1) return 0;
-      let candidate = Math.floor(Math.random() * slideDivs.length);
-      if (candidate === activeIndex) candidate = (activeIndex + 1) % slideDivs.length;
-      return candidate;
-    }
-
-    function startAutoplay() {
-      stopAutoplay();
-      slideTimer = window.setInterval(() => showSlide(nextRandomIndex()), intervalMs);
-    }
-
-    function stopAutoplay() {
-      if (slideTimer !== null) {
-        window.clearInterval(slideTimer);
-        slideTimer = null;
+      if (!carouselLayer) {
+        carouselLayer = document.createElement('div');
+        carouselLayer.setAttribute('data-hero-slides', '');
+        carouselLayer.setAttribute('aria-hidden', 'true');
+        carouselLayer.className = 'pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden';
+        heroSection.prepend(carouselLayer);
       }
-    }
 
-    stopCallbacks.push(stopAutoplay);
-    startCallbacks.push(startAutoplay);
+      const rawInterval = parseInt(heroSection.getAttribute('data-interval') || '', 10);
+      const intervalMs = Number.isFinite(rawInterval) && rawInterval >= 500 ? rawInterval : 4000;
+      let activeIndex = Math.floor(Math.random() * heroImages.length);
+      let slideTimer = null;
 
-    showSlide(activeIndex);
-    startAutoplay();
-  });
+      const frag = document.createDocumentFragment();
+      const slideDivs = heroImages.map((src, idx) => {
+        const slide = document.createElement('div');
+        slide.style.backgroundImage = `url("${src}")`;
+        slide.className =
+          'absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-700 ease-in-out ' +
+          (idx === activeIndex ? 'opacity-100' : 'opacity-0');
+        frag.appendChild(slide);
+        return slide;
+      });
+
+      carouselLayer.innerHTML = '';
+      carouselLayer.appendChild(frag);
+
+      function showSlide(index) {
+        activeIndex = ((index % slideDivs.length) + slideDivs.length) % slideDivs.length;
+        slideDivs.forEach((slide, i) => {
+          const isCurrent = i === activeIndex;
+          slide.classList.toggle('opacity-100', isCurrent);
+          slide.classList.toggle('opacity-0', !isCurrent);
+        });
+      }
+
+      function nextRandomIndex() {
+        if (slideDivs.length <= 1) return 0;
+        let candidate = Math.floor(Math.random() * slideDivs.length);
+        if (candidate === activeIndex) candidate = (activeIndex + 1) % slideDivs.length;
+        return candidate;
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+        if (document.hidden) return;
+        slideTimer = window.setInterval(() => showSlide(nextRandomIndex()), intervalMs);
+      }
+
+      function stopAutoplay() {
+        if (slideTimer !== null) {
+          window.clearInterval(slideTimer);
+          slideTimer = null;
+        }
+      }
+
+      stopCallbacks.push(stopAutoplay);
+      startCallbacks.push(startAutoplay);
+
+      showSlide(activeIndex);
+      startAutoplay();
+    });
+  }
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
@@ -125,4 +134,10 @@ document.addEventListener('DOMContentLoaded', () => {
       startCallbacks.forEach((fn) => fn());
     }
   });
-});
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeroCarousels, { once: true });
+  } else {
+    initHeroCarousels();
+  }
+})();
