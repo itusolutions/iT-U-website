@@ -92,18 +92,6 @@
   <link rel="preload" as="image" href="https://www.it-u.co.za/assets/logo/sekoala-logo-light-mode.png">
   <link rel="preload" as="image" href="https://www.it-u.co.za/assets/logo/sekoala-logo-dark-mode.png">
 
-  <!-- Preload Service & Feature SVGs (/assets/images/) -->
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/computer-repair.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/cybersecurity.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/data-backup.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/general-it.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/hardware-upgrades.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/it-support.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/networking.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/operating-system.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/software-installation.svg" type="image/svg+xml">
-  <link rel="preload" as="image" href="https://www.it-u.co.za/assets/images/website-development.svg" type="image/svg+xml">
-
   <!-- Google Fonts (Inter & JetBrains Mono) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -187,14 +175,6 @@
   <!-- Scripts: Typed.js, AOS & Local JS (Deferred) -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/dark-mode.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/navigation.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/mega-menu.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/back-to-top.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/typed.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/parallax.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/accordion.js" defer></script>
-  <script src="https://www.it-u.co.za/assets/js/main.js" defer></script>
 
   <!-- Structured Data (JSON-LD for Google Rich Results & Sitelinks) -->
   <script type="application/ld+json">
@@ -967,34 +947,40 @@
 <!-- Main Content -->
 <main id="main" class="w-full overflow-x-clip bg-slate-50 text-slate-900 dark:bg-[#0b1220] dark:text-slate-100 font-sans">
 
-  <!-- Unified Hero & Metrics Section -->
-  <section id="hero-section" class="relative overflow-hidden py-[4rem] sm:py-[6.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-gradient-to-br from-[#f0f4f8] via-[#e2e8f0] to-[#f8fafc] dark:from-[#0b1220] dark:via-[#0e2238] dark:to-[#123e68] text-slate-900 dark:text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
-    
+<!-- Unified Hero & Metrics Section -->
+  <section id="hero-section" data-interval="4000" class="relative overflow-hidden py-[4rem] sm:py-[6.5rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-gradient-to-br from-[#f0f4f8] via-[#e2e8f0] to-[#f8fafc] dark:from-[#0b1220] dark:via-[#0e2238] dark:to-[#123e68] text-slate-900 dark:text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
+
+    <!-- JS-Populated Full-Hero Carousel Layer (Scoped Strictly to Hero Section) -->
+    <div id="hero-carousel-layer" aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 overflow-hidden"></div>
+
+    <!-- Readability Scrim Over Carousel Images -->
+    <div aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 bg-gradient-to-br from-slate-950/75 via-blue-950/65 to-slate-950/80"></div>
+
     <!-- Interactive Animated Canvas Background with pointer-events-none so it never blocks the menu -->
-    <canvas id="hero-connected-dots" class="absolute inset-0 w-full h-full opacity-80 z-0 cursor-crosshair pointer-events-none"></canvas>
-    
+    <canvas id="hero-connected-dots" class="absolute inset-0 w-full h-full opacity-80 z-[1] cursor-crosshair pointer-events-none"></canvas>
+
     <!-- Ambient Glow Overlay -->
-    <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/10 dark:bg-sky-400/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/10 dark:bg-sky-400/20 rounded-full blur-3xl z-[1] pointer-events-none"></div>
 
     <!-- Main Content Wrapper -->
     <div class="relative z-10 max-w-[1120px] mx-auto flex flex-col gap-12 pointer-events-auto">
-      
+
       <!-- Hero Header Content -->
       <div class="max-w-[850px]">
-        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-blue-700 dark:text-[#7ec5ff] bg-blue-600/10 dark:bg-sky-400/20 border border-blue-600/20 dark:border-[#7ec5ff]/30 px-3 py-1 rounded-full mb-4">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/60 border border-sky-400/30 px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>IT SOLUTIONS MADE PRACTICAL</span>
         </p>
-        
+
         <!-- Headline with Typed.js Animated Text Container -->
-        <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold uppercase -tracking-[0.04em]">
-          TECHNOLOGY THAT <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-600 to-emerald-600 dark:from-[#69baff] dark:via-[#7ec5ff] dark:to-emerald-400">WORKS FOR YOU</span>
+        <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold uppercase -tracking-[0.04em] text-white drop-shadow">
+          TECHNOLOGY THAT <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-300 to-emerald-400">WORKS FOR YOU</span>
         </h1>
-        
-        <p class="max-w-[720px] text-slate-600 dark:text-[#d7e4f3] print:text-[#333] text-sm sm:text-base leading-relaxed">
+
+        <p class="max-w-[720px] text-slate-200 print:text-[#333] text-xs sm:text-sm leading-relaxed drop-shadow-sm">
           iTu Solutions delivers professional website development, computer maintenance, network setups, and reliable technical support tailored for individuals and businesses across Polokwane and Limpopo.
         </p>
-        
+
         <div class="flex gap-[0.8rem] flex-wrap mt-[2rem]">
           <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 dark:bg-sky-400 text-white dark:text-[#071524] border border-blue-600 dark:border-sky-400 text-xs font-bold uppercase tracking-wider cursor-pointer hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-200 no-underline hover:no-underline print:hidden" href="https://www.it-u.co.za/form/contact-form/">
             <i class="fa-solid fa-paper-plane text-amber-300 dark:text-slate-900"></i>
@@ -1004,159 +990,29 @@
       </div>
 
       <!-- Trust Stats / Flow Line Bar Representation -->
-      <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-slate-300/80 dark:border-white/10">
+      <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-white/15">
         <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-blue-700 dark:text-sky-400">100%</p>
-          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">LOCAL &amp; DEDICATED</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-sky-400">100%</p>
+          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">LOCAL &amp; DEDICATED</p>
         </div>
         <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">FAST</p>
-          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">TURNAROUND TIME</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">FAST</p>
+          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TURNAROUND TIME</p>
         </div>
         <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-violet-600 dark:text-violet-400">CERTIFIED</p>
-          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">TECHNICAL EXPERTISE</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-violet-400">CERTIFIED</p>
+          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TECHNICAL EXPERTISE</p>
         </div>
         <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-orange-600 dark:text-orange-400">TAILORED</p>
-          <p class="text-[11px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider mt-1">DIGITAL SOLUTIONS</p>
+          <p class="text-2xl sm:text-3xl font-extrabold text-orange-400">TAILORED</p>
+          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">DIGITAL SOLUTIONS</p>
         </div>
       </div>
 
     </div>
-
-    <!-- JavaScript for Adaptive Light/Dark Mode Multi-Color Big Dots, Bold Lines, and Mouse Repulsion -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const canvas = document.getElementById('hero-connected-dots');
-        const heroSection = document.getElementById('hero-section');
-        if (!canvas || !heroSection) return;
-
-        const ctx = canvas.getContext('2d');
-        let width, height;
-
-        const lightPalette = [
-          { r: 23,  g: 105, b: 170 },
-          { r: 14,  g: 116, b: 144 },
-          { r: 5,   g: 150, b: 105 },
-          { r: 124, g: 58,  b: 237 },
-          { r: 217, g: 119, b: 6   }
-        ];
-
-        const darkPalette = [
-          { r: 105, g: 186, b: 255 },
-          { r: 52,  g: 211, b: 153 },
-          { r: 167, g: 139, b: 250 },
-          { r: 251, g: 146, b: 60  },
-          { r: 56,  g: 189, b: 248 }
-        ];
-
-        const mouse = { x: null, y: null, radius: 180 };
-
-        function resizeCanvas() {
-          width = canvas.width = heroSection.offsetWidth;
-          height = canvas.height = heroSection.offsetHeight;
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        heroSection.addEventListener('mousemove', (e) => {
-          const rect = heroSection.getBoundingClientRect();
-          mouse.x = e.clientX - rect.left;
-          mouse.y = e.clientY - rect.top;
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-          mouse.x = null;
-          mouse.y = null;
-        });
-
-        class Particle {
-          constructor() { this.reset(); }
-          reset() {
-            this.x = Math.random() * width;
-            this.y = Math.random() * height;
-            this.radius = Math.random() * 4.5 + 5;
-            this.vx = (Math.random() - 0.5) * 1.0;
-            this.vy = (Math.random() - 0.5) * 1.0;
-            this.alpha = Math.random() * 0.4 + 0.6;
-          }
-          update() {
-            if (this.x < 0 || this.x > width) this.vx *= -1;
-            if (this.y < 0 || this.y > height) this.vy *= -1;
-            if (mouse.x !== null && mouse.y !== null) {
-              const dx = mouse.x - this.x;
-              const dy = mouse.y - this.y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
-              if (distance < mouse.radius) {
-                const forceDirectionX = dx / distance;
-                const forceDirectionY = dy / distance;
-                const force = (mouse.radius - distance) / mouse.radius;
-                this.x -= forceDirectionX * force * 5;
-                this.y -= forceDirectionY * force * 5;
-              }
-            }
-            this.x += this.vx;
-            this.y += this.vy;
-          }
-          draw(palette) {
-            const color = palette[Math.floor(this.x % palette.length)];
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
-            const isDark = document.documentElement.classList.contains('dark');
-            ctx.shadowBlur = isDark ? 14 : 8;
-            ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
-            ctx.fill();
-            ctx.shadowBlur = 0;
-            this.currentColor = color;
-          }
-        }
-
-        const particleCount = Math.floor(Math.min(width, 1200) / 20);
-        const particles = Array.from({ length: particleCount }, () => new Particle());
-
-        function animate() {
-          ctx.clearRect(0, 0, width, height);
-          const isDark = document.documentElement.classList.contains('dark');
-          const activePalette = isDark ? darkPalette : lightPalette;
-
-          particles.forEach(p => {
-            p.update();
-            p.draw(activePalette);
-          });
-
-          const maxDistance = 160;
-          for (let i = 0; i < particles.length; i++) {
-            for (let j = i + 1; j < particles.length; j++) {
-              const p1 = particles[i];
-              const p2 = particles[j];
-              const dx = p1.x - p2.x;
-              const dy = p1.y - p2.y;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-
-              if (dist < maxDistance) {
-                const alpha = (1 - dist / maxDistance) * (isDark ? 0.65 : 0.45);
-                const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
-                gradient.addColorStop(0, `rgba(${p1.currentColor.r}, ${p1.currentColor.g}, ${p1.currentColor.b}, ${alpha})`);
-                gradient.addColorStop(1, `rgba(${p2.currentColor.r}, ${p2.currentColor.g}, ${p2.currentColor.b}, ${alpha})`);
-
-                ctx.beginPath();
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = gradient;
-                ctx.lineWidth = (1 - dist / maxDistance) * 3.5;
-                ctx.stroke();
-              }
-            }
-          }
-          requestAnimationFrame(animate);
-        }
-        animate();
-      });
-    </script>
   </section>
 
+  
   <!-- 1. CIRCULAR & RADIAL SHAPES (Donut, Sunburst & Gauge Charts) -->
   <section class="py-16 border-b border-slate-200 dark:border-slate-800 max-w-[1120px] mx-auto px-4">
     <div class="mb-10 text-right">
