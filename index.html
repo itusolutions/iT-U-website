@@ -947,55 +947,63 @@
   
 <!-- Unified Hero & Metrics Section -->
 <!-- HOME PAGE HERO -->
-  <section id="hero-section" data-interval="4000" class="relative isolate flex min-h-[82vh] items-center overflow-hidden py-[6rem] sm:min-h-[88vh] sm:py-[8.5rem] lg:min-h-[92vh] lg:py-[10rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-slate-950 text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
-    <div id="hero-carousel-layer" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-0 overflow-hidden"></div>
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-0 bg-gradient-to-br from-slate-950/75 via-blue-950/65 to-slate-950/80"></div>
-    <canvas id="hero-connected-dots" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full opacity-80 z-[1] cursor-crosshair"></canvas>
-    <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/15 dark:bg-sky-400/20 rounded-full blur-3xl z-[1] pointer-events-none"></div>
+<section id="hero-section" data-interval="4000" class="relative isolate flex min-h-[82vh] items-center overflow-hidden py-[6rem] sm:min-h-[88vh] sm:py-[8.5rem] lg:min-h-[92vh] lg:py-[10rem] px-[max(1.2rem,calc((100%-1120px)/2))] bg-slate-950 text-white transition-colors duration-300 print:bg-white print:text-black print:p-4">
+  <!-- 1. Far-Back Layer: Interactive Connected Dots Canvas -->
+  <canvas id="hero-connected-dots" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full opacity-70 z-0 cursor-crosshair"></canvas>
 
-    <div class="relative z-10 w-full max-w-[1120px] mx-auto flex flex-col gap-12 pointer-events-auto">
-      <div class="max-w-[850px]">
-        <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/60 border border-sky-400/30 px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>IT SOLUTIONS MADE PRACTICAL</span>
-        </p>
+  <!-- 2. Front-of-Canvas Layer: JS-Populated Fixed-Background Carousel -->
+  <div id="hero-carousel-layer" aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-[1] overflow-hidden"></div>
 
-        <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold uppercase -tracking-[0.04em] text-white drop-shadow">
-          TECHNOLOGY THAT <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-300 to-emerald-400">WORKS FOR YOU</span>
-        </h1>
+  <!-- 3. Readability Scrim Over Carousel Images -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 h-full w-full z-[2] bg-gradient-to-br from-slate-950/75 via-blue-950/65 to-slate-950/80"></div>
 
-        <p class="max-w-[720px] text-slate-200 print:text-[#333] text-xs sm:text-sm leading-relaxed drop-shadow-sm">
-          iTu Solutions delivers professional website development, computer maintenance, network setups, and reliable technical support tailored for individuals and businesses across Polokwane and Limpopo.
-        </p>
+  <!-- 4. Ambient Glow Overlay -->
+  <div class="absolute -right-20 -top-20 w-96 h-96 bg-blue-600/15 dark:bg-sky-400/20 rounded-full blur-3xl z-[2] pointer-events-none"></div>
 
-        <div class="flex gap-[0.8rem] flex-wrap mt-[2rem]">
-          <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 dark:bg-sky-400 text-white dark:text-[#071524] border border-blue-600 dark:border-sky-400 text-xs font-bold uppercase tracking-wider cursor-pointer hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-200 no-underline hover:no-underline print:hidden" href="https://www.it-u.co.za/form/contact-form/">
-            <i class="fa-solid fa-paper-plane text-amber-300 dark:text-slate-900" aria-hidden="true"></i>
-            <span>REQUEST A QUOTE</span>
-          </a>
-        </div>
-      </div>
+  <!-- 5. Foreground Hero Content -->
+  <div class="relative z-10 w-full max-w-[1120px] mx-auto flex flex-col gap-12 pointer-events-auto">
+    <div class="max-w-[850px]">
+      <p class="inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[11px] font-extrabold text-sky-300 bg-slate-950/60 border border-sky-400/30 px-3 py-1 rounded-full mb-4 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>IT SOLUTIONS MADE PRACTICAL</span>
+      </p>
 
-      <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-white/15">
-        <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-sky-400">100%</p>
-          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">LOCAL &amp; DEDICATED</p>
-        </div>
-        <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">FAST</p>
-          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TURNAROUND TIME</p>
-        </div>
-        <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-violet-400">CERTIFIED</p>
-          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TECHNICAL EXPERTISE</p>
-        </div>
-        <div class="text-center sm:text-left flex-1">
-          <p class="text-2xl sm:text-3xl font-extrabold text-orange-400">TAILORED</p>
-          <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">DIGITAL SOLUTIONS</p>
-        </div>
+      <h1 class="text-[clamp(2.2rem,5vw,4.2rem)] leading-[1.08] my-2 sm:mb-4 font-extrabold uppercase -tracking-[0.04em] text-white drop-shadow">
+        TECHNOLOGY THAT <span id="typed-text" class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-300 to-emerald-400">WORKS FOR YOU</span>
+      </h1>
+
+      <p class="max-w-[720px] text-slate-200 print:text-[#333] text-xs sm:text-sm leading-relaxed drop-shadow-sm">
+        iTu Solutions delivers professional website development, computer maintenance, network setups, and reliable technical support tailored for individuals and businesses across Polokwane and Limpopo.
+      </p>
+
+      <div class="flex gap-[0.8rem] flex-wrap mt-[2rem]">
+        <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-blue-600 dark:bg-sky-400 text-white dark:text-[#071524] border border-blue-600 dark:border-sky-400 text-xs font-bold uppercase tracking-wider cursor-pointer hover:shadow-lg hover:shadow-blue-600/30 transition-all duration-200 no-underline hover:no-underline print:hidden" href="https://www.it-u.co.za/form/contact-form/">
+          <i class="fa-solid fa-paper-plane text-amber-300 dark:text-slate-900" aria-hidden="true"></i>
+          <span>REQUEST A QUOTE</span>
+        </a>
       </div>
     </div>
-  </section>
+
+    <div class="flex flex-col sm:flex-row justify-between gap-4 pt-6 border-t border-white/15">
+      <div class="text-center sm:text-left flex-1">
+        <p class="text-2xl sm:text-3xl font-extrabold text-sky-400">100%</p>
+        <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">LOCAL &amp; DEDICATED</p>
+      </div>
+      <div class="text-center sm:text-left flex-1">
+        <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400">FAST</p>
+        <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TURNAROUND TIME</p>
+      </div>
+      <div class="text-center sm:text-left flex-1">
+        <p class="text-2xl sm:text-3xl font-extrabold text-violet-400">CERTIFIED</p>
+        <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">TECHNICAL EXPERTISE</p>
+      </div>
+      <div class="text-center sm:text-left flex-1">
+        <p class="text-2xl sm:text-3xl font-extrabold text-orange-400">TAILORED</p>
+        <p class="text-[11px] font-bold text-slate-200 uppercase tracking-wider mt-1">DIGITAL SOLUTIONS</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   
 <!-- How We Work Section (Linear, Wave & Flow / Sankey Step Pipeline) -->
