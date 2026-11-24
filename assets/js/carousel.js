@@ -4,7 +4,6 @@
         const canvas = document.getElementById('hero-connected-dots');
         if (!heroSection) return;
 
-        // 1. All 35 Carousel Images via JavaScript
         const heroImages = [
           "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(1).jpg",
           "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(2).jpg",
@@ -58,7 +57,7 @@
             img.decoding = 'async';
             img.loading = idx === activeIndex ? 'eager' : 'lazy';
             img.className =
-              'absolute -inset-y-12 inset-x-0 h-[calc(100%+6rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out ' +
+              'absolute -inset-y-16 inset-x-0 h-[calc(100%+8rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out ' +
               (idx === activeIndex ? 'opacity-100' : 'opacity-0');
             frag.appendChild(img);
             return img;
@@ -84,7 +83,8 @@
             return candidate;
           }
 
-          function applyHeroFixedScroll() {
+          // Keeps the background anchored inside #hero-section while scrolling
+          function applyHeroFixedBackground() {
             scrollRaf = null;
             if (!inHeroView) return;
             const rect = heroSection.getBoundingClientRect();
@@ -92,13 +92,13 @@
             const span = rect.height + vh;
             if (span <= 0) return;
             const progress = (vh - rect.top) / span;
-            const offset = Math.round((progress - 0.5) * 72);
+            const offset = Math.round((progress - 0.5) * 96);
             carouselLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
           }
 
           function queueScrollSync() {
             if (scrollRaf === null && inHeroView) {
-              scrollRaf = window.requestAnimationFrame(applyHeroFixedScroll);
+              scrollRaf = window.requestAnimationFrame(applyHeroFixedBackground);
             }
           }
 
@@ -137,11 +137,10 @@
           });
 
           showSlide(activeIndex);
-          applyHeroFixedScroll();
+          applyHeroFixedBackground();
           startAutoplay();
         }
 
-        // 2. Connected Dots Canvas
         if (!canvas) return;
         const ctx = canvas.getContext('2d');
         let width, height;
