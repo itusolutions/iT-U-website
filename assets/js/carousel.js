@@ -1,164 +1,268 @@
-(function () {
-  var HERO_IMAGES = [
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(1).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(2).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(3).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(4).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(5).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(6).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(7).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(8).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(9).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(10).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(1).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(2).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(3).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(4).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(5).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(6).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(7).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(8).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(9).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(1).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(2).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(3).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(4).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(5).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(6).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(1).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(2).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(3).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(4).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(5).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(6).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(7).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(8).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(9).jpg",
-    "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(10).jpg"
-  ];
+      document.addEventListener('DOMContentLoaded', () => {
+        const heroSection = document.getElementById('hero-section');
+        const carouselLayer = document.getElementById('hero-carousel-layer');
+        const canvas = document.getElementById('hero-connected-dots');
+        if (!heroSection) return;
 
-  function initHeroCarousel() {
-    var container = document.querySelector("[data-hero-random-carousel]");
-    if (!container) return;
+        // 1. All 35 Carousel Images via JavaScript
+        const heroImages = [
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(1).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(2).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(3).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(4).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(5).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(6).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(7).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(8).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/it-support-and-networking%20(9).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(1).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(2).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(3).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(4).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(5).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/operating-systems-and-software%20(6).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(1).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(2).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(3).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(4).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(5).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(6).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(7).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(8).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(9).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/website-design-and-development%20(10).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(1).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(2).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(3).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(4).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(5).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(6).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(7).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(8).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(9).jpg",
+          "https://www.it-u.co.za/assets/images/carousel-images/computer-repair-and-maintenance%20(10).jpg"
+        ];
 
-    var slidesHost = container.querySelector("[data-hero-slides]");
-    if (!slidesHost || HERO_IMAGES.length === 0) return;
+        if (carouselLayer && heroImages.length > 0) {
+          const intervalMs = parseInt(heroSection.getAttribute('data-interval'), 10) || 4000;
+          let activeIndex = Math.floor(Math.random() * heroImages.length);
+          let slideTimer = null;
+          let scrollRaf = null;
+          let inHeroView = true;
 
-    var intervalMs = parseInt(container.getAttribute("data-interval"), 10) || 4000;
-    var activeIndex = Math.floor(Math.random() * HERO_IMAGES.length);
-    var timerId = null;
-    var rafId = null;
-    var heroInView = true;
+          const frag = document.createDocumentFragment();
+          const slideImgs = heroImages.map((src, idx) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = '';
+            img.decoding = 'async';
+            img.loading = idx === activeIndex ? 'eager' : 'lazy';
+            img.className =
+              'absolute -inset-y-12 inset-x-0 h-[calc(100%+6rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out ' +
+              (idx === activeIndex ? 'opacity-100' : 'opacity-0');
+            frag.appendChild(img);
+            return img;
+          });
 
-    var fragment = document.createDocumentFragment();
-    var slideElements = HERO_IMAGES.map(function (src, index) {
-      var img = document.createElement("img");
-      img.src = src;
-      img.alt = "";
-      img.decoding = "async";
-      img.loading = index === activeIndex ? "eager" : "lazy";
-      img.className =
-        "absolute -inset-y-12 inset-x-0 h-[calc(100%+6rem)] w-full object-cover object-center will-change-transform transition-opacity duration-700 ease-in-out " +
-        (index === activeIndex ? "opacity-100" : "opacity-0");
-      fragment.appendChild(img);
-      return img;
-    });
+          carouselLayer.innerHTML = '';
+          carouselLayer.appendChild(frag);
 
-    slidesHost.innerHTML = "";
-    slidesHost.appendChild(fragment);
+          function showSlide(index) {
+            activeIndex = ((index % slideImgs.length) + slideImgs.length) % slideImgs.length;
+            slideImgs.forEach((img, i) => {
+              const isCurrent = i === activeIndex;
+              if (isCurrent && img.loading === 'lazy') img.loading = 'eager';
+              img.classList.toggle('opacity-100', isCurrent);
+              img.classList.toggle('opacity-0', !isCurrent);
+            });
+          }
 
-    function updateHeroFixedScroll() {
-      rafId = null;
-      if (!heroInView) return;
+          function nextRandomIndex() {
+            if (slideImgs.length <= 1) return 0;
+            let candidate = Math.floor(Math.random() * slideImgs.length);
+            if (candidate === activeIndex) candidate = (activeIndex + 1) % slideImgs.length;
+            return candidate;
+          }
 
-      var rect = container.getBoundingClientRect();
-      var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 800;
-      var totalTravel = rect.height + viewportHeight;
-      if (totalTravel <= 0) return;
+          function applyHeroFixedScroll() {
+            scrollRaf = null;
+            if (!inHeroView) return;
+            const rect = heroSection.getBoundingClientRect();
+            const vh = window.innerHeight || document.documentElement.clientHeight || 800;
+            const span = rect.height + vh;
+            if (span <= 0) return;
+            const progress = (vh - rect.top) / span;
+            const offset = Math.round((progress - 0.5) * 72);
+            carouselLayer.style.transform = `translate3d(0, ${offset}px, 0)`;
+          }
 
-      // Progress from 0 (entering bottom) to 1 (exiting top), anchored around center
-      var progress = (viewportHeight - rect.top) / totalTravel;
-      var offsetPx = Math.round((progress - 0.5) * 72);
+          function queueScrollSync() {
+            if (scrollRaf === null && inHeroView) {
+              scrollRaf = window.requestAnimationFrame(applyHeroFixedScroll);
+            }
+          }
 
-      slidesHost.style.transform = "translate3d(0, " + offsetPx + "px, 0)";
-    }
+          if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                inHeroView = entry.isIntersecting;
+                if (inHeroView) queueScrollSync();
+              });
+            }, { threshold: 0 });
+            io.observe(heroSection);
+          }
 
-    function scheduleScrollUpdate() {
-      if (rafId === null && heroInView) {
-        rafId = window.requestAnimationFrame(updateHeroFixedScroll);
-      }
-    }
+          window.addEventListener('scroll', queueScrollSync, { passive: true });
+          window.addEventListener('resize', queueScrollSync, { passive: true });
 
-    if ("IntersectionObserver" in window) {
-      var observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            heroInView = entry.isIntersecting;
-            if (heroInView) {
-              scheduleScrollUpdate();
+          function startAutoplay() {
+            stopAutoplay();
+            slideTimer = window.setInterval(() => showSlide(nextRandomIndex()), intervalMs);
+          }
+
+          function stopAutoplay() {
+            if (slideTimer !== null) {
+              window.clearInterval(slideTimer);
+              slideTimer = null;
+            }
+          }
+
+          document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+              stopAutoplay();
+            } else {
+              startAutoplay();
+              queueScrollSync();
             }
           });
-        },
-        { threshold: 0 }
-      );
-      observer.observe(container);
-    }
 
-    window.addEventListener("scroll", scheduleScrollUpdate, { passive: true });
-    window.addEventListener("resize", scheduleScrollUpdate, { passive: true });
-
-    function setActiveSlide(index) {
-      activeIndex = ((index % slideElements.length) + slideElements.length) % slideElements.length;
-      slideElements.forEach(function (img, i) {
-        var isActive = i === activeIndex;
-        if (isActive && img.loading === "lazy") {
-          img.loading = "eager";
+          showSlide(activeIndex);
+          applyHeroFixedScroll();
+          startAutoplay();
         }
-        img.classList.toggle("opacity-100", isActive);
-        img.classList.toggle("opacity-0", !isActive);
+
+        // 2. Connected Dots Canvas
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let width, height;
+
+        const lightPalette = [
+          { r: 23,  g: 105, b: 170 },
+          { r: 14,  g: 116, b: 144 },
+          { r: 5,   g: 150, b: 105 },
+          { r: 124, g: 58,  b: 237 },
+          { r: 217, g: 119, b: 6   }
+        ];
+
+        const darkPalette = [
+          { r: 105, g: 186, b: 255 },
+          { r: 52,  g: 211, b: 153 },
+          { r: 167, g: 139, b: 250 },
+          { r: 251, g: 146, b: 60  },
+          { r: 56,  g: 189, b: 248 }
+        ];
+
+        const mouse = { x: null, y: null, radius: 180 };
+
+        function resizeCanvas() {
+          width = canvas.width = heroSection.offsetWidth;
+          height = canvas.height = heroSection.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        heroSection.addEventListener('mousemove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
+        });
+
+        heroSection.addEventListener('mouseleave', () => {
+          mouse.x = null;
+          mouse.y = null;
+        });
+
+        class Particle {
+          constructor() { this.reset(); }
+          reset() {
+            this.x = Math.random() * width;
+            this.y = Math.random() * height;
+            this.radius = Math.random() * 4.5 + 5;
+            this.vx = (Math.random() - 0.5) * 1.0;
+            this.vy = (Math.random() - 0.5) * 1.0;
+            this.alpha = Math.random() * 0.4 + 0.6;
+          }
+          update() {
+            if (this.x < 0 || this.x > width) this.vx *= -1;
+            if (this.y < 0 || this.y > height) this.vy *= -1;
+            if (mouse.x !== null && mouse.y !== null) {
+              const dx = mouse.x - this.x;
+              const dy = mouse.y - this.y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              if (distance < mouse.radius) {
+                const forceDirectionX = dx / distance;
+                const forceDirectionY = dy / distance;
+                const force = (mouse.radius - distance) / mouse.radius;
+                this.x -= forceDirectionX * force * 5;
+                this.y -= forceDirectionY * force * 5;
+              }
+            }
+            this.x += this.vx;
+            this.y += this.vy;
+          }
+          draw(palette) {
+            const color = palette[Math.floor(this.x % palette.length)];
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${color.r}, ${color.g}, ${color.b}, ${this.alpha})`;
+            const isDark = document.documentElement.classList.contains('dark');
+            ctx.shadowBlur = isDark ? 14 : 8;
+            ctx.shadowColor = `rgba(${color.r}, ${color.g}, ${color.b}, ${isDark ? 0.85 : 0.4})`;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+            this.currentColor = color;
+          }
+        }
+
+        const particleCount = Math.floor(Math.min(width, 1200) / 20);
+        const particles = Array.from({ length: particleCount }, () => new Particle());
+
+        function animate() {
+          ctx.clearRect(0, 0, width, height);
+          const isDark = document.documentElement.classList.contains('dark');
+          const activePalette = isDark ? darkPalette : lightPalette;
+
+          particles.forEach(p => {
+            p.update();
+            p.draw(activePalette);
+          });
+
+          const maxDistance = 160;
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const p1 = particles[i];
+              const p2 = particles[j];
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+
+              if (dist < maxDistance) {
+                const alpha = (1 - dist / maxDistance) * (isDark ? 0.65 : 0.45);
+                const gradient = ctx.createLinearGradient(p1.x, p1.y, p2.x, p2.y);
+                gradient.addColorStop(0, `rgba(${p1.currentColor.r}, ${p1.currentColor.g}, ${p1.currentColor.b}, ${alpha})`);
+                gradient.addColorStop(1, `rgba(${p2.currentColor.r}, ${p2.currentColor.g}, ${p2.currentColor.b}, ${alpha})`);
+
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = (1 - dist / maxDistance) * 3.5;
+                ctx.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(animate);
+        }
+        animate();
       });
-    }
-
-    function pickRandomIndex() {
-      if (slideElements.length <= 1) return 0;
-      var next = Math.floor(Math.random() * slideElements.length);
-      if (next === activeIndex) {
-        next = (activeIndex + 1) % slideElements.length;
-      }
-      return next;
-    }
-
-    function startTimer() {
-      stopTimer();
-      timerId = window.setInterval(function () {
-        setActiveSlide(pickRandomIndex());
-      }, intervalMs);
-    }
-
-    function stopTimer() {
-      if (timerId !== null) {
-        window.clearInterval(timerId);
-        timerId = null;
-      }
-    }
-
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) {
-        stopTimer();
-      } else {
-        startTimer();
-        scheduleScrollUpdate();
-      }
-    });
-
-    setActiveSlide(activeIndex);
-    updateHeroFixedScroll();
-    startTimer();
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initHeroCarousel);
-  } else {
-    initHeroCarousel();
-  }
-})();
+    
